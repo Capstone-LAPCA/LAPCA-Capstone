@@ -1,9 +1,11 @@
 import sys
+import os
 from Language.Python.Make_Parser import PythonMakeParser
 
 def factory(lang, formal_structures):
     if lang == "py":
         PythonMakeParser(formal_structures)
+        os.system("python3 Language/Python/Python_Parser_new.py "+sys.argv[2])
     # elif lang == "c":
     #     parser = CMakeParser(formal_structures)
     else:
