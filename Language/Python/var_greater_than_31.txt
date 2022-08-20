@@ -1,5 +1,4 @@
 STATE assign
-    x = items[0].children[0].value
-    if len(x)>=5:
-        print("Too long")
-END_STATE	
+    #if len(var) > 31:
+    print("Too long")
+END_STATE

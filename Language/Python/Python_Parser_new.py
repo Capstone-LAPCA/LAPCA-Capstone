@@ -6,6 +6,8 @@ import sys
 
 class MyTransformer(Transformer):
     def assign(self, items):
+        #if len(var) > 31:
+        print("Too long")
 
         pass
 
