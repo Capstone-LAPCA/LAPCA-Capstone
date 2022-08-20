@@ -1,21 +1,26 @@
-from tracemalloc import start
-from lark import Lark, Transformer, v_args, Tree
+from lark import Lark, visitors
 from lark.indenter import PythonIndenter
 import sys
+info_list = []
 
-class MainTransformer(Transformer):
+def ret_iter(Tree):
+    for i in Tree.children:
+        if isinstance(i,type(Tree)):
+            ret_iter(i)
+        else:
+            info_list.append(i)
+
+class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
-        python_parser2 = Lark.open(
-            'Python_Grammar.lark', rel_to=__file__, **kwargs)
-        MyTransformer().transform(python_parser2.parse(file))
+        python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
+        print(MyTransformer().visit_topdown(python_parser2.parse(file)))
 
-class MyTransformer(Transformer):
+class MyTransformer(visitors.Visitor):
     def single_input(self, items):
 
         pass
-    
     def file_input(self, items):
 
         pass
@@ -103,6 +108,9 @@ class MyTransformer(Transformer):
     def augassign(self, items):
 
         pass
+    def augassign_op(self, items):
+
+        pass
     def testlist_star_expr(self, items):
 
         pass
@@ -137,6 +145,9 @@ class MyTransformer(Transformer):
 
         pass
     def import_from(self, items):
+
+        pass
+    def dots(self, items):
 
         pass
     def import_as_name(self, items):
@@ -307,6 +318,21 @@ class MyTransformer(Transformer):
     def factor(self, items):
 
         pass
+    def _unary_op(self, items):
+
+        pass
+    def _add_op(self, items):
+
+        pass
+    def _shift_op(self, items):
+
+        pass
+    def _mul_op(self, items):
+
+        pass
+    def comp_op(self, items):
+
+        pass
     def power(self, items):
 
         pass
@@ -397,7 +423,8 @@ class MyTransformer(Transformer):
     def string(self, items):
 
         pass
-    def name(self,items):
-        return items[0]
-MainTransformer().run()
+    def name(self, items):
 
+        pass
+
+MainTransformer().run()
