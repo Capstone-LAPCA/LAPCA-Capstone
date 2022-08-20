@@ -1,35 +1,286 @@
-from lark import Lark, Transformer, visitors
+from lark import Lark,visitors
 import sys
-global_list = []
 info_list = []
+
+class MainTransformer():
+    def run(self):
+        file = open(sys.argv[1], encoding='utf-8').read()
+        #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
+        C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,start='translationunit',keep_all_tokens=True,propagate_positions=True)
+        print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
 
 
 def ret_iter(Tree):
     for i in Tree.children:
-        if isinstance(i, type(Tree)):
+        if isinstance(i,type(Tree)):
             ret_iter(i)
         else:
             info_list.append(i)
 
-
 class MyTransformer(visitors.Visitor):
-    def __init__(self) -> None:
-        self.used = set()
+    def start(self, items):
 
-    def check(self, name, items):
-        global info_list
-        if name not in self.used:
-            self.used.add(name)
-            ret_iter(items)
+        pass
+    def primaryexpression(self, items):
 
+        pass
+    def genericselection(self, items):
+
+        pass
+    def genericassoclist(self, items):
+
+        pass
+    def genericassociation(self, items):
+
+        pass
+    def postfixexpression(self, items):
+
+        pass
+    def argumentexpressionlist(self, items):
+
+        pass
+    def unaryexpression(self, items):
+
+        pass
+    def unaryoperator(self, items):
+
+        pass
+    def castexpression(self, items):
+
+        pass
+    def multiplicativeexpression(self, items):
+
+        pass
+    def additiveexpression(self, items):
+
+        pass
+    def shiftexpression(self, items):
+
+        pass
+    def relationalexpression(self, items):
+
+        pass
+    def equalityexpression(self, items):
+
+        pass
+    def andexpression(self, items):
+
+        pass
+    def exclusiveorexpression(self, items):
+
+        pass
+    def inclusiveorexpression(self, items):
+
+        pass
+    def logicalandexpression(self, items):
+
+        pass
+    def logicalorexpression(self, items):
+
+        pass
+    def conditionalexpression(self, items):
+
+        pass
     def assignmentexpression(self, items):
-        self.check('assignmentexpression', items)
-        # pass
 
+        pass
+    def assignmentoperator(self, items):
 
-# test = open(sys.argv[1], encoding='utf-8').read()
-test = "int main(){a=5;}"
-C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
-                     start='translationunit', keep_all_tokens=True, propagate_positions=True)
-MyTransformer().visit_topdown(C_parser.parse(test)).pretty()
-# print(global_list)
+        pass
+    def expression(self, items):
+
+        pass
+    def constantexpression(self, items):
+
+        pass
+    def declaration(self, items):
+        
+        pass
+    def declarationspecifiers(self, items):
+
+        pass
+    def declarationspecifiers2(self, items):
+
+        pass
+    def declarationspecifier(self, items):
+
+        pass
+    def initdeclaratorlist(self, items):
+
+        pass
+    def initdeclarator(self, items):
+
+        pass
+    def storageclassspecifier(self, items):
+
+        pass
+    def typespecifier(self, items):
+
+        pass
+    def structorunionspecifier(self, items):
+
+        pass
+    def structorunion(self, items):
+
+        pass
+    def structdeclarationlist(self, items):
+
+        pass
+    def structdeclaration(self, items):
+
+        pass
+    def specifierqualifierlist(self, items):
+
+        pass
+    def structdeclaratorlist(self, items):
+
+        pass
+    def structdeclarator(self, items):
+
+        pass
+    def enumspecifier(self, items):
+
+        pass
+    def enumeratorlist(self, items):
+
+        pass
+    def enumerator(self, items):
+
+        pass
+    def enumerationconstant(self, items):
+
+        pass
+    def atomictypespecifier(self, items):
+
+        pass
+    def typequalifier(self, items):
+
+        pass
+    def functionspecifier(self, items):
+
+        pass
+    def alignmentspecifier(self, items):
+
+        pass
+    def declarator(self, items):
+
+        pass
+    def directdeclarator(self, items):
+
+        pass
+    def gccdeclaratorextension(self, items):
+
+        pass
+    def gccattributespecifier(self, items):
+
+        pass
+    def gccattributelist(self, items):
+
+        pass
+    def gccattribute(self, items):
+
+        pass
+    def pointer(self, items):
+
+        pass
+    def typequalifierlist(self, items):
+
+        pass
+    def parametertypelist(self, items):
+
+        pass
+    def parameterlist(self, items):
+
+        pass
+    def parameterdeclaration(self, items):
+
+        pass
+    def identifierlist(self, items):
+
+        pass
+    def typename(self, items):
+
+        pass
+    def abstractdeclarator(self, items):
+
+        pass
+    def directabstractdeclarator(self, items):
+
+        pass
+    def typedefname(self, items):
+
+        pass
+    def initializer(self, items):
+
+        pass
+    def initializerlist(self, items):
+
+        pass
+    def designation(self, items):
+
+        pass
+    def designatorlist(self, items):
+
+        pass
+    def designator(self, items):
+
+        pass
+    def staticassertdeclaration(self, items):
+
+        pass
+    def statement(self, items):
+
+        pass
+    def labeledstatement(self, items):
+
+        pass
+    def compoundstatement(self, items):
+
+        pass
+    def blockitemlist(self, items):
+
+        pass
+    def blockitem(self, items):
+
+        pass
+    def expressionstatement(self, items):
+
+        pass
+    def selectionstatement(self, items):
+
+        pass
+    def iterationstatement(self, items):
+
+        pass
+    def forcondition(self, items):
+
+        pass
+    def fordeclaration(self, items):
+
+        pass
+    def forexpression(self, items):
+
+        pass
+    def jumpstatement(self, items):
+
+        pass
+    def compilationunit(self, items):
+
+        pass
+    def translationunit(self, items):
+
+        pass
+    def externaldeclaration(self, items):
+
+        pass
+    def functiondefinition(self, items):
+
+        pass
+    def declarationlist(self, items):
+
+        pass
+    def any(self, items):
+
+        pass
+    
+MainTransformer().run()
