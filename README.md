@@ -27,3 +27,24 @@ cd LAPCA-CAPSTONE
 pip install -r requirements.txt
 python .\main.py .\Language\Python\Formal-Structure-File \Test_FIles\Python_Test_Files\Test_var_greater_31.py
 ```
+
+For Python:
+
+```
+python .\main.py .\Guidelines\var_greater_than_31.lapx .\Test_Files\Python_Test_Files\Test_var_greater_31.py
+python ./main.py ./Guidelines/var_greater_than_31.lapx ./Test_Files/Python_Test_Files/Test_var_greater_31.py
+```
+
+For C:
+
+```
+python .\main.py .\Guidelines\var_greater_than_31.lapx .\Test_Files\C_Test_Files\Test_var_greater_31.c
+python ./main.py ./Guidelines/var_greater_than_31.lapx ./Test_Files/C_Test_Files/Test_var_greater_31.c
+```
+
+For Java:
+
+```
+python .\main.py .\Guidelines\var_greater_than_31.lapx .\Test_FIles\Java_Test_Files\Test_var_greater_31.java
+python ./main.py ./Guidelines/var_greater_than_31.lapx ./Test_FIles/Java_Test_Files/Test_var_greater_31.java
+```

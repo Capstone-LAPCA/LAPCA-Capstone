@@ -15,6 +15,8 @@ def ret_iter(Tree):
 
 class MyTransformer(visitors.Visitor):
     def assignmentexpression(self, items):
+        #if len(var) > 31:
+        print("Too long")
         pass
 
 

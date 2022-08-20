@@ -1,5 +1,12 @@
 class Parser:
-    def __init__(self, formal_structures, base_parser_path, new_parser_path):
+    def __init__(self, lang, formal_structures, base_parser_path, new_parser_path):
+        self.lang = lang
+        self.mapping = {}
+        self.mapping['c'] = {}
+        self.mapping['c']['declr'] = "assignmentexpression"
+        self.mapping['py'] = {}
+        self.mapping['py']['declr'] = "assign"
+
         self.formal_structures = formal_structures
         self.new_parser_path = new_parser_path
         with open(base_parser_path, encoding='utf-8') as f:
@@ -20,6 +27,7 @@ class Parser:
                 break
             i += 1
             cur_state = words[6:-1]
+            cur_state = self.mapping[self.lang][cur_state]
             while(i < len(self.formal_structures)):
                 words = self.formal_structures[i]
                 if(words == "END_STATE\n"):

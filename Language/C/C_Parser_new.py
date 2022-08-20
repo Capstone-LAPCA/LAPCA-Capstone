@@ -13,20 +13,25 @@ def ret_iter(Tree):
 
 
 class MyTransformer(visitors.Visitor):
-    def declaration(self, items):
+    def __init__(self) -> None:
+        self.used = set()
+
+    def check(self, name, items):
         global info_list
-        info_list = []
-        ret_iter(items)
-        print(info_list[1].value)
-        if len(info_list[1].value) > 31:
-            print("Too long")
-        else:
-            print("No")
-    
-        pass
+        if name not in self.used:
+            self.used.add(name)
+            ret_iter(items)
+            print(info_list)
+
+    def assignmentexpression(self, items):
+        #if len(var) > 31:
+        print("Too long")
+        self.check('assignmentexpression', items)
+        # pass
 
 
-test = open(sys.argv[1], encoding='utf-8').read()
+# test = open(sys.argv[1], encoding='utf-8').read()
+test = "int main(){a=5;}"
 C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                      start='translationunit', keep_all_tokens=True, propagate_positions=True)
 MyTransformer().visit_topdown(C_parser.parse(test)).pretty()

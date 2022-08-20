@@ -21,7 +21,6 @@ class MyTransformer(visitors.Visitor):
         if name not in self.used:
             self.used.add(name)
             ret_iter(items)
-            print(info_list)
 
     def assignmentexpression(self, items):
         self.check('assignmentexpression', items)
