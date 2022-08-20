@@ -1,4 +1,0 @@
-STATE assign
-    #if len(var) > 31:
-    print("Too long")
-END_STATE
