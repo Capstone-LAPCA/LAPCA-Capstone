@@ -1,8 +1,8 @@
-with open("Language/Python/Python_Parser.py", encoding='utf-8') as f:
+with open("Language/C/C_Parser.py", encoding='utf-8') as f:
     file_lines = f.readlines()
 
 
-class PythonMakeParser:
+class CMakeParser:
     def __init__(self, formal_structures):
         self.formal_structures = formal_structures
         self.make_parser()
@@ -12,7 +12,7 @@ class PythonMakeParser:
         code = []
         cur_state = ""
         while(i < len(self.formal_structures)):
-            #print(self.formal_structures[i])
+            # print(self.formal_structures[i])
             words = self.formal_structures[i]
             if(not words):
                 continue
@@ -28,17 +28,15 @@ class PythonMakeParser:
                 else:
                     code.append("    "+words)
                 i += 1
-        #print(code)
+        print(cur_state)
         self.write_file_at(cur_state, code)
 
     def write_file_at(self, atstate, string):
         funcname = "def "+atstate+"(self, items):"
-
-        x=0
-        #print(file_lines)
-
+        x = 0
+        print(funcname)
         for i in range(len(file_lines)):
-            #print(file_lines[i])
+            # print(file_lines[i])
             if funcname in file_lines[i]:
                 x = i
                 break
@@ -47,5 +45,5 @@ class PythonMakeParser:
             return
         file_lines.insert(x+1, "".join(string[:-1]))
 
-        with open("Language/Python/Python_Parser_new.py", "w") as f:
+        with open("Language/C/C_Parser_new.py", "w") as f:
             f.write("".join(file_lines))

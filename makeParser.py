@@ -1,10 +1,16 @@
-with open("Language/Python/Python_Parser.py", encoding='utf-8') as f:
-    file_lines = f.readlines()
+class Parser:
+    def __init__(self, lang, formal_structures, base_parser_path, new_parser_path):
+        self.lang = lang
+        self.mapping = {}
+        self.mapping['c'] = {}
+        self.mapping['c']['declr'] = "assignmentexpression"
+        self.mapping['py'] = {}
+        self.mapping['py']['declr'] = "assign"
 
-
-class PythonMakeParser:
-    def __init__(self, formal_structures):
         self.formal_structures = formal_structures
+        self.new_parser_path = new_parser_path
+        with open(base_parser_path, encoding='utf-8') as f:
+            self.file_lines = f.readlines()
         self.make_parser()
 
     def make_parser(self):
@@ -12,7 +18,7 @@ class PythonMakeParser:
         code = []
         cur_state = ""
         while(i < len(self.formal_structures)):
-            #print(self.formal_structures[i])
+            # print(self.formal_structures[i])
             words = self.formal_structures[i]
             if(not words):
                 continue
@@ -21,6 +27,7 @@ class PythonMakeParser:
                 break
             i += 1
             cur_state = words[6:-1]
+            cur_state = self.mapping[self.lang][cur_state]
             while(i < len(self.formal_structures)):
                 words = self.formal_structures[i]
                 if(words == "END_STATE\n"):
@@ -28,24 +35,22 @@ class PythonMakeParser:
                 else:
                     code.append("    "+words)
                 i += 1
-        #print(code)
+        print(cur_state)
         self.write_file_at(cur_state, code)
 
     def write_file_at(self, atstate, string):
         funcname = "def "+atstate+"(self, items):"
-
-        x=0
-        #print(file_lines)
-
-        for i in range(len(file_lines)):
-            #print(file_lines[i])
-            if funcname in file_lines[i]:
+        x = 0
+        print(funcname)
+        for i in range(len(self.file_lines)):
+            # print(self.file_lines[i])
+            if funcname in self.file_lines[i]:
                 x = i
                 break
         if x == 0:
             print("improper Formal structure,check state name")
             return
-        file_lines.insert(x+1, "".join(string[:-1]))
+        self.file_lines.insert(x+1, "".join(string[:-1]))
 
-        with open("Language/Python/Python_Parser_new.py", "w") as f:
-            f.write("".join(file_lines))
+        with open(self.new_parser_path, "w") as f:
+            f.write("".join(self.file_lines))

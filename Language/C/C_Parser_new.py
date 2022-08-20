@@ -21,8 +21,11 @@ class MyTransformer(visitors.Visitor):
         if name not in self.used:
             self.used.add(name)
             ret_iter(items)
+            print(info_list)
 
     def assignmentexpression(self, items):
+        #if len(var) > 31:
+        print("Too long")
         self.check('assignmentexpression', items)
         # pass
 
