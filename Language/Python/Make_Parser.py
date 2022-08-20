@@ -10,7 +10,7 @@ class PythonMakeParser:
         code = []
         cur_state = ""
         while(i < len(self.formal_structures)):
-            print(self.formal_structures[i])
+            #print(self.formal_structures[i])
             words = self.formal_structures[i]
             if(not words):
                 continue
@@ -26,15 +26,15 @@ class PythonMakeParser:
                 else:
                     code.append("    "+words)
                 i += 1
-        print(code)
+        #print(code)
         self.write_file_at(cur_state, code)
 
     def write_file_at(self,atstate, string):
         funcname = "def "+atstate+"(self, items):"
         x=0
-        print(file_lines)
+        #print(file_lines)
         for i in range(len(file_lines)):
-            print(file_lines[i])
+            #print(file_lines[i])
             if funcname in file_lines[i]:
                 x = i
                 break
