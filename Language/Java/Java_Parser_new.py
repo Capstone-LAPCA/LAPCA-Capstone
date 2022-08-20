@@ -15,6 +15,15 @@ def ret_iter(Tree):
 
 class MyTransformer(visitors.Visitor):
     def assignmentexpression(self, items):
+        global info_list
+        info_list = []
+        ret_iter(items)
+        print(info_list[1].value)
+        if len(info_list[1].value) > 31:
+            print("Too long")
+        else:
+            print("Javaaaaa")
+    
         pass
 
 
