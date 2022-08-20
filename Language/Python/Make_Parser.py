@@ -1,10 +1,12 @@
-with open("Language/Python/Python_Parser.py", encoding = 'utf-8') as f:
+with open("Language/Python/Python_Parser.py", encoding='utf-8') as f:
     file_lines = f.readlines()
+
 
 class PythonMakeParser:
     def __init__(self, formal_structures):
         self.formal_structures = formal_structures
         self.make_parser()
+
     def make_parser(self):
         i = 0
         code = []
@@ -29,17 +31,19 @@ class PythonMakeParser:
         print(code)
         self.write_file_at(cur_state, code)
 
-    def write_file_at(self,atstate, string):
+    def write_file_at(self, atstate, string):
         funcname = "def "+atstate+"(self, items):"
-        x=0
+        x = 0
         print(file_lines)
         for i in range(len(file_lines)):
             print(file_lines[i])
             if funcname in file_lines[i]:
                 x = i
                 break
-        file_lines.insert(x+1,"".join(string[:-1]))
+        if x == 0:
+            print("improper Formal structure,check state name")
+            return
+        file_lines.insert(x+1, "".join(string[:-1]))
 
         with open("Language/Python/Python_Parser_new.py", "w") as f:
             f.write("".join(file_lines))
-

@@ -40,6 +40,9 @@ class CMakeParser:
             if funcname in file_lines[i]:
                 x = i
                 break
+        if x == 0:
+            print("improper Formal structure,check state name")
+            return
         file_lines.insert(x+1, "".join(string[:-1]))
 
         with open("Language/C/C_Parser_new.py", "w") as f:
