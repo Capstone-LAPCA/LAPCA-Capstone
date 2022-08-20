@@ -1,0 +1,262 @@
+// Java grammar for Lark
+
+// Modifiers
+!modifier: "private"        -> literal
+          | "public"        -> literal
+          | "protected"     -> literal
+          | "default"       -> literal
+          | "final"         -> literal
+          | "static"        -> literal
+          | "transient"     -> literal
+          | "synchronized"  -> literal
+          | "volatile"      -> literal
+          | "abstract"      -> literal
+
+modifiers: modifier+        -> list
+
+// Package
+package_stmt: "package" path _SEMICOLOM
+
+// Import
+imports: import_stmt+
+import_stmt: "import" modifier? path _SEMICOLOM
+
+// Annotation
+annotations: annotation+                                    -> list
+annotation: "@" name ("(" anno_args? ")")?
+anno_args: anno_arg_kv ("," anno_arg_kv)*                   -> list
+anno_arg_kv: (name "=")? anno_arg_list
+anno_arg_list: "{" anno_arg_base_list? "}" | anno_arg_base
+anno_arg_base_list: anno_arg_base ("," anno_arg_base)*      -> list
+?anno_arg_base: annotation | test
+
+// Field
+fields: field+
+field: comment? field_annotation _SEMICOLOM
+field_annotation: annotations? assign_modifier
+
+// Enum
+enum_class_elem: enum_elems ","? _SEMICOLOM
+enum_field: comment? enum_field_modifiers
+enum_field_modifiers: modifiers? "enum" enum_field_name
+enum_field_name: name enum_field_body
+enum_field_body: "{" enum_elems "}"
+enum_elems: enum_elem ("," enum_elem)*       -> list
+enum_elem: comment? enum_elem_name
+enum_elem_name: name enum_elem_args
+enum_elem_args: ("(" arguments ")")? enum_elem_body
+enum_elem_body: ("{" method* "}")?
+
+// Method
+method: comment? method_annotations
+method_annotations: annotations? method_modifiers
+method_modifiers: modifiers? method_return
+method_return: (return_type " ")? method_name
+method_name: name method_parameters
+method_parameters: "(" parameters? ")" method_throws
+method_throws: ("throws" classes)? (method_body | _SEMICOLOM)
+method_body: "{" suit? "}" _SEMICOLOM?
+classes: class_type ("," class_type)*   -> list
+block: comment? block_modifier
+block_modifier: modifiers? method_body
+
+// Class
+clazz: comment? class_package
+class_package: package_stmt? class_imports
+class_imports: imports? class_comment
+class_comment: comment? class_annotations
+class_annotations: annotations? class_modifier
+class_modifier: modifiers? class_identity
+class_identity: (CLASS | ENUM | INTERFACE | ANNO_INTERFACE) class_identifier
+class_identifier: class_name class_def_generic
+class_def_generic: generic_type? class_extends
+class_extends: ("extends" classes)? class_interfaces
+class_interfaces: ("implements" classes)? class_throws
+class_throws: ("throws" classes)? class_body
+class_body: "{" (field | enum_class_elem | enum_field | method | block | clazz | comment_nouse)* "}"
+
+// Statement
+stmt: comment? stmt_base
+?stmt_base: expr_stmt | compound_stmt _SEMICOLOM?
+?expr_stmt: simple_stmt | test_stmt
+?simple_stmt: break_stmt | continue_stmt | return_stmt | throw_stmt | assert_stmt
+test_stmt: (assign_modifier | test) _SEMICOLOM
+?assign_modifier: modifiers? assign_type
+?assign_type: (class_type " ")? (assign_base | assign_mul)
+assign_mul: assign_base ("," assign_base)+
+assign_base: name_base _assign_op test | name_base
+break_stmt: "break" _SEMICOLOM
+continue_stmt: "continue" _SEMICOLOM
+return_stmt: "return" (" " test)? _SEMICOLOM
+throw_stmt: "throw" " " test _SEMICOLOM
+assert_stmt: "assert" " " test _SEMICOLOM
+?name_base: name | dotted_name | namearr | arr_operation
+namearr: name arr_suffix
+arr_operation: test "[" test "]"
+
+test_stmt_inline: (assign_modifier | test)       -> test_stmt
+
+?compound_stmt: if_stmt | switch_stmt | for_stmt | while_stmt | do_while_stmt | try_stmt | synchronized_stmt
+synchronized_stmt: "synchronized" ("(" test ")")? "{" suit? "}"
+try_stmt: "try" try_with? try_body
+?try_with: "(" test_stmt_inline ")"
+try_body: "{" suit? "}" catch_finally_stmt
+catch_finally_stmt: catches_stmt? finally_stmt?
+catches_stmt: catch_stmt*                         -> list
+catch_stmt: "catch" "(" catch_ex ")" "{" suit? "}" 
+catch_ex: catch_ex_type name
+catch_ex_type: class_type ("|" class_type)*       -> list
+finally_stmt: "finally" "{" suit? "}"
+do_while_stmt: "do" "{" suit? "}" "while" "(" test ")"
+while_stmt: "while" "(" test ")" "{" suit? "}"
+for_stmt: "for" "(" for_test ")" "{" suit? "}"
+for_test: for_test_var ";" for_test_con ";" (test_stmt_inline | for_test_expr)?     -> for_loop_test
+         | class_type " " test ":" test                                             -> for_each_test
+for_test_var: test_stmt_inline?
+for_test_con: test?
+for_test_expr: test_stmt_inline ("," test_stmt_inline)+        -> list
+switch_stmt: "switch" "(" test ")" case_stmts
+?case_stmts: "{" case_suit* "}"                                -> list
+case_suit: case_key suit?
+case_key: ("case" | "default") test? ":"
+?case_type: primary | dotted_name | name
+if_stmt: "if" "(" test ")" single_stmt? elif_stmt* else_stmt?
+elif_stmt: "else" "if" "(" test ")" single_stmt?
+else_stmt: "else" single_stmt?
+single_stmt: "{" suit? "}" | expr_stmt
+suit: stmt+                                       -> list
+
+// Test
+?test: or_test ("?" or_test ":" test)? | lambda_expr
+lambda_expr: lambda_param "->" lambda_body
+lambda_param: "(" (parameters | arguments)? ")" | name
+lambda_body: "{" suit? "}" | test_stmt_inline
+?or_test: and_test ("||" and_test)*
+?and_test: not_test ("&&" not_test)*
+?not_test: "!" not_test -> not_test_body
+         | comparison
+?comparison: expr (_comp_op expr)*
+?expr: xor_expr ("|" xor_expr)*
+?xor_expr: and_expr ("^" and_expr)*
+?and_expr: shift_expr ("&" shift_expr)*
+?shift_expr: arith_expr (_shift_op arith_expr)*
+?arith_expr: term (_add_op term)*
+?term: binary_bf (_mul_op binary_bf)*
+?binary_bf: _binary_op binary_bf | power
+// ?factor: _factor_op factor | power
+?power: cast_expr ("**" binary_bf)?
+?cast_expr: cast_type new_expr | new_expr
+?new_expr: new atom_expr | atom_expr
+?atom_expr: atom_expr "(" arguments? ")"          -> funccall
+          | atom_expr "[" test "]"                -> getitem
+          | atom_expr "{" arguments? ","? "}"     -> arrayliteral
+          | atom_expr "." name                    -> getattr
+          | atom_expr chain_generic name          -> getattr
+          | atom_expr _binary_op                  -> binary_af
+          | atom_expr "instanceof" class_type     -> instanceof
+          | atom
+atom: primary                                     -> itself
+     | class_type                                 -> itself
+     | name                                       -> itself
+     | name arr_suffix                            -> namearr
+     | "(" test ")"                               -> itself
+     | "(" test_stmt_inline ")"                   -> test_stmt
+     | "{" arguments ","? "}"                     -> itself
+     | /{}/                                       -> literal
+     | "new" class_type "(" ")" class_body        -> anonymous_class
+?chain_generic: "." generic_type
+?class_type: class_ellipsis arr_suffix?
+?class_ellipsis: class_generic ellipsis?
+?class_generic: class_name generic_type?
+generic_type: "<" (class_type_list | generic_extends_list) ">" | /<>/
+generic_extends_list: generic_extends ("," generic_extends)*   -> list
+generic_extends: (/\?/ | /[A-Z]/) "extends" class_type_list | /\?/
+class_type_list: class_type ("," class_type)*     -> list
+?cast_type: "(" class_type ")"                    -> itself
+arguments: argvalue ("," argvalue)*               -> list
+?argvalue: test ("=" test)?
+
+!_binary_op: "++"|"--"
+// !_factor_op: "+"|"-"|"~"
+!_add_op: "+"|"-"
+!_shift_op: "<<"|">>"
+!_mul_op: "*"|"@"|"/"|"%"|"//"
+!_comp_op: "<"|">"|"=="|">="|"<="|"<>"|"!="
+!_assign_op: "=" | "+=" | "-=" | "*=" | "@=" | "/=" | "%=" | "&=" | "|=" | "^=" | "<<=" | ">>=" | "**=" | "//="
+
+// Parameter
+parameters: parameter ("," parameter)* -> list
+parameter: annotations? parameter_modifier
+parameter_modifier: modifier? parameter_name
+parameter_name: class_type (name | namearr)
+
+// Common
+_NEWLINE: NEWLINE
+// I don't know why this happens but it just exists!
+_SEMICOLOM: ";"+ (" " ";")*
+CLASS: "class"
+ENUM: "enum"
+INTERFACE: "interface"
+ANNO_INTERFACE: "@interface"
+!comment_nouse: comment (/\/\/.*/)+
+comment: comment_base+
+!comment_base: ("/**" | "/*" | comment_inline) (/\*(.+)?/)* ("*/" | "**/") | comment_inline
+?comment_inline: /\/\*.+/
+return_type: generic_type class_type | class_type
+path: name ("." (name | star))*    -> dotjoin
+name: CNAME                        -> literal
+class_name: /[A-Z亜-熙_][a-zA-Z0-9亜-熙０-９_]*/                      -> literal
+          | /([a-zA-Z0-9]+\.)+[A-Z亜-熙_][a-zA-Z0-9亜-熙０-９_]*/     -> literal
+          | primary_type           -> literal
+dotted_name: CNAME ("." CNAME)+    -> dotjoin
+POINT: "."
+star: /\*/                         -> literal
+primary: boolean                   -> itself
+       | string                    -> itself
+       | char                      -> itself
+       | number                    -> itself
+       | null                      -> itself
+string: ESCAPED_STRING             -> literal
+char: /'.?'/                       -> literal
+number: number_base                -> itself
+       | number_base LONG_SUFFIX   -> concatjoin
+       | number_base FLOAT_SUFFIX  -> concatjoin
+       | number_base DOUBLE_SUFFIX -> concatjoin
+number_base: /(0x|0X)[0-9a-fA-F]+/ -> literal // Hex
+           | /(0b|0B)[0-1]+/       -> literal // Binary
+           | /0[0-7]+/             -> literal // Octal
+           | SIGNED_INT            -> signed_int
+           | SIGNED_FLOAT          -> signed_float
+LONG_SUFFIX: "L" | "l"
+FLOAT_SUFFIX: "F" | "f"
+DOUBLE_SUFFIX: "D" | "d"
+boolean: true            -> itself
+       | false           -> itself
+!true: "true"
+!false: "false"
+!null: "null"
+!new: "new"              -> literal
+!ellipsis: "..."         -> literal
+arr_suffix: /(\[\])+/    -> literal
+!primary_type: "int"     -> literal
+             | "long"    -> literal
+             | "short"   -> literal
+             | "float"   -> literal
+             | "double"  -> literal
+             | "char"    -> literal
+             | "byte"    -> literal
+             | "boolean" -> literal
+             | "void"    -> literal
+CNAME: /[a-zA-Z亜-熙０-９_][a-zA-Z0-9亜-熙０-９_]*/
+
+// Import
+%import common.NEWLINE
+%import common.UCASE_LETTER
+%import common.ESCAPED_STRING
+%import common.SIGNED_INT
+%import common.SIGNED_FLOAT
+%import common.WS
+
+// Ignore
+%ignore /\/\/.*/
+%ignore WS
