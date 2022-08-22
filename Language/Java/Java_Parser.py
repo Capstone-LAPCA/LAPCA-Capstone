@@ -21,7 +21,8 @@ class MyTransformer(visitors.Visitor):
 
 
 test = open(sys.argv[1], encoding='utf-8').read()
-C_parser = Lark.open('Java_Grammar.lark', start="class_identity",
+#test = 'public class Test { public static void main(String[] args) { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) {System.out.println(i);}  return 0; } }'
+Java_parser = Lark.open('Java_Grammar.lark', start="clazz",
                      rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
-print(MyTransformer().visit_topdown(C_parser.parse(test)).pretty())
+print(MyTransformer().visit_topdown(Java_parser.parse(test)).pretty())
 print(global_list)
