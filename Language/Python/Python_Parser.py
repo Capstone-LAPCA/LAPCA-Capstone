@@ -15,7 +15,7 @@ class MainTransformer():
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        print(MyTransformer().visit_topdown(python_parser2.parse(file)))
+        MyTransformer().visit_topdown(python_parser2.parse(file))
 
 class MyTransformer(visitors.Visitor):
     def single_input(self, items):

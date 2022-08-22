@@ -7,7 +7,7 @@ class MainTransformer():
         file = open(sys.argv[1], encoding='utf-8').read()
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,start='translationunit',keep_all_tokens=True,propagate_positions=True)
-        print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
+        MyTransformer().visit_topdown(C_parser.parse(file)).pretty()
 
 
 def ret_iter(Tree):
