@@ -7,15 +7,22 @@ class MainTransformer():
         file = open(sys.argv[1], encoding='utf-8').read()
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,start='translationunit',keep_all_tokens=True,propagate_positions=True)
-        MyTransformer().visit_topdown(C_parser.parse(file)).pretty()
+        print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
 
 
-def ret_iter(Tree):
-    for i in Tree.children:
+def ret_iter(Tree,variables):
+    if Tree.data == "directdeclarator" and not isinstance(Tree.children[0],type(Tree)):
+        return Tree.children[0]
+    l = Tree.children
+    while len(l):
+        i = l.pop()
         if isinstance(i,type(Tree)):
-            ret_iter(i)
-        else:
-            info_list.append(i)
+            if i.data == "functiondefinition":
+                l.extend(i.children[2:])
+                continue
+            if i.data == "directdeclarator":
+                variables.append(i.children[0])
+            l.extend(i.children)
 
 class MyTransformer(visitors.Visitor):
     def start(self, items):
@@ -166,7 +173,10 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def directdeclarator(self, items):
-
+        variable = ret_iter(items,[])
+        if(not variable):
+            return
+        LINE_NO = items.meta.line
         pass
     def gccdeclaratorextension(self, items):
 

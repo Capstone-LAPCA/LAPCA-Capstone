@@ -1,4 +1,4 @@
 STATE declr
-    #if len(var) > 31:
-    print("Too long")
+    if len(variable) > 31:
+        print("Guideline violated at",LINE_NO)
 END_STATE	

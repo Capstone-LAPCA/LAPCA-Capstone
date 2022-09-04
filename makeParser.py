@@ -3,10 +3,10 @@ class Parser:
         self.lang = lang
         self.mapping = {}
         self.mapping['c'] = {}
-        self.mapping['c']['declr'] = "assignmentexpression"
+        self.mapping['c']['declr'] = "directdeclarator"
         self.mapping['py'] = {}
         self.mapping['py']['declr'] = "assign"
-
+        self.mapping['c']['start'] = "translationunit"
         self.formal_structures = formal_structures
         self.new_parser_path = new_parser_path
         with open(base_parser_path, encoding='utf-8') as f:
@@ -45,7 +45,9 @@ class Parser:
         for i in range(len(self.file_lines)):
             # print(self.file_lines[i])
             if funcname in self.file_lines[i]:
-                x = i
+                while self.file_lines[i] != "        pass\n":
+                    i+=1
+                x = i-1
                 break
         if x == 0:
             print("improper Formal structure,check state name")
