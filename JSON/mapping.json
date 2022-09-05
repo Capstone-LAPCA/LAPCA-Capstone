@@ -1,0 +1,9 @@
+{
+    "c":{
+        "declr":"directdeclarator",
+        "start":"translationunit"
+    },
+    "py":{
+        "declr":"assign"
+    }
+}

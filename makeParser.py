@@ -1,12 +1,12 @@
+import json
+from typing import Mapping
+
+
 class Parser:
     def __init__(self, lang, formal_structures, base_parser_path, new_parser_path):
         self.lang = lang
-        self.mapping = {}
-        self.mapping['c'] = {}
-        self.mapping['c']['declr'] = "directdeclarator"
-        self.mapping['py'] = {}
-        self.mapping['py']['declr'] = "assign"
-        self.mapping['c']['start'] = "translationunit"
+        self.f = open("./JSON/mapping.json")
+        self.mapping = json.load(self.f)
         self.formal_structures = formal_structures
         self.new_parser_path = new_parser_path
         with open(base_parser_path, encoding='utf-8') as f:
@@ -35,18 +35,18 @@ class Parser:
                 else:
                     code.append("    "+words)
                 i += 1
-        print(cur_state)
+        # print(cur_state)
         self.write_file_at(cur_state, code)
 
     def write_file_at(self, atstate, string):
         funcname = "def "+atstate+"(self, items):"
         x = 0
-        print(funcname)
+        # print(funcname)
         for i in range(len(self.file_lines)):
             # print(self.file_lines[i])
             if funcname in self.file_lines[i]:
                 while self.file_lines[i] != "        pass\n":
-                    i+=1
+                    i += 1
                 x = i-1
                 break
         if x == 0:
