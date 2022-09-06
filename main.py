@@ -18,8 +18,9 @@ def factory(lang, formal_structures):
         os.system("python Language/C/C_Parser_new.py "+sys.argv[2])
     elif lang == "java":
         Parser(lang, formal_structures, "Language/Java/Java_Parser.py",
-               "Language/Java/Java_Parser.py")
-        # os.system("python Language/Python/Python_Parser_new.py "+sys.argv[2])
+               "Language/Java/Java_Parser_new.py")
+        os.system("python Language/Java/Java_Parser_new.py "+sys.argv[2])
+        
     else:
         print("Parser not found")
 

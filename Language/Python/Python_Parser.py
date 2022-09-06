@@ -3,12 +3,22 @@ from lark.indenter import PythonIndenter
 import sys
 info_list = []
 
-def ret_iter(Tree):
-    for i in Tree.children:
-        if isinstance(i,type(Tree)):
-            ret_iter(i)
-        else:
-            info_list.append(i)
+def ret_iter(Tree,variables):
+    if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
+        return Tree.children[0]
+    l = Tree.children
+    while len(l):
+        i = l.pop()
+        
+        if isinstance(i, type(Tree)):
+            if i.data == "simple_stmt":  
+                l.extend(i.children[2:])
+                continue
+            if i.data == "name":
+                variables.append(i.children[0].value)
+            l.extend(i.children)
+    return variables[0]
+
 
 class MainTransformer():
     def run(self):
@@ -103,7 +113,11 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def assign(self, items):
-
+        variable = ret_iter(items, [])
+        if(not variable):
+            return 
+        LINE_NO = items.meta.line
+        
         pass
     def augassign(self, items):
 

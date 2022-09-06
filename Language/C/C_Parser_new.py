@@ -231,7 +231,7 @@ class MyTransformer(visitors.Visitor):
             return
         LINE_NO = items.meta.line
         if len(variable) > 31:
-            print("Guideline violated at",LINE_NO)
+            print("Variable length too long at line",LINE_NO)
         pass
 
     def gccdeclaratorextension(self, items):

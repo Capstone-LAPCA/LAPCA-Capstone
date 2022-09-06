@@ -5,5 +5,8 @@
     },
     "py":{
         "declr":"assign"
+    },
+    "java":{
+        "declr":"assign_base"
     }
 }
