@@ -25,6 +25,7 @@ class MainTransformer():
         file = open(sys.argv[1], encoding='utf-8').read()
         Java_parser = Lark.open('Java_Grammar.lark', start="clazz",rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
         MyTransformer().visit_topdown(Java_parser.parse(file))
+        return
 
 
 
