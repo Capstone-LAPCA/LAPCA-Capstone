@@ -11,6 +11,7 @@ class MainTransformer():
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
         MyTransformer().visit_topdown(C_parser.parse(file))
         # print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
+        return
 
 
 def ret_iter(Tree, variables):

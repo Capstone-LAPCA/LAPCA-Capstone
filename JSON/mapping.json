@@ -1,12 +1,18 @@
 {
     "c":{
+        "before": "before",
+        "after": "after",
         "declr":"directdeclarator",
         "start":"translationunit"
     },
     "py":{
+        "before": "before",
+        "after": "after",
         "declr":"assign"
     },
     "java":{
+        "before": "before",
+        "after": "after",
         "declr":"assign_base"
     }
 }
