@@ -20,22 +20,31 @@ def ret_iter(Tree, variables):
             l.extend(i.children)
     return variables[0]
 
+def getFunctionName(Tree):
+    l = [Tree]
+    while(len(l)):
+        i = l.pop()
+        if isinstance(i, type(Tree)):
+            if i.data == "method_name":
+                return i.children[0].children[0].value
+            l.extend(i.children)
+
+def getFunctionCalls(Tree,function_calls):
+    if Tree.data == "funccall":
+        if(Tree.children[0].data == "itself"):
+            function_calls.append(Tree.children[0].children[0].children[0].value)
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getFunctionCalls(i,function_calls)
+
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         Java_parser = Lark.open('Java_Grammar.lark', start="clazz",rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
         MyTransformer().visit_topdown(Java_parser.parse(file))
+        #print(MyTransformer().visit_topdown(Java_parser.parse(file)).pretty())
         return
-
-
-
-# test = open(sys.argv[1], encoding='utf-8').read()
-# #test = 'public class Test { public static void main(String[] args) { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) {System.out.println(i);}  return 0; } }'
-# Java_parser = Lark.open('Java_Grammar.lark', start="clazz",
-#                      rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
-# MyTransformer().visit_topdown(Java_parser.parse(test))
-# print(global_list)
-
 
 class MyTransformer(visitors.Visitor):
     def modifier(self, items):
@@ -112,7 +121,10 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def method(self, items):
-
+        FUNCTION_NAME = getFunctionName(items)
+        LINE_NO = items.meta.line
+        FUNCTION_CALLS = []
+        getFunctionCalls(items,FUNCTION_CALLS)
         pass
     def method_annotations(self, items):
 
