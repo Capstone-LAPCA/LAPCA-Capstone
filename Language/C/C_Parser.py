@@ -2,17 +2,15 @@ from lark import Lark, visitors
 import sys
 info_list = []
 
-
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
-        MyTransformer().visit_topdown(C_parser.parse(file))
-        # print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
+        #MyTransformer().visit_topdown(C_parser.parse(file))
+        MyTransformer().visit_topdown(C_parser.parse(file)).pretty()
         return
-
 
 def ret_iter(Tree, variables):
     if Tree.data == "directdeclarator" and not isinstance(Tree.children[0], type(Tree)):
@@ -28,6 +26,27 @@ def ret_iter(Tree, variables):
                 variables.append(i.children[0])
             l.extend(i.children)
 
+def getFunctionName(Tree):
+    if Tree.data == "functiondefinition":
+        l = Tree.children
+        for i in l:
+            if i.data == "declarator":
+                return i.children[0].children[0].children[0]
+
+def getFunctionCalls(Tree,function_calls):
+    if Tree.data == "postfixexpression":
+        l = Tree.children
+        flag = False
+        for i in l:
+            if isinstance(i,type(Tree)) and i.data == "argumentexpressionlist":
+                flag = True
+                break
+        if flag:
+            function_calls.append(l[0].children[0].value)
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getFunctionCalls(i,function_calls)
 
 class MyTransformer(visitors.Visitor):
     def start(self, items):
@@ -374,7 +393,10 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def functiondefinition(self, items):
-
+        FUNCTION_NAME = getFunctionName(items,)
+        FUNCTION_CALLS = []
+        getFunctionCalls(items,FUNCTION_CALLS)
+        LINE_NO = items.meta.line
         pass
 
     def declarationlist(self, items):

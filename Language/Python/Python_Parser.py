@@ -19,12 +19,28 @@ def ret_iter(Tree,variables):
             l.extend(i.children)
     return variables[0]
 
+def getFunctionName(Tree):
+    if Tree.data == "funcdef":
+        l = Tree.children
+        for i in l:
+            if isinstance(i,type(Tree)) and i.data == "name":
+                return i.children[0]
+
+def getFunctionCalls(Tree,function_calls):
+    if Tree.data == "funccall":
+        function_calls.append(Tree.children[0].children[0].children[0].value)
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getFunctionCalls(i,function_calls)
+
 
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
+        #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
         MyTransformer().visit_topdown(python_parser2.parse(file))
         return
 
@@ -51,7 +67,10 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def funcdef(self, items):
-
+        FUNCTION_NAME = getFunctionName(items)
+        LINE_NO = items.meta.line
+        FUNCTION_CALLS = []
+        getFunctionCalls(items,FUNCTION_CALLS)
         pass
     def parameters(self, items):
 

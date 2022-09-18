@@ -58,7 +58,7 @@ class Parser:
             if x == 0:
                 print("improper Formal structure,check state name")
                 return
-            self.file_lines.insert(x+1, "".join(string[:-1]))
+            self.file_lines.insert(x+1, "".join(string))
 
         with open(self.new_parser_path, "w") as f:
             f.write("".join(self.file_lines))

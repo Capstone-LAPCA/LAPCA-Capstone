@@ -3,16 +3,19 @@
         "before": "before",
         "after": "after",
         "declr":"directdeclarator",
-        "start":"translationunit"
+        "start":"translationunit",
+        "function": "functiondefinition"
     },
     "py":{
         "before": "before",
         "after": "after",
-        "declr":"assign"
+        "declr":"assign",
+        "function": "funcdef"
     },
     "java":{
         "before": "before",
         "after": "after",
-        "declr":"assign_base"
+        "declr":"assign_base",
+        "function": "method"
     }
 }
