@@ -1,5 +1,5 @@
 import json
-from typing import Mapping
+import sys
 
 
 class Parser:
@@ -15,17 +15,20 @@ class Parser:
 
     def make_parser(self):
         i = 0
-        code = []
-        cur_state = ""
-        #print(self.formal_structures)
         while(i < len(self.formal_structures)):
+            code = []
             words = self.formal_structures[i]
             if(words[0:5] != "STATE"):
                 i += 1
                 continue
             cur_state = words[6:-1]
             i+=1
-            cur_state = self.mapping[self.lang][cur_state]
+
+            try:
+                cur_state = self.mapping[self.lang][cur_state]
+            except KeyError as e:
+                print("State not found in mapping.json")
+                sys.exit(1)
             while(i < len(self.formal_structures)):
                 words = self.formal_structures[i]
                 if("END_STATE" in words):
@@ -34,7 +37,6 @@ class Parser:
                 else:
                     code.append("    "+words)
                 i += 1
-            code = []
 
     def write_file_at(self, atstate, string):
         if atstate == "before":
@@ -53,12 +55,9 @@ class Parser:
                 if funcname in self.file_lines[i]:
                     while self.file_lines[i] != "        pass\n":
                         i += 1
-                    x = i-1
+                    x = i
                     break
-            if x == 0:
-                print("improper Formal structure,check state name")
-                return
-            self.file_lines.insert(x+1, "".join(string))
+            self.file_lines.insert(x, "".join(string))
 
         with open(self.new_parser_path, "w") as f:
             f.write("".join(self.file_lines))
