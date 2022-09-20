@@ -8,8 +8,8 @@ class MainTransformer():
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
-        #MyTransformer().visit_topdown(C_parser.parse(file))
-        MyTransformer().visit_topdown(C_parser.parse(file)).pretty()
+        MyTransformer().visit_topdown(C_parser.parse(file))
+        #print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
         return
 
 def ret_iter(Tree, variables):
@@ -54,6 +54,8 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def primaryexpression(self, items):
+        LINE_NO = items.meta.line
+        cont_pres= items.children[0].value == "continue"
 
         pass
 
@@ -404,7 +406,7 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def any(self, items):
-
+        
         pass
 
 

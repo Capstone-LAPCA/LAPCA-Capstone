@@ -4,18 +4,21 @@
         "after": "after",
         "declr":"directdeclarator",
         "start":"translationunit",
-        "function": "functiondefinition"
+        "function": "functiondefinition",
+        "continue": "primaryexpression"
     },
     "py":{
         "before": "before",
         "after": "after",
         "declr":"assign",
-        "function": "funcdef"
+        "function": "funcdef",
+        "continue": "continue_stmt"
     },
     "java":{
         "before": "before",
         "after": "after",
         "declr":"assign_base",
-        "function": "method"
+        "function": "method",
+        "continue":"continue_stmt"
     }
 }

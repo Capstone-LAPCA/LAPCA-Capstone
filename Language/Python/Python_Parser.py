@@ -160,7 +160,9 @@ class MyTransformer(visitors.Visitor):
     def break_stmt(self, items):
 
         pass
-    def continue_stmt(self, items):
+    def continue_stmt(self, items):   
+        cont_pres=True    
+        LINE_NO=items.meta.line
 
         pass
     def return_stmt(self, items):
