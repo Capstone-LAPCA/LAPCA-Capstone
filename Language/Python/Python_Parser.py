@@ -1,7 +1,9 @@
-from lark import Lark, visitors
+from lark import Lark, visitors, tree
 from lark.indenter import PythonIndenter
+from lark.lexer import Token
 import sys
 info_list = []
+d={}
 
 def ret_iter(Tree,variables):
     if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
@@ -34,14 +36,38 @@ def getFunctionCalls(Tree,function_calls):
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
 
+def getBlockItem(Tree,s):
+    if isinstance(Tree,Token):
+        s+=Tree.value+' '
+    elif isinstance(Tree,tree.Tree):
+        l = Tree.children
+        for i in l:
+            s+=getBlockItem(i,"")
+        d[s] = Tree.meta.line
+    return s
+
+
+def getBlockItemList(Tree,block_items):
+    if Tree.data == "suite":
+        l = Tree.children
+        for i in l:
+            if isinstance(i,type(Tree)) and i.data == "simple_stmt": 
+                block_items.append(getBlockItem(i,""))
+        print(block_items)
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemList(i,block_items)
+
 
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
-        MyTransformer().visit_topdown(python_parser2.parse(file))
+        print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
+        #MyTransformer().visit_topdown(python_parser2.parse(file))
         return
 
 class MyTransformer(visitors.Visitor):
@@ -67,10 +93,12 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def funcdef(self, items):
-        FUNCTION_NAME = getFunctionName(items)
+        FUNCTION_NAME = getFunctionName(items.children[1])
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
     def parameters(self, items):
 

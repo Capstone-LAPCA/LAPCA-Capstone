@@ -1,9 +1,10 @@
 from tracemalloc import start
-from lark import Lark, Transformer, visitors
+from lark import Lark, Transformer, visitors, tree
 import sys
+from lark.lexer import Token
 global_list = []
 info_list = []
-
+d={}
 
 def ret_iter(Tree, variables):
     if Tree.data == "assign_base" and not isinstance(Tree.children[0], type(Tree)):
@@ -37,6 +38,31 @@ def getFunctionCalls(Tree,function_calls):
     for i in l:
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
+
+
+def getBlockItem(Tree,s):
+    if isinstance(Tree,Token):
+        s+=Tree.value+' '
+    elif isinstance(Tree,tree.Tree):
+        l = Tree.children
+        for i in l:
+            s+=getBlockItem(i,"")
+        d[s] = Tree.meta.line
+    return s
+
+
+def getBlockItemList(Tree,block_items):
+    if Tree.data == "list":
+        l = Tree.children
+        for i in l:
+            if isinstance(i,type(Tree)) and i.data == "stmt": 
+                block_items.append(getBlockItem(i,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemList(i,block_items)
+
 
 class MainTransformer():
     def run(self):
@@ -125,6 +151,8 @@ class MyTransformer(visitors.Visitor):
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
     def method_annotations(self, items):
 

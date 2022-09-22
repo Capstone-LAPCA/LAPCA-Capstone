@@ -1,0 +1,8 @@
+STATE function
+    flag = False
+    for statement in STATEMENTS:
+        if flag == True:
+            print("Dead code at",d[statement])
+        if 'return' in statement[0:6]:
+            flag = True
+END_STATE

@@ -1,7 +1,8 @@
 from lark import Lark, visitors
+from lark.lexer import Token
 import sys
 info_list = []
-
+d = {}
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -47,6 +48,26 @@ def getFunctionCalls(Tree,function_calls):
     for i in l:
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
+
+def getBlockItem(tree,s):
+    if isinstance(tree,Token):
+        s+=tree.value+' '
+    else:
+        l = tree.children
+        for i in l:
+            s+=getBlockItem(i,"")
+        d[s] = tree.meta.line
+    return s
+
+
+def getBlockItemList(Tree,block_items):
+    if Tree.data == "blockitem":
+        block_items.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemList(i,block_items)
 
 class MyTransformer(visitors.Visitor):
     def start(self, items):
@@ -395,10 +416,13 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def functiondefinition(self, items):
+        d.clear()
         FUNCTION_NAME = getFunctionName(items,)
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
 
     def declarationlist(self, items):
