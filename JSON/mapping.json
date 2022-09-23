@@ -5,7 +5,9 @@
         "declr":"directdeclarator",
         "start":"translationunit",
         "function": "functiondefinition",
-        "continue": "primaryexpression"
+        "continue": "primaryexpression",
+        "assign_loop":"iterationstatement"
+
     },
     "py":{
         "before": "before",
