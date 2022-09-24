@@ -3,6 +3,8 @@ from lark.lexer import Token
 import sys
 info_list = []
 d = {}
+line_no = {}
+FUNCTIONS = []
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -32,7 +34,7 @@ def getFunctionName(Tree):
         l = Tree.children
         for i in l:
             if i.data == "declarator":
-                return i.children[0].children[0].children[0]
+                return i.children[0].children[0].children[0].value
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "postfixexpression":
@@ -48,6 +50,18 @@ def getFunctionCalls(Tree,function_calls):
     for i in l:
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
+
+def getGlobalFunctionCalls(Tree,global_function_calls):
+    if Tree.data == "postfixexpression":
+        function_calls = []
+        getFunctionCalls(Tree,function_calls)
+        global_function_calls+=function_calls
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)) and i.data != "functiondefinition":
+                getGlobalFunctionCalls(i,global_function_calls)
+
 
 def getBlockItem(tree,s):
     if isinstance(tree,Token):
@@ -408,7 +422,8 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def translationunit(self, items):
-
+        GLOBAL_FUNCTION_CALLS=[]
+        getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
 
     def externaldeclaration(self, items):
@@ -417,10 +432,11 @@ class MyTransformer(visitors.Visitor):
 
     def functiondefinition(self, items):
         d.clear()
-        FUNCTION_NAME = getFunctionName(items,)
+        FUNCTION_NAME = getFunctionName(items)
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
+        line_no[FUNCTION_NAME] = LINE_NO
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         pass

@@ -1,8 +1,11 @@
+from webbrowser import get
 from lark import Lark, visitors, tree
 from lark.indenter import PythonIndenter
 from lark.lexer import Token
 import sys
 info_list = []
+FUNCTIONS = []
+line_no = {}
 d={}
 
 def ret_iter(Tree,variables):
@@ -36,6 +39,17 @@ def getFunctionCalls(Tree,function_calls):
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
 
+def getGlobalFunctionCalls(Tree,global_function_calls):
+    if Tree.data == "funccall":
+        function_calls = []
+        getFunctionCalls(Tree,function_calls)
+        global_function_calls+=function_calls
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)) and i.data != "funcdef":
+                getGlobalFunctionCalls(i,global_function_calls)
+
 def getBlockItem(Tree,s):
     if isinstance(Tree,Token):
         s+=Tree.value+' '
@@ -53,7 +67,6 @@ def getBlockItemList(Tree,block_items):
         for i in l:
             if isinstance(i,type(Tree)) and i.data == "simple_stmt": 
                 block_items.append(getBlockItem(i,""))
-        print(block_items)
     else:
         l = Tree.children
         for i in l:
@@ -66,8 +79,8 @@ class MainTransformer():
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
-        #MyTransformer().visit_topdown(python_parser2.parse(file))
+        #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
+        MyTransformer().visit_topdown(python_parser2.parse(file))
         return
 
 class MyTransformer(visitors.Visitor):
@@ -75,7 +88,8 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def file_input(self, items):
-
+        GLOBAL_FUNCTION_CALLS=[]
+        getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
     def eval_input(self, items):
 
@@ -93,11 +107,12 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def funcdef(self, items):
-        FUNCTION_NAME = getFunctionName(items.children[1])
+        FUNCTION_NAME = getFunctionName(items)
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         STATEMENTS = []
+        line_no[FUNCTION_NAME] = LINE_NO
         getBlockItemList(items,STATEMENTS)
         pass
     def parameters(self, items):
