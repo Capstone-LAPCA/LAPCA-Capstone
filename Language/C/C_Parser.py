@@ -177,6 +177,10 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def initdeclaratorlist(self, items):
+        var_decl=False
+        LINE_NO=items.meta.line
+        if(len(items.children)>1):
+            var_decl=True
 
         pass
 
