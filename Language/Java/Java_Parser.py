@@ -217,6 +217,8 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def assign_mul(self, items):
+        var_decl=True
+        LINE_NO=items.meta.line
 
         pass
     def assign_base(self, items):
