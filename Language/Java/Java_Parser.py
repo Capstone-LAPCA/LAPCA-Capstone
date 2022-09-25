@@ -1,9 +1,12 @@
 from tracemalloc import start
-from lark import Lark, Transformer, visitors
+from lark import Lark, Transformer, visitors, tree
 import sys
+from lark.lexer import Token
 global_list = []
 info_list = []
-
+FUNCTIONS = []
+line_no = {}
+d={}
 
 def ret_iter(Tree, variables):
     if Tree.data == "assign_base" and not isinstance(Tree.children[0], type(Tree)):
@@ -12,9 +15,6 @@ def ret_iter(Tree, variables):
     while len(l):
         i = l.pop()
         if isinstance(i, type(Tree)):
-            if i.data == "functiondefinition":
-                l.extend(i.children[2:])
-                continue
             if i.data == "literal":
                 variables.append(i.children[0].value)
             l.extend(i.children)
@@ -37,6 +37,41 @@ def getFunctionCalls(Tree,function_calls):
     for i in l:
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
+
+def getGlobalFunctionCalls(Tree,global_function_calls):
+    if Tree.data == "funccall":
+        function_calls = []
+        getFunctionCalls(Tree,function_calls)
+        global_function_calls+=function_calls
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)) and i.data != "method":
+                getGlobalFunctionCalls(i,global_function_calls)
+
+def getBlockItem(Tree,s):
+    if isinstance(Tree,Token):
+        s+=Tree.value+' '
+    elif isinstance(Tree,tree.Tree):
+        l = Tree.children
+        for i in l:
+            s+=getBlockItem(i,"")
+        d[s] = Tree.meta.line
+    return s
+
+
+def getBlockItemList(Tree,block_items):
+    if Tree.data == "list":
+        l = Tree.children
+        for i in l:
+            if isinstance(i,type(Tree)) and i.data == "stmt": 
+                block_items.append(getBlockItem(i,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemList(i,block_items)
+
 
 class MainTransformer():
     def run(self):
@@ -125,6 +160,9 @@ class MyTransformer(visitors.Visitor):
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        line_no[FUNCTION_NAME] = LINE_NO
+        getBlockItemList(items,STATEMENTS)
         pass
     def method_annotations(self, items):
 
@@ -157,7 +195,8 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def clazz(self, items):
-
+        GLOBAL_FUNCTION_CALLS=[]
+        getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
     def class_package(self, items):
 

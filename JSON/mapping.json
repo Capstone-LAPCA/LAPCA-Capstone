@@ -14,7 +14,8 @@
         "after": "after",
         "declr":"assign",
         "function": "funcdef",
-        "continue": "continue_stmt"
+        "continue": "continue_stmt",
+        "start":"file_input"
     },
     "java":{
         "before": "before",
@@ -22,6 +23,7 @@
         "declr":"assign_base",
         "function": "method",
         "continue":"continue_stmt",
+        "start":"clazz",
         "var_decl":"assign_mul"
     }
 }

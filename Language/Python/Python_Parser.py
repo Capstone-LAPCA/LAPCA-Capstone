@@ -1,7 +1,12 @@
-from lark import Lark, visitors
+from webbrowser import get
+from lark import Lark, visitors, tree
 from lark.indenter import PythonIndenter
+from lark.lexer import Token
 import sys
 info_list = []
+FUNCTIONS = []
+line_no = {}
+d={}
 
 def ret_iter(Tree,variables):
     if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
@@ -34,6 +39,40 @@ def getFunctionCalls(Tree,function_calls):
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
 
+def getGlobalFunctionCalls(Tree,global_function_calls):
+    if Tree.data == "funccall":
+        function_calls = []
+        getFunctionCalls(Tree,function_calls)
+        global_function_calls+=function_calls
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)) and i.data != "funcdef":
+                getGlobalFunctionCalls(i,global_function_calls)
+
+def getBlockItem(Tree,s):
+    if isinstance(Tree,Token):
+        s+=Tree.value+' '
+    elif isinstance(Tree,tree.Tree):
+        l = Tree.children
+        for i in l:
+            s+=getBlockItem(i,"")
+        d[s] = Tree.meta.line
+    return s
+
+
+def getBlockItemList(Tree,block_items):
+    if Tree.data == "suite":
+        l = Tree.children
+        for i in l:
+            if isinstance(i,type(Tree)) and i.data == "simple_stmt": 
+                block_items.append(getBlockItem(i,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemList(i,block_items)
+
 
 class MainTransformer():
     def run(self):
@@ -49,7 +88,8 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def file_input(self, items):
-
+        GLOBAL_FUNCTION_CALLS=[]
+        getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
     def eval_input(self, items):
 
@@ -71,6 +111,9 @@ class MyTransformer(visitors.Visitor):
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        line_no[FUNCTION_NAME] = LINE_NO
+        getBlockItemList(items,STATEMENTS)
         pass
     def parameters(self, items):
 

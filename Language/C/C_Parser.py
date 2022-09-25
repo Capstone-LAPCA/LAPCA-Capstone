@@ -1,7 +1,10 @@
 from lark import Lark, visitors
+from lark.lexer import Token
 import sys
 info_list = []
-
+d = {}
+line_no = {}
+FUNCTIONS = []
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -31,7 +34,7 @@ def getFunctionName(Tree):
         l = Tree.children
         for i in l:
             if i.data == "declarator":
-                return i.children[0].children[0].children[0]
+                return i.children[0].children[0].children[0].value
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "postfixexpression":
@@ -48,6 +51,38 @@ def getFunctionCalls(Tree,function_calls):
         if isinstance(i, type(Tree)):
             getFunctionCalls(i,function_calls)
 
+def getGlobalFunctionCalls(Tree,global_function_calls):
+    if Tree.data == "postfixexpression":
+        function_calls = []
+        getFunctionCalls(Tree,function_calls)
+        global_function_calls+=function_calls
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)) and i.data != "functiondefinition":
+                getGlobalFunctionCalls(i,global_function_calls)
+
+
+def getBlockItem(tree,s):
+    if isinstance(tree,Token):
+        s+=tree.value+' '
+    else:
+        l = tree.children
+        for i in l:
+            s+=getBlockItem(i,"")
+        d[s] = tree.meta.line
+    return s
+
+
+def getBlockItemList(Tree,block_items):
+    if Tree.data == "blockitem":
+        block_items.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemList(i,block_items)
+
 def ischild(Tree,child):
     if Tree.data == child:
         return True
@@ -57,6 +92,7 @@ def ischild(Tree,child):
         if isinstance(i, type(Tree)):    
             flag|=ischild(i,child)
     return flag
+
 class MyTransformer(visitors.Visitor):
     def start(self, items):
 
@@ -403,7 +439,8 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def translationunit(self, items):
-
+        GLOBAL_FUNCTION_CALLS=[]
+        getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
 
     def externaldeclaration(self, items):
@@ -411,10 +448,14 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def functiondefinition(self, items):
-        FUNCTION_NAME = getFunctionName(items,)
+        d.clear()
+        FUNCTION_NAME = getFunctionName(items)
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
+        line_no[FUNCTION_NAME] = LINE_NO
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
 
     def declarationlist(self, items):
