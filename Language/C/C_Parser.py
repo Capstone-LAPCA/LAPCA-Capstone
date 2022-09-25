@@ -83,6 +83,16 @@ def getBlockItemList(Tree,block_items):
             if isinstance(i, type(Tree)):
                 getBlockItemList(i,block_items)
 
+def ischild(Tree,child):
+    if Tree.data == child:
+        return True
+    l = Tree.children
+    flag=False
+    for i in l:
+        if isinstance(i, type(Tree)):    
+            flag|=ischild(i,child)
+    return flag
+
 class MyTransformer(visitors.Visitor):
     def start(self, items):
 
@@ -203,6 +213,10 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def initdeclaratorlist(self, items):
+        var_decl=False
+        LINE_NO=items.meta.line
+        if(len(items.children)>1):
+            var_decl=True
 
         pass
 
@@ -398,7 +412,11 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def iterationstatement(self, items):
-
+        assign_pres=False
+        if(items.children[0].value == "while" and ischild(items.children[2],"assignmentoperator")) or (items.children[0].value == "for" and ischild(items.children[2],"assignmentoperator")):
+            LINE_NO = items.meta.line
+            assign_pres=True
+        
         pass
 
     def forcondition(self, items):
@@ -410,7 +428,6 @@ class MyTransformer(visitors.Visitor):
         pass
 
     def forexpression(self, items):
-
         pass
 
     def jumpstatement(self, items):

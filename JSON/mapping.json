@@ -5,7 +5,9 @@
         "declr":"directdeclarator",
         "start":"translationunit",
         "function": "functiondefinition",
-        "continue": "primaryexpression"
+        "continue": "primaryexpression",
+        "assign_loop":"iterationstatement",
+        "var_decl":"initdeclaratorlist"
     },
     "py":{
         "before": "before",
@@ -21,6 +23,7 @@
         "declr":"assign_base",
         "function": "method",
         "continue":"continue_stmt",
-        "start":"clazz"
+        "start":"clazz",
+        "var_decl":"assign_mul"
     }
 }
