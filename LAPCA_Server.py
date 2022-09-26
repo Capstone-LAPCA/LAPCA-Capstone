@@ -21,11 +21,12 @@ def getResults():
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
-                MainModule(mapping[guideline], "test.py")
+                MainModule(mapping[guideline], "test.py").run()
                 with open("results.txt", "r") as text_file:
                     res+= text_file.read()
                     print(res)
                 os.remove("results.txt")
+
                     
     elif language == 'C':
         with open("test.c", "w") as text_file:

@@ -1,3 +1,5 @@
 def add(a, b):
     return a + b
-add(5,10);
+    a = 5
+    a = 6
+add(5,10)
