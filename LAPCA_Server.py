@@ -2,6 +2,7 @@
 from flask import request, jsonify
 from flask import Flask
 import os
+from main import MainModule
 app = Flask(__name__)
 mapping = {}
 mapping['Dead code'] = './Guidelines/Dead_Code.lapx'
@@ -14,24 +15,25 @@ def getResults():
     language = data['language']
     code = data['code']
     form = data['form']
+    res = ""
     if language == 'Python':
         with open("test.py", "w") as text_file:
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
                 print("python3 ./main.py " + mapping[guideline] + " test.py > results.txt")
-                os.system("python3 ./main.py " + mapping[guideline] + " test.py > results.txt")
-            with open("results.txt", "r") as text_file:
-                res = text_file.read()
-                print(res)
-                return jsonify(res)
+                #os.system("python3 ./main.py " + mapping[guideline] + " test.py > results.txt")
+                MainModule(mapping[guideline], "test.py")
+                with open("results.txt", "r") as text_file:
+                    res+= text_file.read()
+                    print(res)
                     
     elif language == 'C':
         with open("test.c", "w") as text_file:
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
-                os.system("python3 ./main.py " + mapping[guideline] + " test.c > results.txt")
+                #os.system("python3 ./main.py " + mapping[guideline] + " test.c > results.txt")
                 with open("results.txt", "r") as text_file:
                     res = text_file.read()
                     print(res)
@@ -46,7 +48,7 @@ def getResults():
                     res = text_file.read()
                     print(res)
                     return jsonify(res)
-    return jsonify(data)
+    return jsonify(res)
 
 if __name__ == '__main__':
     app.run(port=3003)
