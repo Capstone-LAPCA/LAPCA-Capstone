@@ -21,33 +21,32 @@ def getResults():
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
-                print("python3 ./main.py " + mapping[guideline] + " test.py > results.txt")
-                #os.system("python3 ./main.py " + mapping[guideline] + " test.py > results.txt")
                 MainModule(mapping[guideline], "test.py")
                 with open("results.txt", "r") as text_file:
                     res+= text_file.read()
                     print(res)
+                os.remove("results.txt")
                     
     elif language == 'C':
         with open("test.c", "w") as text_file:
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
-                #os.system("python3 ./main.py " + mapping[guideline] + " test.c > results.txt")
+                MainModule(mapping[guideline], "test.c")
                 with open("results.txt", "r") as text_file:
-                    res = text_file.read()
+                    res+= text_file.read()
                     print(res)
-                    return jsonify(res)
+                os.remove("results.txt")
     elif language == 'Java':
         with open("test.java", "w") as text_file:
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
-                os.system("python3 ./main.py " + mapping[guideline] + " test.java > results.txt")
+                MainModule(mapping[guideline], "test.java")
                 with open("results.txt", "r") as text_file:
-                    res = text_file.read()
+                    res+= text_file.read()
                     print(res)
-                    return jsonify(res)
+                os.remove("results.txt")
     return jsonify(res)
 
 if __name__ == '__main__':
