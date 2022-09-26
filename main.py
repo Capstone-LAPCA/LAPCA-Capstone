@@ -10,6 +10,7 @@ class MainModule:
         self.lang = self.getLang()
 
     def factory(self):
+        open("Language/Python/Python_Parser_new.py", "w").close()
         if self.lang == "py":
             Parser(self.lang, self.formal_structures, "Language/Python/Python_Parser.py",
                 "Language/Python/Python_Parser_new.py")
