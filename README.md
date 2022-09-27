@@ -48,3 +48,8 @@ For Java:
 python .\main.py .\Guidelines\var_greater_than_31.lapx .\Test_FIles\Java_Test_Files\Test_var_greater_31.java
 python ./main.py ./Guidelines/var_greater_than_31.lapx ./Test_FIles/Java_Test_Files/Test_var_greater_31.java
 ```
+
+## Start the LAPCA server by executing the below command:
+```
+python LAPCA_Server.py
+```

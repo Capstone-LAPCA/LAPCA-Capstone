@@ -3,9 +3,8 @@ from flask import request, jsonify
 from flask import Flask
 import sys
 import os
-sys.path.append("..")
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
-os.chdir('..')
 app = Flask(__name__)
 mapping = {}
 mapping['Dead code'] = './Guidelines/Dead_Code.lapx'
@@ -37,4 +36,4 @@ def getResults():
     return jsonify(res)
 
 if __name__ == '__main__':
-    app.run(port=3003,debug=True)
+    app.run(port=3003)
