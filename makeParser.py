@@ -1,5 +1,6 @@
 import json
 import sys
+from tokenize import String
 
 
 class Parser:
@@ -11,9 +12,8 @@ class Parser:
         self.new_parser_path = new_parser_path
         with open(base_parser_path, encoding='utf-8') as f:
             self.file_lines = f.readlines()
-        self.make_parser()
 
-    def make_parser(self):
+    def make_parser(self) -> int:
         i = 0
         while(i < len(self.formal_structures)):
             code = []
@@ -24,11 +24,12 @@ class Parser:
             cur_state = words[6:-1]
             i+=1
 
-            try:
-                cur_state = self.mapping[self.lang][cur_state]
-            except KeyError as e:
-                print("State not found in mapping.json")
-                sys.exit(1)
+            if cur_state not in self.mapping[self.lang].keys():
+                print("Invalid formal structure")
+                return 0
+            cur_state = self.mapping[self.lang][cur_state]
+            # except KeyError as e:
+            #     print("State not found in mapping.json")
             while(i < len(self.formal_structures)):
                 words = self.formal_structures[i]
                 if("END_STATE" in words):
@@ -37,6 +38,7 @@ class Parser:
                 else:
                     code.append("    "+words)
                 i += 1
+        return 1
 
     def write_file_at(self, atstate, string):
         if atstate == "before":

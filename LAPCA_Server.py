@@ -10,10 +10,7 @@ mapping['Assign in loop'] = './Guidelines/Assign_in_loop.lapx'
 
 @app.route('/getResults', methods=['POST'])
 def getResults():
-    if os.path.exists("results.txt"):
-        open('results.txt', 'w').close()
     data = request.get_json()
-    print(data)
     language = data['language']
     code = data['code']
     form = data['form']
@@ -23,11 +20,9 @@ def getResults():
             text_file.write(code)
         for guideline in form.keys():
             if form[guideline] == True:
-                MainModule(mapping[guideline], "test.py").run()
+                MainModule(mapping[guideline], "test.py").factory()
                 with open("results.txt", "r") as text_file:
                     res+= text_file.read()
-                    open('results.txt', 'w').close()
-                os.remove("results.txt")
 
     elif language == 'C':
         with open("test.c", "w") as text_file:
@@ -37,7 +32,6 @@ def getResults():
                 MainModule(mapping[guideline], "test.c")
                 with open("results.txt", "r") as text_file:
                     res+= text_file.read()
-                os.remove("results.txt")
     elif language == 'Java':
         with open("test.java", "w") as text_file:
             text_file.write(code)
@@ -46,7 +40,6 @@ def getResults():
                 MainModule(mapping[guideline], "test.java")
                 with open("results.txt", "r") as text_file:
                     res+= text_file.read()
-                os.remove("results.txt")
     return jsonify(res)
 
 if __name__ == '__main__':
