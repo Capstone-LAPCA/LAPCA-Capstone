@@ -7,7 +7,8 @@
         "function": "functiondefinition",
         "continue": "primaryexpression",
         "assign_loop":"iterationstatement",
-        "var_decl":"initdeclaratorlist"
+        "var_decl":"initdeclaratorlist",
+        "iteration":"iterationstatement"
     },
     "py":{
         "before": "before",
