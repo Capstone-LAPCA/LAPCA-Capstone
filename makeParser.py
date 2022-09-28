@@ -1,19 +1,16 @@
 import json
 import os
-from tokenize import String
-
 
 class Parser:
     def __init__(self, lang, formal_structures, base_parser_path, new_parser_path):
         self.lang = lang
-        self.f = open(os.path.abspath("./JSON/mapping.json"))
-        self.mapping = json.load(self.f)
+        self.mapping = json.load(open(os.path.abspath("./JSON/mapping.json")))
         self.formal_structures = formal_structures
         self.new_parser_path = new_parser_path
         with open(base_parser_path, encoding='utf-8') as f:
             self.file_lines = f.readlines()
 
-    def make_parser(self) -> int:
+    def make_parser(self) -> bool:
         i = 0
         while(i < len(self.formal_structures)):
             code = []
@@ -25,11 +22,8 @@ class Parser:
             i+=1
 
             if cur_state not in self.mapping[self.lang].keys():
-                print("Invalid formal structure")
-                return 0
+                return False
             cur_state = self.mapping[self.lang][cur_state]
-            # except KeyError as e:
-            #     print("State not found in mapping.json")
             while(i < len(self.formal_structures)):
                 words = self.formal_structures[i]
                 if("END_STATE" in words):
@@ -38,7 +32,7 @@ class Parser:
                 else:
                     code.append("    "+words)
                 i += 1
-        return 1
+        return True
 
     def write_file_at(self, atstate, string):
         if atstate == "before":
@@ -53,7 +47,6 @@ class Parser:
             funcname = "def "+atstate+"(self, items):"
             x = 0
             for i in range(len(self.file_lines)):
-                # print(self.file_lines[i])
                 if funcname in self.file_lines[i]:
                     while self.file_lines[i] != "        pass\n":
                         i += 1

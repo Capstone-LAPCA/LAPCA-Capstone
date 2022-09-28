@@ -12,16 +12,17 @@ class MainModule:
         self.lang = test_file.split(".")[-1]
 
     def run(self,base_parser_path, new_parser_path):
-        s = Parser(self.lang, self.formal_structures, base_parser_path,
+        flag = Parser(self.lang, self.formal_structures, base_parser_path,
                 new_parser_path).make_parser()
-        if s == 0:
+        if not flag:
             with open("results.txt", "w") as f:
+                print("Invalid Guideline for the given language. Please check the guideline selected")
                 f.write("Invalid Guideline for the given language. Please check the guideline selected\n")
-            return
-        with subprocess.Popen([sys.executable, new_parser_path, self.test_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE,universal_newlines=True) as p, open("results.txt", "w") as f:
-            for line in p.stdout: 
-                print(line, end='') 
-                f.write(line)
+        else:
+            with subprocess.Popen([sys.executable, new_parser_path, self.test_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE,universal_newlines=True) as p, open("results.txt", "w") as f:
+                for line in p.stdout: 
+                    print(line, end='') 
+                    f.write(line)
                 
     def factory(self):
         if self.lang == "py":

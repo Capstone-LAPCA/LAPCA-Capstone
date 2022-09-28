@@ -17,8 +17,8 @@ Language Agnostic Program Conformance Analysis
 
 ### Note:
 
-- Replace "Formal-Structure-File" to actual file name
-- Replace "Python\-New-Parser" to "Preferred Language\Newly generated Parser"
+- Replace "Formal-Structure-File" by the guideline required
+- Replace "Test-File" by the file to be tested
 - Select appropriate test file
 
 ```
