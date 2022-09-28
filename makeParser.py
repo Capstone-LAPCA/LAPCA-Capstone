@@ -1,12 +1,12 @@
 import json
-import sys
+import os
 from tokenize import String
 
 
 class Parser:
     def __init__(self, lang, formal_structures, base_parser_path, new_parser_path):
         self.lang = lang
-        self.f = open("./JSON/mapping.json")
+        self.f = open(os.path.abspath("./JSON/mapping.json"))
         self.mapping = json.load(self.f)
         self.formal_structures = formal_structures
         self.new_parser_path = new_parser_path
