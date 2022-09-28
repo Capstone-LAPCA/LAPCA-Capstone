@@ -1,18 +1,15 @@
 #Flask server for LAPCA
-from re import S
-from flask import request, jsonify
-from flask import Flask
+from flask import request, jsonify, Flask
 import sys
 import os
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 app = Flask(__name__)
 mapping = {}
-mapping['Dead code'] = './Guidelines/Dead_Code.lapx'
-mapping['Assign in loop'] = './Guidelines/Assign_in_loop.lapx'
+mapping['Dead code'] = os.path.abspath('./Guidelines/Dead_Code.lapx')
+mapping['Assign in loop'] = os.path.abspath('./Guidelines/Assign_in_loop.lapx')
 
-
-def accessRes(file,code,form,res):
+def accessRes(file,code,form):
     s = ""
     with open(file, "w") as text_file:
         text_file.write(code)
@@ -21,8 +18,7 @@ def accessRes(file,code,form,res):
             MainModule(mapping[guideline], file).factory()
             with open("results.txt", "r") as text_file:
                 s+=text_file.read()
-    return s
-    
+    return s    
 
 @app.route('/getResults', methods=['POST'])
 def getResults():
@@ -32,12 +28,11 @@ def getResults():
     form = data['form']
     res = ""
     if language == 'Python':
-        res+=accessRes("Server/test.py",code,form,res)
+        res=accessRes(os.path.join("Server","test.py"),code,form)
     elif language == 'C':
-        res+=accessRes("Server/test.c",code,form,res)
+        res=accessRes(os.path.join("Server","test.c"),code,form)
     elif language == 'Java':
-        res+=accessRes("Server/test.java",code,form,res)
-    print(res)
+        res=accessRes(os.path.join("Server","test.java"),code,form)
     return jsonify(res)
 
 if __name__ == '__main__':
