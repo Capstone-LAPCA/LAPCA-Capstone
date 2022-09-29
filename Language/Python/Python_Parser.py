@@ -57,12 +57,12 @@ def getBlockItem(Tree,s):
         l = Tree.children
         for i in l:
             s+=getBlockItem(i,"")
-        d[s] = Tree.meta.line
+        d[s.strip(' ')] = Tree.meta.line
     return s
 
 
 def getBlockItemList(Tree,block_items):
-    if Tree.data == "suite" or Tree.data == "if_stmt":
+    if Tree.data == "suite":
         l = Tree.children
         for i in l:
             block_items.append(getBlockItem(i,"").strip())
