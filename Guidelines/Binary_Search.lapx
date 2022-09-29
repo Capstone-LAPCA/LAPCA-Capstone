@@ -2,14 +2,14 @@ STATE before
     final_res = []
 END_STATE
 
-STATE iteration
+STATE while
     if_else_count = 0
     res = []
     global final_res
     mid_ele = ""
     #CHECKS FOR WHILE CONDITION
     if ">=" not in ITERATION_CONDITION and "<=" not in ITERATION_CONDITION:
-        res.append(0)
+        res.extend([0,1,1,1,1])
         final_res.append(res)
         return
     else:
@@ -20,7 +20,6 @@ STATE iteration
         else:
             left_pointer = ITERATION_CONDITION[:ITERATION_CONDITION.index("<=")].strip()
             right_pointer = ITERATION_CONDITION[ITERATION_CONDITION.index("<=")+2:].strip()
-
     
     #CHECKS FOR NUMBER OF IF-ELSE CONDITIONS
     for i in STATEMENTS:
@@ -32,33 +31,31 @@ STATE iteration
         res.append(0)
     else:
         res.append(1)
-        
+
     #CHECK FOR MIDDLE ELEMENT ASSIGNMENT
     flag = False
     for i in STATEMENTS:
-        if left_pointer in i and right_pointer in i and "/ 2" in i and "=" in i:
-            mid_ele = i.split(' ')[0]
+        if left_pointer in i and right_pointer in i and ("/ 2" in i or "// 2" in i) and "=" in i:
+            temp = i.split(' ').index("=")
+            mid_ele = i.split(' ')[temp-1]
             flag = True
             break
     if flag:
         res.append(1)
     else:
         res.append(0)
-    
 
     #CHECKS FOR IF-ELSE CONDITIONS
     c = 0
     k = []
-    for i in STATEMENTOBJ:
+    for i in condition_list[1:]:
         l = []
-        getCondition(i,l)
-        for j in l:
-            if "==" in j:
-                k.append("==")
-            if " < " in j:
-                k.append("<")
-            if " > " in j:
-                k.append(">")
+        if "==" in i:
+            k.append("==")
+        if " < " in i:
+            k.append("<")
+        if " > " in i:
+            k.append(">")
     if k.count("==") == 1:
         c+=1
     if k.count(">") == 1:
@@ -71,12 +68,13 @@ STATE iteration
         res.append(0)
 
     #CHECK FOR INCREMENT INSIDE IF STATEMENTS
-    for i in EXP_STATEMENTS:    
+    EXP_STATEMENTS = EXP_STATEMENTS + RETURN_STATEMENTS
+    for i in EXP_STATEMENTS:  
         if mid_ele not in i:
             res.append(0)
-    if len(res)==3:
+            break
+    if len(res)==4:
         res.append(1)
-    
     final_res.append(res)
 
 END_STATE

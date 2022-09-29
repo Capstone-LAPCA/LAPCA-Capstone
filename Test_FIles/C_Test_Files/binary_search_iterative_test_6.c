@@ -5,7 +5,7 @@ int binarySearch(int arr[], int l, int r, int x)
         if (arr[m] == x)
             return m;
 
-        if (arr[m] < x)
+        else if (arr[m] < x)
             l = m + 1;
   
         else

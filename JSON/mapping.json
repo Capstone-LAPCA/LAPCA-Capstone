@@ -8,7 +8,7 @@
         "continue": "primaryexpression",
         "assign_loop":"iterationstatement",
         "var_decl":"initdeclaratorlist",
-        "iteration":"iterationstatement"
+        "while":"iterationstatement"
     },
     "py":{
         "before": "before",
@@ -16,7 +16,8 @@
         "declr":"assign",
         "function": "funcdef",
         "continue": "continue_stmt",
-        "start":"file_input"
+        "start":"file_input",
+        "while": "while_stmt"
     },
     "java":{
         "before": "before",

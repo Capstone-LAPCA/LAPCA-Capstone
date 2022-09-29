@@ -62,25 +62,81 @@ def getBlockItem(Tree,s):
 
 
 def getBlockItemList(Tree,block_items):
-    if Tree.data == "suite":
+    if Tree.data == "suite" or Tree.data == "if_stmt":
         l = Tree.children
         for i in l:
-            if isinstance(i,type(Tree)) and i.data == "simple_stmt": 
-                block_items.append(getBlockItem(i,""))
+            block_items.append(getBlockItem(i,"").strip())
     else:
         l = Tree.children
         for i in l:
             if isinstance(i, type(Tree)):
                 getBlockItemList(i,block_items)
 
+def getCondition(Tree,condition_list):
+    if Tree.data=="comparison":
+        condition_list.append(getBlockItem(Tree,""))
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):    
+            getCondition(i,condition_list)
+
+def checkifelse(Tree):
+    count = 0
+    if Tree.data=="selectionstatement":
+        l = Tree.children
+        for i in Tree.children:
+            if isinstance(i,Token) and i.value=="if":
+                count+=1
+            if isinstance(i,Token) and i.value=="else":
+                count+=1
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):    
+            count+=checkifelse(i)
+    return count
+
+def getTokens(Tree,token_list):
+    if isinstance(Tree,Token):
+        token_list.append(Tree.value)
+    else:
+        l = Tree.children
+        for i in l:  
+            getTokens(i,token_list)
+
+def getExpressionStatements(Tree,expression_statements):
+    if Tree.data == "simple_stmt":
+        expression_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getExpressionStatements(i,expression_statements)
+
+def getReturnStatements(Tree,return_statements):
+    if Tree.data == "return_stmt":
+        return_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getReturnStatements(i,return_statements)
+
+def getBlockItemListObj(Tree,block_items):
+    if Tree.data == "suite":
+        block_items.append(Tree)
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getBlockItemListObj(i,block_items)
 
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
-        MyTransformer().visit_topdown(python_parser2.parse(file))
+        print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
+        #MyTransformer().visit_topdown(python_parser2.parse(file))
         return
 
 class MyTransformer(visitors.Visitor):
@@ -269,7 +325,17 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def while_stmt(self, items):
-
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        STATEMENTOBJ = []
+        getBlockItemListObj(items,STATEMENTOBJ)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        RETURN_STATEMENTS = []
+        getReturnStatements(items,RETURN_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list[0]
         pass
     def for_stmt(self, items):
 
