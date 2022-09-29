@@ -1,28 +1,38 @@
-from multiprocessing.spawn import import_main_path
 import sys
 import os
-from Language.Python.Make_Parser import PythonMakeParser
-from Language.C.Make_Parser import CMakeParser
-from Language.Java.Make_Parser import JavaMakeParser
+from makeParser import Parser
+import subprocess
 
 
-def factory(ver, lang, formal_structures):
-    if lang == "py":
-        PythonMakeParser(formal_structures)
-        os.system("python Language/Python/Python_Parser_new.py "+sys.argv[2])
-    elif lang == "c":
-        CMakeParser(formal_structures)
-        os.system("python Language/C/C_Parser_new.py "+sys.argv[2])
-    elif lang == "java":
-        JavaMakeParser(formal_structures)
-        # os.system("python Language/Python/Python_Parser_new.py "+sys.argv[2])
-    else:
-        print("Parser not found")
+class MainModule:
+    def __init__(self, formal_struct, test_file):
+        with open(formal_struct, encoding='utf-8') as f:
+            self.formal_structures = f.readlines()
+        self.test_file = test_file
+        self.lang = test_file.split(".")[-1]
 
-
+    def run(self,base_parser_path, new_parser_path):
+        flag = Parser(self.lang, self.formal_structures, base_parser_path,
+                new_parser_path).make_parser()
+        if not flag:
+            with open("results.txt", "w") as f:
+                print("Invalid Guideline for the given language. Please check the guideline selected")
+                f.write("Invalid Guideline for the given language. Please check the guideline selected\n")
+        else:
+            with subprocess.Popen([sys.executable, new_parser_path, self.test_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE,universal_newlines=True) as p, open("results.txt", "w") as f:
+                for line in p.stdout: 
+                    print(line, end='') 
+                    f.write(line)
+                
+    def factory(self):
+        if self.lang == "py":
+            self.run(os.path.abspath("Language/Python/Python_Parser.py"),os.path.abspath("Language/Python/Python_Parser_new.py"))
+        elif self.lang == "c":
+            self.run(os.path.abspath("Language/C/C_Parser.py"),os.path.abspath("Language/C/C_Parser_new.py"))
+        elif self.lang == "java":
+            self.run(os.path.abspath("Language/Java/Java_Parser.py"),os.path.abspath("Language/Java/Java_Parser_new.py"))
+        else:
+            print("Language not supported")
+    
 if __name__ == "__main__":
-    ext = sys.argv[2].split(".")[-1]
-    python_ver = sys.argv[-1]
-    with open(sys.argv[1], encoding='utf-8') as f:
-        formal_structure = f.readlines()
-    factory(python_ver, ext, formal_structure)
+    MainModule(sys.argv[1], sys.argv[2]).factory()

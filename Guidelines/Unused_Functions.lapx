@@ -1,0 +1,22 @@
+
+STATE before
+    MY_FUNCTION_CALLS = []
+END_STATE
+
+STATE start
+    MY_FUNCTION_CALLS.extend(GLOBAL_FUNCTION_CALLS)
+END_STATE
+
+STATE function
+    if FUNCTION_NAME != 'main':
+        FUNCTIONS.append(FUNCTION_NAME)
+    for FUNCTION in FUNCTION_CALLS:
+        if FUNCTION != FUNCTION_NAME:
+            MY_FUNCTION_CALLS.append(FUNCTION)
+END_STATE
+
+STATE after
+    for FUNCTION in FUNCTIONS:
+        if FUNCTION not in MY_FUNCTION_CALLS:
+            print("Function not used at line",line_no[FUNCTION])
+END_STATE

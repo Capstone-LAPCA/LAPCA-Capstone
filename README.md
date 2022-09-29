@@ -17,13 +17,17 @@ Language Agnostic Program Conformance Analysis
 
 ### Note:
 
-- Replace "Formal-Structure-File" to actual file name
-- Replace "Python\-New-Parser" to "Preferred Language\Newly generated Parser"
+- Replace "Formal-Structure-File" by the guideline required
+- Replace "Test-File" by the file to be tested
 - Select appropriate test file
 
 ```
 git clone https://github.com/Capstone-LAPCA/LAPCA-Capstone.git
 cd LAPCA-CAPSTONE
 pip install -r requirements.txt
-python .\main.py .\Language\Python\Formal-Structure-File \Test_FIles\Python_Test_Files\Test_var_greater_31.py
+python3 main.py "Formal-Structure-File" "Test-File"
+```
+### Start the LAPCA server by executing the below command:
+```
+python3 Server/LAPCA_Server.py
 ```

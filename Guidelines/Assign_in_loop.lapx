@@ -1,0 +1,4 @@
+STATE assign_loop
+    if assign_pres:
+        print("Assignment statement in loop condition at line", LINE_NO)
+END_STATE
