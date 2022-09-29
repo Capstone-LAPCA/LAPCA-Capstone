@@ -45,6 +45,7 @@ STATE while
     else:
         res.append(0)
 
+
     #CHECKS FOR IF-ELSE CONDITIONS
     c = 0
     k = []
@@ -67,8 +68,7 @@ STATE while
     else:
         res.append(0)
 
-    #CHECK FOR INCREMENT INSIDE IF STATEMENTS
-    EXP_STATEMENTS = EXP_STATEMENTS + RETURN_STATEMENTS
+    #CHECK FOR INCREMENT INSIDE IF 
     for i in EXP_STATEMENTS:  
         if mid_ele not in i:
             res.append(0)

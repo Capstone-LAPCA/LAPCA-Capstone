@@ -26,6 +26,7 @@
         "function": "method",
         "continue":"continue_stmt",
         "start":"clazz",
-        "var_decl":"assign_mul"
+        "var_decl":"assign_mul",
+        "while":"while_stmt"
     }
 }

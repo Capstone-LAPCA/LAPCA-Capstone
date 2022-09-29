@@ -77,15 +77,6 @@ def getBlockItemList(Tree,block_items):
             if isinstance(i, type(Tree)):
                 getBlockItemList(i,block_items)
 
-def getBlockItemListObj(Tree,block_items):
-    if Tree.data == "blockitem":
-        block_items.append(Tree)
-    else:
-        l = Tree.children
-        for i in l:
-            if isinstance(i, type(Tree)):
-                getBlockItemListObj(i,block_items)
-
 def ischild(Tree,child):
     if Tree.data == child:
         return True
@@ -103,21 +94,6 @@ def getCondition(Tree,condition_list):
     for i in l:
         if isinstance(i, type(Tree)):    
             getCondition(i,condition_list)
-
-def checkifelse(Tree):
-    count = 0
-    if Tree.data=="selectionstatement":
-        l = Tree.children
-        for i in Tree.children:
-            if isinstance(i,Token) and i.value=="if":
-                count+=1
-            if isinstance(i,Token) and i.value=="else":
-                count+=1
-    l = Tree.children
-    for i in l:
-        if isinstance(i, type(Tree)):    
-            count+=checkifelse(i)
-    return count
 
 def getTokens(Tree,token_list):
     if isinstance(Tree,Token):
@@ -473,8 +449,6 @@ class MyTransformer(visitors.Visitor):
         ITERATION_CONDITION = condition_list[0]
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
-        STATEMENTOBJ = []
-        getBlockItemListObj(items,STATEMENTOBJ)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
         RETURN_STATEMENTS = []

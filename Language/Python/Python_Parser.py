@@ -80,21 +80,6 @@ def getCondition(Tree,condition_list):
         if isinstance(i, type(Tree)):    
             getCondition(i,condition_list)
 
-def checkifelse(Tree):
-    count = 0
-    if Tree.data=="selectionstatement":
-        l = Tree.children
-        for i in Tree.children:
-            if isinstance(i,Token) and i.value=="if":
-                count+=1
-            if isinstance(i,Token) and i.value=="else":
-                count+=1
-    l = Tree.children
-    for i in l:
-        if isinstance(i, type(Tree)):    
-            count+=checkifelse(i)
-    return count
-
 def getTokens(Tree,token_list):
     if isinstance(Tree,Token):
         token_list.append(Tree.value)
@@ -121,22 +106,13 @@ def getReturnStatements(Tree,return_statements):
             if isinstance(i, type(Tree)):
                 getReturnStatements(i,return_statements)
 
-def getBlockItemListObj(Tree,block_items):
-    if Tree.data == "suite":
-        block_items.append(Tree)
-    else:
-        l = Tree.children
-        for i in l:
-            if isinstance(i, type(Tree)):
-                getBlockItemListObj(i,block_items)
-
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
-        #MyTransformer().visit_topdown(python_parser2.parse(file))
+        #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
+        MyTransformer().visit_topdown(python_parser2.parse(file))
         return
 
 class MyTransformer(visitors.Visitor):
@@ -327,8 +303,6 @@ class MyTransformer(visitors.Visitor):
     def while_stmt(self, items):
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
-        STATEMENTOBJ = []
-        getBlockItemListObj(items,STATEMENTOBJ)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
         RETURN_STATEMENTS = []
