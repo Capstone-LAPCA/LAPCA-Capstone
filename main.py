@@ -19,7 +19,7 @@ class MainModule:
                 print("Invalid Guideline for the given language. Please check the guideline selected")
                 f.write("Invalid Guideline for the given language. Please check the guideline selected\n")
         else:
-            with subprocess.Popen([sys.executable, new_parser_path, self.test_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE,universal_newlines=True) as p, open("results.txt", "w") as f:
+            with subprocess.Popen([sys.executable, new_parser_path, self.test_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
                 for line in p.stdout: 
                     print(line, end='') 
                     f.write(line)
