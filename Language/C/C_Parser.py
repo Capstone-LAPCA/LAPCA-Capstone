@@ -29,12 +29,6 @@ def ret_iter(Tree, variables):
                 variables.append(i.children[0])
             l.extend(i.children)
 
-def getFunctionName(Tree):
-    if Tree.data == "functiondefinition":
-        l = Tree.children
-        for i in l:
-            if i.data == "declarator":
-                return i.children[0].children[0].children[0].value
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "postfixexpression":
@@ -92,6 +86,40 @@ def ischild(Tree,child):
         if isinstance(i, type(Tree)):    
             flag|=ischild(i,child)
     return flag
+
+def getCondition(Tree,condition_list):
+    if Tree.data=="iterationstatement" or Tree.data=="selectionstatement":
+        condition_list.append(getBlockItem(Tree.children[2],""))
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):    
+            getCondition(i,condition_list)
+
+def getTokens(Tree,token_list):
+    if isinstance(Tree,Token):
+        token_list.append(Tree.value)
+    else:
+        l = Tree.children
+        for i in l:  
+            getTokens(i,token_list)
+
+def getExpressionStatements(Tree,expression_statements):
+    if Tree.data == "expressionstatement":
+        expression_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getExpressionStatements(i,expression_statements)
+
+def getReturnStatements(Tree,return_statements):
+    if Tree.data == "jumpstatement":
+        return_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getReturnStatements(i,return_statements)
 
 class MyTransformer(visitors.Visitor):
     def start(self, items):
@@ -416,7 +444,15 @@ class MyTransformer(visitors.Visitor):
         if(items.children[0].value == "while" and ischild(items.children[2],"assignmentoperator")) or (items.children[0].value == "for" and ischild(items.children[2],"assignmentoperator")):
             LINE_NO = items.meta.line
             assign_pres=True
-        
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list[0]
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        RETURN_STATEMENTS = []
+        getReturnStatements(items,RETURN_STATEMENTS)
         pass
 
     def forcondition(self, items):
@@ -449,7 +485,9 @@ class MyTransformer(visitors.Visitor):
 
     def functiondefinition(self, items):
         d.clear()
-        FUNCTION_NAME = getFunctionName(items)
+        tokens = []
+        getTokens(items,tokens)
+        FUNCTION_NAME = tokens[1]
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
