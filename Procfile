@@ -1,1 +1,1 @@
-web: gunicorn app:Server/LAPCA_Server
+web: gunicorn Server/LAPCA_Server: app
