@@ -11,6 +11,23 @@ class MainModule:
         self.test_file = test_file
         self.lang = test_file.split(".")[-1]
 
+    def write(self,command):
+        flag=False
+        with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p,open("results.txt", "w") as f:
+            for line in p.stdout: 
+                print(line, end='') 
+                f.write(line)
+                flag=True
+        return flag
+
+    def compile_phase(self):
+        if self.lang=="c":
+            return self.write(["gcc",self.test_file])
+        elif self.lang=="java":
+            return self.write(["javac",self.test_file])
+        elif self.lang=="py":
+            return self.write([sys.executable,"-m","py_compile",self.test_file])
+
     def run(self,base_parser_path, new_parser_path):
         flag = Parser(self.lang, self.formal_structures, base_parser_path,
                 new_parser_path).make_parser()
@@ -19,10 +36,9 @@ class MainModule:
                 print("Invalid Guideline for the given language. Please check the guideline selected")
                 f.write("Invalid Guideline for the given language. Please check the guideline selected\n")
         else:
-            with subprocess.Popen([sys.executable, new_parser_path, self.test_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
-                for line in p.stdout: 
-                    print(line, end='') 
-                    f.write(line)
+            if self.compile_phase():
+                return
+            self.write([sys.executable, new_parser_path, self.test_file])
                 
     def factory(self):
         if self.lang == "py":
