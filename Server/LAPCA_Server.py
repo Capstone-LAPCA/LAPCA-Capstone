@@ -1,6 +1,6 @@
 #Flask server for LAPCA
 from flask import request, jsonify, Flask
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import sys
 import os
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
@@ -10,6 +10,7 @@ CORS(app)
 
 def accessRes(file,code,form):
     s = ""
+    print(os.cwd())
     with open(file, "w") as text_file:
         text_file.write(code)
     for guideline in form.keys():
@@ -22,8 +23,9 @@ def accessRes(file,code,form):
 @app.route('/')
 def home():
     return "LAPCA Server"
-    
+
 @app.route('/getResults', methods=['POST'])
+@cross_origin()
 def getResults():
     data = request.get_json()
     language = data['language']
