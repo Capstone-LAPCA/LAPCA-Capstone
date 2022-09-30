@@ -32,7 +32,7 @@ def getResults():
     code = data['code']
     form = data['form']
     res = ""
-    if(os.getcwd().split(os.sep)=='Server'):
+    if(os.getcwd().split(os.sep)[-1]=='Server'):
         os.chdir('..')
         
     if language == 'Python':
