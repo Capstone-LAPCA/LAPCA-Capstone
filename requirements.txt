@@ -1,2 +1,5 @@
 lark==1.1.2
 Flask==2.2.2
+Flask-Cors==3.0.10
+Werkzeug==2.2.2
+gunicorn==20.1.0
