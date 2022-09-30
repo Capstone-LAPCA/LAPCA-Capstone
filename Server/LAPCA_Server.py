@@ -32,6 +32,9 @@ def getResults():
     code = data['code']
     form = data['form']
     res = ""
+    if(os.getcwd().split(os.sep)=='Server'):
+        os.chdir('..')
+        
     if language == 'Python':
         res=accessRes(os.path.join("Server","test.py"),code,form)
     elif language == 'C':
