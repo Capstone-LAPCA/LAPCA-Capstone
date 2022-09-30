@@ -10,7 +10,7 @@ CORS(app)
 
 def accessRes(file,code,form):
     s = ""
-    print(os.cwd())
+    print(os.getcwd())
     with open(file, "w") as text_file:
         text_file.write(code)
     for guideline in form.keys():
