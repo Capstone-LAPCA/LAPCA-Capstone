@@ -1,1 +1,1 @@
-web: gunicorn Server/LAPCA_Server: app
+web: gunicorn LAPCA_Server: app --chdir Server
