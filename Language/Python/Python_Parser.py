@@ -34,7 +34,12 @@ def getFunctionCalls(Tree,function_calls):
     if Tree.data == "funccall":
         temp = []
         getTokens(Tree,temp)
-        function_calls.append(temp[0])
+        indices = []
+        for idx, value in enumerate(temp):
+            if value == '(':
+                indices.append(idx)
+        for i in indices:
+            function_calls.append(temp[i-1])
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):

@@ -8,7 +8,7 @@ STATE start
 END_STATE
 
 STATE function
-    if FUNCTION_NAME != 'main':
+    if FUNCTION_NAME != 'main' and FUNCTION_NAME!='__init__':
         FUNCTIONS.append(FUNCTION_NAME)
     for FUNCTION in FUNCTION_CALLS:
         if FUNCTION != FUNCTION_NAME:
