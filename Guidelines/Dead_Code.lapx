@@ -3,7 +3,7 @@ STATE function
     for statement in STATEMENTS:
         if flag == True:
             print("Dead code statement in",FUNCTION_NAME,":",statement)
-        if 'return' in statement[0:6]:
+        if 'return ' in statement[0:7]:
             flag = True
 END_STATE
 
@@ -12,6 +12,6 @@ STATE if
     for statement in STATEMENTS:
         if flag == True:
             print("Dead code statement in if statement at line",LINE_NO,":",statement)
-        if 'return' in statement[0:6]:
+        if 'return ' in statement[0:7]:
             flag = True
 END_STATE
