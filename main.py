@@ -15,6 +15,9 @@ class MainModule:
         flag=False
         with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p,open("results.txt", "w") as f:
             for line in p.stdout: 
+                if(line.startswith('Picked up')):
+                    print('works')
+                    continue
                 print(line, end='') 
                 f.write(line)
                 flag=True
