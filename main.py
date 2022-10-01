@@ -15,8 +15,7 @@ class MainModule:
         flag=False
         with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p,open("results.txt", "w") as f:
             for line in p.stdout: 
-                if(line.startswith('Picked up')):
-                    print('works')
+                if(line.startswith('Picked up')): #heroku javac fix
                     continue
                 print(line, end='') 
                 f.write(line)
