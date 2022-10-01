@@ -6,7 +6,6 @@ import sys
 info_list = []
 FUNCTIONS = []
 line_no = {}
-d={}
 
 def ret_iter(Tree,variables):
     if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
@@ -33,7 +32,9 @@ def getFunctionName(Tree):
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "funccall":
-        function_calls.append(Tree.children[0].children[0].children[0].value)
+        temp = []
+        getTokens(Tree,temp)
+        function_calls.append(temp[0])
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):
@@ -57,7 +58,6 @@ def getBlockItem(Tree,s):
         l = Tree.children
         for i in l:
             s+=getBlockItem(i,"")
-        d[s.strip(' ')] = Tree.meta.line
     return s
 
 
@@ -65,7 +65,8 @@ def getBlockItemList(Tree,block_items):
     if Tree.data == "suite":
         l = Tree.children
         for i in l:
-            block_items.append(getBlockItem(i,"").strip())
+            if getBlockItem(i,"").strip() != "":
+                block_items.append(getBlockItem(i,""))
     else:
         l = Tree.children
         for i in l:
@@ -83,7 +84,7 @@ def getCondition(Tree,condition_list):
 def getTokens(Tree,token_list):
     if isinstance(Tree,Token):
         token_list.append(Tree.value)
-    else:
+    elif Tree:
         l = Tree.children
         for i in l:  
             getTokens(i,token_list)
@@ -109,6 +110,7 @@ def getReturnStatements(Tree,return_statements):
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
+        file+="\n"
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
         #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
@@ -292,7 +294,11 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def if_stmt(self, items):
-
+        LINE_NO = items.meta.line
+        FUNCTION_CALLS = []
+        getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
     def elifs(self, items):
 

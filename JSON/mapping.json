@@ -17,7 +17,8 @@
         "function": "funcdef",
         "continue": "continue_stmt",
         "start":"file_input",
-        "while": "while_stmt"
+        "while": "while_stmt",
+        "if":  "if_stmt"
     },
     "java":{
         "before": "before",
