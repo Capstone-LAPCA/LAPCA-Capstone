@@ -1,19 +1,19 @@
 import sys
 import os
-from makeParser import Parser
+from createNewParser import createNewParser as Parser
 import subprocess
 
 
 class MainModule:
     def __init__(self, formal_struct, test_file):
         with open(formal_struct, encoding='utf-8') as f:
-            self.formal_structures = f.readlines()
+            self.guidelines = f.readlines()
         self.test_file = test_file
         self.lang = test_file.split(".")[-1]
 
-    def write(self,command):
+    def runCommand(self,command):
         flag=False
-        with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p,open("results.txt", "w") as f:
+        with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
             for line in p.stdout: 
                 if(line.startswith('Picked up')): #heroku javac fix
                     continue
@@ -22,25 +22,25 @@ class MainModule:
                 flag=True
         return flag
 
-    def compile_phase(self):
+    def compilePhase(self):
         if self.lang=="c":
-            return self.write(["gcc",self.test_file])
+            return self.runCommand(["gcc",self.test_file])
         elif self.lang=="java":
-            return self.write(["javac",self.test_file])
+            return self.runCommand(["javac",self.test_file])
         elif self.lang=="py":
-            return self.write([sys.executable,"-m","py_compile",self.test_file])
+            return self.runCommand([sys.executable,"-m","py_compile",self.test_file])
 
     def run(self,base_parser_path, new_parser_path):
-        flag = Parser(self.lang, self.formal_structures, base_parser_path,
-                new_parser_path).make_parser()
+        flag = Parser(self.lang, self.guidelines, base_parser_path,
+                new_parser_path).createNewParser()
         if not flag:
             with open("results.txt", "w") as f:
                 print("Invalid Guideline for the given language. Please check the guideline selected")
                 f.write("Invalid Guideline for the given language. Please check the guideline selected\n")
         else:
-            if self.compile_phase():
+            if self.compilePhase():
                 return
-            self.write([sys.executable, new_parser_path, self.test_file])
+            self.runCommand([sys.executable, new_parser_path, self.test_file])
                 
     def factory(self):
         if self.lang == "py":

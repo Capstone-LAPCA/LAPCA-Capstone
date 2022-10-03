@@ -11,8 +11,8 @@ class MainTransformer():
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
-        MyTransformer().visit_topdown(C_parser.parse(file))
-        #print(MyTransformer().visit_topdown(C_parser.parse(file)).pretty())
+        CParserActions().visit_topdown(C_parser.parse(file))
+        #print(CParserActions().visit_topdown(C_parser.parse(file)).pretty())
         return
 
 def ret_iter(Tree, variables):
@@ -121,7 +121,7 @@ def getReturnStatements(Tree,return_statements):
             if isinstance(i, type(Tree)):
                 getReturnStatements(i,return_statements)
 
-class MyTransformer(visitors.Visitor):
+class CParserActions(visitors.Visitor):
     def start(self, items):
 
         pass
