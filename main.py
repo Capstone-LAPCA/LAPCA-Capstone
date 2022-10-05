@@ -2,11 +2,13 @@ import sys
 import os
 from createNewParser import createNewParser as Parser
 import subprocess
+from pathlib import Path
 
 
 class MainModule:
     def __init__(self, formal_struct, test_file):
-        with open(formal_struct, encoding='utf-8') as f:
+        self.formal_struct = formal_struct
+        with open(self.formal_struct, encoding='utf-8') as f:
             self.guidelines = f.readlines()
         self.test_file = test_file
         self.lang = test_file.split(".")[-1]
@@ -41,6 +43,10 @@ class MainModule:
             if self.compilePhase():
                 return
             self.runCommand([sys.executable, new_parser_path, self.test_file])
+            if os.stat("results.txt").st_size == 0:
+                with open("results.txt", "w") as f:
+                    print(Path(self.formal_struct).stem, "is followed")
+                    f.write(Path(self.formal_struct).stem + " is followed\n")
                 
     def factory(self):
         if self.lang == "py":
