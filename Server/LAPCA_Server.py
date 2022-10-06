@@ -17,6 +17,9 @@ def accessRes(file,code,form):
             MainModule(os.path.join("Guidelines",guideline),file).factory()
             with open("results.txt", "r") as text_file:
                 s+=text_file.read()
+    if not s:
+        print('Program satisfies all the selected guidelines')
+        s+='Program satisfies all the selected guidelines'
     return s    
 
 @app.route('/')

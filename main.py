@@ -37,16 +37,12 @@ class MainModule:
                 new_parser_path).createNewParser()
         if not flag:
             with open("results.txt", "w") as f:
-                print("Invalid Guideline for the given language. Please check the guideline selected")
-                f.write("Invalid Guideline for the given language. Please check the guideline selected\n")
+                print(Path(self.formal_struct).stem,"not applicable for the given language. Please check the guideline selected")
+                f.write(Path(self.formal_struct).stem +" not applicable for the given language. Please check the guideline selected\n")
         else:
             if self.compilePhase():
                 return
             self.runCommand([sys.executable, new_parser_path, self.test_file])
-            if os.stat("results.txt").st_size == 0:
-                with open("results.txt", "w") as f:
-                    print(Path(self.formal_struct).stem, "is followed")
-                    f.write(Path(self.formal_struct).stem + " is followed\n")
                 
     def factory(self):
         if self.lang == "py":
