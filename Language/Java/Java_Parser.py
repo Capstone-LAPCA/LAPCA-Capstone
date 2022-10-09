@@ -72,16 +72,49 @@ def getBlockItemList(Tree,block_items):
             if isinstance(i, type(Tree)):
                 getBlockItemList(i,block_items)
 
+def getCondition(Tree,condition_list):
+    if Tree.data=="comparison":
+        condition_list.append(getBlockItem(Tree,""))
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):    
+            getCondition(i,condition_list)
+
+def getTokens(Tree,token_list):
+    if isinstance(Tree,Token):
+        token_list.append(Tree.value)
+    else:
+        l = Tree.children
+        for i in l:  
+            getTokens(i,token_list)
+
+def getExpressionStatements(Tree,expression_statements):
+    if Tree.data == "test_stmt":
+        expression_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getExpressionStatements(i,expression_statements)
+
+def getReturnStatements(Tree,return_statements):
+    if Tree.data == "return_stmt":
+        return_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getReturnStatements(i,return_statements)
 
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         Java_parser = Lark.open('Java_Grammar.lark', start="clazz",rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
-        MyTransformer().visit_topdown(Java_parser.parse(file))
-        #print(MyTransformer().visit_topdown(Java_parser.parse(file)).pretty())
+        javaParserActions().visit_topdown(Java_parser.parse(file))
+        #print(javaParserActions().visit_topdown(Java_parser.parse(file)).pretty())
         return
 
-class MyTransformer(visitors.Visitor):
+class javaParserActions(visitors.Visitor):
     def modifier(self, items):
 
         pass
@@ -333,7 +366,15 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def while_stmt(self, items):
-
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        RETURN_STATEMENTS = []
+        getReturnStatements(items,RETURN_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list[0]
         pass
     def for_stmt(self, items):
 

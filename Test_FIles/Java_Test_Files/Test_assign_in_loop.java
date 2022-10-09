@@ -1,4 +1,4 @@
-public class Test_continue {
+public class Test_assign_in_loop {
     public static void test()
     {
         for(int i=0;i==10;i++){

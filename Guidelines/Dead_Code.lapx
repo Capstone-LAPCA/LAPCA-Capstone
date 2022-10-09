@@ -2,7 +2,16 @@ STATE function
     flag = False
     for statement in STATEMENTS:
         if flag == True:
-            print("Dead code at",d[statement])
-        if 'return' in statement[0:6]:
+            print("Dead code statement in",FUNCTION_NAME,":",statement)
+        if 'return ' in statement[0:7]:
+            flag = True
+END_STATE
+
+STATE if
+    flag = False
+    for statement in STATEMENTS:
+        if flag == True:
+            print("Dead code statement in if statement:",statement)
+        if 'return ' in statement[0:7]:
             flag = True
 END_STATE

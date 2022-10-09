@@ -6,7 +6,6 @@ import sys
 info_list = []
 FUNCTIONS = []
 line_no = {}
-d={}
 
 def ret_iter(Tree,variables):
     if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
@@ -33,7 +32,14 @@ def getFunctionName(Tree):
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "funccall":
-        function_calls.append(Tree.children[0].children[0].children[0].value)
+        temp = []
+        getTokens(Tree,temp)
+        indices = []
+        for idx, value in enumerate(temp):
+            if value == '(':
+                indices.append(idx)
+        for i in indices:
+            function_calls.append(temp[i-1])
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):
@@ -57,7 +63,6 @@ def getBlockItem(Tree,s):
         l = Tree.children
         for i in l:
             s+=getBlockItem(i,"")
-        d[s] = Tree.meta.line
     return s
 
 
@@ -65,7 +70,7 @@ def getBlockItemList(Tree,block_items):
     if Tree.data == "suite":
         l = Tree.children
         for i in l:
-            if isinstance(i,type(Tree)) and i.data == "simple_stmt": 
+            if getBlockItem(i,"").strip() != "":
                 block_items.append(getBlockItem(i,""))
     else:
         l = Tree.children
@@ -73,17 +78,51 @@ def getBlockItemList(Tree,block_items):
             if isinstance(i, type(Tree)):
                 getBlockItemList(i,block_items)
 
+def getCondition(Tree,condition_list):
+    if Tree.data=="comparison":
+        condition_list.append(getBlockItem(Tree,""))
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):    
+            getCondition(i,condition_list)
+
+def getTokens(Tree,token_list):
+    if isinstance(Tree,Token):
+        token_list.append(Tree.value)
+    elif Tree:
+        l = Tree.children
+        for i in l:  
+            getTokens(i,token_list)
+
+def getExpressionStatements(Tree,expression_statements):
+    if Tree.data == "simple_stmt":
+        expression_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getExpressionStatements(i,expression_statements)
+
+def getReturnStatements(Tree,return_statements):
+    if Tree.data == "return_stmt":
+        return_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i, type(Tree)):
+                getReturnStatements(i,return_statements)
 
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
+        file+="\n"
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        #print(MyTransformer().visit_topdown(python_parser2.parse(file)).pretty())
-        MyTransformer().visit_topdown(python_parser2.parse(file))
+        #print(pythonParserActions().visit_topdown(python_parser2.parse(file)).pretty())
+        pythonParserActions().visit_topdown(python_parser2.parse(file))
         return
 
-class MyTransformer(visitors.Visitor):
+class pythonParserActions(visitors.Visitor):
     def single_input(self, items):
 
         pass
@@ -260,7 +299,11 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def if_stmt(self, items):
-
+        LINE_NO = items.meta.line
+        FUNCTION_CALLS = []
+        getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
     def elifs(self, items):
 
@@ -269,7 +312,15 @@ class MyTransformer(visitors.Visitor):
 
         pass
     def while_stmt(self, items):
-
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        RETURN_STATEMENTS = []
+        getReturnStatements(items,RETURN_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list[0]
         pass
     def for_stmt(self, items):
 

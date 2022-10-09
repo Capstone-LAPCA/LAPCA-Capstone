@@ -1,4 +1,4 @@
 STATE function
     if FUNCTION_NAME in FUNCTION_CALLS:
-        print("Recursion used in function",LINE_NO)
+        print("Recursion used in function at line",LINE_NO)
 END_STATE
