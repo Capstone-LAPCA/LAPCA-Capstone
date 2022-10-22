@@ -45,5 +45,13 @@ def getResults():
         res=accessRes(os.path.join("Server","test.java"),code,form)
     return jsonify(res)
 
+@app.route('/getGuidelines', methods=['GET'])
+@cross_origin()
+def getGuidelines():
+    guidelines = []
+    for file in os.listdir(os.path.join("Guidelines")):
+        guidelines.append(file)
+    return jsonify(guidelines)
+
 if __name__ == '__main__':
     app.run(port=3003)
