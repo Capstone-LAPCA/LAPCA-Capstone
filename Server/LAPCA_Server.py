@@ -8,6 +8,26 @@ from main import MainModule
 app = Flask(__name__)
 CORS(app)
 
+def runCommand(command):
+    flag=False
+    with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
+        for line in p.stdout: 
+            if(line.startswith('Picked up')): #heroku javac fix
+                continue
+            print(line, end='') 
+            f.write(line)
+            flag=True
+    return flag
+
+def compilePhase(lang,test_file):
+    if lang=="c":
+        return runCommand(["gcc","-c",test_file])
+    elif lang=="java":
+        return runCommand(["javac",test_file])
+    elif lang=="py":
+        return runCommand([sys.executable,"-m","py_compile",test_file])
+
+
 def accessRes(file,code,form):
     s = ""
     with open(file, "w") as text_file:
@@ -36,13 +56,16 @@ def getResults():
     res = ""
     if(os.getcwd().split(os.sep)[-1]=='Server'):
         os.chdir('..')
-        
-    if language == 'Python':
-        res=accessRes(os.path.join("Server","test.py"),code,form)
-    elif language == 'C':
-        res=accessRes(os.path.join("Server","test.c"),code,form)
-    elif language == 'Java':
-        res=accessRes(os.path.join("Server","test.java"),code,form)
+    if not compilePhase(language,code):
+        if language == 'Python':
+            res=accessRes(os.path.join("Server","test.py"),code,form)
+        elif language == 'C':
+            res=accessRes(os.path.join("Server","test.c"),code,form)
+        elif language == 'Java':
+            res=accessRes(os.path.join("Server","test.java"),code,form)
+    else:
+        with open("results.txt", "r") as text_file:
+            res=text_file.read()
     return jsonify(res)
 
 @app.route('/getGuidelines', methods=['GET'])
