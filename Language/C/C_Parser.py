@@ -5,6 +5,7 @@ info_list = []
 d = {}
 line_no = {}
 FUNCTIONS = []
+flagIf = False
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -64,7 +65,8 @@ def getBlockItem(tree,s):
         l = tree.children
         for i in l:
             s+=getBlockItem(i,"")
-        d[s] = tree.meta.line
+        if hasattr(tree,'meta') and hasattr(tree.meta,'line'):
+            d[s] = tree.meta.line
     return s
 
 
@@ -111,6 +113,50 @@ def getExpressionStatements(Tree,expression_statements):
         for i in l:
             if isinstance(i, type(Tree)):
                 getExpressionStatements(i,expression_statements)
+
+def getExpressionStatementsInsideAllIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "selectionstatement":
+        expr = []
+        getExpressionStatementsInsideIf(Tree,expr)
+        if "else" in expr:
+            start = 0
+            while start<len(expr) and "else" in expr[start:]:
+                ind = expr.index("else",start)
+                if len(expr[start:ind]):
+                    expression_statements.append(expr[start:ind])
+                start = ind+1
+            if len(expr[start:]):
+                expression_statements.append(expr[start:])
+        elif len(expr):
+            expression_statements.append(expr)
+        flagIf = False
+    if Tree.data == "declaration":
+        tok = []
+        getTokens(Tree,tok)
+        if tok[0] == 'else':
+            expression_statements.append("".join(tok[1:]))
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getExpressionStatementsInsideAllIf(i,expression_statements)
+
+def getExpressionStatementsInsideIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "selectionstatement":
+        if flagIf:
+            return
+        else:
+            flagIf = True
+    if Tree.data == "expressionstatement" or Tree.data=="blockitem" or Tree.data=="jumpstatement":
+        expression_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i,Token) and i.value == "else":
+                expression_statements.append("else")
+            if isinstance(i, type(Tree)):
+                getExpressionStatementsInsideIf(i,expression_statements)
 
 def getReturnStatements(Tree,return_statements):
     if Tree.data == "jumpstatement":
@@ -445,10 +491,6 @@ class CParserActions(visitors.Visitor):
         ITERATION_CONDITION = condition_list[0]
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
-        EXP_STATEMENTS = []
-        getExpressionStatements(items,EXP_STATEMENTS)
-        RETURN_STATEMENTS = []
-        getReturnStatements(items,RETURN_STATEMENTS)
         pass
 
     def iterationstatement(self, items):
@@ -463,6 +505,8 @@ class CParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         RETURN_STATEMENTS = []
         getReturnStatements(items,RETURN_STATEMENTS)
         pass
@@ -506,6 +550,8 @@ class CParserActions(visitors.Visitor):
         line_no[FUNCTION_NAME] = LINE_NO
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
 
     def declarationlist(self, items):

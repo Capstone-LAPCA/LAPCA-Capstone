@@ -7,6 +7,7 @@ info_list = []
 FUNCTIONS = []
 line_no = {}
 d={}
+flagIf = False
 
 def ret_iter(Tree, variables):
     if Tree.data == "assign_base" and not isinstance(Tree.children[0], type(Tree)):
@@ -56,7 +57,8 @@ def getBlockItem(Tree,s):
         l = Tree.children
         for i in l:
             s+=getBlockItem(i,"")
-        d[s] = Tree.meta.line
+        if hasattr(Tree,'meta') and hasattr(Tree.meta,'line'):
+            d[s] = Tree.meta.line
     return s
 
 
@@ -96,6 +98,47 @@ def getExpressionStatements(Tree,expression_statements):
         for i in l:
             if isinstance(i, type(Tree)):
                 getExpressionStatements(i,expression_statements)
+
+def getExpressionStatementsInsideAllIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "if_stmt":
+        expr = []
+        getExpressionStatementsInsideIf(Tree,expr)
+        if "else" in expr:
+            start = 0
+            while start<len(expr) and "else" in expr[start:]:
+                ind = expr.index("else",start)
+                if len(expr[start:ind]):
+                    expression_statements.append(expr[start:ind])
+                start = ind+1
+            if len(expr[start:]):
+                expression_statements.append(expr[start:])
+        elif len(expr):
+            expression_statements.append(expr)
+        flagIf = False
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getExpressionStatementsInsideAllIf(i,expression_statements)
+
+def getExpressionStatementsInsideIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "if_stmt":
+        if flagIf:
+            return None
+        else:
+            flagIf = True
+    if Tree.data=="test_stmt" or Tree.data=="while_stmt" or Tree.data=="for_stmt" or Tree.data=="return_stmt":
+        expression_statements.append(getBlockItem(Tree,""))
+    else:
+        l = Tree.children
+        for i in l:
+            if isinstance(i,Token) and i.value == "else":
+                expression_statements.append("else") 
+            if isinstance(i, type(Tree)):
+                if i.data == "if_stmt" or i.data=="else_stmt":
+                    expression_statements.append("else")
+                getExpressionStatementsInsideIf(i,expression_statements)
 
 def getReturnStatements(Tree,return_statements):
     if Tree.data == "return_stmt":
@@ -196,6 +239,8 @@ class javaParserActions(visitors.Visitor):
         STATEMENTS = []
         line_no[FUNCTION_NAME] = LINE_NO
         getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def method_annotations(self, items):
 
@@ -375,9 +420,21 @@ class javaParserActions(visitors.Visitor):
         condition_list = []
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list[0]
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def for_stmt(self, items):
-
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        RETURN_STATEMENTS = []
+        getReturnStatements(items,RETURN_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list[0]
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def for_test(self, items):
 
