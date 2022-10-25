@@ -3,6 +3,7 @@ from lark import Lark, visitors, tree
 from lark.indenter import PythonIndenter
 from lark.lexer import Token
 import sys
+from Utils.Utility import Utility, getTokens
 info_list = []
 FUNCTIONS = []
 line_no = {}
@@ -90,14 +91,6 @@ def getCondition(Tree,condition_list):
         if isinstance(i, type(Tree)):    
             getCondition(i,condition_list)
 
-def getTokens(Tree,token_list):
-    if isinstance(Tree,Token):
-        token_list.append(Tree.value)
-    elif Tree:
-        l = Tree.children
-        for i in l:  
-            getTokens(i,token_list)
-
 def getExpressionStatements(Tree,expression_statements):
     if Tree.data == "simple_stmt":
         expression_statements.append(getBlockItem(Tree,""))
@@ -133,7 +126,7 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
     global flagIf
     if Tree.data == "if_stmt":
         if flagIf:
-            return
+            return None
         else:
             flagIf = True
     if Tree.data=="simple_stmt" or Tree.data=="while_stmt" or Tree.data=="for_stmt":
@@ -147,15 +140,6 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                 if i.data == "if_stmt" or i.data=="elifs":
                     expression_statements.append("else")
                 getExpressionStatementsInsideIf(i,expression_statements)
-
-def getReturnStatements(Tree,return_statements):
-    if Tree.data == "return_stmt":
-        return_statements.append(getBlockItem(Tree,""))
-    else:
-        l = Tree.children
-        for i in l:
-            if isinstance(i, type(Tree)):
-                getReturnStatements(i,return_statements)
 
 class MainTransformer():
     def run(self):
@@ -363,8 +347,6 @@ class pythonParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
-        RETURN_STATEMENTS = []
-        getReturnStatements(items,RETURN_STATEMENTS)
         condition_list = []
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list[0]

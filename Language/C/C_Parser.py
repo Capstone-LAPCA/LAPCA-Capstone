@@ -1,11 +1,14 @@
 from lark import Lark, visitors
 from lark.lexer import Token
 import sys
+import os
+from Utils.Utility import Utility, getTokens
 info_list = []
 d = {}
 line_no = {}
 FUNCTIONS = []
 flagIf = False
+
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -97,14 +100,6 @@ def getCondition(Tree,condition_list):
         if isinstance(i, type(Tree)):    
             getCondition(i,condition_list)
 
-def getTokens(Tree,token_list):
-    if isinstance(Tree,Token):
-        token_list.append(Tree.value)
-    else:
-        l = Tree.children
-        for i in l:  
-            getTokens(i,token_list)
-
 def getExpressionStatements(Tree,expression_statements):
     if Tree.data == "expressionstatement":
         expression_statements.append(getBlockItem(Tree,""))
@@ -157,15 +152,6 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                 expression_statements.append("else")
             if isinstance(i, type(Tree)):
                 getExpressionStatementsInsideIf(i,expression_statements)
-
-def getReturnStatements(Tree,return_statements):
-    if Tree.data == "jumpstatement":
-        return_statements.append(getBlockItem(Tree,""))
-    else:
-        l = Tree.children
-        for i in l:
-            if isinstance(i, type(Tree)):
-                getReturnStatements(i,return_statements)
 
 class CParserActions(visitors.Visitor):
     def start(self, items):
@@ -507,8 +493,6 @@ class CParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
-        RETURN_STATEMENTS = []
-        getReturnStatements(items,RETURN_STATEMENTS)
         pass
 
     def forcondition(self, items):
