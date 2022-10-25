@@ -33,11 +33,13 @@ def accessRes(file,form,comp_result):
     s = ""
     for guideline in form.keys():
         if form[guideline]:
-            comp_result["guidelines"][guideline] = {}
             MainModule(file,os.path.join("Guidelines",guideline)).factory()
             with open("results.txt", "r") as text_file:
                 s=text_file.read()
-                comp_result["guidelines"][guideline]["remark"] = s
+                temp = {}
+                temp["name"] = guideline
+                temp["remark"] = s
+                comp_result["guidelines"].append(temp)
     return comp_result    
 
 @app.route('/')
@@ -79,7 +81,7 @@ def getResults():
     comp_result = {
         "compilationErr":False,
         "compilationOutput": "",
-        "guidelines": {}
+        "guidelines": []
     }
 
     if(os.getcwd().split(os.sep)[-1]=='Server'):
