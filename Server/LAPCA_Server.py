@@ -4,6 +4,7 @@ from flask_cors import CORS, cross_origin
 import sys
 import os
 import subprocess
+import json
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 app = Flask(__name__)
@@ -28,21 +29,43 @@ def compilePhase(lang,test_file):
     elif lang=="py":
         return runCommand([sys.executable,"-m","py_compile",test_file])
 
-def accessRes(file,form):
+def accessRes(file,form,comp_result):
     s = ""
     for guideline in form.keys():
-        if form[guideline] :
+        if form[guideline]:
+            comp_result["guidelines"][guideline] = {}
             MainModule(file,os.path.join("Guidelines",guideline)).factory()
             with open("results.txt", "r") as text_file:
-                s+=text_file.read()
-    if not s:
-        print('Program satisfies all the selected guidelines')
-        s+='Program satisfies all the selected guidelines'
-    return s    
+                s=text_file.read()
+                comp_result["guidelines"][guideline]["remark"] = s
+    return comp_result    
 
 @app.route('/')
 def home():
     return "LAPCA Server"
+
+'''
+API
+Guideline    String
+CompilationErr    Bool 
+Remark    String
+Result    Bool
+
+structure of json:
+{
+    compilationErr:Bool,
+    compilationOutput: "Compilation Output",
+    guidelines {
+        guideline1: {
+            remark: "Compilation Error",
+        },
+        guideline2: {
+            remark: "Program satisfies all the selected guidelines",
+        }
+    }
+}
+'''
+
 
 @app.route('/getResults', methods=['POST'])
 @cross_origin()
@@ -53,6 +76,11 @@ def getResults():
     form = data['form']
     file_path=os.path.join("Server","test."+language)
     res = ""
+    comp_result = {
+        "compilationErr":False,
+        "compilationOutput": "",
+        "guidelines": {}
+    }
 
     if(os.getcwd().split(os.sep)[-1]=='Server'):
         os.chdir('..')
@@ -61,20 +89,21 @@ def getResults():
         text_file.write(code)
 
     if not compilePhase(language,file_path):
-        res=accessRes(file_path,form)
+        comp_result["compilationErr"]=False
+        comp_result["compilationOutput"]="Compilation Successful"
+        comp_result=accessRes(file_path,form,comp_result)
     else:
         with open("results.txt", "r") as text_file:
             res=text_file.read()
+            comp_result["compilationErr"] = True
+            comp_result["compilationOutput"] = res
 
-    return jsonify(res)
+    return jsonify(comp_result)
 
 @app.route('/getGuidelines', methods=['GET'])
 @cross_origin()
 def getGuidelines():
-    guidelines = []
-    for file in os.listdir(os.path.join("Guidelines")):
-        guidelines.append(file)
-    return jsonify(guidelines)
+    return json.load(open(os.path.abspath("./JSON/guidelines.json")))
 
 if __name__ == '__main__':
     app.run(port=3003)
