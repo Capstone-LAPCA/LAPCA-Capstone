@@ -30,14 +30,18 @@ def compilePhase(lang,test_file):
         return runCommand([sys.executable,"-m","py_compile",test_file])
 
 def accessRes(file,form,comp_result):
+    guideline_mapping = json.load(open(os.path.abspath("./JSON/guidelines.json")))
+    guideline_mapping = guideline_mapping["guidelines"]
     s = ""
     for guideline in form.keys():
         if form[guideline]:
+            temp = {}
             MainModule(file,os.path.join("Guidelines",guideline)).factory()
+            for i in guideline_mapping:
+                if i["id"] == guideline:
+                    temp["name"] = i["label"]
             with open("results.txt", "r") as text_file:
                 s=text_file.read()
-                temp = {}
-                temp["name"] = guideline
                 temp["remark"] = s
                 comp_result["guidelines"].append(temp)
     return comp_result    
