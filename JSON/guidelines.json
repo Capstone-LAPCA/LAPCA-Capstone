@@ -1,0 +1,34 @@
+{
+    "Assign_in_loop":{
+        "label":"Check for assignment in loop condition",
+        "class":"Organizational"
+    },
+    "Binary_Search_Iterative":{
+        "label":"Check if binary search iterative is implemented",
+        "class":"Algorithmic"
+    },
+    "Continue":{
+        "label":"Check if continue statement is used",
+        "class":"Organizational"
+    },
+    "Dead_Code":{
+        "label":"Check for dead code",
+        "class":"Organizational"
+    },
+    "One_variable_per_declaration":{
+        "label":"Check if only one variable is declared per statement",
+        "class":"Organizational"
+    },
+    "Recursion":{
+        "label":"Check if recursion is used",
+        "class":"Algorithmic"
+    },
+    "Unsed_Functions":{
+        "label":"Check for unused functions",
+        "class":"Organizational"
+    },
+    "var_length_greater_than_31":{
+        "label":"Check if variable length is greater than 31",
+        "class":"Organizational"
+    }
+}
