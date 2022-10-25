@@ -1,34 +1,43 @@
 {
-    "Assign_in_loop.lapx": {
+    "guidelines":[
+        {
+        "id":"Assign_in_loop.lapx",
         "label":"Check for assignment in loop condition",
         "class":"Organizational"
     },
-    "Binary_Search_Iterative.lapx":{
+    {
+        "id":"Binary_Search_Iterative.lapx",
         "label":"Check if binary search iterative is implemented",
         "class":"Algorithmic"
     },
-    "Continue.lapx":{
+    {
+        "id":"Continue.lapx",
         "label":"Check if continue statement is used",
         "class":"Organizational"
     },
-    "Dead_Code.lapx":{
+    {
+        "id":"Dead_Code.lapx",
         "label":"Check for dead code",
         "class":"Organizational"
     },
-    "One_var_decl.lapx":{
+    {
+        "id":"One_var_decl.lapx",
         "label":"Check if only one variable is declared per statement",
         "class":"Organizational"
     },
-    "Recursion.lapx":{
+    {
+        "id":"Recursion.lapx",
         "label":"Check if recursion is used",
         "class":"Algorithmic"
     },
-    "Unused_Functions.lapx":{
+    {
+        "id":"Unused_Functions.lapx",
         "label":"Check for unused functions",
         "class":"Organizational"
     },
-    "var_greater_than_31.lapx":{
+    {
+        "id":"var_greater_than_31.lapx",
         "label":"Check if variable length is greater than 31",
         "class":"Organizational"
-    }
+    }]
 }
