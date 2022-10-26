@@ -111,5 +111,17 @@ def getResults():
 def getGuidelines():
     return json.load(open(os.path.abspath("./JSON/guidelines.json")))
 
+@app.route('/getGuideline', methods=['GET'])
+@cross_origin()
+def getGuideline():
+    file_name=request.args.get("file_path")
+    file_path= os.path.join("Guidelines",file_name)
+    if os.path.isfile(file_path):
+        with open(file_path, "r") as text_file:
+            s=text_file.read()
+        return s
+    else:
+        return "Wrong file path"
+
 if __name__ == '__main__':
     app.run(port=3003)
