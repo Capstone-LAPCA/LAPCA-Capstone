@@ -6,6 +6,11 @@
         "class":"Organizational"
     },
     {
+        "id":"Function_size.lapx",
+        "label":"Check whether size of a function has exceeded the limit",
+        "class":"Organizational"
+    },
+    {
         "id":"Binary_Search_Iterative.lapx",
         "label":"Check if binary search iterative is implemented",
         "class":"Algorithmic"

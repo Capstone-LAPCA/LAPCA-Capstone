@@ -1,0 +1,25 @@
+STATE before
+    count_lines = 0
+    function_count = {}
+    cur_function_name = ""
+END_STATE
+
+STATE function
+    global count_lines
+    global cur_function_name
+    cur_function_name = FUNCTION_NAME
+    count_lines = len(STATEMENTS) + len(sum(EXP_STATEMENTS_INSIDE_ALL_IF,[]))
+    function_count[FUNCTION_NAME] = count_lines
+END_STATE
+
+STATE while
+    global count_lines
+    function_count[cur_function_name]+=len(STATEMENTS)
+END_STATE
+
+STATE after
+    for function in function_count.keys():
+        print(function,function_count[function])
+        if function_count[function] > 30:
+            print("Number of lines exceeded in function",function)
+END_STATE
