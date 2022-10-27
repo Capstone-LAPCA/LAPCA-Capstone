@@ -68,9 +68,9 @@ STATE while
     else:
         res.append(0)
 
-    #CHECK FOR INCREMENT INSIDE IF 
-    for i in EXP_STATEMENTS:  
-        if mid_ele not in i:
+    #CHECK FOR MID ELEMENT INSIDE IF #doesnt work at all times (not required)
+    for EXP_STMT in EXP_STATEMENTS_INSIDE_ALL_IF:  
+        if mid_ele not in "".join(EXP_STMT):
             res.append(0)
             break
     if len(res)==4:

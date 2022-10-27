@@ -1,3 +1,4 @@
+#include<stdio.h>
 int binarySearch(int arr[], int l, int r, int x)
 {
     while (l <= r) {

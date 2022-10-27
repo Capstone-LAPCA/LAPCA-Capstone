@@ -3,9 +3,14 @@ from lark import Lark, visitors, tree
 from lark.indenter import PythonIndenter
 from lark.lexer import Token
 import sys
+import os
+sys.path.insert(1, os.path.join(sys.path[0], '../..'))
+from Utils.Utility import Utility, getTokens
 info_list = []
 FUNCTIONS = []
 line_no = {}
+d = {}
+flagIf = False
 
 def ret_iter(Tree,variables):
     if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
@@ -63,6 +68,8 @@ def getBlockItem(Tree,s):
         l = Tree.children
         for i in l:
             s+=getBlockItem(i,"")
+        if hasattr(Tree,'meta') and hasattr(Tree.meta,'line'):
+            d[s] = Tree.meta.line
     return s
 
 
@@ -86,14 +93,6 @@ def getCondition(Tree,condition_list):
         if isinstance(i, type(Tree)):    
             getCondition(i,condition_list)
 
-def getTokens(Tree,token_list):
-    if isinstance(Tree,Token):
-        token_list.append(Tree.value)
-    elif Tree:
-        l = Tree.children
-        for i in l:  
-            getTokens(i,token_list)
-
 def getExpressionStatements(Tree,expression_statements):
     if Tree.data == "simple_stmt":
         expression_statements.append(getBlockItem(Tree,""))
@@ -103,14 +102,46 @@ def getExpressionStatements(Tree,expression_statements):
             if isinstance(i, type(Tree)):
                 getExpressionStatements(i,expression_statements)
 
-def getReturnStatements(Tree,return_statements):
-    if Tree.data == "return_stmt":
-        return_statements.append(getBlockItem(Tree,""))
+def getExpressionStatementsInsideAllIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "if_stmt":
+        expr = []
+        getExpressionStatementsInsideIf(Tree,expr)
+        if "else" in expr:
+            start = 0
+            while start<len(expr) and "else" in expr[start:]:
+                ind = expr.index("else",start)
+                if len(expr[start:ind]):
+                    expression_statements.append(expr[start:ind])
+                start = ind+1
+            if len(expr[start:]):
+                expression_statements.append(expr[start:])
+        elif len(expr):
+            expression_statements.append(expr)
+        flagIf = False
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getExpressionStatementsInsideAllIf(i,expression_statements)
+
+def getExpressionStatementsInsideIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "if_stmt":
+        if flagIf:
+            return None
+        else:
+            flagIf = True
+    if Tree.data=="simple_stmt" or Tree.data=="while_stmt" or Tree.data=="for_stmt":
+        expression_statements.append(getBlockItem(Tree,""))
     else:
         l = Tree.children
         for i in l:
+            if isinstance(i,Token) and i.value == "else":
+                expression_statements.append("else") 
             if isinstance(i, type(Tree)):
-                getReturnStatements(i,return_statements)
+                if i.data == "if_stmt" or i.data=="elifs":
+                    expression_statements.append("else")
+                getExpressionStatementsInsideIf(i,expression_statements)
 
 class MainTransformer():
     def run(self):
@@ -153,6 +184,8 @@ class pythonParserActions(visitors.Visitor):
         STATEMENTS = []
         line_no[FUNCTION_NAME] = LINE_NO
         getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def parameters(self, items):
 
@@ -316,14 +349,22 @@ class pythonParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
-        RETURN_STATEMENTS = []
-        getReturnStatements(items,RETURN_STATEMENTS)
         condition_list = []
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list[0]
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def for_stmt(self, items):
-
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = ""
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def try_stmt(self, items):
 

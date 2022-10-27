@@ -9,7 +9,10 @@
         "assign_loop":"iterationstatement",
         "var_decl":"initdeclaratorlist",
         "while":"iterationstatement",
-        "if":"selectionstatement"
+        "if":"selectionstatement",
+        "for": "iterationstatement",
+        "iteration":"iterationstatement"
+
     },
     "py":{
         "before": "before",
@@ -19,7 +22,9 @@
         "continue": "continue_stmt",
         "start":"file_input",
         "while": "while_stmt",
-        "if":  "if_stmt"
+        "if":  "if_stmt",
+        "for": "for_stmt",
+        "iteration":"compound_stmt"
     },
     "java":{
         "before": "before",
@@ -29,6 +34,9 @@
         "continue":"continue_stmt",
         "start":"clazz",
         "var_decl":"assign_mul",
-        "while":"while_stmt"
+        "while":"while_stmt",
+        "for":"for_stmt",
+        "iteration":"compound_stmt"
+
     }
 }
