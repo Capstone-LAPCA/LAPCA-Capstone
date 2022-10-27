@@ -3,6 +3,8 @@ from lark import Lark, visitors, tree
 from lark.indenter import PythonIndenter
 from lark.lexer import Token
 import sys
+import os
+sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from Utils.Utility import Utility, getTokens
 info_list = []
 FUNCTIONS = []

@@ -2,6 +2,8 @@ from tracemalloc import start
 from lark import Lark, Transformer, visitors, tree
 import sys
 from lark.lexer import Token
+import os
+sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from Utils.Utility import Utility, getTokens
 global_list = []
 info_list = []
