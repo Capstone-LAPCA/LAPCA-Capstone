@@ -50,12 +50,13 @@ def accessRes(file,form,comp_result):
 def userDefAccessRes(file,form,comp_result):
     s = ""
     for guideline in form:
-        if guideline["checked"]:
+        fs=form[guideline]
+        if fs["checked"]:
             temp = {}
-            temp["name"] = guideline["label"]
-            file_name = "".join(guideline["label"].split(" "))+".lapx"
+            temp["name"] = fs["label"]
+            file_name = "".join(fs["label"].split(" "))+".lapx"
             with open(os.path.join("Guidelines","UserDefGuidelines",file_name),"w") as f:
-                f.write(guideline["lapx_code"])
+                f.write(fs["lapx_code"])
             MainModule(file,os.path.join("Guidelines","UserDefGuidelines",file_name)).factory()
             with open("results.txt", "r") as text_file:
                 s=text_file.read()
