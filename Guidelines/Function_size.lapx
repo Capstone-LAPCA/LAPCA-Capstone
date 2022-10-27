@@ -19,7 +19,6 @@ END_STATE
 
 STATE after
     for function in function_count.keys():
-        print(function,function_count[function])
         if function_count[function] > 30:
             print("Number of lines exceeded in function",function)
 END_STATE
