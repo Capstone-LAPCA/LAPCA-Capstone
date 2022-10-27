@@ -21,10 +21,10 @@ class MainModule:
     def run(self,base_parser_path, new_parser_path):
         flag = Parser(self.lang, self.guidelines, base_parser_path,
                 new_parser_path).createNewParser()
-        if not flag:
+        if flag!="":
             with open("results.txt", "w") as f:
-                print(Path(self.formal_struct).stem,"not applicable for the given language. Please check the guideline selected")
-                f.write(Path(self.formal_struct).stem +" not applicable for the given language. Please check the guideline selected\n")
+                print(Path(self.formal_struct).stem,":",flag)
+                f.write(Path(self.formal_struct).stem +": "+flag+" \n")
         else:
             self.runCommand([sys.executable, new_parser_path, self.test_file])
                 

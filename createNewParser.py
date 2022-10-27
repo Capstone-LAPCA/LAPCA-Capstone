@@ -9,6 +9,8 @@ class createNewParser:
         self.new_parser_path = new_parser_path
         with open(base_parser_path, encoding='utf-8') as f:
             self.file_lines = f.readlines()
+            with open(self.new_parser_path, "w") as f:
+                f.write("".join(self.file_lines))
 
     def createNewParser(self) -> bool:
         i = 0
@@ -22,17 +24,23 @@ class createNewParser:
             i+=1
 
             if cur_state not in self.mapping[self.lang].keys():
-                return False
+                return "State is not applicable for the given language. Please check the State entered"
             cur_state = self.mapping[self.lang][cur_state]
+            flag=False
             while(i < len(self.guidelines)):
                 words = self.guidelines[i]
                 if("END_STATE" in words):
                     self.writeFileAt(cur_state, code)
+                    flag=True
                     break
                 else:
+                    if(words[0:4]!="\t" and words[0:4]!="    "):
+                        return "Guideline is not indented as per LAPCA standards"
                     code.append("    "+words)
                 i += 1
-        return True
+            if not flag:
+                return "END_STATE not found for the given state"
+        return ""
 
     def writeFileAt(self, atstate, string):
         if atstate == "before":

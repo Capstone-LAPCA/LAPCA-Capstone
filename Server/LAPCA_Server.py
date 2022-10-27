@@ -72,6 +72,32 @@ structure of json:
 }
 '''
 
+"""
+{
+    "language": "c",
+    "code":"sdafasd",
+    'formpredef':{
+        "variable_var":true,
+        "check":false
+    }
+"CustomGuideline":[0:{
+"checked": True,
+"label":"check yada yada",
+"guideline":"State vsvmvof EndState"
+},
+1:{
+"checked": false
+"label":"check yada boda"
+"guideline":"State vsvmvof EndState"
+},
+2:{
+"checked": True,
+"label":"check yada sada",
+"guideline":"State vsvmvof EndState"
+}]
+}
+
+"""
 
 @app.route('/getResults', methods=['POST'])
 @cross_origin()
@@ -111,7 +137,7 @@ def getResults():
 def getGuidelines():
     return json.load(open(os.path.abspath("./JSON/guidelines.json")))
 
-@app.route('/getGuideline', methods=['GET'])
+@app.route('/getGuidelinefile', methods=['GET'])
 @cross_origin()
 def getGuideline():
     file_name=request.args.get("file_path")
