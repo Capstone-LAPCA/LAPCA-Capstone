@@ -371,11 +371,11 @@ class javaParserActions(visitors.Visitor):
         ITERATION_CONDITION = ""
         ITERATION = ""
         if items.children[0].data == "while_stmt":
-            ITERATION_CONDITION = getCondition(items.children[0],[])
+            ITERATION_CONDITION = condition_list
             ITERATION = "while"
         elif items.children[0].data == "for_stmt":
             ITERATION = "for"
-            ITERATION_CONDITION = getCondition(items.children[0],[])
+            ITERATION_CONDITION = condition_list
         else :
             ITERATION = items.children[0].data
         EXP_STATEMENTS_INSIDE_ALL_IF = []
@@ -421,7 +421,7 @@ class javaParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         condition_list = []
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list[0]
+        ITERATION_CONDITION = condition_list
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
@@ -432,7 +432,7 @@ class javaParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         condition_list = []
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list[0]
+        ITERATION_CONDITION = condition_list
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass

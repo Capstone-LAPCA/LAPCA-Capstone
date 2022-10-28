@@ -23,6 +23,16 @@ def test(i):
         else:
             continue
     for i in range(1,10):
+        for j in range(1,10):
+            if(i == j):
+                return 0
+            else:
+                for k in range(1,10):
+                    if(i == k):
+                        return 0
+                    else:
+                        continue
+                continue
         continue
     return i + test(i - 1)    
 

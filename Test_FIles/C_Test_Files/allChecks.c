@@ -42,6 +42,7 @@ int main(void)
     for(int i=0;i<n,a=5;i++)
     {
         continue;
+        for(;;) for(;;);
     }
     return 0;
     int b = 10;

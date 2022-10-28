@@ -22,17 +22,11 @@ class MainTransformer():
 
 def ret_iter(Tree, variables):
     if Tree.data == "directdeclarator" and not isinstance(Tree.children[0], type(Tree)):
-        return Tree.children[0]
+        return Tree.children[0].value
     l = Tree.children
-    while len(l):
-        i = l.pop()
+    for i in l:
         if isinstance(i, type(Tree)):
-            if i.data == "functiondefinition":
-                l.extend(i.children[2:])
-                continue
-            if i.data == "directdeclarator":
-                variables.append(i.children[0])
-            l.extend(i.children)
+            ret_iter(i, variables)
 
 
 def getFunctionCalls(Tree,function_calls):
@@ -151,6 +145,9 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                 getExpressionStatementsInsideIf(i,expression_statements)
 
 class CParserActions(visitors.Visitor):
+    def while_rule(self,items):
+
+        pass
     def start(self, items):
 
         pass
@@ -471,7 +468,7 @@ class CParserActions(visitors.Visitor):
             assign_pres=True
         condition_list = []
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list[0]
+        ITERATION_CONDITION = condition_list
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         pass
@@ -490,7 +487,7 @@ class CParserActions(visitors.Visitor):
         else:
             ITERATION = items.children[0].value
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list[0]
+        ITERATION_CONDITION = condition_list
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []

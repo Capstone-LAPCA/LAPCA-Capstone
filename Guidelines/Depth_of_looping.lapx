@@ -1,0 +1,30 @@
+STATE before
+    FOR_CHECK = False
+    CUR_LINE = 1
+    CUR_DEPTH = 1
+    MAX_DEPTH = 0
+END_STATE
+
+STATE iteration
+    global FOR_CHECK
+    global CUR_LINE
+    global CUR_DEPTH
+    global MAX_DEPTH
+    if ITERATION in ["for","while"]:
+        if not FOR_CHECK:
+            CUR_LINE = items.meta.line
+            FOR_CHECK = True
+        temp = []
+        getTokens(items,temp)
+        if "for" not in temp[1:] and "while" not in temp[1:]:
+            FOR_CHECK = False
+            CUR_DEPTH = 1
+        else:
+            CUR_DEPTH += 1
+        MAX_DEPTH = max(MAX_DEPTH,CUR_DEPTH)
+END_STATE
+
+STATE after
+    if MAX_DEPTH > 2:
+        print("Depth of looping greater than 2 at line",CUR_LINE)
+END_STATE

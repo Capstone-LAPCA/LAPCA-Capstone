@@ -131,7 +131,7 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
             return None
         else:
             flagIf = True
-    if Tree.data=="stmt" or "simple_stmt" or "compound_stmt":
+    if Tree.data=="simple_stmt" or Tree.data =="compound_stmt" or Tree.data=="stmt":
         expression_statements.append(getBlockItem(Tree,""))
     else:
         l = Tree.children
