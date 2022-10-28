@@ -5,9 +5,7 @@ STATE function
             print("Dead code statement in",FUNCTION_NAME,"at line",d[statement])
         if 'return ' in statement[0:7]:
             flag = True
-    
     flag = False
-
     for if_stmt in EXP_STATEMENTS_INSIDE_ALL_IF:
         for statement in if_stmt:
             if flag == True:
@@ -18,10 +16,11 @@ STATE function
 END_STATE
 
 STATE iteration
-    flag = False
-    for statement in STATEMENTS:
-        if flag == True:
-            print("Dead code statement in loop at line",d[statement])
-        if 'return' in statement[0:7] or 'break' in statement[0:5] or 'continue' in statement[0:8]:
-            flag = True
+    if ITERATION == "for" or ITERATION == "while":
+        flag = False
+        for statement in STATEMENTS:
+            if flag == True:
+                print("Dead code statement in loop at line",d[statement])
+            if 'return' in statement[0:7] or 'break' in statement[0:5] or 'continue' in statement[0:8]:
+                flag = True
 END_STATE

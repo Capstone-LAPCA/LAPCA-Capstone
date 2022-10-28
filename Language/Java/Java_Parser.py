@@ -86,7 +86,7 @@ def getCondition(Tree,condition_list):
             getCondition(i,condition_list)
 
 def getExpressionStatements(Tree,expression_statements):
-    if Tree.data == "test_stmt":
+    if Tree.data == "stmt_base" or Tree.data=="test_stmt" or Tree.data=="single_stmt" or Tree.data=="compound_stmt" or Tree.data=="simple_stmt":
         expression_statements.append(getBlockItem(Tree,""))
     else:
         l = Tree.children
@@ -123,7 +123,7 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
             return None
         else:
             flagIf = True
-    if Tree.data=="test_stmt" or Tree.data=="while_stmt" or Tree.data=="for_stmt" or Tree.data=="return_stmt":
+    if Tree.data=="test_stmt" or Tree.data=="single_stmt" or Tree.data=="compound_stmt" or Tree.data=="simple_stmt":
         expression_statements.append(getBlockItem(Tree,""))
     else:
         l = Tree.children
@@ -361,7 +361,25 @@ class javaParserActions(visitors.Visitor):
 
         pass
     def compound_stmt(self, items):
-
+        STATEMENTS = []
+        LINE_NO = items.meta.line
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = ""
+        ITERATION = ""
+        if items.children[0].data == "while_stmt":
+            ITERATION_CONDITION = getCondition(items.children[0],[])
+            ITERATION = "while"
+        elif items.children[0].data == "for_stmt":
+            ITERATION = "for"
+            ITERATION_CONDITION = getCondition(items.children[0],[])
+        else :
+            ITERATION = items.children[0].data
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def synchronized_stmt(self, items):
 

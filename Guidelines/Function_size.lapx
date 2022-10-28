@@ -12,9 +12,10 @@ STATE function
     function_count[FUNCTION_NAME] = count_lines
 END_STATE
 
-STATE while
-    global count_lines
-    function_count[cur_function_name]+=len(STATEMENTS)
+STATE iteration
+    if ITERATION=="for" or ITERATION=="while":
+        global count_lines
+        function_count[cur_function_name]+=len(STATEMENTS)
 END_STATE
 
 STATE after

@@ -131,7 +131,7 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
             return None
         else:
             flagIf = True
-    if Tree.data=="simple_stmt" or Tree.data=="while_stmt" or Tree.data=="for_stmt":
+    if Tree.data=="stmt" or "simple_stmt" or "compound_stmt":
         expression_statements.append(getBlockItem(Tree,""))
     else:
         l = Tree.children
@@ -326,7 +326,24 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def compound_stmt(self, items):
-
+        STATEMENTS = []
+        LINE_NO = items.meta.line
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = ""
+        ITERATION = ""
+        if items.children[0].data == "while_stmt":
+            ITERATION_CONDITION = getCondition(items.children[0],[])
+            ITERATION = "while"
+        elif items.children[0].data == "for_stmt":
+            ITERATION = "for"
+        else :
+            ITERATION = items.children[0].data
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def async_stmt(self, items):
 

@@ -31,7 +31,6 @@ STATE while
         res.append(0)
     else:
         res.append(1)
-
     #CHECK FOR MIDDLE ELEMENT ASSIGNMENT
     flag = False
     for i in STATEMENTS:
@@ -44,8 +43,6 @@ STATE while
         res.append(1)
     else:
         res.append(0)
-
-
     #CHECKS FOR IF-ELSE CONDITIONS
     c = 0
     k = []
@@ -67,7 +64,6 @@ STATE while
         res.append(1)
     else:
         res.append(0)
-
     #CHECK FOR MID ELEMENT INSIDE IF #doesnt work at all times (not required)
     for EXP_STMT in EXP_STATEMENTS_INSIDE_ALL_IF:  
         if mid_ele not in "".join(EXP_STMT):
@@ -76,7 +72,6 @@ STATE while
     if len(res)==4:
         res.append(1)
     final_res.append(res)
-
 END_STATE
 
 STATE after

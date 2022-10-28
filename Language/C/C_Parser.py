@@ -131,7 +131,7 @@ def getExpressionStatementsInsideAllIf(Tree,expression_statements):
         tok = []
         getTokens(Tree,tok)
         if tok[0] == 'else':
-            expression_statements.append("".join(tok[1:]))
+            expression_statements.append(["".join(tok[1:])])
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):
@@ -486,6 +486,13 @@ class CParserActions(visitors.Visitor):
             LINE_NO = items.meta.line
             assign_pres=True
         condition_list = []
+        ITERATION = ""
+        if items.children[0].value == "while":
+            ITERATION = "while"
+        elif items.children[0].value == "for":
+            ITERATION = "for"
+        else:
+            ITERATION = items.children[0].value
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list[0]
         STATEMENTS = []

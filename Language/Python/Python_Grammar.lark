@@ -47,8 +47,8 @@ lambda_starparams: "*" [name]  ("," lambda_paramvalue)* ["," [lambda_kwparams]]
 lambda_kwparams: "**" name ","?
 
 
-?stmt: simple_stmt | compound_stmt
-?simple_stmt: small_stmt (";" small_stmt)* [";"] _NEWLINE
+stmt: simple_stmt | compound_stmt
+simple_stmt: small_stmt (";" small_stmt)* [";"] _NEWLINE
 ?small_stmt: (expr_stmt | assign_stmt | del_stmt | pass_stmt | flow_stmt | import_stmt | global_stmt | nonlocal_stmt | assert_stmt)
 expr_stmt: testlist_star_expr 
 assign_stmt: annassign | augassign | assign
@@ -84,7 +84,7 @@ global_stmt: "global" name ("," name)*
 nonlocal_stmt: "nonlocal" name ("," name)*
 assert_stmt: "assert" test ["," test]
 
-?compound_stmt: if_stmt | while_stmt | for_stmt | try_stmt | match_stmt
+compound_stmt: if_stmt | while_stmt | for_stmt | try_stmt | match_stmt
               | with_stmt | funcdef | classdef | decorated | async_stmt
 async_stmt: "async" (funcdef | with_stmt | for_stmt)
 if_stmt: "if" test ":" suite elifs ["else" ":" suite]
