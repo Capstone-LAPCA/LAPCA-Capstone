@@ -34,7 +34,7 @@ class createNewParser:
                     flag=True
                     break
                 else:
-                    if(words[0:4]!="\t" and words[0:4]!="    "):
+                    if(words[0:4]!="\t" and words[0:4]!="    " and words!="\n"):
                         return "Guideline is not indented as per LAPCA standards"
                     code.append("    "+words)
                 i += 1

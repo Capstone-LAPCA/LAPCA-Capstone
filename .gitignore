@@ -7,3 +7,5 @@ results.txt
 test.py
 test.c
 test.java
+*.o
+*.class
