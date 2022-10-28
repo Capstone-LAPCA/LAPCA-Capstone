@@ -37,14 +37,10 @@ def ret_iter(Tree, variables):
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "postfixexpression":
-        l = Tree.children
-        flag = False
-        for i in l:
-            if isinstance(i,type(Tree)) and i.data == "argumentexpressionlist":
-                flag = True
-                break
-        if flag:
-            function_calls.append(l[0].children[0].value)
+        temp = []
+        getTokens(Tree,temp)
+        if len(temp)>1 and temp[1] == '(': 
+            function_calls.append(temp[0])
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):
