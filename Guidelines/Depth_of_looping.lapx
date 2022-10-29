@@ -1,30 +1,36 @@
 STATE before
-    FOR_CHECK = False
-    CUR_LINE = 1
     CUR_DEPTH = 1
-    MAX_DEPTH = 0
+    myl = []
+    RES = []
 END_STATE
 
 STATE iteration
-    global FOR_CHECK
-    global CUR_LINE
+    global myl
+    global RES
     global CUR_DEPTH
-    global MAX_DEPTH
     if ITERATION in ["for","while"]:
-        if not FOR_CHECK:
-            CUR_LINE = items.meta.line
-            FOR_CHECK = True
         temp = []
         getTokens(items,temp)
-        if "for" not in temp[1:] and "while" not in temp[1:]:
-            FOR_CHECK = False
-            CUR_DEPTH = 1
+        t = 0
+        for i in STATEMENTS:
+            if 'while' in i[0:5] or 'for' in i[0:3]:
+                t+=1
+        if t>0:
+            CUR_DEPTH+=1
+            myl.append(t)
+            if CUR_DEPTH > 2:
+                RES.append(LINE_NO)
         else:
-            CUR_DEPTH += 1
-        MAX_DEPTH = max(MAX_DEPTH,CUR_DEPTH)
+            while(len(myl)):
+                myl[-1]-=1
+                if(myl[-1]==0):
+                    CUR_DEPTH-=1
+                    myl.pop()
+                else:
+                    break
 END_STATE
 
 STATE after
-    if MAX_DEPTH > 2:
-        print("Depth of looping greater than 2 at line",CUR_LINE)
+    for i in RES:
+        print("Depth of looping greater than 2 at line",i)
 END_STATE
