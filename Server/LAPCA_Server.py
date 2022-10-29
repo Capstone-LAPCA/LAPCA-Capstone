@@ -34,12 +34,12 @@ def accessRes(file,form,comp_result):
     guideline_mapping = json.load(open(os.path.abspath("./JSON/guidelines.json")))
     guideline_mapping = guideline_mapping["guidelines"]
     s = ""
-    for guideline in form.keys():
-        if form[guideline]:
+    for guideline in form:
+        if guideline["checked"]:
             temp = {}
-            MainModule(file,os.path.join("Guidelines",guideline)).factory()
+            MainModule(file,os.path.join("Guidelines",guideline["id"])).factory()
             for i in guideline_mapping:
-                if i["id"] == guideline:
+                if i["id"] == guideline["id"]:
                     temp["name"] = i["label"]
             with open("results.txt", "r") as text_file:
                 s=text_file.read()
@@ -50,13 +50,12 @@ def accessRes(file,form,comp_result):
 def userDefAccessRes(file,form,comp_result):
     s = ""
     for guideline in form:
-        fs=form[guideline]
-        if fs["checked"]:
+        if guideline["checked"]:
             temp = {}
-            temp["name"] = fs["label"]
-            file_name = "".join(fs["label"].split(" "))+".lapx"
+            temp["name"] = guideline["label"]
+            file_name = "".join(guideline["label"].split(" "))+".lapx"
             with open(os.path.join("Guidelines","UserDefGuidelines",file_name),"w") as f:
-                f.write(fs["lapx_code"])
+                f.write(guideline["code"])
             MainModule(file,os.path.join("Guidelines","UserDefGuidelines",file_name)).factory()
             with open("results.txt", "r") as text_file:
                 s=text_file.read()
@@ -124,6 +123,7 @@ def getResults():
     code = data['code']
     form = data['predefined_guidelines']
     user_defined_guidelines = data['custom_guidelines']
+    print(form)
     file_path=os.path.join("Server","test."+language)
     res = ""
     comp_result = {

@@ -363,6 +363,7 @@ class pythonParserActions(visitors.Visitor):
         pass
     def while_stmt(self, items):
         STATEMENTS = []
+        LINE_NO = items.meta.line
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)

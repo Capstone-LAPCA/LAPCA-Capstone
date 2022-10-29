@@ -24,7 +24,7 @@ class MainModule:
         if flag!="":
             with open("results.txt", "w") as f:
                 print(Path(self.formal_struct).stem,":",flag)
-                f.write(Path(self.formal_struct).stem +": "+flag+" \n")
+                f.write(flag+" \n")
         else:
             self.runCommand([sys.executable, new_parser_path, self.test_file])
                 
