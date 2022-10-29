@@ -150,9 +150,9 @@ class CParserActions(visitors.Visitor):
         condition_list = []
         ITERATION = ""
         if items.children[0].value == "while":
-            ITERATION = "while"
+            ITERATION = "while_stmt"
         elif items.children[0].value == "for":
-            ITERATION = "for"
+            ITERATION = "for_stmt"
         else:
             ITERATION = items.children[0].value
         getCondition(items,condition_list)
@@ -494,9 +494,9 @@ class CParserActions(visitors.Visitor):
         condition_list = []
         ITERATION = ""
         if items.children[0].value == "while":
-            ITERATION = "while"
+            ITERATION = "while_stmt"
         elif items.children[0].value == "for":
-            ITERATION = "for"
+            ITERATION = "for_stmt"
         else:
             ITERATION = items.children[0].value
         getCondition(items,condition_list)
