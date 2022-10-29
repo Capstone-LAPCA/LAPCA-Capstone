@@ -44,5 +44,10 @@
         "id":"var_greater_than_31.lapx",
         "label":"Check if variable length is greater than 31",
         "class":"Organizational"
+    },
+    {
+        "id": "Switch_default.lapx",
+        "label": "Check if switch default is used",
+        "class": "Organizational"
     }]
 }

@@ -402,7 +402,9 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def match_stmt(self, items):
-
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        LINE_NO = items.meta.line
         pass
     def case(self, items):
 
