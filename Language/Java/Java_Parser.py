@@ -320,8 +320,8 @@ class javaParserActions(visitors.Visitor):
 
         pass
     def assign_mul(self, items):
-        var_decl=True
         LINE_NO=items.meta.line
+        var_list=items.children
 
         pass
     def assign_base(self, items):

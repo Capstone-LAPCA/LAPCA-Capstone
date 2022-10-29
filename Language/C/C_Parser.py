@@ -267,6 +267,8 @@ class CParserActions(visitors.Visitor):
         pass
 
     def initdeclaratorlist(self, items):
+        LINE_NO=items.meta.line
+        var_list=items.children
 
         pass
 
