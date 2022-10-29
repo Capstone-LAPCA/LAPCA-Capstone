@@ -1,4 +1,4 @@
-STATE iteration
-    if (items.children[0].value == "while" and ischild(items.children[2],"assignmentoperator")) or (items.children[0].value == "for" and ischild(items.children[2],"assignmentoperator")):
+STATE assign_loop
+    if ' = ' in ASSIGN_COND:
         print("Assignment statement in loop condition at line", LINE_NO)
 END_STATE

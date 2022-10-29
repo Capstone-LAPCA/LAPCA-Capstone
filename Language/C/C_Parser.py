@@ -84,7 +84,7 @@ def ischild(Tree,child):
     return flag
 
 def getCondition(Tree,condition_list):
-    if Tree.data=="iterationstatement" or Tree.data=="selectionstatement":
+    if Tree.data=="while_stmt" or Tree.data =="for_stmt" or Tree.data=="selectionstatement":
         condition_list.append(getBlockItem(Tree.children[2],""))
     l = Tree.children
     for i in l:
@@ -148,15 +148,11 @@ class CParserActions(visitors.Visitor):
     def while_stmt(self, items):
         LINE_NO=items.meta.line
         condition_list = []
-        ITERATION = ""
-        if items.children[0].value == "while":
-            ITERATION = "while_stmt"
-        elif items.children[0].value == "for":
-            ITERATION = "for_stmt"
-        else:
-            ITERATION = items.children[0].value
+        ITERATION = "while"
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list
+        ITERATION_CONDITION = ""
+        if len(condition_list):
+            ITERATION_CONDITION = condition_list[0]
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
@@ -164,7 +160,7 @@ class CParserActions(visitors.Visitor):
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
-        pass
+
     def switch_stmt(self, items):
         LINE_NO = items.meta.line
         ALL_TOKENS = []
@@ -493,14 +489,23 @@ class CParserActions(visitors.Visitor):
         LINE_NO=items.meta.line
         condition_list = []
         ITERATION = ""
-        if items.children[0].value == "while":
-            ITERATION = "while_stmt"
-        elif items.children[0].value == "for":
-            ITERATION = "for_stmt"
+        if items.children[0].data == "while_stmt":
+            ITERATION = "while"
+        elif items.children[0].data == "for_stmt":
+            ITERATION = "for"
         else:
-            ITERATION = items.children[0].value
+            ITERATION = items.children[0].data
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list
+        ASSIGN_COND = ""
+        if len(condition_list) > 0:
+            ASSIGN_COND = condition_list[0].split(';')
+            if len(ASSIGN_COND) > 1:
+                ASSIGN_COND = ASSIGN_COND[1]
+            else:
+                ASSIGN_COND = ASSIGN_COND[0]
+        ITERATION_CONDITION = ""
+        if len(condition_list):
+            ITERATION_CONDITION = condition_list[0]
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
