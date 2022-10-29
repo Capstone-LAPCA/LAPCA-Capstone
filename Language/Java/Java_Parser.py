@@ -449,7 +449,9 @@ class javaParserActions(visitors.Visitor):
 
         pass
     def switch_stmt(self, items):
-
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        LINE_NO = items.meta.line
         pass
     def case_stmts(self, items):
 

@@ -8,11 +8,11 @@
         "continue": "primaryexpression",
         "assign_loop":"iterationstatement",
         "var_decl":"initdeclaratorlist",
-        "while":"iterationstatement",
-        "if":"selectionstatement",
-        "for": "iterationstatement",
-        "iteration":"iterationstatement"
-
+        "iteration":"iterationstatement",
+        "switch":"switch_stmt",
+        "while":"while_stmt",
+        "if":"if_stmt",
+        "for": "for_stmt"
     },
     "py":{
         "before": "before",
@@ -24,7 +24,8 @@
         "while": "while_stmt",
         "if":  "if_stmt",
         "for": "for_stmt",
-        "iteration":"compound_stmt"
+        "iteration":"compound_stmt",
+        "switch":"match_stmt"
     },
     "java":{
         "before": "before",
@@ -36,7 +37,8 @@
         "var_decl":"assign_mul",
         "while":"while_stmt",
         "for":"for_stmt",
-        "iteration":"compound_stmt"
+        "iteration":"compound_stmt",
+        "switch":"switch_stmt"
 
     }
 }

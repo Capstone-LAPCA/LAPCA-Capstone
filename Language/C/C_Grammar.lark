@@ -76,8 +76,8 @@ compoundstatement :   "{" blockitemlist? "}"
 blockitemlist :   blockitem+
 blockitem :   statement |   declaration
 expressionstatement :   expression? ";"
-selectionstatement :   "if" "(" expression ")" statement ("else" statement)? |   "switch" "(" expression ")" statement
-iterationstatement :   WHILE "(" expression ")" statement |   DO statement WHILE "(" expression ")" ";" |   FOR "(" forcondition ")" statement
+selectionstatement :   "if" "(" expression ")" statement ("else" statement)? -> if_stmt |   "switch" "(" expression ")" statement -> switch_stmt
+iterationstatement :   WHILE "(" expression ")" statement -> while_stmt |   DO statement WHILE "(" expression ")" ";" -> do_while_stmt |   FOR "(" forcondition ")" statement -> for_stmt
 forcondition : (fordeclaration | expression?) ";" forexpression? ";" forexpression?
 fordeclaration : declarationspecifiers initdeclaratorlist?
 forexpression : assignmentexpression ("," assignmentexpression)*

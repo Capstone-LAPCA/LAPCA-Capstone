@@ -145,8 +145,10 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                 getExpressionStatementsInsideIf(i,expression_statements)
 
 class CParserActions(visitors.Visitor):
-    def while_rule(self,items):
-
+    def switch_stmt(self, items):
+        LINE_NO = items.meta.line
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         pass
     def start(self, items):
 
