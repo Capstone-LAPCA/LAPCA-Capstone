@@ -8,7 +8,9 @@ public class Test_depth {
                 System.out.println(i);
                 for(;;)
                 {
-                    while(true);
+                    while(true){
+                        int a=0;
+                    }
                 }
         }
         for(int i=0;i==10;i++){
@@ -18,7 +20,9 @@ public class Test_depth {
                 System.out.println(i);
                 for(;;)
                 {
-                    while(true);
+                    while(true){
+                        int a=0;
+                    }
                 }
         }
     }

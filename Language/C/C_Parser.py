@@ -462,10 +462,6 @@ class CParserActions(visitors.Visitor):
         pass
 
     def selectionstatement(self, items):
-        assign_pres=False
-        if(items.children[0].value == "while" and ischild(items.children[2],"assignmentoperator")) or (items.children[0].value == "for" and ischild(items.children[2],"assignmentoperator")):
-            LINE_NO = items.meta.line
-            assign_pres=True
         condition_list = []
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list
@@ -474,10 +470,6 @@ class CParserActions(visitors.Visitor):
         pass
 
     def iterationstatement(self, items):
-        assign_pres=False
-        LINE_NO = items.meta.line
-        if(items.children[0].value == "while" and ischild(items.children[2],"assignmentoperator")) or (items.children[0].value == "for" and ischild(items.children[2],"assignmentoperator")):
-            assign_pres=True
         condition_list = []
         ITERATION = ""
         if items.children[0].value == "while":
