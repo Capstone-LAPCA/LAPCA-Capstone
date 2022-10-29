@@ -267,10 +267,6 @@ class CParserActions(visitors.Visitor):
         pass
 
     def initdeclaratorlist(self, items):
-        var_decl=False
-        LINE_NO=items.meta.line
-        if(len(items.children)>1):
-            var_decl=True
 
         pass
 
@@ -470,6 +466,7 @@ class CParserActions(visitors.Visitor):
         pass
 
     def iterationstatement(self, items):
+        LINE_NO=items.meta.line
         condition_list = []
         ITERATION = ""
         if items.children[0].value == "while":
