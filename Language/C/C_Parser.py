@@ -145,6 +145,26 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                 getExpressionStatementsInsideIf(i,expression_statements)
 
 class CParserActions(visitors.Visitor):
+    def while_stmt(self, items):
+        LINE_NO=items.meta.line
+        condition_list = []
+        ITERATION = ""
+        if items.children[0].value == "while":
+            ITERATION = "while"
+        elif items.children[0].value == "for":
+            ITERATION = "for"
+        else:
+            ITERATION = items.children[0].value
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        pass
+        pass
     def switch_stmt(self, items):
         LINE_NO = items.meta.line
         ALL_TOKENS = []
