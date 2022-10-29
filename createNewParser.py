@@ -13,6 +13,8 @@ class createNewParser:
                 f.write("".join(self.file_lines))
 
     def createNewParser(self) -> bool:
+        if self.guidelines[0][0:8]=='LANGUAGE' and self.lang not in self.guidelines[0][9:].strip().split(','):
+            return "State is not applicable for the given language. Please check the State entered"
         i = 0
         while(i < len(self.guidelines)):
             code = []
