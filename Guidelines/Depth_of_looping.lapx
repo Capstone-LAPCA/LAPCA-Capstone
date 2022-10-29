@@ -9,17 +9,15 @@ STATE iteration
     global RES
     global CUR_DEPTH
     if ITERATION in ["for","while"]:
-        temp = []
-        getTokens(items,temp)
         t = 0
+        if CUR_DEPTH > 2:
+            RES.append(LINE_NO)
         for i in STATEMENTS:
             if 'while' in i[0:5] or 'for' in i[0:3]:
                 t+=1
         if t>0:
             CUR_DEPTH+=1
             myl.append(t)
-            if CUR_DEPTH > 2:
-                RES.append(LINE_NO)
         else:
             while(len(myl)):
                 myl[-1]-=1

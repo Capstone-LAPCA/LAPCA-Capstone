@@ -14,7 +14,7 @@ void f1()
                 printf("Hello World");
                 while(1)
                 {
-                    printf("hhh");
+                    printf("hjhkhh");
                 } 
             }
         } 
