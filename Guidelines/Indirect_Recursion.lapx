@@ -1,0 +1,15 @@
+STATE before
+    ALL_FUNCTION_CALLS = {}
+END_STATE
+
+STATE function
+    FUNCTIONS.append(FUNCTION_NAME)
+    ALL_FUNCTION_CALLS[FUNCTION_NAME] = FUNCTION_CALLS
+END_STATE
+
+STATE after
+    for function in FUNCTIONS:
+        for i in FUNCTIONS:
+            if i!=function and function in ALL_FUNCTION_CALLS[i] and i in ALL_FUNCTION_CALLS[function]:
+                print("Indirect recursion present between functions",function,"and",i)
+END_STATE

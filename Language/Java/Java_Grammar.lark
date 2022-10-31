@@ -77,9 +77,9 @@ class_body: "{" (field | enum_class_elem | enum_field | method | block | clazz |
 
 // Statement
 stmt: comment? stmt_base
-?stmt_base: expr_stmt | compound_stmt _SEMICOLOM?
-?expr_stmt: simple_stmt | test_stmt
-?simple_stmt: break_stmt | continue_stmt | return_stmt | throw_stmt | assert_stmt
+stmt_base: expr_stmt | compound_stmt _SEMICOLOM?
+expr_stmt: simple_stmt | test_stmt
+simple_stmt: break_stmt | continue_stmt | return_stmt | throw_stmt | assert_stmt
 test_stmt: (assign_modifier | test) _SEMICOLOM
 ?assign_modifier: modifiers? assign_type
 ?assign_type: (class_type " ")? (assign_base | assign_mul)
@@ -96,7 +96,7 @@ arr_operation: test "[" test "]"
 
 test_stmt_inline: (assign_modifier | test)       -> test_stmt
 
-?compound_stmt: if_stmt | switch_stmt | for_stmt | while_stmt | do_while_stmt | try_stmt | synchronized_stmt
+compound_stmt: if_stmt | switch_stmt | for_stmt | while_stmt | do_while_stmt | try_stmt | synchronized_stmt
 synchronized_stmt: "synchronized" ("(" test ")")? "{" suit? "}"
 try_stmt: "try" try_with? try_body
 ?try_with: "(" test_stmt_inline ")"

@@ -1,10 +1,15 @@
 from lark import Lark, visitors
 from lark.lexer import Token
 import sys
+import os
+sys.path.insert(1, os.path.join(sys.path[0], '../..'))
+from Utils.Utility import Utility, getTokens
 info_list = []
 d = {}
 line_no = {}
 FUNCTIONS = []
+flagIf = False
+
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -17,29 +22,19 @@ class MainTransformer():
 
 def ret_iter(Tree, variables):
     if Tree.data == "directdeclarator" and not isinstance(Tree.children[0], type(Tree)):
-        return Tree.children[0]
+        return Tree.children[0].value
     l = Tree.children
-    while len(l):
-        i = l.pop()
+    for i in l:
         if isinstance(i, type(Tree)):
-            if i.data == "functiondefinition":
-                l.extend(i.children[2:])
-                continue
-            if i.data == "directdeclarator":
-                variables.append(i.children[0])
-            l.extend(i.children)
+            ret_iter(i, variables)
 
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "postfixexpression":
-        l = Tree.children
-        flag = False
-        for i in l:
-            if isinstance(i,type(Tree)) and i.data == "argumentexpressionlist":
-                flag = True
-                break
-        if flag:
-            function_calls.append(l[0].children[0].value)
+        temp = []
+        getTokens(Tree,temp)
+        if len(temp)>1 and temp[1] == '(': 
+            function_calls.append(temp[0])
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):
@@ -64,7 +59,8 @@ def getBlockItem(tree,s):
         l = tree.children
         for i in l:
             s+=getBlockItem(i,"")
-        d[s] = tree.meta.line
+        if hasattr(tree,'meta') and hasattr(tree.meta,'line'):
+            d[s] = tree.meta.line
     return s
 
 
@@ -88,20 +84,12 @@ def ischild(Tree,child):
     return flag
 
 def getCondition(Tree,condition_list):
-    if Tree.data=="iterationstatement" or Tree.data=="selectionstatement":
+    if Tree.data=="while_stmt" or Tree.data =="for_stmt" or Tree.data=="selectionstatement":
         condition_list.append(getBlockItem(Tree.children[2],""))
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):    
             getCondition(i,condition_list)
-
-def getTokens(Tree,token_list):
-    if isinstance(Tree,Token):
-        token_list.append(Tree.value)
-    else:
-        l = Tree.children
-        for i in l:  
-            getTokens(i,token_list)
 
 def getExpressionStatements(Tree,expression_statements):
     if Tree.data == "expressionstatement":
@@ -112,16 +100,72 @@ def getExpressionStatements(Tree,expression_statements):
             if isinstance(i, type(Tree)):
                 getExpressionStatements(i,expression_statements)
 
-def getReturnStatements(Tree,return_statements):
-    if Tree.data == "jumpstatement":
-        return_statements.append(getBlockItem(Tree,""))
+def getExpressionStatementsInsideAllIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "selectionstatement":
+        expr = []
+        getExpressionStatementsInsideIf(Tree,expr)
+        if "else" in expr:
+            start = 0
+            while start<len(expr) and "else" in expr[start:]:
+                ind = expr.index("else",start)
+                if len(expr[start:ind]):
+                    expression_statements.append(expr[start:ind])
+                start = ind+1
+            if len(expr[start:]):
+                expression_statements.append(expr[start:])
+        elif len(expr):
+            expression_statements.append(expr)
+        flagIf = False
+    if Tree.data == "declaration":
+        tok = []
+        getTokens(Tree,tok)
+        if tok[0] == 'else':
+            expression_statements.append(["".join(tok[1:])])
+    l = Tree.children
+    for i in l:
+        if isinstance(i, type(Tree)):
+            getExpressionStatementsInsideAllIf(i,expression_statements)
+
+def getExpressionStatementsInsideIf(Tree,expression_statements):
+    global flagIf
+    if Tree.data == "selectionstatement":
+        if flagIf:
+            return
+        else:
+            flagIf = True
+    if Tree.data == "expressionstatement" or Tree.data=="blockitem" or Tree.data=="jumpstatement":
+        expression_statements.append(getBlockItem(Tree,""))
     else:
         l = Tree.children
         for i in l:
+            if isinstance(i,Token) and i.value == "else":
+                expression_statements.append("else")
             if isinstance(i, type(Tree)):
-                getReturnStatements(i,return_statements)
+                getExpressionStatementsInsideIf(i,expression_statements)
 
 class CParserActions(visitors.Visitor):
+    def while_stmt(self, items):
+        LINE_NO=items.meta.line
+        condition_list = []
+        ITERATION = "while"
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = ""
+        if len(condition_list):
+            ITERATION_CONDITION = condition_list[0]
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        pass
+
+    def switch_stmt(self, items):
+        LINE_NO = items.meta.line
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        pass
     def start(self, items):
 
         pass
@@ -241,10 +285,8 @@ class CParserActions(visitors.Visitor):
         pass
 
     def initdeclaratorlist(self, items):
-        var_decl=False
         LINE_NO=items.meta.line
-        if(len(items.children)>1):
-            var_decl=True
+        var_list=items.children
 
         pass
 
@@ -436,23 +478,40 @@ class CParserActions(visitors.Visitor):
         pass
 
     def selectionstatement(self, items):
-
+        condition_list = []
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
         pass
 
     def iterationstatement(self, items):
-        assign_pres=False
-        if(items.children[0].value == "while" and ischild(items.children[2],"assignmentoperator")) or (items.children[0].value == "for" and ischild(items.children[2],"assignmentoperator")):
-            LINE_NO = items.meta.line
-            assign_pres=True
+        LINE_NO=items.meta.line
         condition_list = []
+        ITERATION = ""
+        if items.children[0].data == "while_stmt":
+            ITERATION = "while"
+        elif items.children[0].data == "for_stmt":
+            ITERATION = "for"
+        else:
+            ITERATION = items.children[0].data
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list[0]
+        ASSIGN_COND = ""
+        if len(condition_list) > 0:
+            ASSIGN_COND = condition_list[0].split(';')
+            if len(ASSIGN_COND) > 1:
+                ASSIGN_COND = ASSIGN_COND[1]
+            else:
+                ASSIGN_COND = ASSIGN_COND[0]
+        ITERATION_CONDITION = ""
+        if len(condition_list):
+            ITERATION_CONDITION = condition_list[0]
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
-        RETURN_STATEMENTS = []
-        getReturnStatements(items,RETURN_STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
 
     def forcondition(self, items):
@@ -494,6 +553,8 @@ class CParserActions(visitors.Visitor):
         line_no[FUNCTION_NAME] = LINE_NO
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
 
     def declarationlist(self, items):

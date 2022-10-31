@@ -25,7 +25,7 @@ Language Agnostic Program Conformance Analysis
 git clone https://github.com/Capstone-LAPCA/LAPCA-Capstone.git
 cd LAPCA-CAPSTONE
 pip install -r requirements.txt
-python3 main.py "Formal-Structure-File" "Test-File"
+python3 run.py "Formal-Structure-File" "Test-File"
 ```
 ### Start the LAPCA server by executing the below command:
 ```
