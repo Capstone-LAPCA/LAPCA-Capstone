@@ -146,9 +146,10 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
 
 def getFunctionParams(Tree, param_list):
     if Tree.data == "parameterdeclaration":
+        # print(getBlockItem(Tree,""))
         for i in Tree.children:
             if isinstance(i,type(Tree)) and i.data == "declarator":
-               param_list.append(i.children[0].children[0].value)
+                param_list.append(getBlockItem(i,""))
     else:
         for i in Tree.children:
             if isinstance(i,type(Tree)):

@@ -70,8 +70,6 @@ def getBlockItem(Tree,s):
             s+=getBlockItem(i,"")
         if hasattr(Tree,'meta') and hasattr(Tree.meta,'line'):
             d[s] = Tree.meta.line
-    if 'pass' in s:
-        return ""
     return s
 
 

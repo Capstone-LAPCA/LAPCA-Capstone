@@ -1,6 +1,6 @@
 #include <stdio.h>
 int max(int num1, int num2){
-    
+
 }
 
 
@@ -12,7 +12,7 @@ int main () {
    int ret;
  
    /* calling a function to get max value */
-   ret = max(a, b);
+   ret = max(a, b,1,1,1,1);
  
    printf( "Max value is : %d\n", ret );
  
