@@ -1,5 +1,7 @@
 import json
 import os
+import copy
+import re
 
 class createNewParser:
     def __init__(self, lang, guidelines, base_parser_path, new_parser_path):
@@ -11,6 +13,38 @@ class createNewParser:
             self.file_lines = f.readlines()
             with open(self.new_parser_path, "w") as f:
                 f.write("".join(self.file_lines))
+
+    def convertToPython(self,words):
+
+        #is present in
+        compiled = re.compile(re.escape("is present in"), re.IGNORECASE)
+        words = compiled.sub("in", words)
+
+
+        modified_str = copy.deepcopy(words)
+        modified_str = modified_str.strip(' ').split(' ')
+
+        #Print
+        if "PRINT" in modified_str[0]:
+            words = words.replace("PRINT","print(")
+            words = words[0:len(words)-1]+")"+words[len(words)-1:]
+
+        #every
+        if "for" or "while" in modified_str[0]:
+            words = words.replace("every","")
+
+        #equal to
+        if "if" or "while" in modified_str[0]:
+            compiled = re.compile(re.escape("is equal to"), re.IGNORECASE)
+            words = compiled.sub("==", words)
+        return words
+
+    def securityCheck(self,words):
+        if 'import' in words:
+            return True,"Import statements not allowed in guidelines"
+        if ".write" in words:
+            return True,"File operations not allowed in guidelines"
+        return False,""
 
     def createNewParser(self) -> bool:
         if self.guidelines[0][0:8]=='LANGUAGE' and self.lang not in self.guidelines[0][9:].strip().split(','):
@@ -38,6 +72,12 @@ class createNewParser:
                 else:
                     if(words[0:4]!="\t" and words[0:4]!="    " and words!="\n"):
                         return "Guideline is not indented as per LAPCA standards"
+                    
+                    words = self.convertToPython(words)
+                    flag,err = self.securityCheck(words)
+                    if flag:
+                        return err
+                    
                     code.append("    "+words)
                 i += 1
             if not flag:
