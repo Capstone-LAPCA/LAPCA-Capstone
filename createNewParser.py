@@ -26,8 +26,12 @@ class createNewParser:
 
         #Print
         if "PRINT" in modified_str[0]:
-            words = words.replace("PRINT","print('Line ',LINE_NO,': ',")
-            words = words[0:len(words)-1]+",sep='')"+words[len(words)-1:]
+            if cur_state not in ["before","after"]:
+                words = words.replace("PRINT","print('Line ',LINE_NO,': ',")
+                words = words[0:len(words)-1]+",sep='')\n"
+            else:
+                words = words.replace("PRINT","print('")
+                words = words[0:len(words)-1]+"')\n"
 
         #every
         if "for" or "while" in modified_str[0]:
