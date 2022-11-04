@@ -148,14 +148,7 @@ def getFunctionParams(Tree, param_list):
         if isinstance(i,type(Tree)) and i.data == "parameters":
                 for child in i.children:
                     if isinstance(child,type(Tree)):
-                        param_list.append(child.children[0].value)
-
-# def getFunctionBody(Tree, statements):
-#     s = statements
-#     statements = []
-#     for statement in s:
-#         if not ('pass' in statement):
-#             statements.append(statement)
+                        param_list.append(getBlockItem(child,""))
 
 class MainTransformer():
     def run(self):
