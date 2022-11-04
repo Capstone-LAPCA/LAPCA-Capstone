@@ -1,4 +1,4 @@
 STATE switch
     if 'default' not in ALL_TOKENS:
-        print("Switch statement does not have default case at line",LINE_NO)
+        PRINT "Switch statement does not have default case"
 END_STATE

@@ -14,7 +14,7 @@ class createNewParser:
             with open(self.new_parser_path, "w") as f:
                 f.write("".join(self.file_lines))
 
-    def convertToPython(self,words):
+    def convertToPython(self,words,cur_state):
 
         #is present in
         compiled = re.compile(re.escape("is present in"), re.IGNORECASE)
@@ -26,8 +26,8 @@ class createNewParser:
 
         #Print
         if "PRINT" in modified_str[0]:
-            words = words.replace("PRINT","print(")
-            words = words[0:len(words)-1]+")"+words[len(words)-1:]
+            words = words.replace("PRINT","print('Line ',LINE_NO,': ',")
+            words = words[0:len(words)-1]+",sep='')"+words[len(words)-1:]
 
         #every
         if "for" or "while" in modified_str[0]:
@@ -73,7 +73,7 @@ class createNewParser:
                     if(words[0:4]!="\t" and words[0:4]!="    " and words!="\n"):
                         return "Guideline is not indented as per LAPCA standards"
                     
-                    words = self.convertToPython(words)
+                    words = self.convertToPython(words,cur_state)
                     flag,err = self.securityCheck(words)
                     if flag:
                         return err

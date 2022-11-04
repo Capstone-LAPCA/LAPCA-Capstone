@@ -1,4 +1,4 @@
 STATE function
     if FUNCTION_NAME is present in FUNCTION_CALLS:
-        PRINT "Recursion used in function at line",LINE_NO
+        PRINT "Recursion used in function"
 END_STATE
