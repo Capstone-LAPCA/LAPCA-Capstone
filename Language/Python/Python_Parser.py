@@ -70,6 +70,8 @@ def getBlockItem(Tree,s):
             s+=getBlockItem(i,"")
         if hasattr(Tree,'meta') and hasattr(Tree.meta,'line'):
             d[s] = Tree.meta.line
+    if 'pass' in s:
+        return ""
     return s
 
 
@@ -150,6 +152,13 @@ def getFunctionParams(Tree, param_list):
                     if isinstance(child,type(Tree)):
                         param_list.append(child.children[0].value)
 
+# def getFunctionBody(Tree, statements):
+#     s = statements
+#     statements = []
+#     for statement in s:
+#         if not ('pass' in statement):
+#             statements.append(statement)
+
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
@@ -195,6 +204,7 @@ class pythonParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        
         pass
     def parameters(self, items):
 

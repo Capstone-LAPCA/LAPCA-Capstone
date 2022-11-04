@@ -1,0 +1,4 @@
+STATE function
+    if len(STATEMENTS) == 0:
+        print("Empty function found at line", LINE_NO)
+END_STATE

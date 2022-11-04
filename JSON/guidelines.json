@@ -54,5 +54,10 @@
         "id": "Function_params.lapx",
         "label": "Check if function has more than 5 parameters",
         "class": "Organizational"
+    },
+    {
+        "id":"Empty_func.lapx",
+        "label":"Check for empty functions",
+        "class":"Organizational"
     }]
 }
