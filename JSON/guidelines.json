@@ -11,6 +11,16 @@
         "class":"Organizational"
     },
     {
+        "id": "Indirect_Recursion.lapx",
+        "label": "Check for indirect recursion",
+        "class": "Organizational"
+    },
+    {
+        "id": "Depth_of_looping.lapx",
+        "label": "Check whether depth of looping has exceeded the limit",
+        "class": "Organizational"
+    },
+    {
         "id":"Binary_Search_Iterative.lapx",
         "label":"Check if binary search iterative is implemented",
         "class":"Algorithmic"
