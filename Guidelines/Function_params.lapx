@@ -1,0 +1,4 @@
+STATE function
+    if len(FUNCTION_PARAMS) > 5:
+        print("Function has too many parameters at line ", LINE_NO,)
+END_STATE

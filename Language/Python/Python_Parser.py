@@ -143,13 +143,20 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                     expression_statements.append("else")
                 getExpressionStatementsInsideIf(i,expression_statements)
 
+def getFunctionParams(Tree, param_list):
+    for i in Tree.children:
+        if isinstance(i,type(Tree)) and i.data == "parameters":
+                for child in i.children:
+                    if isinstance(child,type(Tree)):
+                        param_list.append(child.children[0].value)
+
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         file+="\n"
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        #print(pythonParserActions().visit_topdown(python_parser2.parse(file)).pretty())
+        # print(pythonParserActions().visit_topdown(python_parser2.parse(file)).pretty())
         pythonParserActions().visit_topdown(python_parser2.parse(file))
         return
 
@@ -177,6 +184,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def funcdef(self, items):
+        FUNCTION_PARAMS = [] 
+        getFunctionParams(items,FUNCTION_PARAMS)
         FUNCTION_NAME = getFunctionName(items)
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
