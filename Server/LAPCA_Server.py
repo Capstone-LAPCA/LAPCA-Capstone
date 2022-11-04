@@ -152,6 +152,7 @@ def getResults():
 @cross_origin()
 def getGuidelines():
     json_file = json.load(open(os.path.abspath("./JSON/guidelines.json")))
+
     for i in range(len(json_file["guidelines"])):
         id = json_file["guidelines"][i]["id"]
         if os.path.isfile(os.path.join("Guidelines",id)):

@@ -135,12 +135,20 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                     expression_statements.append("else")
                 getExpressionStatementsInsideIf(i,expression_statements)
 
+def getFunctionParams(Tree, param_list):
+    if Tree.data == "parameter_name":
+        param_list.append(getBlockItem(Tree,""))
+    else:
+        for i in Tree.children:
+            if isinstance(i,type(Tree)):
+                getFunctionParams(i,param_list)
+
 class MainTransformer():
     def run(self):
         file = open(sys.argv[1], encoding='utf-8').read()
         Java_parser = Lark.open('Java_Grammar.lark', start="clazz",rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
         javaParserActions().visit_topdown(Java_parser.parse(file))
-        #print(javaParserActions().visit_topdown(Java_parser.parse(file)).pretty())
+        # print(javaParserActions().visit_topdown(Java_parser.parse(file)).pretty())
         return
 
 class javaParserActions(visitors.Visitor):
@@ -222,6 +230,8 @@ class javaParserActions(visitors.Visitor):
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
+        FUNCTION_PARAMS = []
+        getFunctionParams(items,FUNCTION_PARAMS)
         STATEMENTS = []
         line_no[FUNCTION_NAME] = LINE_NO
         getBlockItemList(items,STATEMENTS)

@@ -17,7 +17,7 @@ class MainTransformer():
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
         CParserActions().visit_topdown(C_parser.parse(file))
-        #print(CParserActions().visit_topdown(C_parser.parse(file)).pretty())
+        # print(CParserActions().visit_topdown(C_parser.parse(file)).pretty())
         return
 
 def ret_iter(Tree, variables):
@@ -143,6 +143,14 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
                 expression_statements.append("else")
             if isinstance(i, type(Tree)):
                 getExpressionStatementsInsideIf(i,expression_statements)
+
+def getFunctionParams(Tree, param_list):
+    if Tree.data == "parameterdeclaration":
+        param_list.append(getBlockItem(Tree,""))
+    else:
+        for i in Tree.children:
+            if isinstance(i,type(Tree)):
+                getFunctionParams(i,param_list)
 
 class CParserActions(visitors.Visitor):
     def while_stmt(self, items):
@@ -548,6 +556,8 @@ class CParserActions(visitors.Visitor):
         getTokens(items,tokens)
         FUNCTION_NAME = tokens[1]
         FUNCTION_CALLS = []
+        FUNCTION_PARAMS = []
+        getFunctionParams(items,FUNCTION_PARAMS)
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
         line_no[FUNCTION_NAME] = LINE_NO
