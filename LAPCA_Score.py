@@ -37,7 +37,7 @@ for root, dirs, files in os.walk("./ExtractedFiles"):
             score = 0
             print("\t\t\tRunning LAPCA on file:", file)
             for guideline in guidelines:
-                if(guidelines[2]):
+                if(guideline[2]):
                     print("-------------")
                     print(guideline[1])
                     MainModule(os.path.join(root, file), os.path.join('./Guidelines',guideline[0]) ).factory()
