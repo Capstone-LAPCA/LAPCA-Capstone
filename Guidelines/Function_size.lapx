@@ -1,6 +1,6 @@
 STATE before
     count_lines = 0
-    function_count = {}
+    function_count = {"":0}
     cur_function_name = ""
 END_STATE
 
