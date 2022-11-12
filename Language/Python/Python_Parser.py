@@ -7,9 +7,7 @@ import os
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from Utils.Utility import Utility, getTokens
 info_list = []
-FUNCTIONS = []
-line_no = {}
-d = {}
+STATEMENT_LINE_NO = {}
 flagIf = False
 
 def ret_iter(Tree,variables):
@@ -69,7 +67,7 @@ def getBlockItem(Tree,s):
         for i in l:
             s+=getBlockItem(i,"")
         if hasattr(Tree,'meta') and hasattr(Tree.meta,'line'):
-            d[s] = Tree.meta.line
+            STATEMENT_LINE_NO[s] = Tree.meta.line
     return s
 
 
@@ -165,6 +163,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def file_input(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         GLOBAL_FUNCTION_CALLS=[]
         getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
@@ -184,6 +184,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def funcdef(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         FUNCTION_PARAMS = [] 
         getFunctionParams(items,FUNCTION_PARAMS)
         FUNCTION_NAME = getFunctionName(items)
@@ -191,7 +193,6 @@ class pythonParserActions(visitors.Visitor):
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         STATEMENTS = []
-        line_no[FUNCTION_NAME] = LINE_NO
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
@@ -336,6 +337,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def compound_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         STATEMENTS = []
         LINE_NO = items.meta.line
         getBlockItemList(items,STATEMENTS)
@@ -359,6 +362,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def if_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
@@ -372,6 +377,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def while_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         STATEMENTS = []
         LINE_NO = items.meta.line
         getBlockItemList(items,STATEMENTS)
@@ -384,6 +391,8 @@ class pythonParserActions(visitors.Visitor):
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
     def for_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []

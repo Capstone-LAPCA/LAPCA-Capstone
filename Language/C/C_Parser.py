@@ -5,9 +5,7 @@ import os
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from Utils.Utility import Utility, getTokens
 info_list = []
-d = {}
-line_no = {}
-FUNCTIONS = []
+STATEMENT_LINE_NO = {}
 flagIf = False
 
 class MainTransformer():
@@ -60,7 +58,7 @@ def getBlockItem(tree,s):
         for i in l:
             s+=getBlockItem(i,"")
         if hasattr(tree,'meta') and hasattr(tree.meta,'line'):
-            d[s] = tree.meta.line
+            STATEMENT_LINE_NO[s] = tree.meta.line
     return s
 
 
@@ -84,7 +82,7 @@ def ischild(Tree,child):
     return flag
 
 def getCondition(Tree,condition_list):
-    if Tree.data=="while_stmt" or Tree.data =="for_stmt" or Tree.data=="selectionstatement":
+    if Tree.data=="while_stmt" or Tree.data =="for_stmt" or Tree.data=="if_stmt" or Tree.data=="switch_stmt":
         condition_list.append(getBlockItem(Tree.children[2],""))
     l = Tree.children
     for i in l:
@@ -102,7 +100,7 @@ def getExpressionStatements(Tree,expression_statements):
 
 def getExpressionStatementsInsideAllIf(Tree,expression_statements):
     global flagIf
-    if Tree.data == "selectionstatement":
+    if Tree.data == "if_stmt":
         expr = []
         getExpressionStatementsInsideIf(Tree,expr)
         if "else" in expr:
@@ -129,7 +127,7 @@ def getExpressionStatementsInsideAllIf(Tree,expression_statements):
 
 def getExpressionStatementsInsideIf(Tree,expression_statements):
     global flagIf
-    if Tree.data == "selectionstatement":
+    if Tree.data == "if_stmt":
         if flagIf:
             return
         else:
@@ -153,6 +151,24 @@ def getFunctionParams(Tree, param_list):
                 getFunctionParams(i,param_list)
 
 class CParserActions(visitors.Visitor):
+    def for_stmt(self, items):
+        LINE_NO=items.meta.line
+        condition_list = []
+        ITERATION = "for"
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = ""
+        if len(condition_list):
+            ITERATION_CONDITION = condition_list[0]
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        pass
+
     def while_stmt(self, items):
         LINE_NO=items.meta.line
         condition_list = []
@@ -167,6 +183,8 @@ class CParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         pass
 
     def switch_stmt(self, items):
@@ -175,7 +193,9 @@ class CParserActions(visitors.Visitor):
         getTokens(items,ALL_TOKENS)
         pass
     def start(self, items):
-
+        LINE_NO = items.meta.line
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         pass
 
     def primaryexpression(self, items):
@@ -495,6 +515,8 @@ class CParserActions(visitors.Visitor):
 
     def iterationstatement(self, items):
         LINE_NO=items.meta.line
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         condition_list = []
         ITERATION = ""
         if items.children[0].data == "while_stmt":
@@ -523,14 +545,15 @@ class CParserActions(visitors.Visitor):
         pass
 
     def forcondition(self, items):
-
+        LINE_NO=items.meta.line
         pass
 
     def fordeclaration(self, items):
-
+        LINE_NO=items.meta.line
         pass
 
     def forexpression(self, items):
+        LINE_NO=items.meta.line
         pass
 
     def jumpstatement(self, items):
@@ -543,6 +566,7 @@ class CParserActions(visitors.Visitor):
 
     def translationunit(self, items):
         GLOBAL_FUNCTION_CALLS=[]
+        LINE_NO=items.meta.line
         getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
         pass
 
@@ -551,16 +575,14 @@ class CParserActions(visitors.Visitor):
         pass
 
     def functiondefinition(self, items):
-        d.clear()
-        tokens = []
-        getTokens(items,tokens)
-        FUNCTION_NAME = tokens[1]
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        FUNCTION_NAME = ALL_TOKENS[1]
         FUNCTION_CALLS = []
         FUNCTION_PARAMS = []
         getFunctionParams(items,FUNCTION_PARAMS)
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
-        line_no[FUNCTION_NAME] = LINE_NO
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
