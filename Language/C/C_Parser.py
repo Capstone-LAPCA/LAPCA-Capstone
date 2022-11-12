@@ -504,9 +504,21 @@ class CParserActions(visitors.Visitor):
     def expressionstatement(self, items):
 
         pass
+    
+    def if_stmt(self, items):
+        condition_list = []
+        ALL_TOKENS = []
+        LINE_NO = items.meta.line
+        getTokens(items,ALL_TOKENS)
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        pass
 
     def selectionstatement(self, items):
         condition_list = []
+        LINE_NO = items.meta.line
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list
         STATEMENTS = []

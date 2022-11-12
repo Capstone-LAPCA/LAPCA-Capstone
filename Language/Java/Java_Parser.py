@@ -492,6 +492,13 @@ class javaParserActions(visitors.Visitor):
 
         pass
     def if_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        LINE_NO = items.meta.line
+        FUNCTION_CALLS = []
+        getFunctionCalls(items,FUNCTION_CALLS)
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
 
         pass
     def elif_stmt(self, items):

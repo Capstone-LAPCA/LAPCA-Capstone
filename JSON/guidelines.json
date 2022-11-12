@@ -1,6 +1,12 @@
 {
     "guidelines":[
-        {
+    {
+        "id": "Curly_braces.lapx",
+        "label": "Check whether curly braces are used for all control structures",
+        "class":"Organizational",
+        "priority": 10
+    },
+    {
         "id":"Assign_in_loop.lapx",
         "label":"Check for assignment in loop condition",
         "class":"Organizational",

@@ -52,7 +52,7 @@ class createNewParser:
 
     def createNewParser(self) -> bool:
         if self.guidelines[0][0:8]=='LANGUAGE' and self.lang not in self.guidelines[0][9:].strip().split(','):
-            return "State is not applicable for the given language. Please check the State entered"
+            return "Guideline is not applicable for the given language. Please check the languages mentioned in the guideline."
         i = 0
         while(i < len(self.guidelines)):
             code = []
