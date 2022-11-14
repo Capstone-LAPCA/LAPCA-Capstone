@@ -137,7 +137,7 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
             if isinstance(i,Token) and i.value == "else":
                 expression_statements.append("else") 
             if isinstance(i, type(Tree)):
-                if i.data == "if_stmt" or i.data=="elifs":
+                if i.data == "if_stmt" or i.data=="elif_":
                     expression_statements.append("else")
                 getExpressionStatementsInsideIf(i,expression_statements)
 
@@ -154,8 +154,8 @@ class MainTransformer():
         file+="\n"
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
-        # print(pythonParserActions().visit_topdown(python_parser2.parse(file)).pretty())
-        pythonParserActions().visit_topdown(python_parser2.parse(file))
+        print(pythonParserActions().visit_topdown(python_parser2.parse(file)).pretty())
+        #pythonParserActions().visit_topdown(python_parser2.parse(file))
         return
 
 class pythonParserActions(visitors.Visitor):
@@ -196,7 +196,7 @@ class pythonParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
-        
+        print(STATEMENTS)
         pass
     def parameters(self, items):
 
