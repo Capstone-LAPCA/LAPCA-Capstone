@@ -10,7 +10,7 @@ STATE iteration
             elif token=='(':
                 count+=1
             if not count:
-                if ALL_TOKENS[i+1]!='{':
+                if i+1 ==len(ALL_TOKENS) or ALL_TOKENS[i+1]!='{':
                     PRINT "Curly braces not used"
                 break
 END_STATE
@@ -24,7 +24,7 @@ STATE if
         elif token=='(':
             count+=1
         if not count:
-            if ALL_TOKENS[i+1]!='{':
+            if i+1 ==len(ALL_TOKENS) or ALL_TOKENS[i+1]!='{':
                 PRINT "Curly braces not used"
             break
 END_STATE

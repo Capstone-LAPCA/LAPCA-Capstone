@@ -92,6 +92,6 @@ class LAPCA_Score:
 
 if __name__ == "__main__":
     obj = LAPCA_Score("codebase.zip", "./ExtractedFiles")
-    #obj.extractZip()
+    obj.extractZip()
     obj.getLAPCA_Score()
     print(obj.result)

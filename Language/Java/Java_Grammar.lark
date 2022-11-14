@@ -108,8 +108,8 @@ catch_ex: catch_ex_type name
 catch_ex_type: class_type ("|" class_type)*       -> list
 finally_stmt: "finally" "{" suit? "}"
 do_while_stmt: "do" "{" suit? "}" "while" "(" test ")"
-while_stmt: "while" "(" test ")" "{" suit? "}"
-for_stmt: "for" "(" for_test ")" "{" suit? "}"
+while_stmt: "while" "(" test ")" single_stmt
+for_stmt: "for" "(" for_test ")" single_stmt
 for_test: for_test_var ";" for_test_con ";" (test_stmt_inline | for_test_expr)?     -> for_loop_test
          | class_type " " test ":" test                                             -> for_each_test
 for_test_var: test_stmt_inline?
@@ -200,12 +200,12 @@ INTERFACE: "interface"
 ANNO_INTERFACE: "@interface"
 !comment_nouse: comment (/\/\/.*/)+
 comment: comment_base+
-!comment_base: ("/**" | "/*" | comment_inline) (/\*(.+)?/)* ("*/" | "**/") | comment_inline
+!comment_base: ("/**" | "/*" | comment_inline) (/(.+)/)* ("*/" | "**/") | comment_inline
 ?comment_inline: /\/\*.+/
 return_type: generic_type class_type | class_type
 path: name ("." (name | star))*    -> dotjoin
 name: CNAME                        -> literal
-class_name: /[A-Z亜-熙_][a-zA-Z0-9亜-熙０-９_]*/                      -> literal
+class_name: /[a-zA-Z亜-熙_][a-zA-Z0-9亜-熙０-９_]*/                      -> literal
           | /([a-zA-Z0-9]+\.)+[A-Z亜-熙_][a-zA-Z0-9亜-熙０-９_]*/     -> literal
           | primary_type           -> literal
 dotted_name: CNAME ("." CNAME)+    -> dotjoin

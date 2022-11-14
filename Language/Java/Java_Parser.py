@@ -17,7 +17,9 @@ def ret_iter(Tree, variables):
         i = l.pop()
         if isinstance(i, type(Tree)):
             if i.data == "literal":
-                variables.append(i.children[0].value)
+                temp = []
+                getTokens(i,temp)
+                variables.extend(temp)
             l.extend(i.children)
     return variables[0]
 
@@ -32,8 +34,9 @@ def getFunctionName(Tree):
 
 def getFunctionCalls(Tree,function_calls):
     if Tree.data == "funccall":
-        if(Tree.children[0].data == "itself"):
-            function_calls.append(Tree.children[0].children[0].children[0].value)
+        temp = []
+        getTokens(Tree,temp)
+        function_calls.append("".join(temp[0:temp.index("(")]))
     l = Tree.children
     for i in l:
         if isinstance(i, type(Tree)):
@@ -145,7 +148,7 @@ class MainTransformer():
         file = open(sys.argv[1], encoding='utf-8').read()
         Java_parser = Lark.open('Java_Grammar.lark', start="clazz",rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
         javaParserActions().visit_topdown(Java_parser.parse(file))
-        # print(javaParserActions().visit_topdown(Java_parser.parse(file)).pretty())
+        #print(javaParserActions().visit_topdown(Java_parser.parse(file)).pretty())
         return
 
 class javaParserActions(visitors.Visitor):
