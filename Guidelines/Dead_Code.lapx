@@ -1,3 +1,4 @@
+LANGUAGE c,py
 STATE function
     flag = False
     for statement in STATEMENTS:

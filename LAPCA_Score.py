@@ -25,6 +25,8 @@ class LAPCA_Score:
         self.LAPCA_score = 0
         self.LAPCA_percent = 0
         self.guidelines = []
+        self.err_count = 0
+        self.error_files = []
         with open('LAPCA_Score_Report.txt', 'w') as f:
             f.write("")
         for i in self.mapping:
@@ -43,6 +45,7 @@ class LAPCA_Score:
             for file in files:
                 if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
                     self.result[file] = {}
+                    flag = False
                     score = 0
                     print("----------------------------------------")
                     print("\t\t\tRunning LAPCA on file:", file)
@@ -59,22 +62,32 @@ class LAPCA_Score:
                                     score+=guideline[2]
                                     continue
                                 elif lines[0].split(' ')[0]=="Traceback":
-                                    print(f"{bcolors.FAIL}Error in file",file)
-                                    print(f"{bcolors.FAIL}Terminating LAPCA Score Benchmark{bcolors.ENDC}")
-                                    return "Error in file"+file+".\nTerminating LAPCA Score Benchmark\n"
-                                    exit(0)
+                                    print(f"{bcolors.FAIL}Error in file",file,f"{bcolors.ENDC}")
+                                    #print(f"{bcolors.FAIL}Terminating LAPCA Score Benchmark{bcolors.ENDC}")
+                                    #return "Error in file"+file+".\nTerminating LAPCA Score Benchmark\n"
+                                    #exit(0)
+                                    self.error_files.append(file)
+                                    self.err_count+=1
+                                    flag = True
+                                    break
+
                                 else:
                                     with open('LAPCA_Score_Report.txt', 'a+') as f:
                                         for i in lines[:-1]:
                                             f.write("\t\t\t"+i+"\n\n")
                                     self.result[file][guideline[1]].extend(lines[:-1])
                                     score += guideline[2]/len(lines)
+                    if flag:
+                        continue
                     self.LAPCA_score+=score
                     self.LAPCA_percent += (score/self.max_score)
                     no_of_files+=1
                     with open('LAPCA_Score_Report.txt', 'a+') as f:
+                        f.write("\t\t\tFile Number: "+str(no_of_files)+"\n")
                         f.write("\t\t\tLAPCA Score for file "+file+" is "+str(score)+"\n")
                         f.write("\t\t\tLAPCA Percentage for file "+file+" is "+str(score/self.max_score)+"\n")
+                        f.write("\t\t\tCurrent avg LAPCA Score is "+str(self.LAPCA_score/no_of_files)+"\n")
+                    print(f"{bcolors.OKGREEN}Number of files processed:", no_of_files,f"{bcolors.ENDC}")
                     print(f"{bcolors.OKGREEN}LAPCA Percent for file",file,"is",score/self.max_score,f"{bcolors.ENDC}")
                     print(f"{bcolors.OKGREEN}LAPCA Score for file",file,"is",score,f"{bcolors.ENDC}")
                     print("Current avg LAPCA Score:",self.LAPCA_score/no_of_files)
@@ -83,10 +96,12 @@ class LAPCA_Score:
         with open('LAPCA_Score_Report.txt', 'a+') as f:
             f.write("------------------------------------------------------------------------------------------------------------------\n")
             f.write("\n\n")
+            f.write("\t\t\t\t\tnumber of files processed: "+str(no_of_files)+"\n")
             f.write("\t\t\t\t\tLAPCA Score for the given codebase is "+str(self.LAPCA_score/([no_of_files if no_of_files else 1][0]))+"\n")
             f.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str(self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))+"\n")
             f.write("\n\n")
             f.write("------------------------------------------------------------------------------------------------------------------\n")
+        print(f"{bcolors.OKGREEN}Total number of files:",no_of_files,f"{bcolors.ENDC}")
         print(f"{bcolors.OKGREEN}LAPCA Score for the given codebase is",self.LAPCA_score/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
         print(f"{bcolors.OKGREEN}LAPCA Percent for the given codebase is",self.LAPCA_percent/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
 
@@ -95,3 +110,8 @@ if __name__ == "__main__":
     obj.extractZip()
     obj.getLAPCA_Score()
     print(obj.result)
+    print(obj.error_files)
+    print(obj.err_count)
+
+    #node-at-a-given-index-in-linked-list.py
+    #taking-input-and-typecasting-python.py

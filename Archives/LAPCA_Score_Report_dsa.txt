@@ -1,0 +1,2752 @@
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByJytaloramon.py
+			LAPCA Score for file SolutionByJytaloramon.py is 106.0
+			LAPCA Percentage for file SolutionByJytaloramon.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.java
+			Line 25: Recursion used in function
+
+			LAPCA Score for file SolutionByPiyush.java is 105.5
+			LAPCA Percentage for file SolutionByPiyush.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByIndra.java
+			Line 25: Recursion used in function
+
+			LAPCA Score for file SolutionByIndra.java is 105.5
+			LAPCA Percentage for file SolutionByIndra.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRitikaJain.java
+			Line 6: Recursion used in function
+
+			LAPCA Score for file SolutionByRitikaJain.java is 105.5
+			LAPCA Percentage for file SolutionByRitikaJain.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySanchit.java
+			Line 39: Curly braces not used
+
+			Line 47: Recursion used in function
+
+			LAPCA Score for file SolutionBySanchit.java is 100.5
+			LAPCA Percentage for file SolutionBySanchit.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.java
+			Line 35: Curly braces not used
+
+			Line 21: Recursion used in function
+
+			LAPCA Score for file SolutionByPiyush.java is 100.5
+			LAPCA Percentage for file SolutionByPiyush.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAnsh.py
+			Line 18: Recursion used in function
+
+			LAPCA Score for file solutionByAnsh.py is 105.5
+			LAPCA Percentage for file solutionByAnsh.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhanam.java
+			Line 28: Recursion used in function
+
+			LAPCA Score for file SolutionByDhanam.java is 105.5
+			LAPCA Percentage for file SolutionByDhanam.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAnsh.py
+			Line 6: Recursion used in function
+
+			LAPCA Score for file solutionByAnsh.py is 105.5
+			LAPCA Percentage for file solutionByAnsh.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhanam.java
+			Line 41: Recursion used in function
+
+			LAPCA Score for file SolutionByDhanam.java is 105.5
+			LAPCA Percentage for file SolutionByDhanam.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			Line 23: Recursion used in function
+
+			LAPCA Score for file SolutionBySakshi.java is 105.5
+			LAPCA Percentage for file SolutionBySakshi.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByXkcdjerry.c
+			Line 26: Curly braces not used
+
+			Line 35: Curly braces not used
+
+			Line 52: Curly braces not used
+
+			Line 36: continue present
+
+			Line 7: One variable per declaration rule not followed
+
+			Line 19: Recursion used in function
+
+			LAPCA Score for file SolutionByXkcdjerry.c is 96.0
+			LAPCA Percentage for file SolutionByXkcdjerry.c is 0.9056603773584906
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShoaib.java
+			Line 23: Recursion used in function
+
+			LAPCA Score for file SolutionByShoaib.java is 105.5
+			LAPCA Percentage for file SolutionByShoaib.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByKaran.java
+			Line 14: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByKaran.java is 105.0
+			LAPCA Percentage for file SolutionByKaran.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyFuzail.py
+			LAPCA Score for file SolutionbyFuzail.py is 106.0
+			LAPCA Percentage for file SolutionbyFuzail.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 12: Curly braces not used
+
+			Line 21: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByChanpreet.java is 100.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByGautam.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionByGautam.java is 105.0
+			LAPCA Percentage for file solutionByGautam.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 12: Curly braces not used
+
+			Line 22: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 14: Curly braces not used
+
+			Line 36: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavTripathi.py
+			LAPCA Score for file SolutionByVaibhavTripathi.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavTripathi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarshPandey.java
+			Line 12: Curly braces not used
+
+			LAPCA Score for file SolutionByHarshPandey.java is 101.0
+			LAPCA Percentage for file SolutionByHarshPandey.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByGautam.java
+			Line 10: Curly braces not used
+
+			LAPCA Score for file solutionByGautam.java is 101.0
+			LAPCA Percentage for file solutionByGautam.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNeeraj.java
+			Line 47: Curly braces not used
+
+			LAPCA Score for file SolutionByNeeraj.java is 101.0
+			LAPCA Percentage for file SolutionByNeeraj.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+			Line 11: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet2.java is 101.0
+			LAPCA Percentage for file SolutionByChanpreet2.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			Line 13: Curly braces not used
+
+			Line 20: Curly braces not used
+
+			LAPCA Score for file SolutionByPranavGurditta.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByArnab.c
+			Line 6: Curly braces not used
+
+			LAPCA Score for file SolutionByArnab.c is 101.0
+			LAPCA Percentage for file SolutionByArnab.c is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Curly braces not used
+
+			Line 10: Curly braces not used
+
+			Line 20: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 98.5
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9292452830188679
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 47: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet.java is 101.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet3.java
+			LAPCA Score for file SolutionByMananpreet3.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet3.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			Line 4: Recursion used in function
+
+			LAPCA Score for file SolutionByVaishnavi.py is 105.5
+			LAPCA Percentage for file SolutionByVaishnavi.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet4.java
+			LAPCA Score for file SolutionByMananpreet4.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet4.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet2.java
+			Line 7: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet2.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet2.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySatwika.java is 105.0
+			LAPCA Percentage for file SolutionBySatwika.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySukriti.java
+			Line 19: Curly braces not used
+
+			LAPCA Score for file SolutionBySukriti.java is 101.0
+			LAPCA Percentage for file SolutionBySukriti.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTarun.py
+			LAPCA Score for file SolutionByTarun.py is 106.0
+			LAPCA Percentage for file SolutionByTarun.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNeeraj.java
+			Line 23: Curly braces not used
+
+			LAPCA Score for file SolutionByNeeraj.java is 101.0
+			LAPCA Percentage for file SolutionByNeeraj.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			LAPCA Score for file SolutionBySwapnil.java is 106.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+			Line 14: Curly braces not used
+
+			Line 36: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet2.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByChanpreet2.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyBharat.py
+			LAPCA Score for file SolutionbyBharat.py is 106.0
+			LAPCA Percentage for file SolutionbyBharat.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet2.java
+			Line 12: Curly braces not used
+
+			Line 22: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet2.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByMananpreet2.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 23: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet.java is 101.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhaval.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			Line 27: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySatwika.java is 105.0
+			LAPCA Percentage for file SolutionBySatwika.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhanam.java
+			Line 38: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByDhanam.java is 105.0
+			LAPCA Percentage for file SolutionByDhanam.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.java
+			Line 34: Curly braces not used
+
+			Line 44: Curly braces not used
+
+			Line 40: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByVaibhavSethia.java is 98.33333333333334
+			LAPCA Percentage for file SolutionByVaibhavSethia.java is 0.9276729559748429
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByXkcdjerry.c
+			Line 24: Curly braces not used
+
+			Line 4: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByXkcdjerry.c is 100.0
+			LAPCA Percentage for file SolutionByXkcdjerry.c is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarshPandey.java
+			Line 11: Curly braces not used
+
+			Line 14: Curly braces not used
+
+			LAPCA Score for file SolutionByHarshPandey.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByHarshPandey.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySumit.java
+			LAPCA Score for file SolutionBySumit.java is 106.0
+			LAPCA Percentage for file SolutionBySumit.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			LAPCA Score for file SolutionBySakshi.java is 106.0
+			LAPCA Percentage for file SolutionBySakshi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.java
+			LAPCA Score for file SolutionByPiyush.java is 106.0
+			LAPCA Percentage for file SolutionByPiyush.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRishi.java
+			Line 22: Curly braces not used
+
+			Line 24: Curly braces not used
+
+			LAPCA Score for file SolutionByRishi.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByRishi.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			LAPCA Score for file SolutionBySakshi.java is 106.0
+			LAPCA Percentage for file SolutionBySakshi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAkshayGutpta.py
+			LAPCA Score for file solutionByAkshayGutpta.py is 106.0
+			LAPCA Percentage for file solutionByAkshayGutpta.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			Line 26: continue present
+
+			Line 29: continue present
+
+			LAPCA Score for file SolutionBySakshi.java is 104.66666666666666
+			LAPCA Percentage for file SolutionBySakshi.java is 0.9874213836477986
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimar.py
+			LAPCA Score for file SolutionBySimar.py is 106.0
+			LAPCA Percentage for file SolutionBySimar.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			LAPCA Score for file SolutionByEkta.java is 106.0
+			LAPCA Percentage for file SolutionByEkta.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByKanav.java
+			Line 18: Curly braces not used
+
+			Line 19: Curly braces not used
+
+			Line 8: One variable per declaration rule not followed
+
+			Line 17: Recursion used in function
+
+			LAPCA Score for file SolutionByKanav.java is 97.83333333333334
+			LAPCA Percentage for file SolutionByKanav.java is 0.9229559748427674
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByMihirSood.java
+			LAPCA Score for file solutionByMihirSood.java is 106.0
+			LAPCA Percentage for file solutionByMihirSood.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			Line 15: Curly braces not used
+
+			Line 13: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySwapnil.java is 100.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAkshayGupta.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			LAPCA Score for file SolutionbyRishabhSharma.java is 106.0
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMukul.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimar.py
+			LAPCA Score for file SolutionBySimar.py is 106.0
+			LAPCA Percentage for file SolutionBySimar.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByYash.java
+			LAPCA Score for file SolutionByYash.java is 106.0
+			LAPCA Percentage for file SolutionByYash.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMukul.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			Line 18: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySakshi.java is 105.0
+			LAPCA Percentage for file SolutionBySakshi.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			Line 11: Curly braces not used
+
+			Line 17: Curly braces not used
+
+			LAPCA Score for file SolutionBySwapnil.java is 99.33333333333334
+			LAPCA Percentage for file SolutionBySwapnil.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			Line 13: Recursion used in function
+
+			LAPCA Score for file SolutionBySakshi.java is 105.5
+			LAPCA Percentage for file SolutionBySakshi.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			LAPCA Score for file SolutionBySakshi.java is 106.0
+			LAPCA Percentage for file SolutionBySakshi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMukul.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAkshayGupta.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: Solutionbyvijay.c
+			Line 118: One variable per declaration rule not followed
+
+			LAPCA Score for file Solutionbyvijay.c is 105.0
+			LAPCA Percentage for file Solutionbyvijay.c is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: solutionbyNaman.py
+			LAPCA Score for file solutionbyNaman.py is 106.0
+			LAPCA Percentage for file solutionbyNaman.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAmbika.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByAmbika.java is 105.0
+			LAPCA Percentage for file SolutionByAmbika.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimar.c
+			Line 7: One variable per declaration rule not followed
+
+			Line 39: One variable per declaration rule not followed
+
+			Line 40: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySimar.c is 104.5
+			LAPCA Percentage for file SolutionBySimar.c is 0.9858490566037735
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			LAPCA Score for file SolutionByPranavGurditta.java is 106.0
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.java
+			Line 44: Curly braces not used
+
+			Line 54: Curly braces not used
+
+			Line 64: Curly braces not used
+
+			Line 74: Curly braces not used
+
+			Line 30: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByAbhishek.java is 97.0
+			LAPCA Percentage for file SolutionByAbhishek.java is 0.9150943396226415
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAmbika.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 9: Curly braces not used
+
+			Line 10: Curly braces not used
+
+			Line 15: Curly braces not used
+
+			Line 23: Curly braces not used
+
+			Line 24: Curly braces not used
+
+			Line 5: One variable per declaration rule not followed
+
+			Line 22: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 96.33333333333334
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.908805031446541
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 17: Curly braces not used
+
+			Line 18: Curly braces not used
+
+			Line 21: Curly braces not used
+
+			Line 22: Curly braces not used
+
+			Line 27: Curly braces not used
+
+			Line 35: Curly braces not used
+
+			Line 36: Curly braces not used
+
+			Line 7: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 95.91666666666666
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.9048742138364779
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 37: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 37: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			Depth of looping greater than 2 at line 5
+
+			LAPCA Score for file SolutionByRiya.py is 101.0
+			LAPCA Percentage for file SolutionByRiya.py is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 37: Curly braces not used
+
+			Depth of looping greater than 2 at line 43
+
+			LAPCA Score for file SolutionByMananpreet.java is 96.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9056603773584906
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			LAPCA Score for file SolutionByEkta.java is 106.0
+			LAPCA Percentage for file SolutionByEkta.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			LAPCA Score for file SolutionByRiya.java is 106.0
+			LAPCA Percentage for file SolutionByRiya.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyBharat.py
+			LAPCA Score for file SolutionbyBharat.py is 106.0
+			LAPCA Percentage for file SolutionbyBharat.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			Line 11: Curly braces not used
+
+			Line 18: Curly braces not used
+
+			Line 20: Curly braces not used
+
+			LAPCA Score for file SolutionByPranavGurditta.java is 98.5
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 0.9292452830188679
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByChanpreet.java
+			LAPCA Score for file solutionByChanpreet.java is 106.0
+			LAPCA Percentage for file solutionByChanpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPK.py
+			LAPCA Score for file SolutionByPK.py is 106.0
+			LAPCA Percentage for file SolutionByPK.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRahul.java
+			LAPCA Score for file SolutionByRahul.java is 106.0
+			LAPCA Percentage for file SolutionByRahul.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			Depth of looping greater than 2 at line 7
+
+			LAPCA Score for file SolutionByRiya.py is 101.0
+			LAPCA Percentage for file SolutionByRiya.py is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 10: Curly braces not used
+
+			Line 24: Curly braces not used
+
+			Line 4: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 98.33333333333334
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.9276729559748429
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySanyam.java
+			LAPCA Score for file SolutionBySanyam.java is 106.0
+			LAPCA Percentage for file SolutionBySanyam.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVikasSangwan.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTarun.py
+			LAPCA Score for file SolutionByTarun.py is 106.0
+			LAPCA Percentage for file SolutionByTarun.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPreeti.py
+			LAPCA Score for file SolutionByPreeti.py is 106.0
+			LAPCA Percentage for file SolutionByPreeti.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByChanpreet.java
+			Line 7: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionByChanpreet.java is 105.0
+			LAPCA Percentage for file solutionByChanpreet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRahul.java
+			Line 30: Curly braces not used
+
+			Line 36: Curly braces not used
+
+			Dead code statement in loop at line 39
+
+			LAPCA Score for file SolutionByRahul.java is 89.33333333333334
+			LAPCA Percentage for file SolutionByRahul.java is 0.8427672955974843
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByNidhi.java is 105.0
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByJagmeet.py
+			LAPCA Score for file SolutionByJagmeet.py is 106.0
+			LAPCA Percentage for file SolutionByJagmeet.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			Line 13: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByEkta.java is 105.0
+			LAPCA Percentage for file SolutionByEkta.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByRiya.java is 105.0
+			LAPCA Percentage for file SolutionByRiya.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionDivya.java
+			Line 32: Curly braces not used
+
+			Line 38: Curly braces not used
+
+			Line 14: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionDivya.java is 98.33333333333334
+			LAPCA Percentage for file SolutionDivya.java is 0.9276729559748429
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEnthusiastDeveloper.py
+			LAPCA Score for file SolutionByEnthusiastDeveloper.py is 106.0
+			LAPCA Percentage for file SolutionByEnthusiastDeveloper.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByChanpreet.java
+			Line 6: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionByChanpreet.java is 105.0
+			LAPCA Percentage for file solutionByChanpreet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 7: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPK.py
+			LAPCA Score for file SolutionByPK.py is 106.0
+			LAPCA Percentage for file SolutionByPK.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.java
+			LAPCA Score for file SolutionByAbhishek.java is 106.0
+			LAPCA Percentage for file SolutionByAbhishek.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyat.c
+			Line 8: Curly braces not used
+
+			Line 20: Curly braces not used
+
+			Line 4: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyat.c is 98.33333333333334
+			LAPCA Percentage for file SolutionByMashiyat.c is 0.9276729559748429
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyat.py
+			LAPCA Score for file SolutionByMashiyat.py is 106.0
+			LAPCA Percentage for file SolutionByMashiyat.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			LAPCA Score for file SolutionBySatwika.java is 106.0
+			LAPCA Percentage for file SolutionBySatwika.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAshutosh.py
+			LAPCA Score for file solutionByAshutosh.py is 106.0
+			LAPCA Percentage for file solutionByAshutosh.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 9: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 7: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByChanpreet.java is 105.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByVaishnavi.py
+			LAPCA Score for file solutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file solutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyat.c
+			Line 12: Curly braces not used
+
+			Line 23: Curly braces not used
+
+			Line 33: Curly braces not used
+
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyat.c is 97.5
+			LAPCA Percentage for file SolutionByMashiyat.c is 0.9198113207547169
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarjas.java
+			Line 7: Recursion used in function
+
+			LAPCA Score for file SolutionByHarjas.java is 105.5
+			LAPCA Percentage for file SolutionByHarjas.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySakshi.java
+			LAPCA Score for file SolutionBySakshi.java is 106.0
+			LAPCA Percentage for file SolutionBySakshi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			Line 11: Curly braces not used
+
+			Dead code statement in trappingRainWater at line 13
+
+			Dead code statement in trappingRainWater at line 14
+
+			Dead code statement in trappingRainWater at line 26
+
+			Line 13: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySwapnil.java is 85.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 0.8018867924528302
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			Line 26: Curly braces not used
+
+			LAPCA Score for file SolutionBySwapnil.java is 101.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet2.java
+			Line 4: Recursion used in function
+
+			LAPCA Score for file SolutionByMananpreet2.java is 105.5
+			LAPCA Percentage for file SolutionByMananpreet2.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.py
+			LAPCA Score for file SolutionByPiyush.py is 106.0
+			LAPCA Percentage for file SolutionByPiyush.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			Line 51: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByPranavGurditta.java is 105.0
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 6: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 15: Curly braces not used
+
+			LAPCA Score for file SolutionByNidhi.java is 101.0
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVikasSangwan.java
+			Line 23: Curly braces not used
+
+			Line 26: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByVikasSangwan.java is 100.0
+			LAPCA Percentage for file SolutionByVikasSangwan.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByChanpreet.java
+			LAPCA Score for file solutionByChanpreet.java is 106.0
+			LAPCA Percentage for file solutionByChanpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 14: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByNidhi.java is 105.0
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet2.java
+			LAPCA Score for file SolutionByMananpreet2.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet2.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByPreeti.py
+			LAPCA Score for file solutionByPreeti.py is 106.0
+			LAPCA Percentage for file solutionByPreeti.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Depth of looping greater than 2 at line 14
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 7: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByChanpreet.java is 105.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.py
+			LAPCA Score for file SolutionByPiyush.py is 106.0
+			LAPCA Percentage for file SolutionByPiyush.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRishabhSharma.java
+			Line 20: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByRishabhSharma.java is 105.0
+			LAPCA Percentage for file SolutionByRishabhSharma.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRahul.java
+			Line 7: Curly braces not used
+
+			Line 37: Curly braces not used
+
+			Line 53: Curly braces not used
+
+			Line 56: Curly braces not used
+
+			Line 48: Recursion used in function
+
+			LAPCA Score for file SolutionByRahul.java is 97.5
+			LAPCA Percentage for file SolutionByRahul.java is 0.9198113207547169
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 12: Curly braces not used
+
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 100.0
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySanyam.java
+			LAPCA Score for file SolutionBySanyam.java is 106.0
+			LAPCA Percentage for file SolutionBySanyam.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.java
+			LAPCA Score for file SolutionByPiyush.java is 106.0
+			LAPCA Percentage for file SolutionByPiyush.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySaksham.py
+			Line 35: Recursion used in function
+
+			LAPCA Score for file SolutionBySaksham.py is 105.5
+			LAPCA Percentage for file SolutionBySaksham.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 13: Curly braces not used
+
+			Line 15: Curly braces not used
+
+			Line 37: Curly braces not used
+
+			Line 41: Curly braces not used
+
+			Line 5: One variable per declaration rule not followed
+
+			Line 32: One variable per declaration rule not followed
+
+			Line 3: Recursion used in function
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 96.16666666666666
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.9072327044025157
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySam.java
+			Line 8: Curly braces not used
+
+			Line 57: Recursion used in function
+
+			LAPCA Score for file SolutionBySam.java is 100.5
+			LAPCA Percentage for file SolutionBySam.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			Line 4: Curly braces not used
+
+			Line 32: Curly braces not used
+
+			Line 34: Curly braces not used
+
+			Line 37: One variable per declaration rule not followed
+
+			Line 62: Recursion used in function
+
+			LAPCA Score for file SolutionByRiya.java is 97.0
+			LAPCA Percentage for file SolutionByRiya.java is 0.9150943396226415
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			Line 14: Recursion used in function
+
+			LAPCA Score for file SolutionByVaishnavi.py is 105.5
+			LAPCA Percentage for file SolutionByVaishnavi.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByYashika.py
+			Line 1: Recursion used in function
+
+			LAPCA Score for file SolutionByYashika.py is 105.5
+			LAPCA Percentage for file SolutionByYashika.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 9: Curly braces not used
+
+			Line 13: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			LAPCA Score for file SolutionByVyomChandra.java is 106.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAshutosh.py
+			LAPCA Score for file solutionByAshutosh.py is 106.0
+			LAPCA Percentage for file solutionByAshutosh.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+			Line 19: Curly braces not used
+
+			Line 79: Curly braces not used
+
+			Line 89: Curly braces not used
+
+			Line 5: Recursion used in function
+
+			LAPCA Score for file SolutionByChanpreet2.java is 98.0
+			LAPCA Percentage for file SolutionByChanpreet2.java is 0.9245283018867925
+------------------------------------------------------------------------------------------------------------------
+										File: solutionbynaman.py
+			LAPCA Score for file solutionbynaman.py is 106.0
+			LAPCA Percentage for file solutionbynaman.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 27: One variable per declaration rule not followed
+
+			Line 5: Recursion used in function
+
+			LAPCA Score for file SolutionByChanpreet.java is 104.5
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9858490566037735
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySanyam.java
+			LAPCA Score for file SolutionBySanyam.java is 106.0
+			LAPCA Percentage for file SolutionBySanyam.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarshPandey.java
+			LAPCA Score for file SolutionByHarshPandey.java is 106.0
+			LAPCA Percentage for file SolutionByHarshPandey.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByNidhi.java is 105.0
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAshutosh.py
+			Line 1: Recursion used in function
+
+			LAPCA Score for file solutionByAshutosh.py is 105.5
+			LAPCA Percentage for file solutionByAshutosh.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			Line 5: Recursion used in function
+
+			LAPCA Score for file SolutionByVaishnavi.py is 105.5
+			LAPCA Percentage for file SolutionByVaishnavi.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByYashika.py
+			Line 1: Recursion used in function
+
+			LAPCA Score for file SolutionByYashika.py is 105.5
+			LAPCA Percentage for file SolutionByYashika.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 7: Curly braces not used
+
+			Line 10: Curly braces not used
+
+			Line 39: Curly braces not used
+
+			Dead code statement in search at line 10
+
+			Dead code statement in search at line 17
+
+			Line 4: Recursion used in function
+
+			LAPCA Score for file SolutionByMananpreet.java is 84.66666666666666
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.7987421383647798
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			Line 10: Curly braces not used
+
+			Line 15: Curly braces not used
+
+			LAPCA Score for file SolutionByVyomChandra.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByVyomChandra.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByJagmeet.py
+			LAPCA Score for file SolutionByJagmeet.py is 106.0
+			LAPCA Percentage for file SolutionByJagmeet.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySukriti.java
+			Line 36: Curly braces not used
+
+			LAPCA Score for file SolutionBySukriti.java is 101.0
+			LAPCA Percentage for file SolutionBySukriti.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 9: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByNidhi.java is 105.0
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			LAPCA Score for file SolutionBySwapnil.java is 106.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByChanpreet.java
+			Line 6: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionByChanpreet.java is 105.0
+			LAPCA Percentage for file solutionByChanpreet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 10: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+			Line 31: Curly braces not used
+
+			Line 86: Curly braces not used
+
+			Line 27: Recursion used in function
+
+			LAPCA Score for file SolutionByChanpreet2.java is 98.83333333333334
+			LAPCA Percentage for file SolutionByChanpreet2.java is 0.9323899371069183
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			Line 10: Curly braces not used
+
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByVyomChandra.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByVyomChandra.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 20: Curly braces not used
+
+			Line 30: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			Line 38: Curly braces not used
+
+			LAPCA Score for file SolutionBySwapnil.java is 101.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			LAPCA Score for file SolutionByEkta.java is 106.0
+			LAPCA Percentage for file SolutionByEkta.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			LAPCA Score for file SolutionByRiya.java is 106.0
+			LAPCA Percentage for file SolutionByRiya.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			Line 4: Recursion used in function
+
+			LAPCA Score for file SolutionByVaishnavi.py is 105.5
+			LAPCA Percentage for file SolutionByVaishnavi.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByVaishnavi.py
+			LAPCA Score for file solutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file solutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRahul.java
+			Line 37: Curly braces not used
+
+			LAPCA Score for file SolutionByRahul.java is 101.0
+			LAPCA Percentage for file SolutionByRahul.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			LAPCA Score for file SolutionByEkta.java is 106.0
+			LAPCA Percentage for file SolutionByEkta.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByVaishnavi.py
+			LAPCA Score for file solutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file solutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAlok.c
+			LAPCA Score for file SolutionByAlok.c is 106.0
+			LAPCA Percentage for file SolutionByAlok.c is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarpreetSingh.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByBharat.c
+			LAPCA Score for file SolutionByBharat.c is 106.0
+			LAPCA Percentage for file SolutionByBharat.c is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: soultionbyprabhkar.c
+			LAPCA Score for file soultionbyprabhkar.c is 106.0
+			LAPCA Percentage for file soultionbyprabhkar.c is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMananpreet.java is 105.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			LAPCA Score for file SolutionBySatwika.java is 106.0
+			LAPCA Percentage for file SolutionBySatwika.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarpreetSingh.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: Solutionbyvijay.c
+			Line 102: One variable per declaration rule not followed
+
+			Line 116: Switch statement does not have default case
+
+			LAPCA Score for file Solutionbyvijay.c is 95.0
+			LAPCA Percentage for file Solutionbyvijay.c is 0.8962264150943396
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnaviKhurana.java
+			Line 56: Curly braces not used
+
+			Line 25: continue present
+
+			LAPCA Score for file SolutionByVaishnaviKhurana.java is 100.0
+			LAPCA Percentage for file SolutionByVaishnaviKhurana.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByJytaloramon.py
+			LAPCA Score for file SolutionByJytaloramon.py is 106.0
+			LAPCA Percentage for file SolutionByJytaloramon.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			Line 13: Curly braces not used
+
+			Line 22: Curly braces not used
+
+			Line 25: Curly braces not used
+
+			Line 28: Curly braces not used
+
+			LAPCA Score for file SolutionByPranavGurditta.java is 98.0
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 0.9245283018867925
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarshPandey.java
+			LAPCA Score for file SolutionByHarshPandey.java is 106.0
+			LAPCA Percentage for file SolutionByHarshPandey.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShreayan.py
+			LAPCA Score for file SolutionByShreayan.py is 106.0
+			LAPCA Percentage for file SolutionByShreayan.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarpreetSingh.java
+			Line 25: Curly braces not used
+
+			Line 29: Curly braces not used
+
+			LAPCA Score for file SolutionByHarpreetSingh.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByHarpreetSingh.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVikasSangwan.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta2.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyAlok.c
+			Line 60: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionbyAlok.c is 105.0
+			LAPCA Percentage for file SolutionbyAlok.c is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 7: Curly braces not used
+
+			Traceback (most recent call last):
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 734, in <module>
+
+			    MainTransformer().run()
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 150, in run
+
+			    javaParserActions().visit_topdown(Java_parser.parse(file))
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 363, in visit_topdown
+
+			    self._call_userfunc(subtree)
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 335, in _call_userfunc
+
+			    return getattr(self, tree.data, self.__default__)(tree)
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 341, in assign_base
+
+			    variable = ret_iter(items, [])
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 24, in ret_iter
+
+			    return variables[0]
+
+			IndexError: list index out of range
+
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.py
+			LAPCA Score for file SolutionByPiyush.py is 106.0
+			LAPCA Percentage for file SolutionByPiyush.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			LAPCA Score for file SolutionByRiya.py is 106.0
+			LAPCA Percentage for file SolutionByRiya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySaumyaRanjan.c
+			Line 27: Curly braces not used
+
+			Line 97: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionBySaumyaRanjan.c is 100.0
+			LAPCA Percentage for file SolutionBySaumyaRanjan.c is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 40: Curly braces not used
+
+			Line 49: Curly braces not used
+
+			Line 78: Curly braces not used
+
+			Line 86: Curly braces not used
+
+			Line 93: Curly braces not used
+
+			Traceback (most recent call last):
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 734, in <module>
+
+			    MainTransformer().run()
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 150, in run
+
+			    javaParserActions().visit_topdown(Java_parser.parse(file))
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 363, in visit_topdown
+
+			    self._call_userfunc(subtree)
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 335, in _call_userfunc
+
+			    return getattr(self, tree.data, self.__default__)(tree)
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 341, in assign_base
+
+			    variable = ret_iter(items, [])
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 24, in ret_iter
+
+			    return variables[0]
+
+			IndexError: list index out of range
+
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRishabhSharma.java
+			LAPCA Score for file SolutionByRishabhSharma.java is 106.0
+			LAPCA Percentage for file SolutionByRishabhSharma.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySaumyaRanjan.c
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByIshika.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 9: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPiyush.py
+			LAPCA Score for file SolutionByPiyush.py is 106.0
+			LAPCA Percentage for file SolutionByPiyush.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByBernkastelkv.java
+			LAPCA Score for file SolutionByBernkastelkv.java is 106.0
+			LAPCA Percentage for file SolutionByBernkastelkv.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByRishabhSharma.java
+			LAPCA Score for file solutionByRishabhSharma.java is 106.0
+			LAPCA Percentage for file solutionByRishabhSharma.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet2.java
+			Line 43: Curly braces not used
+
+			Traceback (most recent call last):
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 734, in <module>
+
+			    MainTransformer().run()
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 150, in run
+
+			    javaParserActions().visit_topdown(Java_parser.parse(file))
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 363, in visit_topdown
+
+			    self._call_userfunc(subtree)
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 335, in _call_userfunc
+
+			    return getattr(self, tree.data, self.__default__)(tree)
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 341, in assign_base
+
+			    variable = ret_iter(items, [])
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 24, in ret_iter
+
+			    return variables[0]
+
+			IndexError: list index out of range
+
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet3.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 12: Curly braces not used
+
+			Line 20: Curly braces not used
+
+			Traceback (most recent call last):
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 734, in <module>
+
+			    MainTransformer().run()
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 150, in run
+
+			    javaParserActions().visit_topdown(Java_parser.parse(file))
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 363, in visit_topdown
+
+			    self._call_userfunc(subtree)
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 335, in _call_userfunc
+
+			    return getattr(self, tree.data, self.__default__)(tree)
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 341, in assign_base
+
+			    variable = ret_iter(items, [])
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 24, in ret_iter
+
+			    return variables[0]
+
+			IndexError: list index out of range
+
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPankaj.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 41: Curly braces not used
+
+			Traceback (most recent call last):
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 734, in <module>
+
+			    MainTransformer().run()
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 150, in run
+
+			    javaParserActions().visit_topdown(Java_parser.parse(file))
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 363, in visit_topdown
+
+			    self._call_userfunc(subtree)
+
+			  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/visitors.py", line 335, in _call_userfunc
+
+			    return getattr(self, tree.data, self.__default__)(tree)
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 341, in assign_base
+
+			    variable = ret_iter(items, [])
+
+			  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/Java/Java_Parser_new.py", line 24, in ret_iter
+
+			    return variables[0]
+
+			IndexError: list index out of range
+
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByImas.c
+			Line 12: Recursion used in function
+
+			LAPCA Score for file SolutionByImas.c is 105.5
+			LAPCA Percentage for file SolutionByImas.c is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 32: Curly braces not used
+
+			Line 33: Curly braces not used
+
+			Line 6: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 98.83333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9323899371069183
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			Line 6: Curly braces not used
+
+			Line 43: Curly braces not used
+
+			Line 5: Recursion used in function
+
+			Line 42: Recursion used in function
+
+			Empty function found at line 54
+
+			LAPCA Score for file SolutionBySwapnil.java is 88.66666666666667
+			LAPCA Percentage for file SolutionBySwapnil.java is 0.8364779874213837
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 9: Curly braces not used
+
+			Line 29: Curly braces not used
+
+			Line 31: Curly braces not used
+
+			Line 32: Curly braces not used
+
+			Line 34: Curly braces not used
+
+			Line 35: Curly braces not used
+
+			Line 39: Curly braces not used
+
+			Line 8: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 96.75
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9127358490566038
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 7: Recursion used in function
+
+			Line 20: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 105.33333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9937106918238995
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma2.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 8: Curly braces not used
+
+			Line 22: Curly braces not used
+
+			Line 7: Recursion used in function
+
+			Line 17: Recursion used in function
+
+			Line 21: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 98.58333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9300314465408805
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 20: Curly braces not used
+
+			Line 6: Recursion used in function
+
+			Line 19: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 100.33333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9465408805031448
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 33: Curly braces not used
+
+			Line 34: Curly braces not used
+
+			Line 62: Curly braces not used
+
+			Line 7: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 98.0
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9245283018867925
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 20: Curly braces not used
+
+			Line 22: Curly braces not used
+
+			Line 32: Curly braces not used
+
+			Line 6: Recursion used in function
+
+			Line 19: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 97.83333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9229559748427674
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			Line 10: Recursion used in function
+
+			LAPCA Score for file SolutionByRiya.py is 105.5
+			LAPCA Percentage for file SolutionByRiya.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 20: Curly braces not used
+
+			Line 6: Recursion used in function
+
+			Line 19: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 100.33333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9465408805031448
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 8: Curly braces not used
+
+			Line 18: Curly braces not used
+
+			Line 7: Recursion used in function
+
+			Line 17: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 98.66666666666667
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9308176100628931
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 10: Curly braces not used
+
+			Line 30: Curly braces not used
+
+			Line 31: Curly braces not used
+
+			Line 9: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 98.0
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9245283018867925
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 33: Curly braces not used
+
+			Line 34: Curly braces not used
+
+			Line 8: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 98.83333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9323899371069183
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhanam.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.py
+			Line 9: Recursion used in function
+
+			LAPCA Score for file SolutionByRiya.py is 105.5
+			LAPCA Percentage for file SolutionByRiya.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyRishabhSharma.java
+			Line 6: Recursion used in function
+
+			Line 19: Recursion used in function
+
+			LAPCA Score for file SolutionbyRishabhSharma.java is 105.33333333333334
+			LAPCA Percentage for file SolutionbyRishabhSharma.java is 0.9937106918238995
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByIndra.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 105.0
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByRenaldyrizki .py
+			Line 1: Recursion used in function
+
+			LAPCA Score for file solutionByRenaldyrizki .py is 105.5
+			LAPCA Percentage for file solutionByRenaldyrizki .py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavTripathi.py
+			Line 2: Recursion used in function
+
+			LAPCA Score for file SolutionByVaibhavTripathi.py is 105.5
+			LAPCA Percentage for file SolutionByVaibhavTripathi.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			Line 3: Recursion used in function
+
+			LAPCA Score for file SolutionByVaishnavi.py is 105.5
+			LAPCA Percentage for file SolutionByVaishnavi.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionbyShailza.java
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionbyShailza.java is 105.0
+			LAPCA Percentage for file SolutionbyShailza.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByGurirath.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByGurirath.java is 105.0
+			LAPCA Percentage for file SolutionByGurirath.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			LAPCA Score for file SolutionByVyomChandra.java is 106.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionbyharshleen.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionbyharshleen.java is 105.0
+			LAPCA Percentage for file solutionbyharshleen.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 30: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet.java is 101.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			Line 12: Recursion used in function
+
+			LAPCA Score for file SolutionBySatwika.java is 105.5
+			LAPCA Percentage for file SolutionBySatwika.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShoaib.java
+			Line 12: Recursion used in function
+
+			LAPCA Score for file SolutionByShoaib.java is 105.5
+			LAPCA Percentage for file SolutionByShoaib.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNirmal.java
+			Line 12: Recursion used in function
+
+			LAPCA Score for file SolutionByNirmal.java is 105.5
+			LAPCA Percentage for file SolutionByNirmal.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByIndra.java
+			LAPCA Score for file SolutionByIndra.java is 106.0
+			LAPCA Percentage for file SolutionByIndra.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			Line 12: Recursion used in function
+
+			LAPCA Score for file SolutionByEkta.java is 105.5
+			LAPCA Percentage for file SolutionByEkta.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 8: Recursion used in function
+
+			LAPCA Score for file SolutionByNidhi.java is 105.5
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRodeby.java
+			Line 20: Curly braces not used
+
+			LAPCA Score for file SolutionByRodeby.java is 101.0
+			LAPCA Percentage for file SolutionByRodeby.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 10: Curly braces not used
+
+			Line 16: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			Line 10: Curly braces not used
+
+			LAPCA Score for file SolutionByVyomChandra.java is 101.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByKriti.java
+			LAPCA Score for file SolutionByKriti.java is 106.0
+			LAPCA Percentage for file SolutionByKriti.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAnkit.py
+			LAPCA Score for file SolutionByAnkit.py is 106.0
+			LAPCA Percentage for file SolutionByAnkit.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhaval.java
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByVaishnavi.py
+			LAPCA Score for file solutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file solutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAquib.py
+			LAPCA Score for file SolutionByAquib.py is 106.0
+			LAPCA Percentage for file SolutionByAquib.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhaval.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRodeby.java
+			Line 17: Curly braces not used
+
+			Line 19: Curly braces not used
+
+			LAPCA Score for file SolutionByRodeby.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByRodeby.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			LAPCA Score for file SolutionByRiya.java is 106.0
+			LAPCA Percentage for file SolutionByRiya.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAquib.py
+			LAPCA Score for file SolutionByAquib.py is 106.0
+			LAPCA Percentage for file SolutionByAquib.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByIshleen.py
+			LAPCA Score for file solutionByIshleen.py is 106.0
+			LAPCA Percentage for file solutionByIshleen.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Curly braces not used
+
+			Line 8: Curly braces not used
+
+			Line 11: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 98.5
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9292452830188679
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShoaib.java
+			Line 5: Curly braces not used
+
+			Line 8: Curly braces not used
+
+			Line 11: Curly braces not used
+
+			Dead code statement in check at line 11
+
+			Dead code statement in check at line 14
+
+			LAPCA Score for file SolutionByShoaib.java is 85.16666666666666
+			LAPCA Percentage for file SolutionByShoaib.java is 0.8034591194968552
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNirmal.java
+			Line 5: Curly braces not used
+
+			Line 8: Curly braces not used
+
+			Line 11: Curly braces not used
+
+			Dead code statement in check at line 11
+
+			Dead code statement in check at line 14
+
+			LAPCA Score for file SolutionByNirmal.java is 85.16666666666666
+			LAPCA Percentage for file SolutionByNirmal.java is 0.8034591194968552
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPrabhakar.c
+			Line 9: Curly braces not used
+
+			LAPCA Score for file SolutionByPrabhakar.c is 101.0
+			LAPCA Percentage for file SolutionByPrabhakar.c is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShivam.py
+			LAPCA Score for file SolutionByShivam.py is 106.0
+			LAPCA Percentage for file SolutionByShivam.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySukriti.java
+			Line 5: Curly braces not used
+
+			Line 4: Recursion used in function
+
+			LAPCA Score for file SolutionBySukriti.java is 100.5
+			LAPCA Percentage for file SolutionBySukriti.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			LAPCA Score for file SolutionByVyomChandra.java is 106.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAnkit.py
+			LAPCA Score for file SolutionByAnkit.py is 106.0
+			LAPCA Percentage for file SolutionByAnkit.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByVaishnavi.py
+			LAPCA Score for file solutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file solutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimranjeet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPopopo19.py
+			LAPCA Score for file SolutionByPopopo19.py is 106.0
+			LAPCA Percentage for file SolutionByPopopo19.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 9: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByGurirath.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByGurirath.java is 105.0
+			LAPCA Percentage for file SolutionByGurirath.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPrabhakar.c
+			LAPCA Score for file SolutionByPrabhakar.c is 106.0
+			LAPCA Percentage for file SolutionByPrabhakar.c is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShivam.py
+			LAPCA Score for file SolutionByShivam.py is 106.0
+			LAPCA Percentage for file SolutionByShivam.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavTripathi.py
+			LAPCA Score for file SolutionByVaibhavTripathi.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavTripathi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTrrrey.java
+			LAPCA Score for file SolutionByTrrrey.java is 106.0
+			LAPCA Percentage for file SolutionByTrrrey.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVicky.java
+			LAPCA Score for file SolutionByVicky.java is 106.0
+			LAPCA Percentage for file SolutionByVicky.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAayushi.py
+			LAPCA Score for file SolutionByAayushi.py is 106.0
+			LAPCA Percentage for file SolutionByAayushi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAshutosh.java
+			LAPCA Score for file SolutionByAshutosh.java is 106.0
+			LAPCA Percentage for file SolutionByAshutosh.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionBySimranjeet.java
+			Line 15: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionBySimranjeet.java is 105.0
+			LAPCA Percentage for file solutionBySimranjeet.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByXyphos.py
+			Line 7: continue present
+
+			LAPCA Score for file SolutionByXyphos.py is 105.0
+			LAPCA Percentage for file SolutionByXyphos.py is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			Line 16: Curly braces not used
+
+			Line 15: Recursion used in function
+
+			LAPCA Score for file SolutionBySatwika.java is 100.5
+			LAPCA Percentage for file SolutionBySatwika.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShivam.py
+			LAPCA Score for file SolutionByShivam.py is 106.0
+			LAPCA Percentage for file SolutionByShivam.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAkshatJain.py
+			LAPCA Score for file SolutionByAkshatJain.py is 106.0
+			LAPCA Percentage for file SolutionByAkshatJain.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionBySimranjeet.java
+			Line 18: Curly braces not used
+
+			Line 15: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionBySimranjeet.java is 100.0
+			LAPCA Percentage for file solutionBySimranjeet.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByBhavnoor.py
+			LAPCA Score for file SolutionByBhavnoor.py is 106.0
+			LAPCA Percentage for file SolutionByBhavnoor.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySatwika.java
+			Line 13: Curly braces not used
+
+			Line 12: Recursion used in function
+
+			LAPCA Score for file SolutionBySatwika.java is 100.5
+			LAPCA Percentage for file SolutionBySatwika.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.py
+			LAPCA Score for file SolutionByAbhishek.py is 106.0
+			LAPCA Percentage for file SolutionByAbhishek.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByArushi.py
+			LAPCA Score for file SolutionByArushi.py is 106.0
+			LAPCA Percentage for file SolutionByArushi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByAshutosh.py
+			LAPCA Score for file solutionByAshutosh.py is 106.0
+			LAPCA Percentage for file solutionByAshutosh.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByIshaan.py
+			LAPCA Score for file solutionByIshaan.py is 106.0
+			LAPCA Percentage for file solutionByIshaan.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySwapnil.java
+			LAPCA Score for file SolutionBySwapnil.java is 106.0
+			LAPCA Percentage for file SolutionBySwapnil.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			Line 33: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByPranavGurditta.java is 105.0
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByHarshleen.java
+			Line 13: Curly braces not used
+
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByHarshleen.java is 100.0
+			LAPCA Percentage for file SolutionByHarshleen.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			Line 18: Curly braces not used
+
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByVyomChandra.java is 100.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhaval.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimranjeet.java
+			Line 34: Curly braces not used
+
+			LAPCA Score for file SolutionBySimranjeet.java is 101.0
+			LAPCA Percentage for file SolutionBySimranjeet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 8: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 24: Curly braces not used
+
+			LAPCA Score for file SolutionByChanpreet.java is 101.0
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			LAPCA Score for file SolutionByTanmay.py is 106.0
+			LAPCA Percentage for file SolutionByTanmay.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPrabhakar.c
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRishabh.py
+			LAPCA Score for file SolutionByRishabh.py is 106.0
+			LAPCA Percentage for file SolutionByRishabh.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByManan.py
+			LAPCA Score for file SolutionByManan.py is 106.0
+			LAPCA Percentage for file SolutionByManan.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByKaran.java
+			LAPCA Score for file SolutionByKaran.java is 106.0
+			LAPCA Percentage for file SolutionByKaran.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAquib.py
+			LAPCA Score for file SolutionByAquib.py is 106.0
+			LAPCA Percentage for file SolutionByAquib.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAshutosh.java
+			Line 8: Curly braces not used
+
+			Line 17: Switch statement does not have default case
+
+			LAPCA Score for file SolutionByAshutosh.java is 91.0
+			LAPCA Percentage for file SolutionByAshutosh.java is 0.8584905660377359
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAshutosh.py
+			LAPCA Score for file SolutionByAshutosh.py is 106.0
+			LAPCA Percentage for file SolutionByAshutosh.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 7: Curly braces not used
+
+			Dead code statement in check at line 10
+
+			LAPCA Score for file SolutionByMananpreet.java is 91.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.8584905660377359
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShoaib.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.java
+			Line 7: Curly braces not used
+
+			Dead code statement in check at line 10
+
+			LAPCA Score for file SolutionByAbhishek.java is 91.0
+			LAPCA Percentage for file SolutionByAbhishek.java is 0.8584905660377359
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByGurirath.java
+			LAPCA Score for file SolutionByGurirath.java is 106.0
+			LAPCA Percentage for file SolutionByGurirath.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAnkit.py
+			LAPCA Score for file SolutionByAnkit.py is 106.0
+			LAPCA Percentage for file SolutionByAnkit.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNirmal.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhaval.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByTanmay.py
+			Line 1: Recursion used in function
+
+			LAPCA Score for file SolutionByTanmay.py is 105.5
+			LAPCA Percentage for file SolutionByTanmay.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByFuzail.py
+			LAPCA Score for file SolutionByFuzail.py is 106.0
+			LAPCA Percentage for file SolutionByFuzail.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPrabhakar.c
+			Line 7: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByPrabhakar.c is 105.0
+			LAPCA Percentage for file SolutionByPrabhakar.c is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByManan.py
+			LAPCA Score for file SolutionByManan.py is 106.0
+			LAPCA Percentage for file SolutionByManan.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySukriti.java
+			Line 10: Curly braces not used
+
+			Line 9: Recursion used in function
+
+			LAPCA Score for file SolutionBySukriti.java is 100.5
+			LAPCA Percentage for file SolutionBySukriti.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimranjeet.java
+			Line 15: Curly braces not used
+
+			Line 14: Recursion used in function
+
+			LAPCA Score for file SolutionBySimranjeet.java is 100.5
+			LAPCA Percentage for file SolutionBySimranjeet.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySomya.py
+			LAPCA Score for file SolutionBySomya.py is 106.0
+			LAPCA Percentage for file SolutionBySomya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRodeby.java
+			LAPCA Score for file SolutionByRodeby.java is 106.0
+			LAPCA Percentage for file SolutionByRodeby.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.py
+			LAPCA Score for file SolutionByAbhishek.py is 106.0
+			LAPCA Percentage for file SolutionByAbhishek.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			LAPCA Score for file SolutionByRiya.java is 106.0
+			LAPCA Percentage for file SolutionByRiya.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyat.c
+			Line 18: Curly braces not used
+
+			Line 7: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyat.c is 100.0
+			LAPCA Percentage for file SolutionByMashiyat.c is 0.9433962264150944
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEnthusiastDeveloper.py
+			LAPCA Score for file SolutionByEnthusiastDeveloper.py is 106.0
+			LAPCA Percentage for file SolutionByEnthusiastDeveloper.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByIshleen.py
+			Line 3: Recursion used in function
+
+			LAPCA Score for file solutionByIshleen.py is 105.5
+			LAPCA Percentage for file solutionByIshleen.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByPranavGurditta.java
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByPranavGurditta.java is 101.0
+			LAPCA Percentage for file SolutionByPranavGurditta.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAshutosh.java
+			LAPCA Score for file SolutionByAshutosh.java is 106.0
+			LAPCA Percentage for file SolutionByAshutosh.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDhirenderKumar.java
+			Line 13: Curly braces not used
+
+			LAPCA Score for file SolutionByDhirenderKumar.java is 101.0
+			LAPCA Percentage for file SolutionByDhirenderKumar.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Recursion used in function
+
+			LAPCA Score for file SolutionByMananpreet.java is 105.5
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShoaib.java
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByShoaib.java is 101.0
+			LAPCA Percentage for file SolutionByShoaib.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySushruth.c
+			Line 15: Recursion used in function
+
+			LAPCA Score for file SolutionBySushruth.c is 105.5
+			LAPCA Percentage for file SolutionBySushruth.c is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+			Line 16: Curly braces not used
+
+			Line 26: Curly braces not used
+
+			Line 25: Recursion used in function
+
+			LAPCA Score for file SolutionByChanpreet.java is 98.83333333333334
+			LAPCA Percentage for file SolutionByChanpreet.java is 0.9323899371069183
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRishabh.java
+			LAPCA Score for file SolutionByRishabh.java is 106.0
+			LAPCA Percentage for file SolutionByRishabh.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAnkit.py
+			Line 7: Recursion used in function
+
+			LAPCA Score for file SolutionByAnkit.py is 105.5
+			LAPCA Percentage for file SolutionByAnkit.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNirmal.java
+			Line 16: Curly braces not used
+
+			Line 26: Curly braces not used
+
+			Line 25: Recursion used in function
+
+			LAPCA Score for file SolutionByNirmal.java is 98.83333333333334
+			LAPCA Percentage for file SolutionByNirmal.java is 0.9323899371069183
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			Line 15: Recursion used in function
+
+			LAPCA Score for file SolutionByEkta.java is 105.5
+			LAPCA Percentage for file SolutionByEkta.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 14: Recursion used in function
+
+			LAPCA Score for file SolutionByNidhi.java is 105.5
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByArnab.py
+			Line 1: Recursion used in function
+
+			LAPCA Score for file SolutionByArnab.py is 105.5
+			LAPCA Percentage for file SolutionByArnab.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 10: Curly braces not used
+
+			Line 16: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.java
+			Line 10: Curly braces not used
+
+			Line 16: Curly braces not used
+
+			LAPCA Score for file SolutionByAbhishek.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByAbhishek.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByKriti.java
+			LAPCA Score for file SolutionByKriti.java is 106.0
+			LAPCA Percentage for file SolutionByKriti.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAnkit.py
+			LAPCA Score for file SolutionByAnkit.py is 106.0
+			LAPCA Percentage for file SolutionByAnkit.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavTripathi.py
+			LAPCA Score for file SolutionByVaibhavTripathi.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavTripathi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByDeepak.py
+			LAPCA Score for file SolutionByDeepak.py is 106.0
+			LAPCA Percentage for file SolutionByDeepak.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 7: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 101.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			Line 9: Curly braces not used
+
+			LAPCA Score for file SolutionByVyomChandra.java is 101.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByJagmeet.py
+			LAPCA Score for file SolutionByJagmeet.py is 106.0
+			LAPCA Percentage for file SolutionByJagmeet.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByFuzail.py
+			LAPCA Score for file SolutionByFuzail.py is 106.0
+			LAPCA Percentage for file SolutionByFuzail.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEkta.java
+			Line 10: Recursion used in function
+
+			LAPCA Score for file SolutionByEkta.java is 105.5
+			LAPCA Percentage for file SolutionByEkta.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			Line 11: Recursion used in function
+
+			LAPCA Score for file SolutionByNidhi.java is 105.5
+			LAPCA Percentage for file SolutionByNidhi.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi2.py
+			Line 2: Recursion used in function
+
+			LAPCA Score for file SolutionByVaishnavi2.py is 105.5
+			LAPCA Percentage for file SolutionByVaishnavi2.py is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.py
+			LAPCA Score for file SolutionByAbhishek.py is 106.0
+			LAPCA Percentage for file SolutionByAbhishek.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionByIshleen.py
+			LAPCA Score for file solutionByIshleen.py is 106.0
+			LAPCA Percentage for file solutionByIshleen.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySumit.c
+			LAPCA Score for file SolutionBySumit.c is 106.0
+			LAPCA Percentage for file SolutionBySumit.c is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 12: Curly braces not used
+
+			Line 10: Recursion used in function
+
+			LAPCA Score for file SolutionByMananpreet.java is 100.5
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShoaib.java
+			Line 10: Recursion used in function
+
+			LAPCA Score for file SolutionByShoaib.java is 105.5
+			LAPCA Percentage for file SolutionByShoaib.java is 0.9952830188679245
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNirmal.java
+			Line 12: Curly braces not used
+
+			Line 10: Recursion used in function
+
+			LAPCA Score for file SolutionByNirmal.java is 100.5
+			LAPCA Percentage for file SolutionByNirmal.java is 0.9481132075471698
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMashiyatHussain.c
+			Line 10: Curly braces not used
+
+			Line 18: Curly braces not used
+
+			Line 6: One variable per declaration rule not followed
+
+			Line 17: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByMashiyatHussain.c is 98.0
+			LAPCA Percentage for file SolutionByMashiyatHussain.c is 0.9245283018867925
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByShivam.py
+			LAPCA Score for file SolutionByShivam.py is 106.0
+			LAPCA Percentage for file SolutionByShivam.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySomya.py
+			LAPCA Score for file SolutionBySomya.py is 106.0
+			LAPCA Percentage for file SolutionBySomya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRodeby.java
+			LAPCA Score for file SolutionByRodeby.java is 106.0
+			LAPCA Percentage for file SolutionByRodeby.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.py
+			LAPCA Score for file SolutionByAbhishek.py is 106.0
+			LAPCA Percentage for file SolutionByAbhishek.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRiya.java
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByRiya.java is 101.0
+			LAPCA Percentage for file SolutionByRiya.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByEnthusiastDeveloper.py
+			LAPCA Score for file SolutionByEnthusiastDeveloper.py is 106.0
+			LAPCA Percentage for file SolutionByEnthusiastDeveloper.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAquib.py
+			LAPCA Score for file SolutionByAquib.py is 106.0
+			LAPCA Percentage for file SolutionByAquib.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Curly braces not used
+
+			Line 8: Curly braces not used
+
+			LAPCA Score for file SolutionByMananpreet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionByMananpreet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByGurirath.java
+			Line 5: One variable per declaration rule not followed
+
+			LAPCA Score for file SolutionByGurirath.java is 105.0
+			LAPCA Percentage for file SolutionByGurirath.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByVyomChandra.java is 101.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByRishabh.java
+			Line 18: Curly braces not used
+
+			LAPCA Score for file SolutionByRishabh.java is 101.0
+			LAPCA Percentage for file SolutionByRishabh.java is 0.9528301886792453
+------------------------------------------------------------------------------------------------------------------
+										File: SolutinByIndra.java
+			LAPCA Score for file SolutinByIndra.java is 106.0
+			LAPCA Percentage for file SolutinByIndra.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavTripathi.py
+			LAPCA Score for file SolutionByVaibhavTripathi.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavTripathi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			LAPCA Score for file SolutionByMananpreet.java is 106.0
+			LAPCA Percentage for file SolutionByMananpreet.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVyomChandra.java
+			LAPCA Score for file SolutionByVyomChandra.java is 106.0
+			LAPCA Percentage for file SolutionByVyomChandra.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: solutionbyharshleen.java
+			Line 10: One variable per declaration rule not followed
+
+			LAPCA Score for file solutionbyharshleen.java is 105.0
+			LAPCA Percentage for file solutionbyharshleen.java is 0.9905660377358491
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByChanpreet.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaibhavSethia.py
+			LAPCA Score for file SolutionByVaibhavSethia.py is 106.0
+			LAPCA Percentage for file SolutionByVaibhavSethia.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySimranjeet.java
+			Line 15: Curly braces not used
+
+			Line 27: Curly braces not used
+
+			LAPCA Score for file SolutionBySimranjeet.java is 99.33333333333334
+			LAPCA Percentage for file SolutionBySimranjeet.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySomya.py
+			LAPCA Score for file SolutionBySomya.py is 106.0
+			LAPCA Percentage for file SolutionBySomya.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByNidhi.java
+			LAPCA Score for file SolutionByNidhi.java is 106.0
+			LAPCA Percentage for file SolutionByNidhi.java is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi2.py
+			LAPCA Score for file SolutionByVaishnavi2.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi2.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAbhishek.py
+			LAPCA Score for file SolutionByAbhishek.py is 106.0
+			LAPCA Percentage for file SolutionByAbhishek.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionBySweta.java
+			Line 5: Curly braces not used
+
+			Line 15: Curly braces not used
+
+			LAPCA Score for file SolutionBySweta.java is 99.33333333333334
+			LAPCA Percentage for file SolutionBySweta.java is 0.9371069182389938
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByVaishnavi.py
+			LAPCA Score for file SolutionByVaishnavi.py is 106.0
+			LAPCA Percentage for file SolutionByVaishnavi.py is 1.0
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByAshutosh.java
+------------------------------------------------------------------------------------------------------------------
+										File: SolutionByMananpreet.java
+			Line 5: Curly braces not used
+
+			Line 20: Curly braces not used
+

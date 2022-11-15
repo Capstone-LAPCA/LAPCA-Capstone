@@ -26,7 +26,7 @@ class createNewParser:
 
         #Print
         if "PRINT" in modified_str[0]:
-            if cur_state not in ["before","after"]:
+            if cur_state[0] not in ["before","after"]:
                 words = words.replace("PRINT","print('Line ',LINE_NO,': ',")
                 words = words[0:len(words)-1]+",sep='')\n"
             else:
@@ -60,17 +60,18 @@ class createNewParser:
             if(words[0:5] != "STATE"):
                 i += 1
                 continue
-            cur_state = words[6:-1]
+            cur_state = words[6:-1].strip(' ').split(',')
             i+=1
-
-            if cur_state not in self.mapping[self.lang].keys():
-                return "State is not applicable for the given language. Please check the State entered"
-            cur_state = self.mapping[self.lang][cur_state]
+            for cur in cur_state:
+                if cur not in self.mapping[self.lang].keys():
+                    return "State is not applicable for the given language. Please check the State entered"
+            #cur_state = self.mapping[self.lang][cur_state]
             flag=False
             while(i < len(self.guidelines)):
                 words = self.guidelines[i]
                 if("END_STATE" in words):
-                    self.writeFileAt(cur_state, code)
+                    for cur in cur_state:
+                        self.writeFileAt(self.mapping[self.lang][cur],code)
                     flag=True
                     break
                 else:
