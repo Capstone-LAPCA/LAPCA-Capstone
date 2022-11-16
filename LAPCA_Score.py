@@ -27,11 +27,14 @@ class LAPCA_Score:
         self.guidelines = []
         self.err_count = 0
         self.error_files = []
+        self.violation_count = {}
         with open('LAPCA_Score_Report.txt', 'w') as f:
             f.write("")
         for i in self.mapping:
-            self.guidelines.append([i["id"],i["label"],i["priority"]])
-            self.max_score+=i["priority"]
+            if i["priority"]:
+                self.violation_count[i["id"]] = 0
+                self.guidelines.append([i["id"],i["label"],i["priority"]])
+                self.max_score+=i["priority"]
 
     def extractZip(self):
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
@@ -53,30 +56,30 @@ class LAPCA_Score:
                         f.write("------------------------------------------------------------------------------------------------------------------\n")
                         f.write("\t\t\t\t\t\t\t\t\t\tFile: "+file+"\n")
                     for guideline in self.guidelines:
-                        if(guideline[2]):
-                            self.result[file][guideline[1]] = []
-                            MainModule(os.path.join(root, file), os.path.join('./Guidelines',guideline[0]) ).factory()
-                            with open("results.txt", "r") as f:
-                                lines = f.read().split("\n")
-                                if lines[0] == 'State is not applicable for the given language. Please check the State entered ' or lines[0] == 'Guideline is not applicable for the given language. Please check the languages mentioned in the guideline. ':
-                                    score+=guideline[2]
-                                    continue
-                                elif lines[0].split(' ')[0]=="Traceback":
-                                    print(f"{bcolors.FAIL}Error in file",file,f"{bcolors.ENDC}")
-                                    #print(f"{bcolors.FAIL}Terminating LAPCA Score Benchmark{bcolors.ENDC}")
-                                    #return "Error in file"+file+".\nTerminating LAPCA Score Benchmark\n"
-                                    #exit(0)
-                                    self.error_files.append(file)
-                                    self.err_count+=1
-                                    flag = True
-                                    break
+                        self.result[file][guideline[1]] = []
+                        MainModule(os.path.join(root, file), os.path.join('./Guidelines',guideline[0]) ).factory()
+                        with open("results.txt", "r") as f:
+                            lines = f.read().split("\n")
+                            if lines[0] == 'State is not applicable for the given language. Please check the State entered ' or lines[0] == 'Guideline is not applicable for the given language. Please check the languages mentioned in the guideline. ':
+                                score+=guideline[2]
+                                continue
+                            elif lines[0].split(' ')[0]=="Traceback":
+                                print(f"{bcolors.FAIL}Error in file",file,f"{bcolors.ENDC}")
+                                #print(f"{bcolors.FAIL}Terminating LAPCA Score Benchmark{bcolors.ENDC}")
+                                #return "Error in file"+file+".\nTerminating LAPCA Score Benchmark\n"
+                                #exit(0)
+                                self.error_files.append(file)
+                                self.err_count+=1
+                                flag = True
+                                break
 
-                                else:
-                                    with open('LAPCA_Score_Report.txt', 'a+') as f:
-                                        for i in lines[:-1]:
-                                            f.write("\t\t\t"+i+"\n\n")
-                                    self.result[file][guideline[1]].extend(lines[:-1])
-                                    score += guideline[2]/len(lines)
+                            else:
+                                self.violation_count[guideline[0]]+=len(lines)-1
+                                with open('LAPCA_Score_Report.txt', 'a+') as f:
+                                    for i in lines[:-1]:
+                                        f.write("\t\t\t"+i+"\n\n")
+                                self.result[file][guideline[1]].extend(lines[:-1])
+                                score += guideline[2]/len(lines)
                     if flag:
                         continue
                     self.LAPCA_score+=score
@@ -96,9 +99,15 @@ class LAPCA_Score:
         with open('LAPCA_Score_Report.txt', 'a+') as f:
             f.write("------------------------------------------------------------------------------------------------------------------\n")
             f.write("\n\n")
-            f.write("\t\t\t\t\tnumber of files processed: "+str(no_of_files)+"\n")
+            f.write("\t\t\t\t\tTotal number of files processed: "+str(no_of_files)+"\n")
             f.write("\t\t\t\t\tLAPCA Score for the given codebase is "+str(self.LAPCA_score/([no_of_files if no_of_files else 1][0]))+"\n")
             f.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str(self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))+"\n")
+            f.write("\t\t\t\t\tTotal number of error files: "+str(self.err_count)+"\n")
+            f.write("\t\t\t\t\tError files: "+str(self.error_files)+"\n")
+            f.write("\t\t\t\t\tViolation count:\n")
+            for i in self.violation_count.keys():
+                f.write("\t\t\t\t\t\t"+i+" : "+str(self.violation_count[i])+"\n")
+
             f.write("\n\n")
             f.write("------------------------------------------------------------------------------------------------------------------\n")
         print(f"{bcolors.OKGREEN}Total number of files:",no_of_files,f"{bcolors.ENDC}")
