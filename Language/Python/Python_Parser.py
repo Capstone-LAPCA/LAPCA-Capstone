@@ -384,8 +384,10 @@ class pythonParserActions(visitors.Visitor):
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
         condition_list = []
+        ITERATION_CONDITION = ""
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list
+        if len(condition_list) >0:
+            ITERATION_CONDITION = condition_list[0]
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         pass
