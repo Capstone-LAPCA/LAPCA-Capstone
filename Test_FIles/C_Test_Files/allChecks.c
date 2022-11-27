@@ -9,8 +9,9 @@ int binarySearch(int arr[], int l, int r, int x)
         if (arr[m] < x)
             l = m + 1;
   
-        else
+        else{
             r = m - 1;
+        }
     }
     return -1;
 }
@@ -36,7 +37,7 @@ int main(void)
     if (result == -1)
         printf("Element is not present in array");
     else
-        printf("Element is present at index %d",result);
+       { printf("Element is present at index %d",result); }
     recursiveBinarySearch(arr, 0, n - 1, x);
     int a;
     for(int i=0;i<n,a=5;i++)
