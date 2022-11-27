@@ -1,0 +1,15 @@
+LANGUAGE c,java
+this guideline is used to check if curly braces are used in selection and iteration statements
+STATE while,for,if
+    count = 1
+    for i in range(2,len(ALL_TOKENS)):
+        token = ALL_TOKENS[i]
+        if token==')':
+            count-=1
+        elif token=='(':
+            count+=1
+        if not count:
+            if i+1 ==len(ALL_TOKENS) or ALL_TOKENS[i+1]!='{':
+                PRINT "Curly braces not used"
+            break
+END_STATE

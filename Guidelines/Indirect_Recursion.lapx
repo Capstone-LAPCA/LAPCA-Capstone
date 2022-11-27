@@ -1,5 +1,6 @@
 STATE before
     ALL_FUNCTION_CALLS = {}
+    FUNCTIONS = []
 END_STATE
 
 STATE function
@@ -8,8 +9,10 @@ STATE function
 END_STATE
 
 STATE after
-    for function in FUNCTIONS:
-        for i in FUNCTIONS:
-            if i!=function and function in ALL_FUNCTION_CALLS[i] and i in ALL_FUNCTION_CALLS[function]:
-                print("Indirect recursion present between functions",function,"and",i)
+    for i in range(len(FUNCTIONS)):
+        x = FUNCTIONS[i]
+        for j in range(i+1,len(FUNCTIONS)):
+            y = FUNCTIONS[j]
+            if x in ALL_FUNCTION_CALLS[y] and y in ALL_FUNCTION_CALLS[x]:
+                print("Indirect recursion present between functions",x,"and",y)
 END_STATE

@@ -1,6 +1,8 @@
 
 STATE before
     MY_FUNCTION_CALLS = []
+    line_no = {}
+    FUNCTIONS = []
 END_STATE
 
 STATE start
@@ -8,6 +10,7 @@ STATE start
 END_STATE
 
 STATE function
+    line_no[FUNCTION_NAME] = LINE_NO
     if FUNCTION_NAME != 'main' and FUNCTION_NAME!='__init__':
         FUNCTIONS.append(FUNCTION_NAME)
     for FUNCTION in FUNCTION_CALLS:

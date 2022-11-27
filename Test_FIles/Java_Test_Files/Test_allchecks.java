@@ -14,13 +14,13 @@ class Test_allchecks {
         for(int i=0;i==10;i++){
             if (i %2 == 0)
                 continue;
-            else
-                {System.out.println(i);
+            else{
+                System.out.println(i);
                 for(;;)
                 {
                     while(true){}
                 }
-                }
+            }
         }
     }
     public static void recursive(int i)
@@ -39,7 +39,9 @@ class Test_allchecks {
         if (n == 0)
             return 1;
         else
-            return n*fact(n-1);
+            {
+                return n*fact(n-1);
+            }
     }
     static int binarySearch(int[] arr, int x) {
         int l = 0, r = arr.length - 1;

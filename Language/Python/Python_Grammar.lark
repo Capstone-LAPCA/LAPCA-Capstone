@@ -168,7 +168,7 @@ assign_expr: name ":=" test
 ?comparison: expr (comp_op expr)*
 star_expr: "*" expr
 
-?expr: or_expr
+?expr: or_expr | "_"
 ?or_expr: xor_expr ("|" xor_expr)*
 ?xor_expr: and_expr ("^" and_expr)*
 ?and_expr: shift_expr ("&" shift_expr)*

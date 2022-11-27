@@ -1,0 +1,2026 @@
+------------------------------------------------------------------------------------------------------------------
+										File: candy-crush.py
+			File Number: 1			LAPCA Score for file candy-crush.py is 106.0
+			LAPCA Percentage for file candy-crush.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: common-elements.py
+			File Number: 2			LAPCA Score for file common-elements.py is 106.0
+			LAPCA Percentage for file common-elements.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: isRotation.py
+			File Number: 3			LAPCA Score for file isRotation.py is 106.0
+			LAPCA Percentage for file isRotation.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: k-nearest-stars.py
+			File Number: 4			LAPCA Score for file k-nearest-stars.py is 106.0
+			LAPCA Percentage for file k-nearest-stars.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: find-the-runner-up-score.py
+			File Number: 5			LAPCA Score for file find-the-runner-up-score.py is 106.0
+			LAPCA Percentage for file find-the-runner-up-score.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: min-max.py
+			File Number: 6			LAPCA Score for file min-max.py is 106.0
+			LAPCA Percentage for file min-max.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: the-captains-room.py
+			File Number: 7			LAPCA Score for file the-captains-room.py is 106.0
+			LAPCA Percentage for file the-captains-room.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: ConceptOfInheritence.py
+			File Number: 8			LAPCA Score for file ConceptOfInheritence.py is 106.0
+			LAPCA Percentage for file ConceptOfInheritence.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: palindrome-string.py
+			File Number: 9			LAPCA Score for file palindrome-string.py is 106.0
+			LAPCA Percentage for file palindrome-string.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: length-of-last-word.py
+			File Number: 10			LAPCA Score for file length-of-last-word.py is 106.0
+			LAPCA Percentage for file length-of-last-word.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: container-with-most-water.py
+			File Number: 11			LAPCA Score for file container-with-most-water.py is 106.0
+			LAPCA Percentage for file container-with-most-water.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: merge-two-sorted-lists-ii.py
+			File Number: 12			LAPCA Score for file merge-two-sorted-lists-ii.py is 106.0
+			LAPCA Percentage for file merge-two-sorted-lists-ii.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: intersection-of-sorted-arrays.py
+			File Number: 13			LAPCA Score for file intersection-of-sorted-arrays.py is 106.0
+			LAPCA Percentage for file intersection-of-sorted-arrays.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: maximum-path-in-triangle.py
+			File Number: 14			LAPCA Score for file maximum-path-in-triangle.py is 106.0
+			LAPCA Percentage for file maximum-path-in-triangle.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: paint-house.py
+			File Number: 15			LAPCA Score for file paint-house.py is 106.0
+			LAPCA Percentage for file paint-house.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-linked-list.py
+			File Number: 16			LAPCA Score for file reverse-linked-list.py is 106.0
+			LAPCA Percentage for file reverse-linked-list.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: list-cycle.py
+			File Number: 17			LAPCA Score for file list-cycle.py is 106.0
+			LAPCA Percentage for file list-cycle.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: remove-nth-node-from-list-end.py
+			File Number: 18			LAPCA Score for file remove-nth-node-from-list-end.py is 106.0
+			LAPCA Percentage for file remove-nth-node-from-list-end.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: noble-integer.py
+			File Number: 19			LAPCA Score for file noble-integer.py is 106.0
+			LAPCA Percentage for file noble-integer.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: kth-row-of-pascals-triangle.py
+			File Number: 20			LAPCA Score for file kth-row-of-pascals-triangle.py is 106.0
+			LAPCA Percentage for file kth-row-of-pascals-triangle.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: pick-from-both-sides.py
+			File Number: 21			LAPCA Score for file pick-from-both-sides.py is 106.0
+			LAPCA Percentage for file pick-from-both-sides.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: min-steps-in-infinite-grid.py
+			File Number: 22			LAPCA Score for file min-steps-in-infinite-grid.py is 106.0
+			LAPCA Percentage for file min-steps-in-infinite-grid.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: largest-number.py
+			File Number: 23			LAPCA Score for file largest-number.py is 106.0
+			LAPCA Percentage for file largest-number.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: add-one-to-number.py
+			File Number: 24			LAPCA Score for file add-one-to-number.py is 106.0
+			LAPCA Percentage for file add-one-to-number.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: perfect-peak-of-array.py
+			File Number: 25			LAPCA Score for file perfect-peak-of-array.py is 106.0
+			LAPCA Percentage for file perfect-peak-of-array.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: maximum-sum-triplet.py
+			File Number: 26			LAPCA Score for file maximum-sum-triplet.py is 106.0
+			LAPCA Percentage for file maximum-sum-triplet.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: wave-array.py
+			File Number: 27			LAPCA Score for file wave-array.py is 106.0
+			LAPCA Percentage for file wave-array.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: balance-array.py
+			File Number: 28			LAPCA Score for file balance-array.py is 106.0
+			LAPCA Percentage for file balance-array.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: leaders-in-an-array.py
+			File Number: 29			LAPCA Score for file leaders-in-an-array.py is 106.0
+			LAPCA Percentage for file leaders-in-an-array.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: pascal-triangle.py
+			File Number: 30			LAPCA Score for file pascal-triangle.py is 106.0
+			LAPCA Percentage for file pascal-triangle.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: sort-array-with-squares.py
+			File Number: 31			LAPCA Score for file sort-array-with-squares.py is 106.0
+			LAPCA Percentage for file sort-array-with-squares.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: large-factorial.py
+			File Number: 32			LAPCA Score for file large-factorial.py is 106.0
+			LAPCA Percentage for file large-factorial.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: maximum-absolute-difference.py
+			File Number: 33			LAPCA Score for file maximum-absolute-difference.py is 106.0
+			LAPCA Percentage for file maximum-absolute-difference.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: max-sum-contiguous-subarray.py
+			File Number: 34			LAPCA Score for file max-sum-contiguous-subarray.py is 106.0
+			LAPCA Percentage for file max-sum-contiguous-subarray.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: max-min.py
+			File Number: 35			LAPCA Score for file max-min.py is 106.0
+			LAPCA Percentage for file max-min.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: minimum-lights-to-activate.py
+			File Number: 36			LAPCA Score for file minimum-lights-to-activate.py is 106.0
+			LAPCA Percentage for file minimum-lights-to-activate.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: palindrome-integer.py
+			File Number: 37			LAPCA Score for file palindrome-integer.py is 106.0
+			LAPCA Percentage for file palindrome-integer.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: mathbug01.py
+			File Number: 38			LAPCA Score for file mathbug01.py is 106.0
+			LAPCA Percentage for file mathbug01.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: fizzbuzz.py
+			File Number: 39			LAPCA Score for file fizzbuzz.py is 106.0
+			LAPCA Percentage for file fizzbuzz.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: excel-column-number.py
+			File Number: 40			LAPCA Score for file excel-column-number.py is 106.0
+			LAPCA Percentage for file excel-column-number.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: roys-life-cycle.py
+			File Number: 41			LAPCA Score for file roys-life-cycle.py is 106.0
+			LAPCA Percentage for file roys-life-cycle.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: string-sum.py
+			File Number: 42			LAPCA Score for file string-sum.py is 106.0
+			LAPCA Percentage for file string-sum.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: once-upon-a-time-in-time-land.py
+			File Number: 43			LAPCA Score for file once-upon-a-time-in-time-land.py is 106.0
+			LAPCA Percentage for file once-upon-a-time-in-time-land.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: e-maze-in.py
+			File Number: 44			LAPCA Score for file e-maze-in.py is 106.0
+			LAPCA Percentage for file e-maze-in.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: points_in_a_rectangle.py
+			File Number: 45			LAPCA Score for file points_in_a_rectangle.py is 106.0
+			LAPCA Percentage for file points_in_a_rectangle.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: one-string-no-trouble.py
+			File Number: 46			LAPCA Score for file one-string-no-trouble.py is 106.0
+			LAPCA Percentage for file one-string-no-trouble.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: reduce_the_fraction.py
+			File Number: 47			LAPCA Score for file reduce_the_fraction.py is 106.0
+			LAPCA Percentage for file reduce_the_fraction.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: project-team.py
+			File Number: 48			LAPCA Score for file project-team.py is 106.0
+			LAPCA Percentage for file project-team.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: lets-begin.py
+			File Number: 49			LAPCA Score for file lets-begin.py is 106.0
+			LAPCA Percentage for file lets-begin.py is 1.0
+			Current avg LAPCA Score is 106.0
+------------------------------------------------------------------------------------------------------------------
+										File: set-and-unset-bits.py
+			Line 37: Recursion used in function
+
+			File Number: 50			LAPCA Score for file set-and-unset-bits.py is 105.5
+			LAPCA Percentage for file set-and-unset-bits.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.99
+------------------------------------------------------------------------------------------------------------------
+										File: roy-and-texting-robot.py
+			Depth of looping greater than 2 at line 51
+
+			File Number: 51			LAPCA Score for file roy-and-texting-robot.py is 101.0
+			LAPCA Percentage for file roy-and-texting-robot.py is 0.9528301886792453
+			Current avg LAPCA Score is 105.8921568627451
+------------------------------------------------------------------------------------------------------------------
+										File: ankit-and-numbers.py
+			File Number: 52			LAPCA Score for file ankit-and-numbers.py is 106.0
+			LAPCA Percentage for file ankit-and-numbers.py is 1.0
+			Current avg LAPCA Score is 105.89423076923077
+------------------------------------------------------------------------------------------------------------------
+										File: are-they-the-same?.py
+			File Number: 53			LAPCA Score for file are-they-the-same?.py is 106.0
+			LAPCA Percentage for file are-they-the-same?.py is 1.0
+			Current avg LAPCA Score is 105.89622641509433
+------------------------------------------------------------------------------------------------------------------
+										File: roy-and-coding-contest.py
+			File Number: 54			LAPCA Score for file roy-and-coding-contest.py is 106.0
+			LAPCA Percentage for file roy-and-coding-contest.py is 1.0
+			Current avg LAPCA Score is 105.89814814814815
+------------------------------------------------------------------------------------------------------------------
+										File: simple_search.py
+			File Number: 55			LAPCA Score for file simple_search.py is 106.0
+			LAPCA Percentage for file simple_search.py is 1.0
+			Current avg LAPCA Score is 105.9
+------------------------------------------------------------------------------------------------------------------
+										File: numbers-of-interest-2.py
+			File Number: 56			LAPCA Score for file numbers-of-interest-2.py is 106.0
+			LAPCA Percentage for file numbers-of-interest-2.py is 1.0
+			Current avg LAPCA Score is 105.90178571428571
+------------------------------------------------------------------------------------------------------------------
+										File: pile-of-coins.py
+			File Number: 57			LAPCA Score for file pile-of-coins.py is 106.0
+			LAPCA Percentage for file pile-of-coins.py is 1.0
+			Current avg LAPCA Score is 105.90350877192982
+------------------------------------------------------------------------------------------------------------------
+										File: goki-and-his-breakup.py
+			File Number: 58			LAPCA Score for file goki-and-his-breakup.py is 106.0
+			LAPCA Percentage for file goki-and-his-breakup.py is 1.0
+			Current avg LAPCA Score is 105.90517241379311
+------------------------------------------------------------------------------------------------------------------
+										File: Char-Sum.py
+			File Number: 59			LAPCA Score for file Char-Sum.py is 106.0
+			LAPCA Percentage for file Char-Sum.py is 1.0
+			Current avg LAPCA Score is 105.90677966101696
+------------------------------------------------------------------------------------------------------------------
+										File: memorise-me.py
+			File Number: 60			LAPCA Score for file memorise-me.py is 106.0
+			LAPCA Percentage for file memorise-me.py is 1.0
+			Current avg LAPCA Score is 105.90833333333333
+------------------------------------------------------------------------------------------------------------------
+										File: string-rotator.py
+			File Number: 61			LAPCA Score for file string-rotator.py is 106.0
+			LAPCA Percentage for file string-rotator.py is 1.0
+			Current avg LAPCA Score is 105.90983606557377
+------------------------------------------------------------------------------------------------------------------
+										File: good-numbers.py
+			File Number: 62			LAPCA Score for file good-numbers.py is 106.0
+			LAPCA Percentage for file good-numbers.py is 1.0
+			Current avg LAPCA Score is 105.91129032258064
+------------------------------------------------------------------------------------------------------------------
+										File: hamiltonian-and-lagrangian.py
+			File Number: 63			LAPCA Score for file hamiltonian-and-lagrangian.py is 106.0
+			LAPCA Percentage for file hamiltonian-and-lagrangian.py is 1.0
+			Current avg LAPCA Score is 105.91269841269842
+------------------------------------------------------------------------------------------------------------------
+										File: counting-frog-paths.py
+			File Number: 64			LAPCA Score for file counting-frog-paths.py is 106.0
+			LAPCA Percentage for file counting-frog-paths.py is 1.0
+			Current avg LAPCA Score is 105.9140625
+------------------------------------------------------------------------------------------------------------------
+										File: maximize-the-earning.py
+			File Number: 65			LAPCA Score for file maximize-the-earning.py is 106.0
+			LAPCA Percentage for file maximize-the-earning.py is 1.0
+			Current avg LAPCA Score is 105.91538461538461
+------------------------------------------------------------------------------------------------------------------
+										File: rank-list.py
+			File Number: 66			LAPCA Score for file rank-list.py is 106.0
+			LAPCA Percentage for file rank-list.py is 1.0
+			Current avg LAPCA Score is 105.91666666666667
+------------------------------------------------------------------------------------------------------------------
+										File: most-frequent.py
+			File Number: 67			LAPCA Score for file most-frequent.py is 106.0
+			LAPCA Percentage for file most-frequent.py is 1.0
+			Current avg LAPCA Score is 105.91791044776119
+------------------------------------------------------------------------------------------------------------------
+										File: special_series_sum.py
+			File Number: 68			LAPCA Score for file special_series_sum.py is 106.0
+			LAPCA Percentage for file special_series_sum.py is 1.0
+			Current avg LAPCA Score is 105.91911764705883
+------------------------------------------------------------------------------------------------------------------
+										File: the-great-run.py
+			File Number: 69			LAPCA Score for file the-great-run.py is 106.0
+			LAPCA Percentage for file the-great-run.py is 1.0
+			Current avg LAPCA Score is 105.92028985507247
+------------------------------------------------------------------------------------------------------------------
+										File: Loot-Houses.py
+			File Number: 70			LAPCA Score for file Loot-Houses.py is 106.0
+			LAPCA Percentage for file Loot-Houses.py is 1.0
+			Current avg LAPCA Score is 105.92142857142858
+------------------------------------------------------------------------------------------------------------------
+										File: strange-array.py
+			File Number: 71			LAPCA Score for file strange-array.py is 106.0
+			LAPCA Percentage for file strange-array.py is 1.0
+			Current avg LAPCA Score is 105.9225352112676
+------------------------------------------------------------------------------------------------------------------
+										File: even-and-odd-indexes.py
+			File Number: 72			LAPCA Score for file even-and-odd-indexes.py is 106.0
+			LAPCA Percentage for file even-and-odd-indexes.py is 1.0
+			Current avg LAPCA Score is 105.92361111111111
+------------------------------------------------------------------------------------------------------------------
+										File: Gaitonde-and-his-Seven-Accomplices.py
+			File Number: 73			LAPCA Score for file Gaitonde-and-his-Seven-Accomplices.py is 106.0
+			LAPCA Percentage for file Gaitonde-and-his-Seven-Accomplices.py is 1.0
+			Current avg LAPCA Score is 105.92465753424658
+------------------------------------------------------------------------------------------------------------------
+										File: print-the-pattern.py
+			File Number: 74			LAPCA Score for file print-the-pattern.py is 106.0
+			LAPCA Percentage for file print-the-pattern.py is 1.0
+			Current avg LAPCA Score is 105.92567567567568
+------------------------------------------------------------------------------------------------------------------
+										File: sum-me-up.py
+			File Number: 75			LAPCA Score for file sum-me-up.py is 106.0
+			LAPCA Percentage for file sum-me-up.py is 1.0
+			Current avg LAPCA Score is 105.92666666666666
+------------------------------------------------------------------------------------------------------------------
+										File: Circular-List-of-Students.py
+			File Number: 76			LAPCA Score for file Circular-List-of-Students.py is 106.0
+			LAPCA Percentage for file Circular-List-of-Students.py is 1.0
+			Current avg LAPCA Score is 105.92763157894737
+------------------------------------------------------------------------------------------------------------------
+										File: Pattern_ify.py
+			File Number: 77			LAPCA Score for file Pattern_ify.py is 106.0
+			LAPCA Percentage for file Pattern_ify.py is 1.0
+			Current avg LAPCA Score is 105.92857142857143
+------------------------------------------------------------------------------------------------------------------
+										File: last_index.py
+			File Number: 78			LAPCA Score for file last_index.py is 106.0
+			LAPCA Percentage for file last_index.py is 1.0
+			Current avg LAPCA Score is 105.92948717948718
+------------------------------------------------------------------------------------------------------------------
+										File: two-digit-sum.py
+------------------------------------------------------------------------------------------------------------------
+										File: mean-finder.py
+------------------------------------------------------------------------------------------------------------------
+										File: closest-number.py
+			File Number: 79			LAPCA Score for file closest-number.py is 106.0
+			LAPCA Percentage for file closest-number.py is 1.0
+			Current avg LAPCA Score is 105.93037974683544
+------------------------------------------------------------------------------------------------------------------
+										File: char_to_string.py
+			File Number: 80			LAPCA Score for file char_to_string.py is 106.0
+			LAPCA Percentage for file char_to_string.py is 1.0
+			Current avg LAPCA Score is 105.93125
+------------------------------------------------------------------------------------------------------------------
+										File: average.py
+			File Number: 81			LAPCA Score for file average.py is 106.0
+			LAPCA Percentage for file average.py is 1.0
+			Current avg LAPCA Score is 105.9320987654321
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-a-string-using-stack.py
+------------------------------------------------------------------------------------------------------------------
+										File: queue-reversal.py
+			File Number: 82			LAPCA Score for file queue-reversal.py is 106.0
+			LAPCA Percentage for file queue-reversal.py is 1.0
+			Current avg LAPCA Score is 105.9329268292683
+------------------------------------------------------------------------------------------------------------------
+										File: search-in-a-rotated-array.py
+------------------------------------------------------------------------------------------------------------------
+										File: count-zero.py
+			File Number: 83			LAPCA Score for file count-zero.py is 106.0
+			LAPCA Percentage for file count-zero.py is 1.0
+			Current avg LAPCA Score is 105.93373493975903
+------------------------------------------------------------------------------------------------------------------
+										File: count-the-number-of-contiguous-increasing-and-decreasing-subsequences-in-a-sequence.py
+			File Number: 84			LAPCA Score for file count-the-number-of-contiguous-increasing-and-decreasing-subsequences-in-a-sequence.py is 106.0
+			LAPCA Percentage for file count-the-number-of-contiguous-increasing-and-decreasing-subsequences-in-a-sequence.py is 1.0
+			Current avg LAPCA Score is 105.93452380952381
+------------------------------------------------------------------------------------------------------------------
+										File: compete-the-skills.py
+			File Number: 85			LAPCA Score for file compete-the-skills.py is 106.0
+			LAPCA Percentage for file compete-the-skills.py is 1.0
+			Current avg LAPCA Score is 105.93529411764706
+------------------------------------------------------------------------------------------------------------------
+										File: urlify-a-given-string.py
+			File Number: 86			LAPCA Score for file urlify-a-given-string.py is 106.0
+			LAPCA Percentage for file urlify-a-given-string.py is 1.0
+			Current avg LAPCA Score is 105.93604651162791
+------------------------------------------------------------------------------------------------------------------
+										File: reversing-the-vowels.py
+			File Number: 87			LAPCA Score for file reversing-the-vowels.py is 106.0
+			LAPCA Percentage for file reversing-the-vowels.py is 1.0
+			Current avg LAPCA Score is 105.9367816091954
+------------------------------------------------------------------------------------------------------------------
+										File: full_prime.py
+			File Number: 88			LAPCA Score for file full_prime.py is 106.0
+			LAPCA Percentage for file full_prime.py is 1.0
+			Current avg LAPCA Score is 105.9375
+------------------------------------------------------------------------------------------------------------------
+										File: difference-series.py
+			File Number: 89			LAPCA Score for file difference-series.py is 106.0
+			LAPCA Percentage for file difference-series.py is 1.0
+			Current avg LAPCA Score is 105.93820224719101
+------------------------------------------------------------------------------------------------------------------
+										File: subarray-range-with-given-sum.py
+			File Number: 90			LAPCA Score for file subarray-range-with-given-sum.py is 106.0
+			LAPCA Percentage for file subarray-range-with-given-sum.py is 1.0
+			Current avg LAPCA Score is 105.93888888888888
+------------------------------------------------------------------------------------------------------------------
+										File: ishan_weight.py
+			File Number: 91			LAPCA Score for file ishan_weight.py is 106.0
+			LAPCA Percentage for file ishan_weight.py is 1.0
+			Current avg LAPCA Score is 105.93956043956044
+------------------------------------------------------------------------------------------------------------------
+										File: fitting_the_array.py
+			File Number: 92			LAPCA Score for file fitting_the_array.py is 106.0
+			LAPCA Percentage for file fitting_the_array.py is 1.0
+			Current avg LAPCA Score is 105.94021739130434
+------------------------------------------------------------------------------------------------------------------
+										File: size-of-binary-tree.py
+			Line 54: Recursion used in function
+
+			Line 91: Recursion used in function
+
+			File Number: 93			LAPCA Score for file size-of-binary-tree.py is 105.33333333333334
+			LAPCA Percentage for file size-of-binary-tree.py is 0.9937106918238995
+			Current avg LAPCA Score is 105.93369175627241
+------------------------------------------------------------------------------------------------------------------
+										File: uppercase_conversion.py
+			File Number: 94			LAPCA Score for file uppercase_conversion.py is 106.0
+			LAPCA Percentage for file uppercase_conversion.py is 1.0
+			Current avg LAPCA Score is 105.93439716312058
+------------------------------------------------------------------------------------------------------------------
+										File: series-ap.py
+			File Number: 95			LAPCA Score for file series-ap.py is 106.0
+			LAPCA Percentage for file series-ap.py is 1.0
+			Current avg LAPCA Score is 105.93508771929825
+------------------------------------------------------------------------------------------------------------------
+										File: key-pair.py
+			File Number: 96			LAPCA Score for file key-pair.py is 106.0
+			LAPCA Percentage for file key-pair.py is 1.0
+			Current avg LAPCA Score is 105.9357638888889
+------------------------------------------------------------------------------------------------------------------
+										File: sum-tree.py
+			Line 50: Recursion used in function
+
+			File Number: 97			LAPCA Score for file sum-tree.py is 105.5
+			LAPCA Percentage for file sum-tree.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.93127147766323
+------------------------------------------------------------------------------------------------------------------
+										File: sort-a-stack.py
+			File Number: 98			LAPCA Score for file sort-a-stack.py is 106.0
+			LAPCA Percentage for file sort-a-stack.py is 1.0
+			Current avg LAPCA Score is 105.93197278911565
+------------------------------------------------------------------------------------------------------------------
+										File: find_index.py
+			File Number: 99			LAPCA Score for file find_index.py is 106.0
+			LAPCA Percentage for file find_index.py is 1.0
+			Current avg LAPCA Score is 105.93265993265994
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-ap-series.py
+			File Number: 100			LAPCA Score for file sum-of-ap-series.py is 106.0
+			LAPCA Percentage for file sum-of-ap-series.py is 1.0
+			Current avg LAPCA Score is 105.93333333333334
+------------------------------------------------------------------------------------------------------------------
+										File: remove_vowels.py
+			File Number: 101			LAPCA Score for file remove_vowels.py is 106.0
+			LAPCA Percentage for file remove_vowels.py is 1.0
+			Current avg LAPCA Score is 105.93399339933994
+------------------------------------------------------------------------------------------------------------------
+										File: count_the_chars.py
+			File Number: 102			LAPCA Score for file count_the_chars.py is 106.0
+			LAPCA Percentage for file count_the_chars.py is 1.0
+			Current avg LAPCA Score is 105.93464052287582
+------------------------------------------------------------------------------------------------------------------
+										File: doctor_clinic.py
+			File Number: 103			LAPCA Score for file doctor_clinic.py is 106.0
+			LAPCA Percentage for file doctor_clinic.py is 1.0
+			Current avg LAPCA Score is 105.93527508090615
+------------------------------------------------------------------------------------------------------------------
+										File: facing-the-sun.py
+			File Number: 104			LAPCA Score for file facing-the-sun.py is 106.0
+			LAPCA Percentage for file facing-the-sun.py is 1.0
+			Current avg LAPCA Score is 105.93589743589745
+------------------------------------------------------------------------------------------------------------------
+										File: binary-number-to-decimal-number.py
+			File Number: 105			LAPCA Score for file binary-number-to-decimal-number.py is 106.0
+			LAPCA Percentage for file binary-number-to-decimal-number.py is 1.0
+			Current avg LAPCA Score is 105.93650793650794
+------------------------------------------------------------------------------------------------------------------
+										File: intersection-point-in-y-shapped-linked-lists.py
+			Line 56: Recursion used in function
+
+			File Number: 106			LAPCA Score for file intersection-point-in-y-shapped-linked-lists.py is 105.5
+			LAPCA Percentage for file intersection-point-in-y-shapped-linked-lists.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.93238993710692
+------------------------------------------------------------------------------------------------------------------
+										File: angle-between-hour-and-minute-hand.py
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-digits-modified.py
+			File Number: 107			LAPCA Score for file sum-of-digits-modified.py is 106.0
+			LAPCA Percentage for file sum-of-digits-modified.py is 1.0
+			Current avg LAPCA Score is 105.93302180685359
+------------------------------------------------------------------------------------------------------------------
+										File: factorial.py
+			Line 19: Recursion used in function
+
+			File Number: 108			LAPCA Score for file factorial.py is 105.5
+			LAPCA Percentage for file factorial.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.92901234567901
+------------------------------------------------------------------------------------------------------------------
+										File: print-the-kth-digit.py
+			File Number: 109			LAPCA Score for file print-the-kth-digit.py is 106.0
+			LAPCA Percentage for file print-the-kth-digit.py is 1.0
+			Current avg LAPCA Score is 105.92966360856269
+------------------------------------------------------------------------------------------------------------------
+										File: convert-from-any-base-to-decimal.py
+			File Number: 110			LAPCA Score for file convert-from-any-base-to-decimal.py is 106.0
+			LAPCA Percentage for file convert-from-any-base-to-decimal.py is 1.0
+			Current avg LAPCA Score is 105.93030303030304
+------------------------------------------------------------------------------------------------------------------
+										File: remove_element.py
+			File Number: 111			LAPCA Score for file remove_element.py is 106.0
+			LAPCA Percentage for file remove_element.py is 1.0
+			Current avg LAPCA Score is 105.93093093093094
+------------------------------------------------------------------------------------------------------------------
+										File: third-largest-element.py
+			File Number: 112			LAPCA Score for file third-largest-element.py is 106.0
+			LAPCA Percentage for file third-largest-element.py is 1.0
+			Current avg LAPCA Score is 105.93154761904762
+------------------------------------------------------------------------------------------------------------------
+										File: lcm-and-gcd.py
+			Line 31: Recursion used in function
+
+			File Number: 113			LAPCA Score for file lcm-and-gcd.py is 105.5
+			LAPCA Percentage for file lcm-and-gcd.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.92772861356933
+------------------------------------------------------------------------------------------------------------------
+										File: check-if-linked-list-is-pallindrome.py
+			File Number: 114			LAPCA Score for file check-if-linked-list-is-pallindrome.py is 106.0
+			LAPCA Percentage for file check-if-linked-list-is-pallindrome.py is 1.0
+			Current avg LAPCA Score is 105.92836257309942
+------------------------------------------------------------------------------------------------------------------
+										File: minimum-element-in-bst.py
+			Line 49: Recursion used in function
+
+			File Number: 115			LAPCA Score for file minimum-element-in-bst.py is 105.5
+			LAPCA Percentage for file minimum-element-in-bst.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.92463768115942
+------------------------------------------------------------------------------------------------------------------
+										File: positive-and-negative-elements.py
+			File Number: 116			LAPCA Score for file positive-and-negative-elements.py is 106.0
+			LAPCA Percentage for file positive-and-negative-elements.py is 1.0
+			Current avg LAPCA Score is 105.92528735632185
+------------------------------------------------------------------------------------------------------------------
+										File: adding-one.py
+			File Number: 117			LAPCA Score for file adding-one.py is 106.0
+			LAPCA Percentage for file adding-one.py is 1.0
+			Current avg LAPCA Score is 105.92592592592594
+------------------------------------------------------------------------------------------------------------------
+										File: greater-on-right-side.py
+			File Number: 118			LAPCA Score for file greater-on-right-side.py is 106.0
+			LAPCA Percentage for file greater-on-right-side.py is 1.0
+			Current avg LAPCA Score is 105.92655367231639
+------------------------------------------------------------------------------------------------------------------
+										File: swap_kth_element.py
+			File Number: 119			LAPCA Score for file swap_kth_element.py is 106.0
+			LAPCA Percentage for file swap_kth_element.py is 1.0
+			Current avg LAPCA Score is 105.92717086834735
+------------------------------------------------------------------------------------------------------------------
+										File: square-root.py
+			File Number: 120			LAPCA Score for file square-root.py is 106.0
+			LAPCA Percentage for file square-root.py is 1.0
+			Current avg LAPCA Score is 105.92777777777778
+------------------------------------------------------------------------------------------------------------------
+										File: power-of-2.py
+			File Number: 121			LAPCA Score for file power-of-2.py is 106.0
+			LAPCA Percentage for file power-of-2.py is 1.0
+			Current avg LAPCA Score is 105.92837465564739
+------------------------------------------------------------------------------------------------------------------
+										File: identical-linked-lists.py
+			Line 89: Recursion used in function
+
+			File Number: 122			LAPCA Score for file identical-linked-lists.py is 105.5
+			LAPCA Percentage for file identical-linked-lists.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.92486338797815
+------------------------------------------------------------------------------------------------------------------
+										File: find-the-fine.py
+			File Number: 123			LAPCA Score for file find-the-fine.py is 106.0
+			LAPCA Percentage for file find-the-fine.py is 1.0
+			Current avg LAPCA Score is 105.92547425474255
+------------------------------------------------------------------------------------------------------------------
+										File: who-will-win.py
+			File Number: 124			LAPCA Score for file who-will-win.py is 106.0
+			LAPCA Percentage for file who-will-win.py is 1.0
+			Current avg LAPCA Score is 105.92607526881721
+------------------------------------------------------------------------------------------------------------------
+										File: find-first-repeated-character.py
+			File Number: 125			LAPCA Score for file find-first-repeated-character.py is 106.0
+			LAPCA Percentage for file find-first-repeated-character.py is 1.0
+			Current avg LAPCA Score is 105.92666666666668
+------------------------------------------------------------------------------------------------------------------
+										File: merge-two-sorted-linked-lists.py
+			File Number: 126			LAPCA Score for file merge-two-sorted-linked-lists.py is 106.0
+			LAPCA Percentage for file merge-two-sorted-linked-lists.py is 1.0
+			Current avg LAPCA Score is 105.92724867724868
+------------------------------------------------------------------------------------------------------------------
+										File: power-of-pow-odd-numbers.py
+			File Number: 127			LAPCA Score for file power-of-pow-odd-numbers.py is 106.0
+			LAPCA Percentage for file power-of-pow-odd-numbers.py is 1.0
+			Current avg LAPCA Score is 105.92782152230971
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-digit.py
+			File Number: 128			LAPCA Score for file reverse-digit.py is 106.0
+			LAPCA Percentage for file reverse-digit.py is 1.0
+			Current avg LAPCA Score is 105.92838541666667
+------------------------------------------------------------------------------------------------------------------
+										File: detect-loop-in-linked-list.py
+			File Number: 129			LAPCA Score for file detect-loop-in-linked-list.py is 106.0
+			LAPCA Percentage for file detect-loop-in-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.92894056847545
+------------------------------------------------------------------------------------------------------------------
+										File: multiply-matrices.py
+			Depth of looping greater than 2 at line 40
+
+			Depth of looping greater than 2 at line 47
+
+			Depth of looping greater than 2 at line 53
+
+			Depth of looping greater than 2 at line 65
+
+			File Number: 130			LAPCA Score for file multiply-matrices.py is 98.0
+			LAPCA Percentage for file multiply-matrices.py is 0.9245283018867925
+			Current avg LAPCA Score is 105.86794871794872
+------------------------------------------------------------------------------------------------------------------
+										File: count-alphabets.py
+			File Number: 131			LAPCA Score for file count-alphabets.py is 106.0
+			LAPCA Percentage for file count-alphabets.py is 1.0
+			Current avg LAPCA Score is 105.86895674300256
+------------------------------------------------------------------------------------------------------------------
+										File: binary-representation.py
+			File Number: 132			LAPCA Score for file binary-representation.py is 106.0
+			LAPCA Percentage for file binary-representation.py is 1.0
+			Current avg LAPCA Score is 105.8699494949495
+------------------------------------------------------------------------------------------------------------------
+										File: equilibrium-point.py
+			File Number: 133			LAPCA Score for file equilibrium-point.py is 106.0
+			LAPCA Percentage for file equilibrium-point.py is 1.0
+			Current avg LAPCA Score is 105.87092731829574
+------------------------------------------------------------------------------------------------------------------
+										File: max_product.py
+			File Number: 134			LAPCA Score for file max_product.py is 106.0
+			LAPCA Percentage for file max_product.py is 1.0
+			Current avg LAPCA Score is 105.87189054726369
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-digit-is-pallindrome-or-not.py
+			File Number: 135			LAPCA Score for file sum-of-digit-is-pallindrome-or-not.py is 106.0
+			LAPCA Percentage for file sum-of-digit-is-pallindrome-or-not.py is 1.0
+			Current avg LAPCA Score is 105.87283950617284
+------------------------------------------------------------------------------------------------------------------
+										File: anagram-palindrome.py
+			File Number: 136			LAPCA Score for file anagram-palindrome.py is 106.0
+			LAPCA Percentage for file anagram-palindrome.py is 1.0
+			Current avg LAPCA Score is 105.87377450980392
+------------------------------------------------------------------------------------------------------------------
+										File: postorder-traversal.py
+------------------------------------------------------------------------------------------------------------------
+										File: sort_in_specific_order.py
+			File Number: 137			LAPCA Score for file sort_in_specific_order.py is 106.0
+			LAPCA Percentage for file sort_in_specific_order.py is 1.0
+			Current avg LAPCA Score is 105.87469586374696
+------------------------------------------------------------------------------------------------------------------
+										File: midori_and_chocolates.py
+			File Number: 138			LAPCA Score for file midori_and_chocolates.py is 106.0
+			LAPCA Percentage for file midori_and_chocolates.py is 1.0
+			Current avg LAPCA Score is 105.8756038647343
+------------------------------------------------------------------------------------------------------------------
+										File: palindromic_string.py
+			File Number: 139			LAPCA Score for file palindromic_string.py is 106.0
+			LAPCA Percentage for file palindromic_string.py is 1.0
+			Current avg LAPCA Score is 105.87649880095924
+------------------------------------------------------------------------------------------------------------------
+										File: odd_even.py
+			File Number: 140			LAPCA Score for file odd_even.py is 106.0
+			LAPCA Percentage for file odd_even.py is 1.0
+			Current avg LAPCA Score is 105.87738095238096
+------------------------------------------------------------------------------------------------------------------
+										File: find-transition-point.py
+			File Number: 141			LAPCA Score for file find-transition-point.py is 106.0
+			LAPCA Percentage for file find-transition-point.py is 1.0
+			Current avg LAPCA Score is 105.87825059101655
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-words-in-a-given-string.py
+			File Number: 142			LAPCA Score for file reverse-words-in-a-given-string.py is 106.0
+			LAPCA Percentage for file reverse-words-in-a-given-string.py is 1.0
+			Current avg LAPCA Score is 105.87910798122066
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-array-elements.py
+			File Number: 143			LAPCA Score for file sum-of-array-elements.py is 106.0
+			LAPCA Percentage for file sum-of-array-elements.py is 1.0
+			Current avg LAPCA Score is 105.87995337995338
+------------------------------------------------------------------------------------------------------------------
+										File: palindrome.py
+			File Number: 144			LAPCA Score for file palindrome.py is 106.0
+			LAPCA Percentage for file palindrome.py is 1.0
+			Current avg LAPCA Score is 105.88078703703704
+------------------------------------------------------------------------------------------------------------------
+										File: part_sort.py
+			File Number: 145			LAPCA Score for file part_sort.py is 106.0
+			LAPCA Percentage for file part_sort.py is 1.0
+			Current avg LAPCA Score is 105.8816091954023
+------------------------------------------------------------------------------------------------------------------
+										File: pattern_number.py
+			Line 17: Recursion used in function
+
+			File Number: 146			LAPCA Score for file pattern_number.py is 105.5
+			LAPCA Percentage for file pattern_number.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.87899543378995
+------------------------------------------------------------------------------------------------------------------
+										File: alone-in-couple.py
+			File Number: 147			LAPCA Score for file alone-in-couple.py is 106.0
+			LAPCA Percentage for file alone-in-couple.py is 1.0
+			Current avg LAPCA Score is 105.87981859410431
+------------------------------------------------------------------------------------------------------------------
+										File: finding-position.py
+			File Number: 148			LAPCA Score for file finding-position.py is 106.0
+			LAPCA Percentage for file finding-position.py is 1.0
+			Current avg LAPCA Score is 105.88063063063063
+------------------------------------------------------------------------------------------------------------------
+										File: check-for-binary.py
+			File Number: 149			LAPCA Score for file check-for-binary.py is 106.0
+			LAPCA Percentage for file check-for-binary.py is 1.0
+			Current avg LAPCA Score is 105.88143176733782
+------------------------------------------------------------------------------------------------------------------
+										File: excel-sheet.py
+			File Number: 150			LAPCA Score for file excel-sheet.py is 106.0
+			LAPCA Percentage for file excel-sheet.py is 1.0
+			Current avg LAPCA Score is 105.88222222222223
+------------------------------------------------------------------------------------------------------------------
+										File: min-distance-between-two-given-nodes-of-a-binary-tree.py
+			Line 51: Recursion used in function
+
+			File Number: 151			LAPCA Score for file min-distance-between-two-given-nodes-of-a-binary-tree.py is 105.5
+			LAPCA Percentage for file min-distance-between-two-given-nodes-of-a-binary-tree.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.87969094922738
+------------------------------------------------------------------------------------------------------------------
+										File: remove-spaces.py
+			File Number: 152			LAPCA Score for file remove-spaces.py is 106.0
+			LAPCA Percentage for file remove-spaces.py is 1.0
+			Current avg LAPCA Score is 105.88048245614036
+------------------------------------------------------------------------------------------------------------------
+										File: length_of_last_word.py
+			File Number: 153			LAPCA Score for file length_of_last_word.py is 106.0
+			LAPCA Percentage for file length_of_last_word.py is 1.0
+			Current avg LAPCA Score is 105.88126361655773
+------------------------------------------------------------------------------------------------------------------
+										File: SquaresInNxNChessBoard.py
+			File Number: 154			LAPCA Score for file SquaresInNxNChessBoard.py is 106.0
+			LAPCA Percentage for file SquaresInNxNChessBoard.py is 1.0
+			Current avg LAPCA Score is 105.88203463203463
+------------------------------------------------------------------------------------------------------------------
+										File: linked-list-length-even-or-odd.py
+			File Number: 155			LAPCA Score for file linked-list-length-even-or-odd.py is 106.0
+			LAPCA Percentage for file linked-list-length-even-or-odd.py is 1.0
+			Current avg LAPCA Score is 105.88279569892475
+------------------------------------------------------------------------------------------------------------------
+										File: floor-in-a-sorted-array.py
+			File Number: 156			LAPCA Score for file floor-in-a-sorted-array.py is 106.0
+			LAPCA Percentage for file floor-in-a-sorted-array.py is 1.0
+			Current avg LAPCA Score is 105.88354700854703
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-elements-in-a-matrix.py
+			File Number: 157			LAPCA Score for file sum-of-elements-in-a-matrix.py is 106.0
+			LAPCA Percentage for file sum-of-elements-in-a-matrix.py is 1.0
+			Current avg LAPCA Score is 105.88428874734609
+------------------------------------------------------------------------------------------------------------------
+										File: count-leaves-in-binary-tree.py
+			Line 56: continue present
+
+			Line 89: Recursion used in function
+
+			File Number: 158			LAPCA Score for file count-leaves-in-binary-tree.py is 104.5
+			LAPCA Percentage for file count-leaves-in-binary-tree.py is 0.9858490566037735
+			Current avg LAPCA Score is 105.87552742616035
+------------------------------------------------------------------------------------------------------------------
+										File: leap_year.py
+			File Number: 159			LAPCA Score for file leap_year.py is 106.0
+			LAPCA Percentage for file leap_year.py is 1.0
+			Current avg LAPCA Score is 105.8763102725367
+------------------------------------------------------------------------------------------------------------------
+										File: anagram.py
+			File Number: 160			LAPCA Score for file anagram.py is 106.0
+			LAPCA Percentage for file anagram.py is 1.0
+			Current avg LAPCA Score is 105.87708333333335
+------------------------------------------------------------------------------------------------------------------
+										File: level-order-traversal.py
+			Line 43: Recursion used in function
+
+			File Number: 161			LAPCA Score for file level-order-traversal.py is 105.5
+			LAPCA Percentage for file level-order-traversal.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.87474120082817
+------------------------------------------------------------------------------------------------------------------
+										File: consecutive-1s-not-allowed.py
+			Line 45: Recursion used in function
+
+			File Number: 162			LAPCA Score for file consecutive-1s-not-allowed.py is 105.5
+			LAPCA Percentage for file consecutive-1s-not-allowed.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.87242798353911
+------------------------------------------------------------------------------------------------------------------
+										File: subarray-with-given-sum.py
+			File Number: 163			LAPCA Score for file subarray-with-given-sum.py is 106.0
+			LAPCA Percentage for file subarray-with-given-sum.py is 1.0
+			Current avg LAPCA Score is 105.87321063394684
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-dependencies-in-a-graph.py
+			File Number: 164			LAPCA Score for file sum-of-dependencies-in-a-graph.py is 106.0
+			LAPCA Percentage for file sum-of-dependencies-in-a-graph.py is 1.0
+			Current avg LAPCA Score is 105.87398373983741
+------------------------------------------------------------------------------------------------------------------
+										File: inorder-successor-in-bst.py
+			Line 37: Recursion used in function
+
+			Line 53: Recursion used in function
+
+			File Number: 165			LAPCA Score for file inorder-successor-in-bst.py is 105.33333333333334
+			LAPCA Percentage for file inorder-successor-in-bst.py is 0.9937106918238995
+			Current avg LAPCA Score is 105.87070707070708
+------------------------------------------------------------------------------------------------------------------
+										File: print-bracket-number.py
+			File Number: 166			LAPCA Score for file print-bracket-number.py is 106.0
+			LAPCA Percentage for file print-bracket-number.py is 1.0
+			Current avg LAPCA Score is 105.87148594377511
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-product-of-all-pairs.py
+			File Number: 167			LAPCA Score for file sum-of-product-of-all-pairs.py is 106.0
+			LAPCA Percentage for file sum-of-product-of-all-pairs.py is 1.0
+			Current avg LAPCA Score is 105.87225548902197
+------------------------------------------------------------------------------------------------------------------
+										File: consecutive-elements.py
+			File Number: 168			LAPCA Score for file consecutive-elements.py is 106.0
+			LAPCA Percentage for file consecutive-elements.py is 1.0
+			Current avg LAPCA Score is 105.87301587301587
+------------------------------------------------------------------------------------------------------------------
+										File: sum_of_fifth_power.py
+			File Number: 169			LAPCA Score for file sum_of_fifth_power.py is 106.0
+			LAPCA Percentage for file sum_of_fifth_power.py is 1.0
+			Current avg LAPCA Score is 105.87376725838266
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-numbers-in-string.py
+			File Number: 170			LAPCA Score for file sum-of-numbers-in-string.py is 106.0
+			LAPCA Percentage for file sum-of-numbers-in-string.py is 1.0
+			Current avg LAPCA Score is 105.87450980392157
+------------------------------------------------------------------------------------------------------------------
+										File: delete-a-node-in-single-linked-list.py
+------------------------------------------------------------------------------------------------------------------
+										File: implement-stack-using-array.py
+------------------------------------------------------------------------------------------------------------------
+										File: split-the-input-python.py
+			File Number: 171			LAPCA Score for file split-the-input-python.py is 106.0
+			LAPCA Percentage for file split-the-input-python.py is 1.0
+			Current avg LAPCA Score is 105.87524366471736
+------------------------------------------------------------------------------------------------------------------
+										File: linked-list-insertion.py
+------------------------------------------------------------------------------------------------------------------
+										File: left-view-of-binary-tree.py
+------------------------------------------------------------------------------------------------------------------
+										File: check-for-bst.py
+			File Number: 172			LAPCA Score for file check-for-bst.py is 106.0
+			LAPCA Percentage for file check-for-bst.py is 1.0
+			Current avg LAPCA Score is 105.87596899224808
+------------------------------------------------------------------------------------------------------------------
+										File: count_divisor.py
+			File Number: 173			LAPCA Score for file count_divisor.py is 106.0
+			LAPCA Percentage for file count_divisor.py is 1.0
+			Current avg LAPCA Score is 105.87668593448942
+------------------------------------------------------------------------------------------------------------------
+										File: no_of_open_doors.py
+			File Number: 174			LAPCA Score for file no_of_open_doors.py is 106.0
+			LAPCA Percentage for file no_of_open_doors.py is 1.0
+			Current avg LAPCA Score is 105.87739463601534
+------------------------------------------------------------------------------------------------------------------
+										File: count-increasing-subsequences.py
+			File Number: 175			LAPCA Score for file count-increasing-subsequences.py is 106.0
+			LAPCA Percentage for file count-increasing-subsequences.py is 1.0
+			Current avg LAPCA Score is 105.87809523809524
+------------------------------------------------------------------------------------------------------------------
+										File: search-a-node-in-bst.py
+------------------------------------------------------------------------------------------------------------------
+										File: value-equal-to-index-value.py
+			File Number: 176			LAPCA Score for file value-equal-to-index-value.py is 106.0
+			LAPCA Percentage for file value-equal-to-index-value.py is 1.0
+			Current avg LAPCA Score is 105.87878787878789
+------------------------------------------------------------------------------------------------------------------
+										File: trailing-zeroes-in-factorial.py
+			File Number: 177			LAPCA Score for file trailing-zeroes-in-factorial.py is 106.0
+			LAPCA Percentage for file trailing-zeroes-in-factorial.py is 1.0
+			Current avg LAPCA Score is 105.87947269303203
+------------------------------------------------------------------------------------------------------------------
+										File: GeekAndCoffeeShop.py
+			File Number: 178			LAPCA Score for file GeekAndCoffeeShop.py is 106.0
+			LAPCA Percentage for file GeekAndCoffeeShop.py is 1.0
+			Current avg LAPCA Score is 105.88014981273409
+------------------------------------------------------------------------------------------------------------------
+										File: prime-number.py
+			File Number: 179			LAPCA Score for file prime-number.py is 106.0
+			LAPCA Percentage for file prime-number.py is 1.0
+			Current avg LAPCA Score is 105.88081936685289
+------------------------------------------------------------------------------------------------------------------
+										File: binary-array-sorting.py
+			File Number: 180			LAPCA Score for file binary-array-sorting.py is 106.0
+			LAPCA Percentage for file binary-array-sorting.py is 1.0
+			Current avg LAPCA Score is 105.88148148148149
+------------------------------------------------------------------------------------------------------------------
+										File: armstrongs_numbers.py
+			File Number: 181			LAPCA Score for file armstrongs_numbers.py is 106.0
+			LAPCA Percentage for file armstrongs_numbers.py is 1.0
+			Current avg LAPCA Score is 105.88213627992634
+------------------------------------------------------------------------------------------------------------------
+										File: lucky_ishan.py
+			Depth of looping greater than 2 at line 59
+
+			File Number: 182			LAPCA Score for file lucky_ishan.py is 101.0
+			LAPCA Percentage for file lucky_ishan.py is 0.9528301886792453
+			Current avg LAPCA Score is 105.85531135531136
+------------------------------------------------------------------------------------------------------------------
+										File: sieve-of-eratosthenes.py
+			File Number: 183			LAPCA Score for file sieve-of-eratosthenes.py is 106.0
+			LAPCA Percentage for file sieve-of-eratosthenes.py is 1.0
+			Current avg LAPCA Score is 105.85610200364299
+------------------------------------------------------------------------------------------------------------------
+										File: uncommon-characters.py
+			File Number: 184			LAPCA Score for file uncommon-characters.py is 106.0
+			LAPCA Percentage for file uncommon-characters.py is 1.0
+			Current avg LAPCA Score is 105.85688405797102
+------------------------------------------------------------------------------------------------------------------
+										File: find_missing_and_repeating.py
+			File Number: 185			LAPCA Score for file find_missing_and_repeating.py is 106.0
+			LAPCA Percentage for file find_missing_and_repeating.py is 1.0
+			Current avg LAPCA Score is 105.85765765765767
+------------------------------------------------------------------------------------------------------------------
+										File: red_or_green.py
+			File Number: 186			LAPCA Score for file red_or_green.py is 106.0
+			LAPCA Percentage for file red_or_green.py is 1.0
+			Current avg LAPCA Score is 105.8584229390681
+------------------------------------------------------------------------------------------------------------------
+										File: index-of-an-extra-element.py
+			File Number: 187			LAPCA Score for file index-of-an-extra-element.py is 106.0
+			LAPCA Percentage for file index-of-an-extra-element.py is 1.0
+			Current avg LAPCA Score is 105.85918003565062
+------------------------------------------------------------------------------------------------------------------
+										File: minimum-number-of-jumps.py
+			File Number: 188			LAPCA Score for file minimum-number-of-jumps.py is 106.0
+			LAPCA Percentage for file minimum-number-of-jumps.py is 1.0
+			Current avg LAPCA Score is 105.85992907801419
+------------------------------------------------------------------------------------------------------------------
+										File: preorder-traversal.py
+			Line 50: Recursion used in function
+
+			File Number: 189			LAPCA Score for file preorder-traversal.py is 105.5
+			LAPCA Percentage for file preorder-traversal.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.85802469135803
+------------------------------------------------------------------------------------------------------------------
+										File: the-dice-problem.py
+			File Number: 190			LAPCA Score for file the-dice-problem.py is 106.0
+			LAPCA Percentage for file the-dice-problem.py is 1.0
+			Current avg LAPCA Score is 105.85877192982457
+------------------------------------------------------------------------------------------------------------------
+										File: distance-between-2-points.py
+			File Number: 191			LAPCA Score for file distance-between-2-points.py is 106.0
+			LAPCA Percentage for file distance-between-2-points.py is 1.0
+			Current avg LAPCA Score is 105.85951134380454
+------------------------------------------------------------------------------------------------------------------
+										File: pattern-of-strings.py
+			File Number: 192			LAPCA Score for file pattern-of-strings.py is 106.0
+			LAPCA Percentage for file pattern-of-strings.py is 1.0
+			Current avg LAPCA Score is 105.86024305555556
+------------------------------------------------------------------------------------------------------------------
+										File: fibonacci_to_n.py
+			File Number: 193			LAPCA Score for file fibonacci_to_n.py is 106.0
+			LAPCA Percentage for file fibonacci_to_n.py is 1.0
+			Current avg LAPCA Score is 105.86096718480138
+------------------------------------------------------------------------------------------------------------------
+										File: longest-k-unique-characters-substring.py
+			File Number: 194			LAPCA Score for file longest-k-unique-characters-substring.py is 106.0
+			LAPCA Percentage for file longest-k-unique-characters-substring.py is 1.0
+			Current avg LAPCA Score is 105.86168384879726
+------------------------------------------------------------------------------------------------------------------
+										File: 12-hour-clock-addition.py
+			File Number: 195			LAPCA Score for file 12-hour-clock-addition.py is 106.0
+			LAPCA Percentage for file 12-hour-clock-addition.py is 1.0
+			Current avg LAPCA Score is 105.86239316239318
+------------------------------------------------------------------------------------------------------------------
+										File: cutting-binary-string.py
+			Line 61: continue present
+
+			File Number: 196			LAPCA Score for file cutting-binary-string.py is 105.0
+			LAPCA Percentage for file cutting-binary-string.py is 0.9905660377358491
+			Current avg LAPCA Score is 105.85799319727892
+------------------------------------------------------------------------------------------------------------------
+										File: mirror-tree.py
+			Line 54: continue present
+
+			Line 35: Recursion used in function
+
+			Line 94: Recursion used in function
+
+			File Number: 197			LAPCA Score for file mirror-tree.py is 104.33333333333334
+			LAPCA Percentage for file mirror-tree.py is 0.9842767295597485
+			Current avg LAPCA Score is 105.8502538071066
+------------------------------------------------------------------------------------------------------------------
+										File: move-all-zeroes-to-end-of-array.py
+			File Number: 198			LAPCA Score for file move-all-zeroes-to-end-of-array.py is 106.0
+			LAPCA Percentage for file move-all-zeroes-to-end-of-array.py is 1.0
+			Current avg LAPCA Score is 105.8510101010101
+------------------------------------------------------------------------------------------------------------------
+										File: comment-in-python.py
+			File Number: 199			LAPCA Score for file comment-in-python.py is 106.0
+			LAPCA Percentage for file comment-in-python.py is 1.0
+			Current avg LAPCA Score is 105.85175879396985
+------------------------------------------------------------------------------------------------------------------
+										File: product-of-array-element.py
+			File Number: 200			LAPCA Score for file product-of-array-element.py is 106.0
+			LAPCA Percentage for file product-of-array-element.py is 1.0
+			Current avg LAPCA Score is 105.8525
+------------------------------------------------------------------------------------------------------------------
+										File: penalty_shootout.py
+			File Number: 201			LAPCA Score for file penalty_shootout.py is 106.0
+			LAPCA Percentage for file penalty_shootout.py is 1.0
+			Current avg LAPCA Score is 105.85323383084577
+------------------------------------------------------------------------------------------------------------------
+										File: the-tiny-miny.py
+			File Number: 202			LAPCA Score for file the-tiny-miny.py is 106.0
+			LAPCA Percentage for file the-tiny-miny.py is 1.0
+			Current avg LAPCA Score is 105.85396039603961
+------------------------------------------------------------------------------------------------------------------
+										File: special-stack.py
+			Line 54: Recursion used in function
+
+			File Number: 203			LAPCA Score for file special-stack.py is 105.5
+			LAPCA Percentage for file special-stack.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.85221674876847
+------------------------------------------------------------------------------------------------------------------
+										File: clone-a-stack-without-usinig-extra-space.py
+			File Number: 204			LAPCA Score for file clone-a-stack-without-usinig-extra-space.py is 106.0
+			LAPCA Percentage for file clone-a-stack-without-usinig-extra-space.py is 1.0
+			Current avg LAPCA Score is 105.8529411764706
+------------------------------------------------------------------------------------------------------------------
+										File: confused-pappu.py
+			File Number: 205			LAPCA Score for file confused-pappu.py is 106.0
+			LAPCA Percentage for file confused-pappu.py is 1.0
+			Current avg LAPCA Score is 105.85365853658537
+------------------------------------------------------------------------------------------------------------------
+										File: delete-without-head-pointer.py
+			Line 44: Recursion used in function
+
+			File Number: 206			LAPCA Score for file delete-without-head-pointer.py is 105.5
+			LAPCA Percentage for file delete-without-head-pointer.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.85194174757281
+------------------------------------------------------------------------------------------------------------------
+										File: remove-repeated-digits-in-a-given-number.py
+			File Number: 207			LAPCA Score for file remove-repeated-digits-in-a-given-number.py is 106.0
+			LAPCA Percentage for file remove-repeated-digits-in-a-given-number.py is 1.0
+			Current avg LAPCA Score is 105.85265700483092
+------------------------------------------------------------------------------------------------------------------
+										File: node-at-a-given-index-in-linked-list.py
+------------------------------------------------------------------------------------------------------------------
+										File: remove-duplicate-element-from-sorted-linked-list.py
+			File Number: 208			LAPCA Score for file remove-duplicate-element-from-sorted-linked-list.py is 106.0
+			LAPCA Percentage for file remove-duplicate-element-from-sorted-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.85336538461539
+------------------------------------------------------------------------------------------------------------------
+										File: largest-subarray-of-0s-and-1s.py
+			File Number: 209			LAPCA Score for file largest-subarray-of-0s-and-1s.py is 106.0
+			LAPCA Percentage for file largest-subarray-of-0s-and-1s.py is 1.0
+			Current avg LAPCA Score is 105.85406698564593
+------------------------------------------------------------------------------------------------------------------
+										File: topological-sort.py
+			Line 23: Recursion used in function
+
+			File Number: 210			LAPCA Score for file topological-sort.py is 105.5
+			LAPCA Percentage for file topological-sort.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.85238095238095
+------------------------------------------------------------------------------------------------------------------
+										File: average_count_array.py
+			File Number: 211			LAPCA Score for file average_count_array.py is 106.0
+			LAPCA Percentage for file average_count_array.py is 1.0
+			Current avg LAPCA Score is 105.85308056872037
+------------------------------------------------------------------------------------------------------------------
+										File: small-factorial.py
+			Line 24: Recursion used in function
+
+			File Number: 212			LAPCA Score for file small-factorial.py is 105.5
+			LAPCA Percentage for file small-factorial.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.85141509433963
+------------------------------------------------------------------------------------------------------------------
+										File: count-nodes-of-linked-list.py
+			Line 81: Recursion used in function
+
+			File Number: 213			LAPCA Score for file count-nodes-of-linked-list.py is 105.5
+			LAPCA Percentage for file count-nodes-of-linked-list.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.84976525821597
+------------------------------------------------------------------------------------------------------------------
+										File: find-the-camel.py
+			File Number: 214			LAPCA Score for file find-the-camel.py is 106.0
+			LAPCA Percentage for file find-the-camel.py is 1.0
+			Current avg LAPCA Score is 105.85046728971963
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-a-string.py
+			File Number: 215			LAPCA Score for file reverse-a-string.py is 106.0
+			LAPCA Percentage for file reverse-a-string.py is 1.0
+			Current avg LAPCA Score is 105.85116279069767
+------------------------------------------------------------------------------------------------------------------
+										File: gcd-of-array.py
+			Line 30: Recursion used in function
+
+			File Number: 216			LAPCA Score for file gcd-of-array.py is 105.5
+			LAPCA Percentage for file gcd-of-array.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.84953703703704
+------------------------------------------------------------------------------------------------------------------
+										File: index-of-first-1-in-a-sorted-array-of-0s-and-1s.py
+			File Number: 217			LAPCA Score for file index-of-first-1-in-a-sorted-array-of-0s-and-1s.py is 106.0
+			LAPCA Percentage for file index-of-first-1-in-a-sorted-array-of-0s-and-1s.py is 1.0
+			Current avg LAPCA Score is 105.85023041474655
+------------------------------------------------------------------------------------------------------------------
+										File: find_first_and_last_occurrence_of_x.py
+			File Number: 218			LAPCA Score for file find_first_and_last_occurrence_of_x.py is 106.0
+			LAPCA Percentage for file find_first_and_last_occurrence_of_x.py is 1.0
+			Current avg LAPCA Score is 105.85091743119266
+------------------------------------------------------------------------------------------------------------------
+										File: kadanes-algorithm.py
+			File Number: 219			LAPCA Score for file kadanes-algorithm.py is 106.0
+			LAPCA Percentage for file kadanes-algorithm.py is 1.0
+			Current avg LAPCA Score is 105.85159817351598
+------------------------------------------------------------------------------------------------------------------
+										File: chocolate-distribution-problem.py
+			File Number: 220			LAPCA Score for file chocolate-distribution-problem.py is 106.0
+			LAPCA Percentage for file chocolate-distribution-problem.py is 1.0
+			Current avg LAPCA Score is 105.85227272727273
+------------------------------------------------------------------------------------------------------------------
+										File: second-largest.py
+			File Number: 221			LAPCA Score for file second-largest.py is 106.0
+			LAPCA Percentage for file second-largest.py is 1.0
+			Current avg LAPCA Score is 105.8529411764706
+------------------------------------------------------------------------------------------------------------------
+										File: is-digital-root-of-n-a-prime.py
+			File Number: 222			LAPCA Score for file is-digital-root-of-n-a-prime.py is 106.0
+			LAPCA Percentage for file is-digital-root-of-n-a-prime.py is 1.0
+			Current avg LAPCA Score is 105.8536036036036
+------------------------------------------------------------------------------------------------------------------
+										File: majority-element.py
+			File Number: 223			LAPCA Score for file majority-element.py is 106.0
+			LAPCA Percentage for file majority-element.py is 1.0
+			Current avg LAPCA Score is 105.8542600896861
+------------------------------------------------------------------------------------------------------------------
+										File: sum-palindrome.py
+			File Number: 224			LAPCA Score for file sum-palindrome.py is 106.0
+			LAPCA Percentage for file sum-palindrome.py is 1.0
+			Current avg LAPCA Score is 105.85491071428571
+------------------------------------------------------------------------------------------------------------------
+										File: perfect-number.py
+			File Number: 225			LAPCA Score for file perfect-number.py is 106.0
+			LAPCA Percentage for file perfect-number.py is 1.0
+			Current avg LAPCA Score is 105.85555555555555
+------------------------------------------------------------------------------------------------------------------
+										File: k-smallest-elements.py
+			File Number: 226			LAPCA Score for file k-smallest-elements.py is 106.0
+			LAPCA Percentage for file k-smallest-elements.py is 1.0
+			Current avg LAPCA Score is 105.85619469026548
+------------------------------------------------------------------------------------------------------------------
+										File: find-the-highest-number.py
+			File Number: 227			LAPCA Score for file find-the-highest-number.py is 106.0
+			LAPCA Percentage for file find-the-highest-number.py is 1.0
+			Current avg LAPCA Score is 105.8568281938326
+------------------------------------------------------------------------------------------------------------------
+										File: print-alternate-elements-of-an-array.py
+			File Number: 228			LAPCA Score for file print-alternate-elements-of-an-array.py is 106.0
+			LAPCA Percentage for file print-alternate-elements-of-an-array.py is 1.0
+			Current avg LAPCA Score is 105.85745614035088
+------------------------------------------------------------------------------------------------------------------
+										File: add-two-fractions.py
+			Line 52: Recursion used in function
+
+			File Number: 229			LAPCA Score for file add-two-fractions.py is 105.5
+			LAPCA Percentage for file add-two-fractions.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.85589519650655
+------------------------------------------------------------------------------------------------------------------
+										File: print-elements-of-array.py
+			File Number: 230			LAPCA Score for file print-elements-of-array.py is 106.0
+			LAPCA Percentage for file print-elements-of-array.py is 1.0
+			Current avg LAPCA Score is 105.85652173913043
+------------------------------------------------------------------------------------------------------------------
+										File: gold-mine-problem.py
+			Depth of looping greater than 2 at line 54
+
+			Depth of looping greater than 2 at line 88
+
+			Line 59: continue present
+
+			Line 92: continue present
+
+			File Number: 231			LAPCA Score for file gold-mine-problem.py is 98.0
+			LAPCA Percentage for file gold-mine-problem.py is 0.9245283018867925
+			Current avg LAPCA Score is 105.82251082251082
+------------------------------------------------------------------------------------------------------------------
+										File: product-array-puzzle.py
+			File Number: 232			LAPCA Score for file product-array-puzzle.py is 106.0
+			LAPCA Percentage for file product-array-puzzle.py is 1.0
+			Current avg LAPCA Score is 105.82327586206897
+------------------------------------------------------------------------------------------------------------------
+										File: form-a-number-divisible-by-3-using-array-digits.py
+			File Number: 233			LAPCA Score for file form-a-number-divisible-by-3-using-array-digits.py is 106.0
+			LAPCA Percentage for file form-a-number-divisible-by-3-using-array-digits.py is 1.0
+			Current avg LAPCA Score is 105.82403433476395
+------------------------------------------------------------------------------------------------------------------
+										File: leaders-in-an-array.py
+			File Number: 234			LAPCA Score for file leaders-in-an-array.py is 106.0
+			LAPCA Percentage for file leaders-in-an-array.py is 1.0
+			Current avg LAPCA Score is 105.82478632478633
+------------------------------------------------------------------------------------------------------------------
+										File: check-if-an-array-is-sorted.py
+			File Number: 235			LAPCA Score for file check-if-an-array-is-sorted.py is 106.0
+			LAPCA Percentage for file check-if-an-array-is-sorted.py is 1.0
+			Current avg LAPCA Score is 105.82553191489362
+------------------------------------------------------------------------------------------------------------------
+										File: most-frequent-word-in-an-array-of-strings.py
+			File Number: 236			LAPCA Score for file most-frequent-word-in-an-array-of-strings.py is 106.0
+			LAPCA Percentage for file most-frequent-word-in-an-array-of-strings.py is 1.0
+			Current avg LAPCA Score is 105.82627118644068
+------------------------------------------------------------------------------------------------------------------
+										File: check-if-two-arrays-are-equal-or-not.py
+			File Number: 237			LAPCA Score for file check-if-two-arrays-are-equal-or-not.py is 106.0
+			LAPCA Percentage for file check-if-two-arrays-are-equal-or-not.py is 1.0
+			Current avg LAPCA Score is 105.82700421940929
+------------------------------------------------------------------------------------------------------------------
+										File: series-gp.py
+			File Number: 238			LAPCA Score for file series-gp.py is 106.0
+			LAPCA Percentage for file series-gp.py is 1.0
+			Current avg LAPCA Score is 105.82773109243698
+------------------------------------------------------------------------------------------------------------------
+										File: display-longest-name.py
+			File Number: 239			LAPCA Score for file display-longest-name.py is 106.0
+			LAPCA Percentage for file display-longest-name.py is 1.0
+			Current avg LAPCA Score is 105.82845188284519
+------------------------------------------------------------------------------------------------------------------
+										File: taking-input-and-typecasting-python.py
+------------------------------------------------------------------------------------------------------------------
+										File: last-duplicate-element-in-a-sorted-array.py
+			File Number: 240			LAPCA Score for file last-duplicate-element-in-a-sorted-array.py is 106.0
+			LAPCA Percentage for file last-duplicate-element-in-a-sorted-array.py is 1.0
+			Current avg LAPCA Score is 105.82916666666667
+------------------------------------------------------------------------------------------------------------------
+										File: difference-between-highest-and-lowest-occurrence.py
+			File Number: 241			LAPCA Score for file difference-between-highest-and-lowest-occurrence.py is 106.0
+			LAPCA Percentage for file difference-between-highest-and-lowest-occurrence.py is 1.0
+			Current avg LAPCA Score is 105.8298755186722
+------------------------------------------------------------------------------------------------------------------
+										File: twice-counter.py
+			File Number: 242			LAPCA Score for file twice-counter.py is 106.0
+			LAPCA Percentage for file twice-counter.py is 1.0
+			Current avg LAPCA Score is 105.8305785123967
+------------------------------------------------------------------------------------------------------------------
+										File: prime_string.py
+			File Number: 243			LAPCA Score for file prime_string.py is 106.0
+			LAPCA Percentage for file prime_string.py is 1.0
+			Current avg LAPCA Score is 105.83127572016461
+------------------------------------------------------------------------------------------------------------------
+										File: sum_of_first_n_terms.py
+			File Number: 244			LAPCA Score for file sum_of_first_n_terms.py is 106.0
+			LAPCA Percentage for file sum_of_first_n_terms.py is 1.0
+			Current avg LAPCA Score is 105.83196721311475
+------------------------------------------------------------------------------------------------------------------
+										File: covid-spread.py
+			Depth of looping greater than 2 at line 80
+
+			Line 85: continue present
+
+			File Number: 245			LAPCA Score for file covid-spread.py is 100.0
+			LAPCA Percentage for file covid-spread.py is 0.9433962264150944
+			Current avg LAPCA Score is 105.80816326530612
+------------------------------------------------------------------------------------------------------------------
+										File: swap-two-numbers.py
+			File Number: 246			LAPCA Score for file swap-two-numbers.py is 106.0
+			LAPCA Percentage for file swap-two-numbers.py is 1.0
+			Current avg LAPCA Score is 105.8089430894309
+------------------------------------------------------------------------------------------------------------------
+										File: finger-game.py
+			File Number: 247			LAPCA Score for file finger-game.py is 106.0
+			LAPCA Percentage for file finger-game.py is 1.0
+			Current avg LAPCA Score is 105.80971659919028
+------------------------------------------------------------------------------------------------------------------
+										File: sum_of_distinct_elements.py
+			File Number: 248			LAPCA Score for file sum_of_distinct_elements.py is 106.0
+			LAPCA Percentage for file sum_of_distinct_elements.py is 1.0
+			Current avg LAPCA Score is 105.81048387096774
+------------------------------------------------------------------------------------------------------------------
+										File: finding-middle-element-in-a-linked-list.py
+			File Number: 249			LAPCA Score for file finding-middle-element-in-a-linked-list.py is 106.0
+			LAPCA Percentage for file finding-middle-element-in-a-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.81124497991968
+------------------------------------------------------------------------------------------------------------------
+										File: rotate-a-linked-list.py
+			File Number: 250			LAPCA Score for file rotate-a-linked-list.py is 106.0
+			LAPCA Percentage for file rotate-a-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.812
+------------------------------------------------------------------------------------------------------------------
+										File: inorder-traversal.py
+			Line 70: continue present
+
+			Line 48: Recursion used in function
+
+			Line 99: Recursion used in function
+
+			File Number: 251			LAPCA Score for file inorder-traversal.py is 104.33333333333334
+			LAPCA Percentage for file inorder-traversal.py is 0.9842767295597485
+			Current avg LAPCA Score is 105.80610889774236
+------------------------------------------------------------------------------------------------------------------
+										File: non-repeating-character.py
+			File Number: 252			LAPCA Score for file non-repeating-character.py is 106.0
+			LAPCA Percentage for file non-repeating-character.py is 1.0
+			Current avg LAPCA Score is 105.8068783068783
+------------------------------------------------------------------------------------------------------------------
+										File: equal-to-product.py
+			File Number: 253			LAPCA Score for file equal-to-product.py is 106.0
+			LAPCA Percentage for file equal-to-product.py is 1.0
+			Current avg LAPCA Score is 105.80764163372858
+------------------------------------------------------------------------------------------------------------------
+										File: extract-maximum.py
+			File Number: 254			LAPCA Score for file extract-maximum.py is 106.0
+			LAPCA Percentage for file extract-maximum.py is 1.0
+			Current avg LAPCA Score is 105.80839895013123
+------------------------------------------------------------------------------------------------------------------
+										File: merge_SA.py
+			File Number: 255			LAPCA Score for file merge_SA.py is 106.0
+			LAPCA Percentage for file merge_SA.py is 1.0
+			Current avg LAPCA Score is 105.80915032679738
+------------------------------------------------------------------------------------------------------------------
+										File: add-two-numbers-represented-by-linked-lists.py
+			Line 52: Recursion used in function
+
+			File Number: 256			LAPCA Score for file add-two-numbers-represented-by-linked-lists.py is 105.5
+			LAPCA Percentage for file add-two-numbers-represented-by-linked-lists.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.80794270833333
+------------------------------------------------------------------------------------------------------------------
+										File: shortest-direction.py
+			File Number: 257			LAPCA Score for file shortest-direction.py is 106.0
+			LAPCA Percentage for file shortest-direction.py is 1.0
+			Current avg LAPCA Score is 105.80869001297016
+------------------------------------------------------------------------------------------------------------------
+										File: Print_1_to_n_without_using_loops.py
+			Line 23: Recursion used in function
+
+			File Number: 258			LAPCA Score for file Print_1_to_n_without_using_loops.py is 105.5
+			LAPCA Percentage for file Print_1_to_n_without_using_loops.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.80749354005168
+------------------------------------------------------------------------------------------------------------------
+										File: remove-duplicate-elements-from-sorted-array.py
+			File Number: 259			LAPCA Score for file remove-duplicate-elements-from-sorted-array.py is 106.0
+			LAPCA Percentage for file remove-duplicate-elements-from-sorted-array.py is 1.0
+			Current avg LAPCA Score is 105.8082368082368
+------------------------------------------------------------------------------------------------------------------
+										File: merge-k-sorted-linked-lists.py
+			Depth of looping greater than 2 at line 97
+
+			Line 53: Recursion used in function
+
+			File Number: 260			LAPCA Score for file merge-k-sorted-linked-lists.py is 100.5
+			LAPCA Percentage for file merge-k-sorted-linked-lists.py is 0.9481132075471698
+			Current avg LAPCA Score is 105.7878205128205
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-an-array.py
+			File Number: 261			LAPCA Score for file reverse-an-array.py is 106.0
+			LAPCA Percentage for file reverse-an-array.py is 1.0
+			Current avg LAPCA Score is 105.78863346104725
+------------------------------------------------------------------------------------------------------------------
+										File: determine-if-two-trees-are-identical.py
+			Line 50: Recursion used in function
+
+			Line 112: Recursion used in function
+
+			File Number: 262			LAPCA Score for file determine-if-two-trees-are-identical.py is 105.33333333333334
+			LAPCA Percentage for file determine-if-two-trees-are-identical.py is 0.9937106918238995
+			Current avg LAPCA Score is 105.78689567430024
+------------------------------------------------------------------------------------------------------------------
+										File: strange_sum.py
+			File Number: 263			LAPCA Score for file strange_sum.py is 106.0
+			LAPCA Percentage for file strange_sum.py is 1.0
+			Current avg LAPCA Score is 105.78770595690747
+------------------------------------------------------------------------------------------------------------------
+										File: mean.py
+			File Number: 264			LAPCA Score for file mean.py is 106.0
+			LAPCA Percentage for file mean.py is 1.0
+			Current avg LAPCA Score is 105.78851010101009
+------------------------------------------------------------------------------------------------------------------
+										File: repetitive-addition-of-digits.py
+			File Number: 265			LAPCA Score for file repetitive-addition-of-digits.py is 106.0
+			LAPCA Percentage for file repetitive-addition-of-digits.py is 1.0
+			Current avg LAPCA Score is 105.78930817610062
+------------------------------------------------------------------------------------------------------------------
+										File: path-in-matrix.py
+			Depth of looping greater than 2 at line 48
+
+			File Number: 266			LAPCA Score for file path-in-matrix.py is 101.0
+			LAPCA Percentage for file path-in-matrix.py is 0.9528301886792453
+			Current avg LAPCA Score is 105.77130325814535
+------------------------------------------------------------------------------------------------------------------
+										File: amicable-pair.py
+			File Number: 267			LAPCA Score for file amicable-pair.py is 106.0
+			LAPCA Percentage for file amicable-pair.py is 1.0
+			Current avg LAPCA Score is 105.77215980024968
+------------------------------------------------------------------------------------------------------------------
+										File: set-bitsset-bits.py
+			Line 27: Recursion used in function
+
+			File Number: 268			LAPCA Score for file set-bitsset-bits.py is 105.5
+			LAPCA Percentage for file set-bitsset-bits.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.77114427860695
+------------------------------------------------------------------------------------------------------------------
+										File: occurence-of-an-integer-in-a-linked-list.py
+			File Number: 269			LAPCA Score for file occurence-of-an-integer-in-a-linked-list.py is 106.0
+			LAPCA Percentage for file occurence-of-an-integer-in-a-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.7719950433705
+------------------------------------------------------------------------------------------------------------------
+										File: pascal-triangle.py
+			File Number: 270			LAPCA Score for file pascal-triangle.py is 106.0
+			LAPCA Percentage for file pascal-triangle.py is 1.0
+			Current avg LAPCA Score is 105.77283950617283
+------------------------------------------------------------------------------------------------------------------
+										File: sort-an-array-of-0s-1s-and-2s.py
+			Depth of looping greater than 2 at line 40
+
+			File Number: 271			LAPCA Score for file sort-an-array-of-0s-1s-and-2s.py is 101.0
+			LAPCA Percentage for file sort-an-array-of-0s-1s-and-2s.py is 0.9528301886792453
+			Current avg LAPCA Score is 105.75522755227551
+------------------------------------------------------------------------------------------------------------------
+										File: xor-of-all-elements.py
+			File Number: 272			LAPCA Score for file xor-of-all-elements.py is 106.0
+			LAPCA Percentage for file xor-of-all-elements.py is 1.0
+			Current avg LAPCA Score is 105.75612745098039
+------------------------------------------------------------------------------------------------------------------
+										File: find-duplicates-in-an-array.py
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-a-linked-list.py
+			File Number: 273			LAPCA Score for file reverse-a-linked-list.py is 106.0
+			LAPCA Percentage for file reverse-a-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.75702075702075
+------------------------------------------------------------------------------------------------------------------
+										File: max-value.py
+			File Number: 274			LAPCA Score for file max-value.py is 106.0
+			LAPCA Percentage for file max-value.py is 1.0
+			Current avg LAPCA Score is 105.75790754257906
+------------------------------------------------------------------------------------------------------------------
+										File: immediate-smaller-element.py
+			File Number: 275			LAPCA Score for file immediate-smaller-element.py is 106.0
+			LAPCA Percentage for file immediate-smaller-element.py is 1.0
+			Current avg LAPCA Score is 105.75878787878787
+------------------------------------------------------------------------------------------------------------------
+										File: check-if-a-string-is-isogram-or-not.py
+------------------------------------------------------------------------------------------------------------------
+										File: first-and-last-occurrences-of-x.py
+			File Number: 276			LAPCA Score for file first-and-last-occurrences-of-x.py is 106.0
+			LAPCA Percentage for file first-and-last-occurrences-of-x.py is 1.0
+			Current avg LAPCA Score is 105.75966183574879
+------------------------------------------------------------------------------------------------------------------
+										File: find-minimum-and-maximum-element-in-an-array.py
+			File Number: 277			LAPCA Score for file find-minimum-and-maximum-element-in-an-array.py is 106.0
+			LAPCA Percentage for file find-minimum-and-maximum-element-in-an-array.py is 1.0
+			Current avg LAPCA Score is 105.76052948255114
+------------------------------------------------------------------------------------------------------------------
+										File: repeated-sum-of-digits.py
+			File Number: 278			LAPCA Score for file repeated-sum-of-digits.py is 106.0
+			LAPCA Percentage for file repeated-sum-of-digits.py is 1.0
+			Current avg LAPCA Score is 105.76139088729016
+------------------------------------------------------------------------------------------------------------------
+										File: npr.py
+			File Number: 279			LAPCA Score for file npr.py is 106.0
+			LAPCA Percentage for file npr.py is 1.0
+			Current avg LAPCA Score is 105.76224611708481
+------------------------------------------------------------------------------------------------------------------
+										File: height-of-binary-tree.py
+			Line 69: continue present
+
+			Line 47: Recursion used in function
+
+			Line 96: Recursion used in function
+
+			File Number: 280			LAPCA Score for file height-of-binary-tree.py is 104.33333333333334
+			LAPCA Percentage for file height-of-binary-tree.py is 0.9842767295597485
+			Current avg LAPCA Score is 105.75714285714284
+------------------------------------------------------------------------------------------------------------------
+										File: multiply-array.py
+			File Number: 281			LAPCA Score for file multiply-array.py is 106.0
+			LAPCA Percentage for file multiply-array.py is 1.0
+			Current avg LAPCA Score is 105.75800711743771
+------------------------------------------------------------------------------------------------------------------
+										File: sum_of_even_factors.py
+			File Number: 282			LAPCA Score for file sum_of_even_factors.py is 106.0
+			LAPCA Percentage for file sum_of_even_factors.py is 1.0
+			Current avg LAPCA Score is 105.75886524822694
+------------------------------------------------------------------------------------------------------------------
+										File: program-for-length-of-the-longest-word-in-a-sentence.py
+			File Number: 283			LAPCA Score for file program-for-length-of-the-longest-word-in-a-sentence.py is 106.0
+			LAPCA Percentage for file program-for-length-of-the-longest-word-in-a-sentence.py is 1.0
+			Current avg LAPCA Score is 105.75971731448762
+------------------------------------------------------------------------------------------------------------------
+										File: find_unique_element.py
+			File Number: 284			LAPCA Score for file find_unique_element.py is 106.0
+			LAPCA Percentage for file find_unique_element.py is 1.0
+			Current avg LAPCA Score is 105.76056338028168
+------------------------------------------------------------------------------------------------------------------
+										File: Anushumans_Favourite_Number.py
+			File Number: 285			LAPCA Score for file Anushumans_Favourite_Number.py is 106.0
+			LAPCA Percentage for file Anushumans_Favourite_Number.py is 1.0
+			Current avg LAPCA Score is 105.76140350877192
+------------------------------------------------------------------------------------------------------------------
+										File: 0-1-knapsack-problem.py
+			Indirect recursion present between functions helper and helper
+
+			Line 60: Recursion used in function
+
+			Line 81: Recursion used in function
+
+			File Number: 286			LAPCA Score for file 0-1-knapsack-problem.py is 102.83333333333334
+			LAPCA Percentage for file 0-1-knapsack-problem.py is 0.9701257861635221
+			Current avg LAPCA Score is 105.75116550116549
+------------------------------------------------------------------------------------------------------------------
+										File: even_odd_sum.py
+			File Number: 287			LAPCA Score for file even_odd_sum.py is 106.0
+			LAPCA Percentage for file even_odd_sum.py is 1.0
+			Current avg LAPCA Score is 105.75203252032519
+------------------------------------------------------------------------------------------------------------------
+										File: last_duplicate_element.py
+			File Number: 288			LAPCA Score for file last_duplicate_element.py is 106.0
+			LAPCA Percentage for file last_duplicate_element.py is 1.0
+			Current avg LAPCA Score is 105.7528935185185
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-array-in-groups.py
+			File Number: 289			LAPCA Score for file reverse-array-in-groups.py is 106.0
+			LAPCA Percentage for file reverse-array-in-groups.py is 1.0
+			Current avg LAPCA Score is 105.75374855824681
+------------------------------------------------------------------------------------------------------------------
+										File: find-the-closest-number.py
+			File Number: 290			LAPCA Score for file find-the-closest-number.py is 106.0
+			LAPCA Percentage for file find-the-closest-number.py is 1.0
+			Current avg LAPCA Score is 105.75459770114941
+------------------------------------------------------------------------------------------------------------------
+										File: print-the-pattern-set-1.py
+			File Number: 291			LAPCA Score for file print-the-pattern-set-1.py is 106.0
+			LAPCA Percentage for file print-the-pattern-set-1.py is 1.0
+			Current avg LAPCA Score is 105.75544100801831
+------------------------------------------------------------------------------------------------------------------
+										File: smallest-positive-missing-number.py
+			File Number: 292			LAPCA Score for file smallest-positive-missing-number.py is 106.0
+			LAPCA Percentage for file smallest-positive-missing-number.py is 1.0
+			Current avg LAPCA Score is 105.75627853881277
+------------------------------------------------------------------------------------------------------------------
+										File: check-if-a-number-can-be-expressed-as-xy.py
+			File Number: 293			LAPCA Score for file check-if-a-number-can-be-expressed-as-xy.py is 106.0
+			LAPCA Percentage for file check-if-a-number-can-be-expressed-as-xy.py is 1.0
+			Current avg LAPCA Score is 105.75711035267348
+------------------------------------------------------------------------------------------------------------------
+										File: multiply_left_right_array_sum.py
+			File Number: 294			LAPCA Score for file multiply_left_right_array_sum.py is 106.0
+			LAPCA Percentage for file multiply_left_right_array_sum.py is 1.0
+			Current avg LAPCA Score is 105.75793650793649
+------------------------------------------------------------------------------------------------------------------
+										File: palindromic-array.py
+			File Number: 295			LAPCA Score for file palindromic-array.py is 106.0
+			LAPCA Percentage for file palindromic-array.py is 1.0
+			Current avg LAPCA Score is 105.75875706214687
+------------------------------------------------------------------------------------------------------------------
+										File: repeated_id.py
+			File Number: 296			LAPCA Score for file repeated_id.py is 106.0
+			LAPCA Percentage for file repeated_id.py is 1.0
+			Current avg LAPCA Score is 105.75957207207206
+------------------------------------------------------------------------------------------------------------------
+										File: count_of_smaller_elements.py
+			File Number: 297			LAPCA Score for file count_of_smaller_elements.py is 106.0
+			LAPCA Percentage for file count_of_smaller_elements.py is 1.0
+			Current avg LAPCA Score is 105.76038159371491
+------------------------------------------------------------------------------------------------------------------
+										File: doubling-the-value.py
+			File Number: 298			LAPCA Score for file doubling-the-value.py is 106.0
+			LAPCA Percentage for file doubling-the-value.py is 1.0
+			Current avg LAPCA Score is 105.76118568232661
+------------------------------------------------------------------------------------------------------------------
+										File: print-linked-list-elements.py
+------------------------------------------------------------------------------------------------------------------
+										File: merge_UA.py
+			File Number: 299			LAPCA Score for file merge_UA.py is 106.0
+			LAPCA Percentage for file merge_UA.py is 1.0
+			Current avg LAPCA Score is 105.76198439241917
+------------------------------------------------------------------------------------------------------------------
+										File: insert-in-middle-of-linked-list.py
+------------------------------------------------------------------------------------------------------------------
+										File: element-appearing-once.py
+			File Number: 300			LAPCA Score for file element-appearing-once.py is 106.0
+			LAPCA Percentage for file element-appearing-once.py is 1.0
+			Current avg LAPCA Score is 105.76277777777776
+------------------------------------------------------------------------------------------------------------------
+										File: maximum-sum-of-elements-not-part-of-lis.py
+			File Number: 301			LAPCA Score for file maximum-sum-of-elements-not-part-of-lis.py is 106.0
+			LAPCA Percentage for file maximum-sum-of-elements-not-part-of-lis.py is 1.0
+			Current avg LAPCA Score is 105.76356589147285
+------------------------------------------------------------------------------------------------------------------
+										File: maximum-repeating-number.py
+			File Number: 302			LAPCA Score for file maximum-repeating-number.py is 106.0
+			LAPCA Percentage for file maximum-repeating-number.py is 1.0
+			Current avg LAPCA Score is 105.76434878587195
+------------------------------------------------------------------------------------------------------------------
+										File: run-length-encoding.py
+			File Number: 303			LAPCA Score for file run-length-encoding.py is 106.0
+			LAPCA Percentage for file run-length-encoding.py is 1.0
+			Current avg LAPCA Score is 105.76512651265125
+------------------------------------------------------------------------------------------------------------------
+										File: minimum-element-in-a-sorted-and-rotated-array.py
+			File Number: 304			LAPCA Score for file minimum-element-in-a-sorted-and-rotated-array.py is 106.0
+			LAPCA Percentage for file minimum-element-in-a-sorted-and-rotated-array.py is 1.0
+			Current avg LAPCA Score is 105.765899122807
+------------------------------------------------------------------------------------------------------------------
+										File: sum-of-all-prime-numbers-between-1-and-n.py
+			File Number: 305			LAPCA Score for file sum-of-all-prime-numbers-between-1-and-n.py is 106.0
+			LAPCA Percentage for file sum-of-all-prime-numbers-between-1-and-n.py is 1.0
+			Current avg LAPCA Score is 105.76666666666665
+------------------------------------------------------------------------------------------------------------------
+										File: max-level-sum-in-binary-tree.py
+			Line 46: Recursion used in function
+
+			File Number: 306			LAPCA Score for file max-level-sum-in-binary-tree.py is 105.5
+			LAPCA Percentage for file max-level-sum-in-binary-tree.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.76579520697166
+------------------------------------------------------------------------------------------------------------------
+										File: IPL-2021-Match-Day-2.py
+			File Number: 307			LAPCA Score for file IPL-2021-Match-Day-2.py is 106.0
+			LAPCA Percentage for file IPL-2021-Match-Day-2.py is 1.0
+			Current avg LAPCA Score is 105.76655808903364
+------------------------------------------------------------------------------------------------------------------
+										File: bottom-view-of-binary-tree.py
+			File Number: 308			LAPCA Score for file bottom-view-of-binary-tree.py is 106.0
+			LAPCA Percentage for file bottom-view-of-binary-tree.py is 1.0
+			Current avg LAPCA Score is 105.767316017316
+------------------------------------------------------------------------------------------------------------------
+										File: the-counting-game.py
+			File Number: 309			LAPCA Score for file the-counting-game.py is 106.0
+			LAPCA Percentage for file the-counting-game.py is 1.0
+			Current avg LAPCA Score is 105.76806903991368
+------------------------------------------------------------------------------------------------------------------
+										File: maximum-difference.py
+			File Number: 310			LAPCA Score for file maximum-difference.py is 106.0
+			LAPCA Percentage for file maximum-difference.py is 1.0
+			Current avg LAPCA Score is 105.76881720430106
+------------------------------------------------------------------------------------------------------------------
+										File: smallest-number-subset.py
+			File Number: 311			LAPCA Score for file smallest-number-subset.py is 106.0
+			LAPCA Percentage for file smallest-number-subset.py is 1.0
+			Current avg LAPCA Score is 105.76956055734189
+------------------------------------------------------------------------------------------------------------------
+										File: count-digits.py
+			File Number: 312			LAPCA Score for file count-digits.py is 106.0
+			LAPCA Percentage for file count-digits.py is 1.0
+			Current avg LAPCA Score is 105.77029914529913
+------------------------------------------------------------------------------------------------------------------
+										File: reverse-each-word-in-a-given-string.py
+			File Number: 313			LAPCA Score for file reverse-each-word-in-a-given-string.py is 106.0
+			LAPCA Percentage for file reverse-each-word-in-a-given-string.py is 1.0
+			Current avg LAPCA Score is 105.7710330138445
+------------------------------------------------------------------------------------------------------------------
+										File: minimum-product-pair.py
+			File Number: 314			LAPCA Score for file minimum-product-pair.py is 106.0
+			LAPCA Percentage for file minimum-product-pair.py is 1.0
+			Current avg LAPCA Score is 105.77176220806793
+------------------------------------------------------------------------------------------------------------------
+										File: missing-number-in-array.py
+			File Number: 315			LAPCA Score for file missing-number-in-array.py is 106.0
+			LAPCA Percentage for file missing-number-in-array.py is 1.0
+			Current avg LAPCA Score is 105.77248677248676
+------------------------------------------------------------------------------------------------------------------
+										File: segregate-0s-and-1s.py
+			File Number: 316			LAPCA Score for file segregate-0s-and-1s.py is 106.0
+			LAPCA Percentage for file segregate-0s-and-1s.py is 1.0
+			Current avg LAPCA Score is 105.77320675105484
+------------------------------------------------------------------------------------------------------------------
+										File: k-th-element-of-two-sorted-array1.py
+			Line 45: Recursion used in function
+
+			Function has too many parameters at line  45
+
+			File Number: 317			LAPCA Score for file k-th-element-of-two-sorted-array1.py is 103.0
+			LAPCA Percentage for file k-th-element-of-two-sorted-array1.py is 0.9716981132075472
+			Current avg LAPCA Score is 105.76445846477391
+------------------------------------------------------------------------------------------------------------------
+										File: nearest-power.py
+			File Number: 318			LAPCA Score for file nearest-power.py is 106.0
+			LAPCA Percentage for file nearest-power.py is 1.0
+			Current avg LAPCA Score is 105.76519916142556
+------------------------------------------------------------------------------------------------------------------
+										File: anshumans-favourite-number.py
+			File Number: 319			LAPCA Score for file anshumans-favourite-number.py is 106.0
+			LAPCA Percentage for file anshumans-favourite-number.py is 1.0
+			Current avg LAPCA Score is 105.76593521421105
+------------------------------------------------------------------------------------------------------------------
+										File: find-length-of-loop.py
+			File Number: 320			LAPCA Score for file find-length-of-loop.py is 106.0
+			LAPCA Percentage for file find-length-of-loop.py is 1.0
+			Current avg LAPCA Score is 105.76666666666665
+------------------------------------------------------------------------------------------------------------------
+										File: replace-all-0-with-5-in-an-input-integer.py
+			File Number: 321			LAPCA Score for file replace-all-0-with-5-in-an-input-integer.py is 106.0
+			LAPCA Percentage for file replace-all-0-with-5-in-an-input-integer.py is 1.0
+			Current avg LAPCA Score is 105.76739356178606
+------------------------------------------------------------------------------------------------------------------
+										File: last_index_of_one.py
+			File Number: 322			LAPCA Score for file last_index_of_one.py is 106.0
+			LAPCA Percentage for file last_index_of_one.py is 1.0
+			Current avg LAPCA Score is 105.76811594202897
+------------------------------------------------------------------------------------------------------------------
+										File: frequency_of_elements.py
+			File Number: 323			LAPCA Score for file frequency_of_elements.py is 106.0
+			LAPCA Percentage for file frequency_of_elements.py is 1.0
+			Current avg LAPCA Score is 105.76883384932918
+------------------------------------------------------------------------------------------------------------------
+										File: sorting_elements_except_one.py
+			File Number: 324			LAPCA Score for file sorting_elements_except_one.py is 106.0
+			LAPCA Percentage for file sorting_elements_except_one.py is 1.0
+			Current avg LAPCA Score is 105.76954732510286
+------------------------------------------------------------------------------------------------------------------
+										File: the-celebrity-problem.py
+			File Number: 325			LAPCA Score for file the-celebrity-problem.py is 106.0
+			LAPCA Percentage for file the-celebrity-problem.py is 1.0
+			Current avg LAPCA Score is 105.7702564102564
+------------------------------------------------------------------------------------------------------------------
+										File: implement-queue-using-array.py
+------------------------------------------------------------------------------------------------------------------
+										File: implement-stack-using-linked-list.py
+			File Number: 326			LAPCA Score for file implement-stack-using-linked-list.py is 106.0
+			LAPCA Percentage for file implement-stack-using-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.77096114519426
+------------------------------------------------------------------------------------------------------------------
+										File: find-winner-of-the-game-of-nim.py
+			File Number: 327			LAPCA Score for file find-winner-of-the-game-of-nim.py is 106.0
+			LAPCA Percentage for file find-winner-of-the-game-of-nim.py is 1.0
+			Current avg LAPCA Score is 105.77166156982669
+------------------------------------------------------------------------------------------------------------------
+										File: value_equal_to_index_value.py
+			File Number: 328			LAPCA Score for file value_equal_to_index_value.py is 106.0
+			LAPCA Percentage for file value_equal_to_index_value.py is 1.0
+			Current avg LAPCA Score is 105.77235772357722
+------------------------------------------------------------------------------------------------------------------
+										File: cricket_average.py
+			File Number: 329			LAPCA Score for file cricket_average.py is 106.0
+			LAPCA Percentage for file cricket_average.py is 1.0
+			Current avg LAPCA Score is 105.77304964539006
+------------------------------------------------------------------------------------------------------------------
+										File: nth-node-from-end-of-linked-list.py
+			File Number: 330			LAPCA Score for file nth-node-from-end-of-linked-list.py is 106.0
+			LAPCA Percentage for file nth-node-from-end-of-linked-list.py is 1.0
+			Current avg LAPCA Score is 105.77373737373736
+------------------------------------------------------------------------------------------------------------------
+										File: missing-number.py
+			File Number: 331			LAPCA Score for file missing-number.py is 106.0
+			LAPCA Percentage for file missing-number.py is 1.0
+			Current avg LAPCA Score is 105.77442094662636
+------------------------------------------------------------------------------------------------------------------
+										File: next-larger-element.py
+------------------------------------------------------------------------------------------------------------------
+										File: three-great-candidates.py
+			File Number: 332			LAPCA Score for file three-great-candidates.py is 106.0
+			LAPCA Percentage for file three-great-candidates.py is 1.0
+			Current avg LAPCA Score is 105.77510040160641
+------------------------------------------------------------------------------------------------------------------
+										File: number_system.py
+			File Number: 333			LAPCA Score for file number_system.py is 106.0
+			LAPCA Percentage for file number_system.py is 1.0
+			Current avg LAPCA Score is 105.77577577577576
+------------------------------------------------------------------------------------------------------------------
+										File: bubble-sort.py
+------------------------------------------------------------------------------------------------------------------
+										File: odd-even-level-difference.py
+			Line 45: Recursion used in function
+
+			Line 59: Recursion used in function
+
+			Line 90: Recursion used in function
+
+			File Number: 334			LAPCA Score for file odd-even-level-difference.py is 105.25
+			LAPCA Percentage for file odd-even-level-difference.py is 0.9929245283018868
+			Current avg LAPCA Score is 105.77420159680638
+------------------------------------------------------------------------------------------------------------------
+										File: find-duplicates-under-given-constraints.py
+			File Number: 335			LAPCA Score for file find-duplicates-under-given-constraints.py is 106.0
+			LAPCA Percentage for file find-duplicates-under-given-constraints.py is 1.0
+			Current avg LAPCA Score is 105.77487562189053
+------------------------------------------------------------------------------------------------------------------
+										File: pair-with-given-sum-in-a-sorted-array.py
+			File Number: 336			LAPCA Score for file pair-with-given-sum-in-a-sorted-array.py is 106.0
+			LAPCA Percentage for file pair-with-given-sum-in-a-sorted-array.py is 1.0
+			Current avg LAPCA Score is 105.77554563492062
+------------------------------------------------------------------------------------------------------------------
+										File: Rock_Paper_Scissor.py
+			File Number: 337			LAPCA Score for file Rock_Paper_Scissor.py is 106.0
+			LAPCA Percentage for file Rock_Paper_Scissor.py is 1.0
+			Current avg LAPCA Score is 105.77621167161224
+------------------------------------------------------------------------------------------------------------------
+										File: palindrome_product.c
+------------------------------------------------------------------------------------------------------------------
+										File: product_digits.c
+------------------------------------------------------------------------------------------------------------------
+										File: count_type_of_characters.c
+------------------------------------------------------------------------------------------------------------------
+										File: krishnamurthy_number.c
+------------------------------------------------------------------------------------------------------------------
+										File: four_square.c
+------------------------------------------------------------------------------------------------------------------
+										File: second_largest_element.c
+------------------------------------------------------------------------------------------------------------------
+										File: Nth_prime.c
+------------------------------------------------------------------------------------------------------------------
+										File: change_the_string.c
+------------------------------------------------------------------------------------------------------------------
+										File: max_no_of_zeroes.c
+------------------------------------------------------------------------------------------------------------------
+										File: countdigits.c
+------------------------------------------------------------------------------------------------------------------
+										File: gcd.c
+------------------------------------------------------------------------------------------------------------------
+										File: multiple3_5.c
+------------------------------------------------------------------------------------------------------------------
+										File: majority_element.c
+------------------------------------------------------------------------------------------------------------------
+										File: find_max_no.c
+------------------------------------------------------------------------------------------------------------------
+										File: balanced_array.c
+------------------------------------------------------------------------------------------------------------------
+										File: find_me_roots.c
+------------------------------------------------------------------------------------------------------------------
+										File: find_the_multiples.c
+------------------------------------------------------------------------------------------------------------------
+										File: find_index.c
+------------------------------------------------------------------------------------------------------------------
+										File: paint_ball.c
+------------------------------------------------------------------------------------------------------------------
+										File: sum_of_distinct_elements.c
+------------------------------------------------------------------------------------------------------------------
+										File: last_occurence.c
+------------------------------------------------------------------------------------------------------------------
+										File: check_binary_string.c
+------------------------------------------------------------------------------------------------------------------
+										File: max_money.c
+------------------------------------------------------------------------------------------------------------------
+										File: decimal_to_binary.c
+------------------------------------------------------------------------------------------------------------------
+										File: check_string.c
+------------------------------------------------------------------------------------------------------------------
+										File: trailing_zeroes.c
+------------------------------------------------------------------------------------------------------------------
+										File: find_product.c
+------------------------------------------------------------------------------------------------------------------
+										File: monks_love_for_food.c
+------------------------------------------------------------------------------------------------------------------
+										File: help_john.c
+------------------------------------------------------------------------------------------------------------------
+										File: FizzBuzz.c
+------------------------------------------------------------------------------------------------------------------
+										File: foo_and_exams.c
+------------------------------------------------------------------------------------------------------------------
+										File: jump_out.c
+------------------------------------------------------------------------------------------------------------------
+										File: little_jhool_the_devdas.c
+------------------------------------------------------------------------------------------------------------------
+										File: count_divisors.c
+------------------------------------------------------------------------------------------------------------------
+										File: chandu_and_his_toy_stack.c
+------------------------------------------------------------------------------------------------------------------
+										File: monk_and_rotation.c
+------------------------------------------------------------------------------------------------------------------
+										File: will_you_be_my_friend.c
+------------------------------------------------------------------------------------------------------------------
+										File: little_jhool_and_psychic_powers.c
+------------------------------------------------------------------------------------------------------------------
+										File: monk_and_philosopher_stone.c
+------------------------------------------------------------------------------------------------------------------
+										File: breakup_app.c
+------------------------------------------------------------------------------------------------------------------
+										File: who_wants_to_be_millionaire.c
+------------------------------------------------------------------------------------------------------------------
+										File: palindromic_ciphers.c
+------------------------------------------------------------------------------------------------------------------
+										File: studious_little_jhool.c
+------------------------------------------------------------------------------------------------------------------
+										File: city_and_flood.c
+------------------------------------------------------------------------------------------------------------------
+										File: monk_in_the_real_state.c
+------------------------------------------------------------------------------------------------------------------
+										File: save_patients.c
+------------------------------------------------------------------------------------------------------------------
+										File: complete_the_syllabus.c
+------------------------------------------------------------------------------------------------------------------
+										File: factorial.c
+------------------------------------------------------------------------------------------------------------------
+										File: palindromic_string.c
+------------------------------------------------------------------------------------------------------------------
+										File: monk_and_welcome_problem.c
+------------------------------------------------------------------------------------------------------------------
+										File: min_max.c
+------------------------------------------------------------------------------------------------------------------
+										File: chandu_and_his_playing_area.c
+------------------------------------------------------------------------------------------------------------------
+										File: prime_no.c
+------------------------------------------------------------------------------------------------------------------
+										File: city_group.c
+------------------------------------------------------------------------------------------------------------------
+										File: square_transaction.c
+------------------------------------------------------------------------------------------------------------------
+										File: toggle_string.c
+------------------------------------------------------------------------------------------------------------------
+										File: print_hackerearth.c
+------------------------------------------------------------------------------------------------------------------
+										File: modify_sequence.c
+------------------------------------------------------------------------------------------------------------------
+										File: life_universe_and_everything.c
+------------------------------------------------------------------------------------------------------------------
+										File: count_digits.c
+------------------------------------------------------------------------------------------------------------------
+										File: seating_arrangement.c
+------------------------------------------------------------------------------------------------------------------
+										File: count_no.c
+------------------------------------------------------------------------------------------------------------------
+										File: strange_addition.c
+------------------------------------------------------------------------------------------------------------------
+										File: cheapest_palindrome.c
+------------------------------------------------------------------------------------------------------------------
+										File: roy_and_profile_picture.c
+------------------------------------------------------------------------------------------------------------------
+										File: mark_the_answer.c
+------------------------------------------------------------------------------------------------------------------
+										File: digit_problem.c
+------------------------------------------------------------------------------------------------------------------
+										File: cipher.c
+------------------------------------------------------------------------------------------------------------------
+										File: addition_is_not_simple.c
+------------------------------------------------------------------------------------------------------------------
+										File: long_ATM_queue.c
+------------------------------------------------------------------------------------------------------------------
+										File: magical_word.c
+------------------------------------------------------------------------------------------------------------------
+										File: teaching_how_to_draw.c
+------------------------------------------------------------------------------------------------------------------
+										File: fredo_and_game.c
+------------------------------------------------------------------------------------------------------------------
+										File: count_of_dashes.c
+------------------------------------------------------------------------------------------------------------------
+										File: climbing_stairs.c
+------------------------------------------------------------------------------------------------------------------
+										File: furniture_transportation.c
+------------------------------------------------------------------------------------------------------------------
+										File: are_they_the_same.c
+------------------------------------------------------------------------------------------------------------------
+										File: speed.c
+------------------------------------------------------------------------------------------------------------------
+										File: digit.c
+------------------------------------------------------------------------------------------------------------------
+										File: monk_takes_a_walk.c
+------------------------------------------------------------------------------------------------------------------
+										File: area_of_a_triangle.c
+------------------------------------------------------------------------------------------------------------------
+
+
+					number of files processed: 337
+					LAPCA Score for the given codebase is 105.77621167161224
+					LAPCA Percentage for the given codebase is 0.9978887893548326
+
+
+------------------------------------------------------------------------------------------------------------------
