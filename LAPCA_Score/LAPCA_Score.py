@@ -1,6 +1,8 @@
 import zipfile
 import os
 import json
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 
 class bcolors:
@@ -28,7 +30,7 @@ class LAPCA_Score:
         self.err_count = 0
         self.error_files = []
         self.violation_count = {}
-        with open('LAPCA_Score_Report.txt', 'w') as f:
+        with open('LAPCA_Score/LAPCA_Score_Report.txt', 'w') as f:
             f.write("")
         for i in self.mapping:
             if i["priority"]:
@@ -115,7 +117,7 @@ class LAPCA_Score:
         print(f"{bcolors.OKGREEN}LAPCA Percent for the given codebase is",self.LAPCA_percent/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
 
 if __name__ == "__main__":
-    obj = LAPCA_Score("codebase.zip", "./ExtractedFiles")
+    obj = LAPCA_Score("codebase", "./ExtractedFiles")
     obj.extractZip()
     obj.getLAPCA_Score()
     print(obj.result)
