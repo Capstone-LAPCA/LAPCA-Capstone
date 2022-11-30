@@ -4,6 +4,7 @@ import json
 import sys
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
+import subprocess
 
 class bcolors:
     HEADER = '\033[95m'
@@ -16,6 +17,22 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+def runCommand(command):
+    flag=False
+    with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
+        for line in p.stdout: 
+            print(line, end='') 
+            f.write(line)
+            flag=True
+    return flag
+
+def compilePhase(lang,test_file):
+    if lang=="c":
+        return runCommand(["gcc","-c",test_file])
+    elif lang=="java":
+        return runCommand(["javac",test_file])
+    elif lang=="py":
+        return runCommand([sys.executable,"-m","py_compile",test_file])
 
 class LAPCA_Score:
     def __init__(self, input_file, output_file, *args, **kwargs):
@@ -30,13 +47,16 @@ class LAPCA_Score:
         self.err_count = 0
         self.error_files = []
         self.violation_count = {}
+        self.violated_file_count = {}
         with open('LAPCA_Score/LAPCA_Score_Report.txt', 'w') as f:
             f.write("")
         for i in self.mapping:
             if i["priority"]:
                 self.violation_count[i["id"]] = 0
+                self.violated_file_count[i["id"]] = 0
                 self.guidelines.append([i["id"],i["label"],i["priority"]])
                 self.max_score+=i["priority"]
+        
 
     def extractZip(self):
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
@@ -50,6 +70,7 @@ class LAPCA_Score:
             for file in files:
                 if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
                     self.result[file] = {}
+                    no_of_files+=1
                     flag = False
                     score = 0
                     print("----------------------------------------")
@@ -57,11 +78,20 @@ class LAPCA_Score:
                     with open('LAPCA_Score_Report.txt', 'a+') as f:
                         f.write("------------------------------------------------------------------------------------------------------------------\n")
                         f.write("\t\t\t\t\t\t\t\t\t\tFile: "+file+"\n")
+                    lang = file.split(".")[-1]
+                    if compilePhase(lang,os.path.join(root, file)):
+                        with open('LAPCA_Score_Report.txt', 'a+') as f, open('results.txt', 'r') as r:
+                            f.write("Error(s) found in file: "+file+"\n")
+                            f.write(r.read())
+                            self.error_files.append(file)
+                            self.err_count+=1
+                            continue
                     for guideline in self.guidelines:
                         self.result[file][guideline[1]] = []
                         MainModule(os.path.join(root, file), os.path.join('./Guidelines',guideline[0]) ).factory()
                         with open("results.txt", "r") as f:
-                            lines = f.read().split("\n")
+                            file_op = f.read()
+                            lines = file_op.split("\n")
                             if lines[0] == 'State is not applicable for the given language. Please check the State entered ' or lines[0] == 'Guideline is not applicable for the given language. Please check the languages mentioned in the guideline. ':
                                 score+=guideline[2]
                                 continue
@@ -70,13 +100,16 @@ class LAPCA_Score:
                                 #print(f"{bcolors.FAIL}Terminating LAPCA Score Benchmark{bcolors.ENDC}")
                                 #return "Error in file"+file+".\nTerminating LAPCA Score Benchmark\n"
                                 #exit(0)
-                                self.error_files.append(file)
-                                self.err_count+=1
+                                with open('LAPCA_Score_Report.txt', 'a+') as f:
+                                    f.write("Error in file "+file+".\n")
+                                    f.write(str(file_op))
                                 flag = True
                                 break
 
                             else:
                                 self.violation_count[guideline[0]]+=len(lines)-1
+                                if len(lines)-1 > 0:
+                                    self.violated_file_count[guideline[0]]+=1
                                 with open('LAPCA_Score_Report.txt', 'a+') as f:
                                     for i in lines[:-1]:
                                         f.write("\t\t\t"+i+"\n\n")
@@ -86,7 +119,6 @@ class LAPCA_Score:
                         continue
                     self.LAPCA_score+=score
                     self.LAPCA_percent += (score/self.max_score)
-                    no_of_files+=1
                     with open('LAPCA_Score_Report.txt', 'a+') as f:
                         f.write("\t\t\tFile Number: "+str(no_of_files)+"\n")
                         f.write("\t\t\tLAPCA Score for file "+file+" is "+str(score)+"\n")
@@ -101,28 +133,34 @@ class LAPCA_Score:
         with open('LAPCA_Score_Report.txt', 'a+') as f:
             f.write("------------------------------------------------------------------------------------------------------------------\n")
             f.write("\n\n")
+
             f.write("\t\t\t\t\tTotal number of files processed: "+str(no_of_files)+"\n")
             f.write("\t\t\t\t\tLAPCA Score for the given codebase is "+str(self.LAPCA_score/([no_of_files if no_of_files else 1][0]))+"\n")
             f.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str(self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))+"\n")
-            f.write("\t\t\t\t\tTotal number of error files: "+str(self.err_count)+"\n")
-            f.write("\t\t\t\t\tError files: "+str(self.error_files)+"\n")
+
+            f.write("\t\t\t\t\tTotal number of files with syntax errors: "+str(self.err_count)+"\n")
+            f.write("\t\t\t\t\tFiles with syntax errors:\n")
+            for i in self.error_files:
+                f.write("\t\t\t\t\t\t"+i+"\n")
+
             f.write("\t\t\t\t\tViolation count:\n")
             for i in self.violation_count.keys():
                 f.write("\t\t\t\t\t\t"+i+" : "+str(self.violation_count[i])+"\n")
+            f.write("\t\t\t\t\tViolated files count:\n")
+            for i in self.violated_file_count.keys():
+                f.write("\t\t\t\t\t\t"+i+" : "+str(self.violated_file_count[i])+"\n")
 
             f.write("\n\n")
             f.write("------------------------------------------------------------------------------------------------------------------\n")
+    
         print(f"{bcolors.OKGREEN}Total number of files:",no_of_files,f"{bcolors.ENDC}")
         print(f"{bcolors.OKGREEN}LAPCA Score for the given codebase is",self.LAPCA_score/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
         print(f"{bcolors.OKGREEN}LAPCA Percent for the given codebase is",self.LAPCA_percent/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
 
 if __name__ == "__main__":
-    obj = LAPCA_Score("codebase", "./ExtractedFiles")
+    obj = LAPCA_Score("codebase.zip", "./ExtractedFiles")
     obj.extractZip()
     obj.getLAPCA_Score()
-    print(obj.result)
-    print(obj.error_files)
-    print(obj.err_count)
-
-    #node-at-a-given-index-in-linked-list.py
-    #taking-input-and-typecasting-python.py
+    # print(obj.result)
+    # print(obj.error_files)
+    # print(obj.err_count)
