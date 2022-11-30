@@ -2,6 +2,7 @@ import json
 import os
 import copy
 import re
+from textwrap import dedent
 
 class createNewParser:
     def __init__(self, lang, guidelines, base_parser_path, new_parser_path):
@@ -9,10 +10,15 @@ class createNewParser:
         self.mapping = json.load(open(os.path.abspath("./JSON/mapping.json")))
         self.guidelines = guidelines
         self.new_parser_path = new_parser_path
+        self.map_state_to_code  = {}
+        for i in self.mapping[self.lang].keys():
+            self.map_state_to_code[self.mapping[self.lang][i]] = ""
+        self.map_state_to_code["after"] = ""
+        self.map_state_to_code["before"] = ""
         with open(base_parser_path, encoding='utf-8') as f:
             self.file_lines = f.readlines()
-            with open(self.new_parser_path, "w") as f:
-                f.write("".join(self.file_lines))
+            # with open(self.new_parser_path, "w") as f:
+            #     f.write("".join(self.file_lines))
 
     def convertToPython(self,words,cur_state):
 
@@ -52,7 +58,7 @@ class createNewParser:
 
     def createNewParser(self) -> bool:
         if self.guidelines[0][0:8]=='LANGUAGE' and self.lang not in self.guidelines[0][9:].strip().split(','):
-            return "Guideline is not applicable for the given language. Please check the languages mentioned in the guideline."
+            return "Guideline is not applicable for the given language. Please check the languages mentioned in the guideline.",self.map_state_to_code
         i = 0
         while(i < len(self.guidelines)):
             code = []
@@ -64,7 +70,7 @@ class createNewParser:
             i+=1
             for cur in cur_state:
                 if cur not in self.mapping[self.lang].keys():
-                    return "State is not applicable for the given language. Please check the State entered"
+                    return "State is not applicable for the given language. Please check the State entered",self.map_state_to_code
             #cur_state = self.mapping[self.lang][cur_state]
             flag=False
             while(i < len(self.guidelines)):
@@ -75,19 +81,19 @@ class createNewParser:
                     flag=True
                     break
                 else:
-                    if(words[0:4]!="\t" and words[0:4]!="    " and words!="\n"):
-                        return "Guideline is not indented as per LAPCA standards"
+                    # if(words[0:4]!="\t" and words[0:4]!="    " and words!="\n"):
+                    #     return "Guideline is not indented as per LAPCA standards",self.map_state_to_code
                     
                     words = self.convertToPython(words,cur_state)
                     flag,err = self.securityCheck(words)
                     if flag:
-                        return err
+                        return err,self.map_state_to_code
                     
-                    code.append("    "+words)
+                    code.append(words)
                 i += 1
             if not flag:
-                return "END_STATE not found for the given state"
-        return ""
+                return "END_STATE not found for the given state",self.map_state_to_code
+        return "",self.map_state_to_code
 
     def writeFileAt(self, atstate, string):
         if atstate == "before":
@@ -108,6 +114,6 @@ class createNewParser:
                     x = i
                     break
             self.file_lines.insert(x, "".join(string))
-
-        with open(self.new_parser_path, "w") as f:
-            f.write("".join(self.file_lines))
+        self.map_state_to_code[atstate] = "".join(dedent("".join(string)))
+        # with open(self.new_parser_path, "w") as f:
+        #     f.write("".join(self.file_lines))

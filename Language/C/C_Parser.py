@@ -7,14 +7,21 @@ from Utils.Utility import Utility, getTokens
 info_list = []
 STATEMENT_LINE_NO = {}
 flagIf = False
+map_state_to_code = {}
 
 class MainTransformer():
+    def __init__(self,temp,test_file_path):
+        global map_state_to_code
+        map_state_to_code = temp
+        self.test_file_path = test_file_path
     def run(self):
-        file = open(sys.argv[1], encoding='utf-8').read()
+        file = open(self.test_file_path, encoding='utf-8').read()
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
+        exec(map_state_to_code["before"])
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
         CParserActions().visit_topdown(C_parser.parse(file))
+        exec(map_state_to_code["after"])
         # print(CParserActions().visit_topdown(C_parser.parse(file)).pretty())
         return
 
@@ -167,6 +174,7 @@ class CParserActions(visitors.Visitor):
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
+        exec(map_state_to_code["for_stmt"])
         pass
 
     def while_stmt(self, items):
@@ -185,6 +193,7 @@ class CParserActions(visitors.Visitor):
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
+        exec(map_state_to_code["while_stmt"])
         pass
 
     def switch_stmt(self, items):
@@ -514,6 +523,7 @@ class CParserActions(visitors.Visitor):
         ITERATION_CONDITION = condition_list
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
+        exec(map_state_to_code["if_stmt"])
         pass
 
     def selectionstatement(self, items):
@@ -610,4 +620,4 @@ class CParserActions(visitors.Visitor):
         pass
 
 
-MainTransformer().run()
+# MainTransformer().run()

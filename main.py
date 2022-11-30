@@ -19,14 +19,16 @@ class MainModule:
                 f.write(line)
 
     def run(self,base_parser_path, new_parser_path):
-        flag = Parser(self.lang, self.guidelines, base_parser_path,
+        flag, map_state_to_code = Parser(self.lang, self.guidelines, base_parser_path,
                 new_parser_path).createNewParser()
         if flag!="":
             with open("results.txt", "w") as f:
                 print(Path(self.formal_struct).stem,":",flag)
                 f.write(flag+" \n")
         else:
-            self.runCommand([sys.executable, new_parser_path, self.test_file])
+            #self.runCommand([sys.executable, new_parser_path, self.test_file])
+            from Language.C.C_Parser import MainTransformer
+            MainTransformer(map_state_to_code, self.test_file).run()
                 
     def factory(self):
         if self.lang == "py":
