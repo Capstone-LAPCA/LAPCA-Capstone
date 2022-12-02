@@ -43,6 +43,7 @@ class LAPCA_Score:
         self.max_score = 0
         self.LAPCA_score = 0
         self.LAPCA_percent = 0
+        self.plagiarism = []
         self.guidelines = []
         self.err_count = 0
         self.error_files = []
@@ -62,7 +63,27 @@ class LAPCA_Score:
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
         
-        
+    def getLAPCASimilarity(self, file1, file2):
+        all_fils_list = {}
+        for root, dirs, files in os.walk("./ExtractedFiles"):
+            for file in files:
+                if file.endswith(".py"):
+                    all_fils_list[os.path.join(root, file)] = file
+        for i in all_fils_list.keys():
+            plag = []
+            plag.append(all_fils_list[i])
+            max_plag_file = ""
+            max_plag = 0
+            for j in all_fils_list.keys():
+                if i!=j:
+                    perc=1 #logic for plagiarism goes here
+                    if perc > max_plag:
+                        max_plag = perc
+                        max_plag_file = all_fils_list[j]
+            plag.append(max_plag_file)
+            plag.append(max_plag)
+            self.plagiarism.append(plag)
+
     def getLAPCA_Score(self):
         no_of_files = 0
         print("------------------------------------------------------------------------------------------------------------------")
