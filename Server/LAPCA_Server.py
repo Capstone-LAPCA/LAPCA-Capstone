@@ -5,6 +5,7 @@ import sys
 import os
 import subprocess
 import json
+import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 if(os.getcwd().split(os.sep)[-1]=='Server'):
@@ -129,7 +130,8 @@ def getResults():
     comp_result = {
         "compilationErr":False,
         "compilationOutput": "",
-        "guidelines": []
+        "guidelines": [], 
+        "score": 552
     }
 
     with open(file_path, "w") as text_file:
@@ -152,6 +154,7 @@ def getResults():
 @cross_origin()
 def getGuidelines():
     json_file = json.load(open(os.path.abspath("./JSON/guidelines.json")))
+    # json_file = json.load(open(r"C:\Users\Hp\Documents\LAPCA-Capstone\JSON\guidelines.json"))
 
     for i in range(len(json_file["guidelines"])):
         id = json_file["guidelines"][i]["id"]
@@ -162,5 +165,16 @@ def getGuidelines():
         else:
             return jsonify({"error":"Guideline file not found"})
     return jsonify(json_file)
+
+@app.route("/upload_file", methods=['POST'])
+@cross_origin()
+def uploadFile():
+    data = request.get_json()
+    zipfile = data['uploadFile']['data']
+    with open("temp.zip", "wb") as f:
+        f.write(base64.b64decode(zipfile))
+    
+    return jsonify({'data':"success"})
+
 if __name__ == '__main__':
     app.run(port=3003)
