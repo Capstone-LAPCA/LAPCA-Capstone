@@ -5,6 +5,7 @@ import sys
 import os
 import subprocess
 import json
+import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 if(os.getcwd().split(os.sep)[-1]=='Server'):
@@ -168,8 +169,11 @@ def getGuidelines():
 @app.route("/upload_file", methods=['POST'])
 @cross_origin()
 def uploadFile():
-    file = request.get_json()
-    print(file['uploadFile']['fileName'])
+    data = request.get_json()
+    zipfile = data['uploadFile']['data']
+    with open("temp.zip", "wb") as f:
+        f.write(base64.b64decode(zipfile))
+    
     return jsonify({'data':"success"})
 
 if __name__ == '__main__':
