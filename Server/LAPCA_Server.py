@@ -129,7 +129,8 @@ def getResults():
     comp_result = {
         "compilationErr":False,
         "compilationOutput": "",
-        "guidelines": []
+        "guidelines": [], 
+        "score": 552
     }
 
     with open(file_path, "w") as text_file:
@@ -152,6 +153,7 @@ def getResults():
 @cross_origin()
 def getGuidelines():
     json_file = json.load(open(os.path.abspath("./JSON/guidelines.json")))
+    # json_file = json.load(open(r"C:\Users\Hp\Documents\LAPCA-Capstone\JSON\guidelines.json"))
 
     for i in range(len(json_file["guidelines"])):
         id = json_file["guidelines"][i]["id"]
@@ -162,5 +164,13 @@ def getGuidelines():
         else:
             return jsonify({"error":"Guideline file not found"})
     return jsonify(json_file)
+
+@app.route("/upload_file", methods=['POST'])
+@cross_origin()
+def uploadFile():
+    file = request.get_json()
+    print(file['uploadFile']['fileName'])
+    return jsonify({'data':"success"})
+
 if __name__ == '__main__':
     app.run(port=3003)
