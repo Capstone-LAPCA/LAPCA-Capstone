@@ -82,7 +82,7 @@ class LAPCA_Plag:
         # print(points)
         if len(points) == 0:
             print("No plagiarism detected")
-            return 0
+            return 0,""
         mergedPoints = []
         mergedPoints.append(points[0])
         for i in range(1, len(points)):
@@ -109,7 +109,7 @@ class LAPCA_Plag:
         divi = token1[len(token1) - 1][1] - token1[0][1] - 1
         self.plagiarism_percent = (plagCount/divi)*100
         print("Approx ratio of plagiarized content in file 1: ", self.plagiarism_percent, "%")
-        return self.plagiarism_percent
+        return self.plagiarism_percent, newCode
 
 if "__main__" == __name__:
     code1 = open("LAPCA_metrics/test1.c", "r").read()

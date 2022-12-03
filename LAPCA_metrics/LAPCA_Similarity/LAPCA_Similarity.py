@@ -28,16 +28,19 @@ class LAPCA_Similarity:
             plag.append(file_list[i])
             max_plag_file = ""
             max_plag = 0
+            max_plag_code = code1
             for j in file_list.keys():
                 with open (j, "r") as f:
                     code2 = f.read()
                 if i!=j:
-                    perc=LAPCA_Plag(code1,code2,"c").check_similarity() #remove c
+                    perc,code=LAPCA_Plag(code1,code2,"c").check_similarity() #remove c
                     if perc > max_plag:
                         max_plag = perc
                         max_plag_file = file_list[j]
-            plag.append(max_plag_file)
+                        max_plag_code = code
             plag.append(max_plag)
+            plag.append(max_plag_file)
+            plag.append(max_plag_code)
             self.plagiarism.append(plag)
         print(self.plagiarism)
         return self.plagiarism
