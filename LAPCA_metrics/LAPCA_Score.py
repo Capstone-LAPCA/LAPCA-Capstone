@@ -5,6 +5,9 @@ import sys
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 import subprocess
+from fpdf import FPDF
+import PyPDF2
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -32,6 +35,7 @@ def compilePhase(lang,test_file):
         return runCommand(["javac",test_file])
     elif lang=="py":
         return runCommand([sys.executable,"-m","py_compile",test_file])
+
 class LAPCA_Score:
     def __init__(self,  *args, **kwargs):
         if len(args) == 2:
@@ -59,6 +63,23 @@ class LAPCA_Score:
     def extractZip(self):
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
+    
+    def createPdf(self):
+        self.pdf.add_page()  
+        self.pdf.set_font("Arial", size = 15)
+        f = open('LAPCA_metrics/LAPCA_Score_Report.txt', "r")
+        for x in f:
+            self.pdf.cell(200, 10, txt = x, ln = 1, align = 'L')
+        self.pdf.output("LAPCA_metrics/LAPCA_Score_pdf/results.pdf",'F')
+        self.mergePdf()
+
+    def mergePdf(self):
+        merger = PyPDF2.PdfFileMerger()
+        f1 = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\Report_Cover_Page.pdf')
+        f2 = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\results.pdf')
+        merger.append(f1)
+        merger.append(f2)
+        merger.write("LAPCA_metrics/LAPCA_Score_pdf/Report.pdf")
         
     def getLAPCA_ScoreOfFile(self,file):
         if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
@@ -169,6 +190,7 @@ class LAPCA_Score:
         print(f"{bcolors.OKGREEN}Total number of files:",no_of_files,f"{bcolors.ENDC}")
         print(f"{bcolors.OKGREEN}LAPCA Score for the given codebase is",self.LAPCA_score/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
         print(f"{bcolors.OKGREEN}LAPCA Percent for the given codebase is",self.LAPCA_percent/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
+        self.createPdf()
 
 if __name__ == "__main__":
     obj = LAPCA_Score("codebase.zip", "./ExtractedFiles")
