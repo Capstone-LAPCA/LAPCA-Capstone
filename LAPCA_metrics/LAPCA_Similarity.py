@@ -52,16 +52,12 @@ class LAPCA_Similary:
         token2 = lc.tokenize(self.code2)
         code1 = lc.toText(token1)
         code2 = lc.toText(token2)
-        print(code1)
-        print(code2)
         kGrams1 = self.kgrams(list(code1),10)  #stores k-grams, their hash values and positions in cleaned up text
         kGrams2 = self.kgrams(list(code2),10)
         HL1 = [i[1] for i in kGrams1] 
         HL2 = [i[1] for i in kGrams2]
         fpList1 = self.get_fingerprint(HL1,1)
         fpList2 = self.get_fingerprint(HL2,1)
-        print(fpList1)
-        print(fpList2)
         newCode = ""   #code with marked plagiarized content
         points = []
         for i in fpList1:
@@ -112,10 +108,10 @@ class LAPCA_Similary:
                     newCode = newCode + self.code1[mergedPoints[i][1] :]
         divi = token1[len(token1) - 1][1] - token1[0][1] - 1
         print("Approx ratio of plagiarized content in file 1: ", (plagCount/divi)*100, "%")
-        #print(newCode)
+        print(newCode)
         return self.plagiarism_percent
 
 if "__main__" == __name__:
-    code1 = open("test1.c", "r").read()
-    code2 = open("test2.c", "r").read()
+    code1 = open("LAPCA_metrics/test1.c", "r").read()
+    code2 = open("LAPCA_metrics/test1.c", "r").read()
     LAPCA_Similary(code1, code2,"c").check_similarity()
