@@ -108,7 +108,7 @@ class LAPCA_Plag:
                     newCode = newCode + self.code1[mergedPoints[i][1] :]
         divi = token1[len(token1) - 1][1] - token1[0][1] - 1
         self.plagiarism_percent = (plagCount/divi)*100
-        print("Approx ratio of plagiarized content in file 1: ", self.plagiarism_percent, "%")
+        #print("Approx ratio of plagiarized content in file: ", self.plagiarism_percent, "%")
         return self.plagiarism_percent, newCode
 
 if "__main__" == __name__:
