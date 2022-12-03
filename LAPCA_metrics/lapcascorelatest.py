@@ -6,6 +6,8 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 import subprocess
 from fpdf import FPDF
+import PyPDF2
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -16,6 +18,9 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
+class PDF(FPDF):
+    pass
 
 def runCommand(command):
     flag=False
@@ -42,6 +47,8 @@ class LAPCA_Score:
         self.max_score = 0
         self.LAPCA_score = 0
         self.LAPCA_percent = 0
+        self.plagiarism = []
+        self.pdf = PDF()
         self.guidelines = []
         self.err_count = 0
         self.error_files = []
@@ -59,14 +66,51 @@ class LAPCA_Score:
         # self.createPdf()
         
     def createPdf(self):
-        self.pdf.add_page()
-        self.pdf.output('test.pdf','F')
+        self.pdf.add_page()  
+        self.pdf.set_font("Arial", size = 15)
+        f = open('LAPCA_metrics/LAPCA_Score_Report.txt', "r")
+        for x in f:
+            self.pdf.cell(200, 10, txt = x, ln = 1, align = 'L')
+        self.pdf.output("LAPCA_metrics/LAPCA_Score_pdf/results.pdf",'F')
+        self.mergePdf()
+
+    def mergePdf(self):
+        merger = PyPDF2.PdfFileMerger()
+        f1 = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\Report_Cover_Page.pdf')
+        f2 = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\results.pdf')
+        merger.append(f1)
+        merger.append(f2)
+        merger.write("LAPCA_metrics/LAPCA_Score_pdf/Report.pdf")
+    
+    def sendEmail(self):
         
+        pass
+
     def extractZip(self):
         print(self.input_file)
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
         
+    def getLAPCASimilarity(self, file1, file2):
+        all_fils_list = {}
+        for root, dirs, files in os.walk(self.output_file):
+            for file in files:
+                if file.endswith(".py"):
+                    all_fils_list[os.path.join(root, file)] = file
+        for i in all_fils_list.keys():
+            plag = []
+            plag.append(all_fils_list[i])
+            max_plag_file = ""
+            max_plag = 0
+            for j in all_fils_list.keys():
+                if i!=j:
+                    perc=1 #logic for plagiarism goes here
+                    if perc > max_plag:
+                        max_plag = perc
+                        max_plag_file = all_fils_list[j]
+            plag.append(max_plag_file)
+            plag.append(max_plag)
+            self.plagiarism.append(plag)
 
     def getLAPCA_Score(self):
         no_of_files = 0
