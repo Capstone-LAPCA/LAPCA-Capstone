@@ -9,7 +9,7 @@ import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 from LAPCA_metrics.LAPCA_Score import LAPCA_Score
-
+from Server.Mail import Mail
 
 # from LAPCA_metrics.LAPCA_Similarity import LAPCA_Similarity
 
@@ -180,6 +180,7 @@ def uploadFile():
     with open("temp.zip", "wb") as f:
         f.write(base64.b64decode(zipfile))
     LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Score()
+    Mail(data['name'],data['email'],data['reportType']).sendMail()
     return jsonify({'data':"success"})
 
 if __name__ == '__main__':
