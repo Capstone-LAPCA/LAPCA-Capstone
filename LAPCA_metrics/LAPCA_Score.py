@@ -33,9 +33,10 @@ def compilePhase(lang,test_file):
     elif lang=="py":
         return runCommand([sys.executable,"-m","py_compile",test_file])
 class LAPCA_Score:
-    def __init__(self, input_file, output_file, *args, **kwargs):
-        self.input_file = input_file
-        self.output_file = output_file
+    def __init__(self,  *args, **kwargs):
+        if len(args) == 2:
+            self.input_file = args[0]
+            self.output_file = args[1]
         self.mapping = json.load(open(os.path.abspath("./JSON/guidelines.json")))["guidelines"]
         self.result = {}
         self.max_score = 0
@@ -54,16 +55,29 @@ class LAPCA_Score:
                 self.violated_file_count[i["id"]] = 0
                 self.guidelines.append([i["id"],i["label"],i["priority"]])
                 self.max_score+=i["priority"]
-        self.extractZip()
-        self.createPdf()
         
     def extractZip(self):
         print(self.input_file)
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
         
+    def getLAPCA_ScoreOfFile(self,file):
+        if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
+            score = 0
+            for guideline in self.guidelines:
+                MainModule(os.path.join(file), os.path.join('./Guidelines',guideline[0]) ).factory()
+                with open("results.txt", "r") as f:
+                    file_op = f.read()
+                    lines = file_op.split("\n")
+                    if lines[0] == 'State is not applicable for the given language. Please check the State entered ' or lines[0] == 'Guideline is not applicable for the given language. Please check the languages mentioned in the guideline. ':
+                        score+=guideline[2]
+                    else:
+                        score += guideline[2]/len(lines)
+            return score
+
 
     def getLAPCA_Score(self):
+        self.extractZip()
         no_of_files = 0
         print("------------------------------------------------------------------------------------------------------------------")
         for root, dirs, files in os.walk(self.output_file):
