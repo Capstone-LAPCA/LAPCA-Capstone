@@ -9,3 +9,4 @@ test.c
 test.java
 *.o
 *.class
+*.zip

@@ -1,50 +1,78 @@
-import email, smtplib, ssl
-import os
-from email import encoders
-from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.application import MIMEApplication
+import smtplib
+import ssl
+import os
 
-subject = "An email with attachment from Python"
-body = "This is an email with attachment sent from Python"
-sender_email = "lapcametric@gmail.com"
-receiver_email = "sethupathyrv@gmail.com"
-password = 'lapcaemailpassword'
+smtp_server = "smtp.gmail.com"
+port = 587  # For starttls
+class Mail:
+    def __init__(self, name, email, reportType, *args, **kwargs):
+        self.name = name
+        self.sender_email = "lapcametric@gmail.com" # TODO: replace with your email address
+        self.receiver_email = email # TODO: replace with your recipients
+        self.password = ''
+        self.msg = MIMEMultipart()
+        self.msg["Subject"] = "Your LAPCA Results are here!"
+        self.msg["From"] = self.sender_email
+        self.msg['To'] =self.receiver_email
+        self.reportType = reportType
 
-# Create a multipart message and set headers
-message = MIMEMultipart()
-message["From"] = sender_email
-message["To"] = receiver_email
-message["Subject"] = subject
-message["Bcc"] = receiver_email  # Recommended for mass emails
+    def sendMail(self):
+        text = """"""
 
-# Add body to email
-message.attach(MIMEText(body, "plain"))
+        body_text = MIMEText(text, 'plain')  # 
+        self.msg.attach(body_text)  # attaching the text body into msg
+        html = """\
+        <html>
+        <body>
+            <p>Hi {},<br>
+            <br>
+            PFA your {} report <br>
+            Thank you. <br>
+            </p>
+        </body>
+        </html>
+        """
 
-filename = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\Report.pdf')  # In same directory as script
+        body_html = MIMEText(html.format(self.name, self.reportType), 'html')  # parse values into html text
+        self.msg.attach(body_html)  # attaching the text body into msg
 
-# Open PDF file in binary mode
-with open(filename, "rb") as attachment:
-    # Add file as application/octet-stream
-    # Email client can usually download this automatically as attachment
-    part = MIMEBase("application", "octet-stream")
-    part.set_payload(attachment.read())
+        ## Image
+        # img_name = 'logo_pb.png' # TODO: replace your image filepath/name
+        # with open(img_name, 'rb') as fp:
+        #     img = MIMEImage(fp.read())
+        #     img.add_header('Content-Disposition', 'attachment', filename=img_name)
+        #     msg.attach(img)
 
-# Encode file in ASCII characters to send by email    
-encoders.encode_base64(part)
+        ## Attachments in general
+        ## Replace filename to your attachments. Tested and works for png, jpeg, txt, pptx, csv
+        if(self.reportType == 'LAPCA Score'):
+            filename = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\Report.pdf') # TODO: replace your attachment filepath/name
+        else:
+            filename = os.path.abspath('LAPCA_metrics\Similarity_Score_Pdf\\Report.pdf') # TODO: replace your attachment filepath/name
 
-# Add header as key/value pair to attachment part
-part.add_header(
-    "Content-Disposition",
-    f"attachment; filename= {filename}",
-)
+        with open(filename, 'rb') as fp:
+            attachment = MIMEApplication(fp.read())
+            attachment.add_header('Content-Disposition', 'attachment', filename='Report.pdf')
+            self.msg.attach(attachment)
 
-# Add attachment to message and convert message to string
-message.attach(part)
-text = message.as_string()
+        context = ssl.create_default_context()
+        # Try to log in to server and send email
+        try:
+            server = smtplib.SMTP(smtp_server, port)
+            server.ehlo()  # check connection
+            server.starttls(context=context)  # Secure the connection
+            server.ehlo()  # check connection
+            server.login(self.sender_email, self.password)
 
-# Log in to server using secure context and send email
-context = ssl.create_default_context()
-with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, text)
+            # Send email here
+            server.sendmail(self.sender_email, self.receiver_email, self.msg.as_string())
+
+        except Exception as e:
+            # Print any error messages to stdout
+            print(e)
+        finally:
+            server.quit()

@@ -9,9 +9,9 @@ import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 from LAPCA_metrics.LAPCA_Score import LAPCA_Score
-
-
-# from LAPCA_metrics.LAPCA_Similarity import LAPCA_Similarity
+from Server.Mail import Mail
+print(os.getcwd())
+from LAPCA_metrics.LAPCA_Similarity.LAPCA_Similarity import LAPCA_Similarity
 
 if(os.getcwd().split(os.sep)[-1]=='Server'):
     os.chdir('..')
@@ -137,7 +137,7 @@ def getResults():
         "compilationErr":False,
         "compilationOutput": "",
         "guidelines": [], 
-        "score": 552
+        "score": 0
     }
 
     with open(file_path, "w") as text_file:
@@ -148,11 +148,13 @@ def getResults():
         comp_result["compilationOutput"]="Compilation Successful"
         comp_result=accessRes(file_path,form,comp_result)
         comp_result=userDefAccessRes(file_path,user_defined_guidelines,comp_result)
+        comp_result["score"] = LAPCA_Score().getLAPCA_ScoreOfFile(file_path)
     else:
         with open("results.txt", "r") as text_file:
             res=text_file.read()
             comp_result["compilationErr"] = True
             comp_result["compilationOutput"] = res
+            comp_result["score"]=0
 
     return jsonify(comp_result)
 
@@ -179,8 +181,11 @@ def uploadFile():
     zipfile = data['uploadFile']['data']
     with open("temp.zip", "wb") as f:
         f.write(base64.b64decode(zipfile))
-    LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Score()
+    if data['reportType']=='LAPCA Score':
+        LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Score()
+    else:
+        LAPCA_Similarity(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Similarity()
+    Mail(data['name'],data['email'],data['reportType']).sendMail()
     return jsonify({'data':"success"})
-
 if __name__ == '__main__':
     app.run(port=3003)

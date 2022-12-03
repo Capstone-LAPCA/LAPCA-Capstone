@@ -19,9 +19,6 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-class PDF(FPDF):
-    pass
-
 def runCommand(command):
     flag=False
     with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
@@ -38,22 +35,23 @@ def compilePhase(lang,test_file):
         return runCommand(["javac",test_file])
     elif lang=="py":
         return runCommand([sys.executable,"-m","py_compile",test_file])
+
 class LAPCA_Score:
-    def __init__(self, input_file, output_file, *args, **kwargs):
-        self.input_file = input_file
-        self.output_file = output_file
+    def __init__(self,  *args, **kwargs):
+        if len(args) == 2:
+            self.input_file = args[0]
+            self.output_file = args[1]
         self.mapping = json.load(open(os.path.abspath("./JSON/guidelines.json")))["guidelines"]
         self.result = {}
         self.max_score = 0
         self.LAPCA_score = 0
         self.LAPCA_percent = 0
-        self.plagiarism = []
-        self.pdf = PDF()
         self.guidelines = []
         self.err_count = 0
         self.error_files = []
         self.violation_count = {}
         self.violated_file_count = {}
+        self.pdf = FPDF()
         with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'w') as f:
             f.write("")
         for i in self.mapping:
@@ -62,9 +60,13 @@ class LAPCA_Score:
                 self.violated_file_count[i["id"]] = 0
                 self.guidelines.append([i["id"],i["label"],i["priority"]])
                 self.max_score+=i["priority"]
-        self.extractZip()
-        # self.createPdf()
         
+        pass
+
+    def extractZip(self):
+        with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
+            zip_ref.extractall(self.output_file)
+    
     def createPdf(self):
         self.pdf.add_page()  
         self.pdf.set_font("Arial", size = 15)
@@ -81,38 +83,24 @@ class LAPCA_Score:
         merger.append(f1)
         merger.append(f2)
         merger.write("LAPCA_metrics/LAPCA_Score_pdf/Report.pdf")
-    
-    def sendEmail(self):
         
-        pass
+    def getLAPCA_ScoreOfFile(self,file):
+        if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
+            score = 0
+            for guideline in self.guidelines:
+                MainModule(os.path.join(file), os.path.join('./Guidelines',guideline[0]) ).factory()
+                with open("results.txt", "r") as f:
+                    file_op = f.read()
+                    lines = file_op.split("\n")
+                    if lines[0] == 'State is not applicable for the given language. Please check the State entered ' or lines[0] == 'Guideline is not applicable for the given language. Please check the languages mentioned in the guideline. ':
+                        score+=guideline[2]
+                    else:
+                        score += guideline[2]/len(lines)
+            return score
 
-    def extractZip(self):
-        print(self.input_file)
-        with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
-            zip_ref.extractall(self.output_file)
-        
-    def getLAPCASimilarity(self, file1, file2):
-        all_fils_list = {}
-        for root, dirs, files in os.walk(self.output_file):
-            for file in files:
-                if file.endswith(".py"):
-                    all_fils_list[os.path.join(root, file)] = file
-        for i in all_fils_list.keys():
-            plag = []
-            plag.append(all_fils_list[i])
-            max_plag_file = ""
-            max_plag = 0
-            for j in all_fils_list.keys():
-                if i!=j:
-                    perc=1 #logic for plagiarism goes here
-                    if perc > max_plag:
-                        max_plag = perc
-                        max_plag_file = all_fils_list[j]
-            plag.append(max_plag_file)
-            plag.append(max_plag)
-            self.plagiarism.append(plag)
 
     def getLAPCA_Score(self):
+        self.extractZip()
         no_of_files = 0
         print("------------------------------------------------------------------------------------------------------------------")
         for root, dirs, files in os.walk(self.output_file):
