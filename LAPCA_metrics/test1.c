@@ -121,7 +121,7 @@ int main(){
                 insert(head, position, data);
                 break;
            // case 2:
-                 Delete alternate nodes, starting from the node at index position 1
+                //Delete alternate nodes, starting from the node at index position 1
                 delete(head);
                 break;
             case 3:

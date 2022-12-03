@@ -51,6 +51,7 @@ class LAPCA_Score:
         self.error_files = []
         self.violation_count = {}
         self.violated_file_count = {}
+        self.pdf = FPDF()
         with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'w') as f:
             f.write("")
         for i in self.mapping:
@@ -60,6 +61,8 @@ class LAPCA_Score:
                 self.guidelines.append([i["id"],i["label"],i["priority"]])
                 self.max_score+=i["priority"]
         
+        pass
+
     def extractZip(self):
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)

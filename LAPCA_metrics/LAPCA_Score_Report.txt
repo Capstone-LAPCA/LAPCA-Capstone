@@ -76,4 +76,4 @@ Error(s) found in file: PES1UG21CS915 - Amritha S.c
    63 | int countNodes(node *head){
       |     ^~~~~~~~~~
 ------------------------------------------------------------------------------------------------------------------
-										File: PES1UG21CS106 - Archishman Vb.c
+										File: PES1UG21CS393 - Nischal H S.c

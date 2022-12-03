@@ -76,7 +76,3 @@ class Mail:
             print(e)
         finally:
             server.quit()
-
-if __name__ == "__main__":
-    obj = Mail("Nan","nandana814056@gmail.com", "LAPCA Score")
-    obj.sendMail()

@@ -9,6 +9,7 @@ import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 from LAPCA_metrics.LAPCA_Score import LAPCA_Score
+from Server.Mail import Mail
 print(os.getcwd())
 from LAPCA_metrics.LAPCA_Similarity.LAPCA_Similarity import LAPCA_Similarity
 
@@ -16,6 +17,7 @@ if(os.getcwd().split(os.sep)[-1]=='Server'):
     os.chdir('..')
 app = Flask(__name__)
 CORS(app)
+
 def runCommand(command):
     flag=False
     with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
@@ -179,10 +181,11 @@ def uploadFile():
     zipfile = data['uploadFile']['data']
     with open("temp.zip", "wb") as f:
         f.write(base64.b64decode(zipfile))
-    if data['reportType']=='score':
+    if data['reportType']=='LAPCA Score':
         LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Score()
     else:
         LAPCA_Similarity(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Similarity()
+    Mail(data['name'],data['email'],data['reportType']).sendMail()
     return jsonify({'data':"success"})
 if __name__ == '__main__':
     app.run(port=3003)
