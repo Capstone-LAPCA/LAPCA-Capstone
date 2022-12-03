@@ -1,7 +1,7 @@
 import hashlib
 from LAPCA_Clean import LAPCA_Clean
 
-class LAPCA_Similary:
+class LAPCA_Plag:
     def __init__(self, code1, code2, lang):
         self.code1 = code1
         self.lang = lang
@@ -114,4 +114,4 @@ class LAPCA_Similary:
 if "__main__" == __name__:
     code1 = open("LAPCA_metrics/test1.c", "r").read()
     code2 = open("LAPCA_metrics/test1.c", "r").read()
-    LAPCA_Similary(code1, code2,"c").check_similarity()
+    LAPCA_Plag(code1, code2,"c").check_similarity()
