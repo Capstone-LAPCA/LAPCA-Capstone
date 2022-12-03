@@ -1,37 +1,46 @@
-from LAPCA_Plag import LAPCA_Plag
 import os
+from LAPCA_metrics.LAPCA_Similarity.LAPCA_Plag import LAPCA_Plag
 import zipfile
 
 
 class LAPCA_Similarity:
-    def __init__(self, input_file, output_file, lang):
+    def __init__(self, input_file, output_file):
         self.plagiarism = []
         self.input_file = input_file
         self.output_file = output_file
 
 
     def extractZip(self):
-        print(self.input_file)
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
 
-    def getLAPCASimilarity(self, file1, file2):
-        all_fils_list = {}
+    def getLAPCA_Similarity(self):
+        self.extractZip()
+        file_list = {}
         for root, dirs, files in os.walk(self.output_file):
             for file in files:
-                if file.endswith(".py"):
-                    all_fils_list[os.path.join(root, file)] = file
-        for i in all_fils_list.keys():
+                if file.endswith(".py") or file.endswith(".java") or file.endswith(".c"):
+                    file_list[os.path.join(root, file)] = file
+        for i in file_list.keys():
+            with open (i, "r") as f:
+                code1 = f.read()
             plag = []
-            plag.append(all_fils_list[i])
+            plag.append(file_list[i])
             max_plag_file = ""
             max_plag = 0
-            for j in all_fils_list.keys():
+            for j in file_list.keys():
+                with open (j, "r") as f:
+                    code2 = f.read()
                 if i!=j:
-                    perc=1 #logic for plagiarism goes here
+                    perc=LAPCA_Plag(code1,code2,"c").check_similarity() #remove c
                     if perc > max_plag:
                         max_plag = perc
-                        max_plag_file = all_fils_list[j]
+                        max_plag_file = file_list[j]
             plag.append(max_plag_file)
             plag.append(max_plag)
             self.plagiarism.append(plag)
+        print(self.plagiarism)
+        return self.plagiarism
+
+if __name__ == "__main__":
+    LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/input.zip", "output").getLAPCA_Similarity()

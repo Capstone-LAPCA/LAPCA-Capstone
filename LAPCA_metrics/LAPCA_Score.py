@@ -57,7 +57,6 @@ class LAPCA_Score:
                 self.max_score+=i["priority"]
         
     def extractZip(self):
-        print(self.input_file)
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
         

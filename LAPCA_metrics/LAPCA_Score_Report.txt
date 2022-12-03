@@ -1,0 +1,79 @@
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS915 - Amritha S.c
+Error(s) found in file: PES1UG21CS915 - Amritha S.c
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c: In function ‘insert’:
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:34:5: error: ‘data’ redeclared as different kind of symbol
+   34 | int data;
+      |     ^~~~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:32:38: note: previous definition of ‘data’ was here
+   32 | void insert(node *head, int pos, int data){
+      |                                  ~~~~^~~~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:35:13: error: invalid type argument of ‘->’ (have ‘int’)
+   35 | node *p=data->head;
+      |             ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:36:11: warning: comparison between pointer and integer
+   36 | while(data==NULL)
+      |           ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:38:8: warning: comparison between pointer and integer
+   38 | if(data!=NULL){
+      |        ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:39:5: error: invalid type argument of ‘->’ (have ‘int’)
+   39 | data->head=data->next;
+      |     ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:39:16: error: invalid type argument of ‘->’ (have ‘int’)
+   39 | data->head=data->next;
+      |                ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:40:2: error: ‘node’ {aka ‘struct node’} has no member named ‘head’
+   40 | p->head=next;
+      |  ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:40:9: error: ‘next’ undeclared (first use in this function)
+   40 | p->head=next;
+      |         ^~~~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:40:9: note: each undeclared identifier is reported only once for each function it appears in
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:41:4: error: ‘node’ {aka ‘struct node’} has no member named ‘head’
+   41 | p=p->head;
+      |    ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:43:4: error: ‘node’ {aka ‘struct node’} has no member named ‘head’
+   43 | p=p->head;
+      |    ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c: In function ‘delete’:
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:51:13: error: invalid type argument of ‘->’ (have ‘int’)
+   51 | node *p=info->head, *q=NULL;
+      |             ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:52:11: warning: comparison between pointer and integer
+   52 | while(info==NULL)
+      |           ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:54:4: error: expected expression before ‘[’ token
+   54 | if([head].info%2==0){
+      |    ^
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:55:5: error: invalid type argument of ‘->’ (have ‘int’)
+   55 | info->head=info->next;
+      |     ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:55:16: error: invalid type argument of ‘->’ (have ‘int’)
+   55 | info->head=info->next;
+      |                ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:57:4: error: ‘node’ {aka ‘struct node’} has no member named ‘head’
+   57 | p=p->head;
+      |    ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c: In function ‘countNodes’:
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:65:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   65 | node *p->head, *q->NULL;
+      |        ^~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:65:8: error: expected expression before ‘->’ token
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:65:17: error: ‘q’ undeclared (first use in this function)
+   65 | node *p->head, *q->NULL;
+      |                 ^
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:66:4: error: ‘p’ undeclared (first use in this function)
+   66 | if(p<0 || p>n)
+      |    ^
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:66:13: error: ‘n’ undeclared (first use in this function)
+   66 | if(p<0 || p>n)
+      |             ^
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:67:1: warning: ‘return’ with no value, in function returning non-void
+   67 | return;
+      | ^~~~~~
+/home/manish/LAPCA-Capstone/extractedFiles/Question 1 (Linked list) (File responses)/PES1UG21CS915 - Amritha S.c:63:5: note: declared here
+   63 | int countNodes(node *head){
+      |     ^~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS106 - Archishman Vb.c

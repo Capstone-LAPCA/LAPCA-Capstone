@@ -1,5 +1,5 @@
 import hashlib
-from LAPCA_Clean import LAPCA_Clean
+from LAPCA_metrics.LAPCA_Similarity.LAPCA_Clean import LAPCA_Clean
 
 class LAPCA_Plag:
     def __init__(self, code1, code2, lang):
@@ -82,7 +82,7 @@ class LAPCA_Plag:
         # print(points)
         if len(points) == 0:
             print("No plagiarism detected")
-            return
+            return 0
         mergedPoints = []
         mergedPoints.append(points[0])
         for i in range(1, len(points)):
@@ -107,8 +107,8 @@ class LAPCA_Plag:
                 else:
                     newCode = newCode + self.code1[mergedPoints[i][1] :]
         divi = token1[len(token1) - 1][1] - token1[0][1] - 1
-        print("Approx ratio of plagiarized content in file 1: ", (plagCount/divi)*100, "%")
-        print(newCode)
+        self.plagiarism_percent = (plagCount/divi)*100
+        print("Approx ratio of plagiarized content in file 1: ", self.plagiarism_percent, "%")
         return self.plagiarism_percent
 
 if "__main__" == __name__:
