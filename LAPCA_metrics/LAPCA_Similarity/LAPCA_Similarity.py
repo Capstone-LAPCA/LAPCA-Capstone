@@ -22,7 +22,12 @@ class LAPCA_Similarity:
             self.pdf.cell(200, 10, txt = i[0], ln = 1, align = 'C')
             self.pdf.cell(200, 10, txt = "Plagiarism Percentage: "+str(i[1]), ln = 1, align = 'C')
             self.pdf.cell(200, 10, txt = "Plagiarised File: "+str(i[2]), ln = 1, align = 'C')
-            self.pdf.cell(200, 10, txt = "Plagiarised Code: "+str(i[3]), ln = 2, align = 'C')
+            self.pdf.cell(200, 10, txt = "Plagiarised Code:\n",align='L')
+            self.pdf.set_font("Arial", size = 8)
+            for j in i[3].split("\n"):
+                #REPLACE THE BELOW LOGIC
+                self.pdf.cell(200, 10, txt = j, ln = 1, align = 'L')
+            self.pdf.set_font("Arial", size = 15)
         #self.pdf.cell(200, 10, txt = x, ln = 1, align = 'L')
         self.pdf.output("LAPCA_metrics/LAPCA_Score_Pdf/resultsSimilarity.pdf",'F')
         self.mergePdf()

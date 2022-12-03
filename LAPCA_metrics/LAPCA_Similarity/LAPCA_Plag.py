@@ -96,20 +96,24 @@ class LAPCA_Plag:
             else:
                 mergedPoints.append(points[i])
         newCode = self.code1[: mergedPoints[0][0]]
+        newCodeSend = self.code1[: mergedPoints[0][0]]
         plagCount = 0
 
         for i in range(len(mergedPoints)):
             if mergedPoints[i][1] > mergedPoints[i][0]:
                 plagCount += mergedPoints[i][1] - mergedPoints[i][0]
                 newCode = newCode + '\x1b[6;30;42m' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + '\x1b[0m'
+                newCodeSend = newCodeSend + 'ADD_COLOR' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + 'REMOVE_COLOR'
                 if i < len(mergedPoints) - 1:
                     newCode = newCode + self.code1[mergedPoints[i][1] : mergedPoints[i+1][0]]
+                    newCodeSend = newCodeSend + self.code1[mergedPoints[i][1] : mergedPoints[i+1][0]]
                 else:
                     newCode = newCode + self.code1[mergedPoints[i][1] :]
+                    newCodeSend = newCodeSend + self.code1[mergedPoints[i][1] :]
         divi = token1[len(token1) - 1][1] - token1[0][1] - 1
         self.plagiarism_percent = (plagCount/divi)*100
         #print("Approx ratio of plagiarized content in file: ", self.plagiarism_percent, "%")
-        return self.plagiarism_percent, newCode
+        return self.plagiarism_percent, newCodeSend
 
 if "__main__" == __name__:
     code1 = open("LAPCA_metrics/test1.c", "r").read()
