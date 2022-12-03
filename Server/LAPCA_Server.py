@@ -9,12 +9,15 @@ import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 from LAPCA_metrics.LAPCA_Score import LAPCA_Score
+
+
 # from LAPCA_metrics.LAPCA_Similarity import LAPCA_Similarity
 
 if(os.getcwd().split(os.sep)[-1]=='Server'):
     os.chdir('..')
 app = Flask(__name__)
 CORS(app)
+
 def runCommand(command):
     flag=False
     with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:

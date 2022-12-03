@@ -1,2 +1,63 @@
 ------------------------------------------------------------------------------------------------------------------
-										File: PES1UG21CS393 - Nischal H S.c
+										File: Test_recursion.py
+			Line 1: Recursion used in function
+
+			File Number: 1
+			LAPCA Score for file Test_recursion.py is 105.5
+			LAPCA Percentage for file Test_recursion.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.5
+------------------------------------------------------------------------------------------------------------------
+										File: Test_unused_functions.py
+			Line 10: Recursion used in function
+
+			File Number: 2
+			LAPCA Score for file Test_unused_functions.py is 105.5
+			LAPCA Percentage for file Test_unused_functions.py is 0.9952830188679245
+			Current avg LAPCA Score is 105.5
+------------------------------------------------------------------------------------------------------------------
+										File: Test_var_greater_31.py
+			Line 2: Variable length too long
+
+			File Number: 3
+			LAPCA Score for file Test_var_greater_31.py is 104.0
+			LAPCA Percentage for file Test_var_greater_31.py is 0.9811320754716981
+			Current avg LAPCA Score is 105.0
+------------------------------------------------------------------------------------------------------------------
+
+
+					Total number of files processed: 3
+					LAPCA Score for the given codebase is 105.0
+					LAPCA Percentage for the given codebase is 0.9905660377358491
+					Total number of files with syntax errors: 0
+					Files with syntax errors:
+					Violation count:
+						Curly_braces.lapx : 0
+						Assign_in_loop.lapx : 0
+						Function_size.lapx : 0
+						Indirect_Recursion.lapx : 0
+						Depth_of_looping.lapx : 0
+						Continue.lapx : 0
+						Dead_Code.lapx : 0
+						One_var_decl.lapx : 0
+						Recursion.lapx : 2
+						var_greater_than_31.lapx : 1
+						Switch_default.lapx : 0
+						Function_params.lapx : 0
+						Empty_func.lapx : 0
+					Violated files count:
+						Curly_braces.lapx : 0
+						Assign_in_loop.lapx : 0
+						Function_size.lapx : 0
+						Indirect_Recursion.lapx : 0
+						Depth_of_looping.lapx : 0
+						Continue.lapx : 0
+						Dead_Code.lapx : 0
+						One_var_decl.lapx : 0
+						Recursion.lapx : 2
+						var_greater_than_31.lapx : 1
+						Switch_default.lapx : 0
+						Function_params.lapx : 0
+						Empty_func.lapx : 0
+
+
+------------------------------------------------------------------------------------------------------------------
