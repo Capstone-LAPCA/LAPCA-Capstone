@@ -1,0 +1,2533 @@
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS208 - GOPI KRISHNA G 2022 Batch,PES University.c
+			Line 90: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 126: One variable per declaration rule not followed
+
+			Line 131: Switch statement does not have default case
+
+			File Number: 1
+			LAPCA Score for file PES1UG21CS208 - GOPI KRISHNA G 2022 Batch,PES University.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS208 - GOPI KRISHNA G 2022 Batch,PES University.c is 0.8472222222222223
+			Current avg LAPCA Score is 111.83333333333334
+------------------------------------------------------------------------------------------------------------------
+										File: Q1 - SANJANA M V 2022 Batch,PES University.c
+Error(s) found in file: Q1 - SANJANA M V 2022 Batch,PES University.c
+./ExtractedFiles/test1/Q1 - SANJANA M V 2022 Batch,PES University.c: In function ‘insert’:
+./ExtractedFiles/test1/Q1 - SANJANA M V 2022 Batch,PES University.c:48:16: warning: ‘return’ with a value, in function returning void
+   48 |         return temp;
+      |                ^~~~
+./ExtractedFiles/test1/Q1 - SANJANA M V 2022 Batch,PES University.c:32:6: note: declared here
+   32 | void insert(node *head, int pos, int data){
+      |      ^~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS340 - Zulqar Nain.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 104: One variable per declaration rule not followed
+
+			Line 109: Switch statement does not have default case
+
+			File Number: 3
+			LAPCA Score for file PES1UG21CS340 - Zulqar Nain.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS340 - Zulqar Nain.c is 0.9608585858585859
+			Current avg LAPCA Score is 79.55555555555556
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS732 - Yashaswini Ippili.c
+			Line 23: One variable per declaration rule not followed
+
+			Line 179: One variable per declaration rule not followed
+
+			Line 189: Switch statement does not have default case
+
+			File Number: 4
+			LAPCA Score for file PES1UG21CS732 - Yashaswini Ippili.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS732 - Yashaswini Ippili.c is 0.9608585858585859
+			Current avg LAPCA Score is 91.375
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS509 - Saarth Vardhan.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 107: One variable per declaration rule not followed
+
+			Line 112: Switch statement does not have default case
+
+			File Number: 5
+			LAPCA Score for file PES1UG21CS509 - Saarth Vardhan.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS509 - Saarth Vardhan.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.46666666666667
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS543 - SATHVIK VITTAL 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 110: One variable per declaration rule not followed
+
+			Line 115: Switch statement does not have default case
+
+			File Number: 6
+			LAPCA Score for file PES1UG21CS543 - SATHVIK VITTAL 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS543 - SATHVIK VITTAL 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 103.19444444444444
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS248 - JOHN J J GNANASEELAN 2022 Batch,PES University.c
+			Line 64: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			Line 57: One variable per declaration rule not followed
+
+			Line 114: One variable per declaration rule not followed
+
+			Line 119: Switch statement does not have default case
+
+			File Number: 7
+			LAPCA Score for file PES1UG21CS248 - JOHN J J GNANASEELAN 2022 Batch,PES University.c is 111.3
+			LAPCA Percentage for file PES1UG21CS248 - JOHN J J GNANASEELAN 2022 Batch,PES University.c is 0.8431818181818181
+			Current avg LAPCA Score is 104.35238095238094
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS403 - Pannuru Sidhvi.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 110: One variable per declaration rule not followed
+
+			Line 115: Switch statement does not have default case
+
+			File Number: 8
+			LAPCA Score for file PES1UG21CS403 - Pannuru Sidhvi.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS403 - Pannuru Sidhvi.c is 0.9608585858585859
+			Current avg LAPCA Score is 107.1625
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS524 - SAMARTH S RAO 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 115: One variable per declaration rule not followed
+
+			Line 120: Switch statement does not have default case
+
+			File Number: 9
+			LAPCA Score for file PES1UG21CS524 - SAMARTH S RAO 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS524 - SAMARTH S RAO 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 109.34814814814814
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS213 - Bharath H M.c
+Error(s) found in file: PES1UG21CS213 - Bharath H M.c
+./ExtractedFiles/test1/PES1UG21CS213 - Bharath H M.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS213 - Bharath H M.c:47:8: warning: ‘return’ with a value, in function returning void
+   47 | return head;
+      |        ^~~~
+./ExtractedFiles/test1/PES1UG21CS213 - Bharath H M.c:32:6: note: declared here
+   32 | void insert(node *head, int pos, int data){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS213 - Bharath H M.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS213 - Bharath H M.c:64:8: warning: ‘return’ with a value, in function returning void
+   64 | return head;
+      |        ^~~~
+./ExtractedFiles/test1/PES1UG21CS213 - Bharath H M.c:51:6: note: declared here
+   51 | void delete(node *head){
+      |      ^~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS505 - Priyadarshi Sivakumaran.c
+Error(s) found in file: PES1UG21CS505 - Priyadarshi Sivakumaran.c
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:36:9: error: ‘node’ has no member named ‘link’
+   36 |     temp->link=NULL;
+      |         ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:38:14: error: ‘node’ has no member named ‘link’
+   38 |     head=temp->link;
+      |              ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:46:12: error: ‘node’ has no member named ‘link’
+   46 |     ptr=ptr->link;
+      |            ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:48:8: error: ‘node’ has no member named ‘link’
+   48 |     ptr->link=temp;
+      |        ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:49:9: error: ‘node’ has no member named ‘link’
+   49 |     temp->link=ptr->link;}
+      |         ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:49:19: error: ‘node’ has no member named ‘link’
+   49 |     temp->link=ptr->link;}
+      |                   ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:69:12: error: ‘node’ has no member named ‘link’
+   69 |     ptr=ptr->link->link;
+      |            ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:83:12: error: ‘node’ has no member named ‘link’
+   83 |     ptr=ptr->link;
+      |            ^~
+./ExtractedFiles/test1/PES1UG21CS505 - Priyadarshi Sivakumaran.c:84:12: error: expected ‘;’ before ‘}’ token
+   84 |     count++}
+      |            ^
+      |            ;
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS093 - Anoushka V.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 107: One variable per declaration rule not followed
+
+			Line 112: Switch statement does not have default case
+
+			File Number: 12
+			LAPCA Score for file PES1UG21CS093 - Anoushka V.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS093 - Anoushka V.c is 0.9608585858585859
+			Current avg LAPCA Score is 92.58055555555556
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS168 - DARSHAN V 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 129: One variable per declaration rule not followed
+
+			Line 134: Switch statement does not have default case
+
+			File Number: 13
+			LAPCA Score for file PES1UG21CS168 - DARSHAN V 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS168 - DARSHAN V 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 95.21538461538461
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS537 - SARANG KUMAR 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 124: One variable per declaration rule not followed
+
+			Line 129: Switch statement does not have default case
+
+			File Number: 14
+			LAPCA Score for file PES1UG21CS537 - SARANG KUMAR 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS537 - SARANG KUMAR 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.47380952380952
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS327 - Manju nath.c
+Error(s) found in file: PES1UG21CS327 - Manju nath.c
+./ExtractedFiles/test1/PES1UG21CS327 - Manju nath.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS327 - Manju nath.c:69:1: warning: implicit declaration of function ‘printList’ [-Wimplicit-function-declaration]
+   69 | printList(&p);
+      | ^~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS327 - Manju nath.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS327 - Manju nath.c:95:6: warning: conflicting types for ‘printList’; have ‘void(node *)’
+   95 | void printList(node *head){
+      |      ^~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS327 - Manju nath.c:69:1: note: previous implicit declaration of ‘printList’ with type ‘void(node *)’
+   69 | printList(&p);
+      | ^~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS411 - PIYUSH KAUSHISH 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 111: One variable per declaration rule not followed
+
+			Line 116: Switch statement does not have default case
+
+			File Number: 16
+			LAPCA Score for file PES1UG21CS411 - PIYUSH KAUSHISH 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS411 - PIYUSH KAUSHISH 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 93.21666666666665
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS673 - Tharun M.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 107: One variable per declaration rule not followed
+
+			Line 113: Switch statement does not have default case
+
+			File Number: 17
+			LAPCA Score for file PES1UG21CS673 - Tharun M.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS673 - Tharun M.c is 0.9608585858585859
+			Current avg LAPCA Score is 95.1941176470588
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS118 - Ashay Naik.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 111: One variable per declaration rule not followed
+
+			Line 116: Switch statement does not have default case
+
+			File Number: 18
+			LAPCA Score for file PES1UG21CS118 - Ashay Naik.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS118 - Ashay Naik.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.95185185185183
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS424 - PRAKHAR SAHU 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 127: One variable per declaration rule not followed
+
+			Line 132: Switch statement does not have default case
+
+			File Number: 19
+			LAPCA Score for file PES1UG21CS424 - PRAKHAR SAHU 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS424 - PRAKHAR SAHU 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.52456140350876
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS670 - TEJAS S S.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 120: One variable per declaration rule not followed
+
+			Line 125: Switch statement does not have default case
+
+			File Number: 20
+			LAPCA Score for file PES1UG21CS670 - TEJAS S S.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS670 - TEJAS S S.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.93999999999997
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS194 - Vishnupriya reddy Gade.c
+Error(s) found in file: PES1UG21CS194 - Vishnupriya reddy Gade.c
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:34:6: error: ‘pos’ redeclared as different kind of symbol
+   34 |  int pos=0;
+      |      ^~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:32:29: note: previous definition of ‘pos’ with type ‘int’
+   32 | void insert(node *head, int pos, int data){
+      |                         ~~~~^~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:35:5: error: ‘data’ redeclared as different kind of symbol
+   35 | int data=NULL;
+      |     ^~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:32:38: note: previous definition of ‘data’ with type ‘int’
+   32 | void insert(node *head, int pos, int data){
+      |                                  ~~~~^~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:35:10: warning: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   35 | int data=NULL;
+      |          ^~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:36:5: error: ‘arr’ undeclared (first use in this function)
+   36 | for(arr[i]=0;arr[i]<n;arr[i]++)
+      |     ^~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:36:5: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:36:9: error: ‘i’ undeclared (first use in this function)
+   36 | for(arr[i]=0;arr[i]<n;arr[i]++)
+      |         ^
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:36:21: error: ‘n’ undeclared (first use in this function)
+   36 | for(arr[i]=0;arr[i]<n;arr[i]++)
+      |                     ^
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:38:3: error: ‘newnode’ undeclared (first use in this function); did you mean ‘node’?
+   38 |   newnode=node*head->next;
+      |   ^~~~~~~
+      |   node
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:38:11: error: expected expression before ‘node’
+   38 |   newnode=node*head->next;
+      |           ^~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:50:6: error: ‘newNode’ undeclared (first use in this function); did you mean ‘node’?
+   50 |      newNode=iter->head;
+      |      ^~~~~~~
+      |      node
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:50:14: error: ‘iter’ undeclared (first use in this function)
+   50 |      newNode=iter->head;
+      |              ^~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:51:16: error: ‘newnode’ undeclared (first use in this function); did you mean ‘node’?
+   51 |      int *iter=newnode*head;
+      |                ^~~~~~~
+      |                node
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:53:41: error: request for member ‘info’ in something not a structure or union
+   53 | if(iter==NULL&& newnode->data->info>iter->info);
+      |                                         ^~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:55:20: error: request for member ‘head’ in something not a structure or union
+   55 |   newnode*head=iter->head;
+      |                    ^~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:56:12: error: request for member ‘next’ in something not a structure or union
+   56 |   iter=iter->next;
+      |            ^~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:58:16: error: expected expression before ‘=’ token
+   58 | if( dummyhead!==NULL);
+      |                ^
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:60:20: error: request for member ‘head’ in something not a structure or union
+   60 |   newnode*head=iter->head;
+      |                    ^~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:62:7: error: request for member ‘head’ in something not a structure or union
+   62 |   iter->head=newnode;
+      |       ^~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:70:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘!=’ token
+   70 | for(node*head!==NULL)
+      |              ^~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:72:14: error: expected expression before ‘]’ token
+   72 |   countNodes[]++;
+      |              ^
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:74:4: error: expected expression before ‘node’
+   74 | if(node*head==NULL)
+      |    ^~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:76:13: error: lvalue required as left operand of assignment
+   76 |   countNodes=countNodes-1;
+      |             ^
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:77:4: warning: ‘return’ with no value, in function returning non-void
+   77 |    return;
+      |    ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:68:5: note: declared here
+   68 | int countNodes(node *head){
+      |     ^~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS194 - Vishnupriya reddy Gade.c:138:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ at end of input
+  138 | __
+      | ^~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS026 - Abhishek SV.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 22
+			LAPCA Score for file PES1UG21CS026 - Abhishek SV.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS026 - Abhishek SV.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.61969696969695
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS936 - Srimanish Chandrasekaran.c
+Error(s) found in file: PES1UG21CS936 - Srimanish Chandrasekaran.c
+./ExtractedFiles/test1/PES1UG21CS936 - Srimanish Chandrasekaran.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS936 - Srimanish Chandrasekaran.c:79:9: error: ‘else’ without a previous ‘if’
+   79 |         else{break;}
+      |         ^~~~
+./ExtractedFiles/test1/PES1UG21CS936 - Srimanish Chandrasekaran.c:79:14: error: break statement not within loop or switch
+   79 |         else{break;}
+      |              ^~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS126.c - ATLA SRIVATSAV 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 114: One variable per declaration rule not followed
+
+			Line 119: Switch statement does not have default case
+
+			File Number: 24
+			LAPCA Score for file PES1UG21CS126.c - ATLA SRIVATSAV 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS126.c - ATLA SRIVATSAV 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 93.85277777777776
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS472 - Rahul R.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 118: Switch statement does not have default case
+
+			File Number: 25
+			LAPCA Score for file PES1UG21CS472 - Rahul R.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS472 - Rahul R.c is 0.9608585858585859
+			Current avg LAPCA Score is 95.17199999999998
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS187 - Diya Kalyanpur.c
+Error(s) found in file: PES1UG21CS187 - Diya Kalyanpur.c
+./ExtractedFiles/test1/PES1UG21CS187 - Diya Kalyanpur.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS187 - Diya Kalyanpur.c:40:12: error: ‘ptr’ undeclared (first use in this function); did you mean ‘ptr2’?
+   40 |         if(ptr==NULL){
+      |            ^~~
+      |            ptr2
+./ExtractedFiles/test1/PES1UG21CS187 - Diya Kalyanpur.c:40:12: note: each undeclared identifier is reported only once for each function it appears in
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS603 - Skanda Prasad.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 105: One variable per declaration rule not followed
+
+			Line 110: Switch statement does not have default case
+
+			File Number: 27
+			LAPCA Score for file PES1UG21CS603 - Skanda Prasad.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS603 - Skanda Prasad.c is 0.9608585858585859
+			Current avg LAPCA Score is 92.81975308641975
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS167 - Darshan Babu T.R.c
+Error(s) found in file: PES1UG21CS167 - Darshan Babu T.R.c
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c:38:12: error: expected expression before ‘int’
+   38 |         if(int i=0;i<pos-1;i++)
+      |            ^~~
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c:56:23: error: ‘no_of_nodes’ undeclared (first use in this function)
+   56 |         for(int i=0;i<no_of_nodes;i++)
+      |                       ^~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c:56:23: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS167 - Darshan Babu T.R.c:76:9: error: expected ‘,’ or ‘;’ before ‘while’
+   76 |         while(i!=NULL)
+      |         ^~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS151 - Charitha Keshava Reddy.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 29
+			LAPCA Score for file PES1UG21CS151 - Charitha Keshava Reddy.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS151 - Charitha Keshava Reddy.c is 0.9608585858585859
+			Current avg LAPCA Score is 90.7919540229885
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS346 - MULLAPUDI JAHNAVI 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 132: One variable per declaration rule not followed
+
+			Line 137: Switch statement does not have default case
+
+			File Number: 30
+			LAPCA Score for file PES1UG21CS346 - MULLAPUDI JAHNAVI 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS346 - MULLAPUDI JAHNAVI 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 91.99333333333334
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS054 - Akanksha Mulgund.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 129: One variable per declaration rule not followed
+
+			Line 134: Switch statement does not have default case
+
+			File Number: 31
+			LAPCA Score for file PES1UG21CS054 - Akanksha Mulgund.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS054 - Akanksha Mulgund.c is 0.9608585858585859
+			Current avg LAPCA Score is 93.11720430107528
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS077 - Ananya.c
+Error(s) found in file: PES1UG21CS077 - Ananya.c
+./ExtractedFiles/test1/PES1UG21CS077 - Ananya.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS077 - Ananya.c:45:19: error: ‘temp’ undeclared (first use in this function); did you mean ‘mktemp’?
+   45 |         new->next=temp;
+      |                   ^~~~
+      |                   mktemp
+./ExtractedFiles/test1/PES1UG21CS077 - Ananya.c:45:19: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS077 - Ananya.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS077 - Ananya.c:56:44: error: expected ‘;’ before ‘free’
+   56 |                 temp->next=temp->next->next
+      |                                            ^
+      |                                            ;
+   57 |                 free(del);
+      |                 ~~~~                        
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS368.C - Navya Govil.c
+			Line 13: One variable per declaration rule not followed
+
+			Line 118: One variable per declaration rule not followed
+
+			Line 123: Switch statement does not have default case
+
+			File Number: 33
+			LAPCA Score for file PES1UG21CS368.C - Navya Govil.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS368.C - Navya Govil.c is 0.9608585858585859
+			Current avg LAPCA Score is 91.31717171717173
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS068 - AMAAN FEROZ 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 118: One variable per declaration rule not followed
+
+			Line 123: Switch statement does not have default case
+
+			File Number: 34
+			LAPCA Score for file PES1UG21CS068 - AMAAN FEROZ 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS068 - AMAAN FEROZ 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 92.36176470588236
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS378 - NETTEM GAYATHRI 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 143: One variable per declaration rule not followed
+
+			Line 148: Switch statement does not have default case
+
+			File Number: 35
+			LAPCA Score for file PES1UG21CS378 - NETTEM GAYATHRI 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS378 - NETTEM GAYATHRI 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 93.34666666666669
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS247 - Joel Renjith.c
+			Line 38: Curly braces not used
+
+			Line 68: Curly braces not used
+
+			Line 78: Curly braces not used
+
+			Line 80: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 75: Recursion used in function
+
+			Line 118: Switch statement does not have default case
+
+			File Number: 36
+			LAPCA Score for file PES1UG21CS247 - Joel Renjith.c is 92.83333333333334
+			LAPCA Percentage for file PES1UG21CS247 - Joel Renjith.c is 0.7032828282828284
+			Current avg LAPCA Score is 93.33240740740743
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS170 - Utsav Kumar.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 115: One variable per declaration rule not followed
+
+			Line 120: Switch statement does not have default case
+
+			File Number: 37
+			LAPCA Score for file PES1UG21CS170 - Utsav Kumar.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS170 - Utsav Kumar.c is 0.9608585858585859
+			Current avg LAPCA Score is 94.23783783783787
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS445 - PRATYUSH PANKAJ 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 130: One variable per declaration rule not followed
+
+			Line 135: Switch statement does not have default case
+
+			File Number: 38
+			LAPCA Score for file PES1UG21CS445 - PRATYUSH PANKAJ 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS445 - PRATYUSH PANKAJ 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 95.09561403508775
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS269 - karthik namboori.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 125: One variable per declaration rule not followed
+
+			Line 130: Switch statement does not have default case
+
+			File Number: 39
+			LAPCA Score for file PES1UG21CS269 - karthik namboori.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS269 - karthik namboori.c is 0.9608585858585859
+			Current avg LAPCA Score is 95.90940170940175
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS354 - NACHIKETHA MANOOR 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 118: One variable per declaration rule not followed
+
+			Line 123: Switch statement does not have default case
+
+			File Number: 40
+			LAPCA Score for file PES1UG21CS354 - NACHIKETHA MANOOR 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS354 - NACHIKETHA MANOOR 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.68250000000003
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS262 - K SRINIVASA ANKITA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 118: One variable per declaration rule not followed
+
+			Line 123: Switch statement does not have default case
+
+			File Number: 41
+			LAPCA Score for file PES1UG21CS262 - K SRINIVASA ANKITA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS262 - K SRINIVASA ANKITA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.41788617886183
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS618 - Srikrishna Balaji.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 114: One variable per declaration rule not followed
+
+			Line 119: Switch statement does not have default case
+
+			File Number: 42
+			LAPCA Score for file PES1UG21CS618 - Srikrishna Balaji.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS618 - Srikrishna Balaji.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.118253968254
+------------------------------------------------------------------------------------------------------------------
+										File: PES2UG21CS304 - MRUNAL KULKARNI 2022 Batch,PES University.c
+			Line 60: Curly braces not used
+
+			Line 77: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 123: One variable per declaration rule not followed
+
+			Line 128: Switch statement does not have default case
+
+			File Number: 43
+			LAPCA Score for file PES2UG21CS304 - MRUNAL KULKARNI 2022 Batch,PES University.c is 106.83333333333334
+			LAPCA Percentage for file PES2UG21CS304 - MRUNAL KULKARNI 2022 Batch,PES University.c is 0.8093434343434344
+			Current avg LAPCA Score is 98.32093023255817
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS369.c - Manoj Kumar.c
+Error(s) found in file: PES1UG21CS369.c - Manoj Kumar.c
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:1:3: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘)’ token
+    1 | Q1)
+      |   ^
+In file included from /usr/include/stdio.h:43,
+                 from ./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:3:
+/usr/include/bits/types/struct_FILE.h:95:3: error: unknown type name ‘size_t’
+   95 |   size_t __pad5;
+      |   ^~~~~~
+/usr/include/bits/types/struct_FILE.h:98:67: error: ‘size_t’ undeclared here (not in a function)
+   98 |   char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+      |                                                                   ^~~~~~
+/usr/include/bits/types/struct_FILE.h:1:1: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+  +++ |+#include <stddef.h>
+    1 | /* Copyright (C) 1991-2022 Free Software Foundation, Inc.
+/usr/include/stdio.h:308:35: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  308 | extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+      |                                   ^~~~~~
+/usr/include/stdio.h:314:47: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  314 | extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) __THROW
+      |                                               ^~~~~~
+/usr/include/stdio.h:333:34: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  333 |                     int __modes, size_t __n) __THROW;
+      |                                  ^~~~~~
+/usr/include/stdio.h:339:24: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  339 |                        size_t __size) __THROW;
+      |                        ^~~~~~
+/usr/include/stdio.h:378:44: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  378 | extern int snprintf (char *__restrict __s, size_t __maxlen,
+      |                                            ^~~~~~
+/usr/include/stdio.h:382:45: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  382 | extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+      |                                             ^~~~~~
+/usr/include/stdio.h:633:30: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  633 |                              size_t *__restrict __n, int __delimiter,
+      |                              ^~~~~~
+/usr/include/stdio.h:636:28: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  636 |                            size_t *__restrict __n, int __delimiter,
+      |                            ^~~~~~
+/usr/include/stdio.h:646:27: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  646 |                           size_t *__restrict __n,
+      |                           ^~~~~~
+/usr/include/stdio.h:675:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fread’
+  675 | extern size_t fread (void *__restrict __ptr, size_t __size,
+      |               ^~~~~
+/usr/include/stdio.h:681:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fwrite’
+  681 | extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+      |               ^~~~~~
+/usr/include/stdio.h:702:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fread_unlocked’
+  702 | extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+      |               ^~~~~~~~~~~~~~
+/usr/include/stdio.h:704:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘fwrite_unlocked’
+  704 | extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+      |               ^~~~~~~~~~~~~~~
+In file included from ./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:4:
+/usr/include/stdlib.h:98:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘__ctype_get_mb_cur_max’
+   98 | extern size_t __ctype_get_mb_cur_max (void) __THROW __wur;
+      |               ^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/stdlib.h:412:25: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  412 |                         size_t __statelen) __THROW __nonnull ((2));
+      |                         ^~~~~~
+/usr/include/stdlib.h:442:25: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  442 |                         size_t __statelen,
+      |                         ^~~~~~
+/usr/include/stdlib.h:542:42: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  542 | extern void arc4random_buf (void *__buf, size_t __size)
+      |                                          ^~~~~~
+/usr/include/stdlib.h:553:22: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  553 | extern void *malloc (size_t __size) __THROW __attribute_malloc__
+      |                      ^~~~~~
+/usr/include/stdlib.h:556:22: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  556 | extern void *calloc (size_t __nmemb, size_t __size)
+      |                      ^~~~~~
+/usr/include/stdlib.h:556:38: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  556 | extern void *calloc (size_t __nmemb, size_t __size)
+      |                                      ^~~~~~
+/usr/include/stdlib.h:564:36: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  564 | extern void *realloc (void *__ptr, size_t __size)
+      |                                    ^~~~~~
+/usr/include/stdlib.h:576:41: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  576 | extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
+      |                                         ^~~~~~
+/usr/include/stdlib.h:576:57: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  576 | extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
+      |                                                         ^~~~~~
+/usr/include/stdlib.h:582:41: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  582 | extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
+      |                                         ^~~~~~
+/usr/include/stdlib.h:582:57: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  582 | extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
+      |                                                         ^~~~~~
+In file included from /usr/include/stdlib.h:587:
+/usr/include/alloca.h:32:22: error: expected declaration specifiers or ‘...’ before ‘size_t’
+   32 | extern void *alloca (size_t __size) __THROW;
+      |                      ^~~~~~
+/usr/include/stdlib.h:593:22: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  593 | extern void *valloc (size_t __size) __THROW __attribute_malloc__
+      |                      ^~~~~~
+/usr/include/stdlib.h:599:45: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  599 | extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+      |                                             ^~~~~~
+/usr/include/stdlib.h:599:65: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  599 | extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+      |                                                                 ^~~~~~
+/usr/include/stdlib.h:605:29: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  605 | extern void *aligned_alloc (size_t __alignment, size_t __size)
+      |                             ^~~~~~
+/usr/include/stdlib.h:605:49: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  605 | extern void *aligned_alloc (size_t __alignment, size_t __size)
+      |                                                 ^~~~~~
+/usr/include/stdlib.h:842:23: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  842 |                       size_t __nmemb, size_t __size, __compar_fn_t __compar)
+      |                       ^~~~~~
+/usr/include/stdlib.h:842:39: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  842 |                       size_t __nmemb, size_t __size, __compar_fn_t __compar)
+      |                                       ^~~~~~
+/usr/include/stdlib.h:851:34: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  851 | extern void qsort (void *__base, size_t __nmemb, size_t __size,
+      |                                  ^~~~~~
+/usr/include/stdlib.h:851:50: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  851 | extern void qsort (void *__base, size_t __nmemb, size_t __size,
+      |                                                  ^~~~~~
+/usr/include/stdlib.h:925:20: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  925 |                    size_t __len) __THROW __nonnull ((3, 4, 5));
+      |                    ^~~~~~
+/usr/include/stdlib.h:928:20: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  928 |                    size_t __len) __THROW __nonnull ((3, 4, 5));
+      |                    ^~~~~~
+/usr/include/stdlib.h:932:45: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  932 |                     char *__restrict __buf, size_t __len)
+      |                                             ^~~~~~
+/usr/include/stdlib.h:936:45: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  936 |                     char *__restrict __buf, size_t __len)
+      |                                             ^~~~~~
+/usr/include/stdlib.h:943:36: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  943 | extern int mblen (const char *__s, size_t __n) __THROW;
+      |                                    ^~~~~~
+/usr/include/stdlib.h:947:48: error: expected declaration specifiers or ‘...’ before ‘size_t’
+  947 |                    const char *__restrict __s, size_t __n) __THROW;
+      |                                                ^~~~~~
+/usr/include/stdlib.h:954:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘mbstowcs’
+  954 | extern size_t mbstowcs (wchar_t *__restrict  __pwcs,
+      |               ^~~~~~~~
+/usr/include/stdlib.h:958:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘wcstombs’
+  958 | extern size_t wcstombs (char *__restrict __s,
+      |               ^~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c: In function ‘createLinkedList’:
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:16:30: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+   16 |     node* dummyhead = (node*)malloc(sizeof(node));
+      |                              ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:5:1: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+    4 | #include<stdlib.h>
+  +++ |+#include <stdlib.h>
+    5 | 
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:16:30: warning: incompatible implicit declaration of built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+   16 |     node* dummyhead = (node*)malloc(sizeof(node));
+      |                              ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:16:30: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:35:5: error: ‘newNode’ undeclared (first use in this function); did you mean ‘node’?
+   35 |     newNode  = (node*0)malloc(sizeof(node));
+      |     ^~~~~~~
+      |     node
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:35:5: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:35:22: error: expected ‘)’ before numeric constant
+   35 |     newNode  = (node*0)malloc(sizeof(node));
+      |                ~     ^
+      |                      )
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:35:24: warning: incompatible implicit declaration of built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+   35 |     newNode  = (node*0)malloc(sizeof(node));
+      |                        ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:35:24: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:36:24: error: ‘ele’ undeclared (first use in this function)
+   36 |     newNode  -> data = ele
+      |                        ^~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:36:27: error: expected ‘;’ before ‘newNode’
+   36 |     newNode  -> data = ele
+      |                           ^
+      |                           ;
+   37 |     newNode  -> next = NULL;
+      |     ~~~~~~~                
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:38:5: error: ‘iter’ undeclared (first use in this function)
+   38 |     iter ->next =newNode;
+      |     ^~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:47:2: error: ‘newNode’ undeclared (first use in this function); did you mean ‘node’?
+   47 |  newNode  = (node*0)malloc(sizeof(node));
+      |  ^~~~~~~
+      |  node
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:47:19: error: expected ‘)’ before numeric constant
+   47 |  newNode  = (node*0)malloc(sizeof(node));
+      |             ~     ^
+      |                   )
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:47:21: warning: incompatible implicit declaration of built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+   47 |  newNode  = (node*0)malloc(sizeof(node));
+      |                     ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:47:21: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:48:24: error: ‘ele’ undeclared (first use in this function)
+   48 |     newNode  -> data = ele
+      |                        ^~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:48:27: error: expected ‘;’ before ‘newNode’
+   48 |     newNode  -> data = ele
+      |                           ^
+      |                           ;
+   49 |     newNode  -> next = NULL;
+      |     ~~~~~~~                
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:50:5: error: ‘iter’ undeclared (first use in this function)
+   50 |     iter ->next =newNode;
+      |     ^~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:59:24: error: ‘n’ undeclared (first use in this function)
+   59 |     for(int i = 0; i < n; i++){
+      |                        ^
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:61:25: error: ‘arr’ undeclared (first use in this function)
+   61 |         newNode->data = arr[i];
+      |                         ^~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:130:1: error: ‘___________________________________’ undeclared (first use in this function)
+  130 | ___________________________________
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:130:36: error: expected ‘;’ at end of input
+  130 | ___________________________________
+      |                                    ^
+      |                                    ;
+./ExtractedFiles/test1/PES1UG21CS369.c - Manoj Kumar.c:130:1: error: expected declaration or statement at end of input
+  130 | ___________________________________
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS415 - PRADHYUMNA UPADHYA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 45
+			LAPCA Score for file PES1UG21CS415 - PRADHYUMNA UPADHYA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS415 - PRADHYUMNA UPADHYA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.76962962962965
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS391 - NIROOP CHENGAPPA KARERA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 46
+			LAPCA Score for file PES1UG21CS391 - NIROOP CHENGAPPA KARERA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS391 - NIROOP CHENGAPPA KARERA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.4231884057971
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS654 - Swathi Karanth.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 45: One variable per declaration rule not followed
+
+			Line 59: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 47
+			LAPCA Score for file PES1UG21CS654 - Swathi Karanth.c is 126.3
+			LAPCA Percentage for file PES1UG21CS654 - Swathi Karanth.c is 0.9568181818181818
+			Current avg LAPCA Score is 98.03758865248228
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS569 - Shreya Halgeri.c
+Error(s) found in file: PES1UG21CS569 - Shreya Halgeri.c
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:36:16: warning: implicit declaration of function ‘count’ [-Wimplicit-function-declaration]
+   36 |         int n =count(pl);
+      |                ^~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:37:8: error: two or more data types in declaration specifiers
+   37 |   node int *p , *elep=pl->head;
+      |        ^~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:37:18: error: conflicting types for ‘elep’; have ‘node *’
+   37 |   node int *p , *elep=pl->head;
+      |                  ^~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:34:18: note: previous declaration of ‘elep’ with type ‘int *’
+   34 |         int *pl,*elep;
+      |                  ^~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:37:25: error: request for member ‘head’ in something not a structure or union
+   37 |   node int *p , *elep=pl->head;
+      |                         ^~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:40:1: error: expected expression before ‘}’ token
+   40 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:41:16: warning: ‘return’ with a value, in function returning void
+   41 |         return 0;
+      |                ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:32:6: note: declared here
+   32 | void insert(node *head, int pos, int data){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:44:17: warning: implicit declaration of function ‘insertfront’ [-Wimplicit-function-declaration]
+   44 |                 insertfront(*p,*ele);
+      |                 ^~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:44:32: error: invalid type argument of unary ‘*’ (have ‘int’)
+   44 |                 insertfront(*p,*ele);
+      |                                ^~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:48:16: warning: ‘return’ with a value, in function returning void
+   48 |         return 1;
+      |                ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:32:6: note: declared here
+   32 | void insert(node *head, int pos, int data){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:51:9: warning: data definition has no type or storage class
+   51 |         newnode=createnode(ele);
+      |         ^~~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:51:9: warning: type defaults to ‘int’ in declaration of ‘newnode’ [-Wimplicit-int]
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:51:17: warning: implicit declaration of function ‘createnode’ [-Wimplicit-function-declaration]
+   51 |         newnode=createnode(ele);
+      |                 ^~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:51:28: error: ‘ele’ undeclared here (not in a function)
+   51 |         newnode=createnode(ele);
+      |                            ^~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:52:10: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   52 |         p->next=newnode;
+      |          ^~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:53:1: error: expected identifier or ‘(’ before ‘{’ token
+   53 | {
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:58:9: error: expected identifier or ‘(’ before ‘return’
+   58 |         return 1;
+      |         ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:65:9: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘int’
+   65 |         int n =count(pl);
+      |         ^~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:66:9: error: parameter ‘q’ is initialized
+   66 |         node *q=NULL , *pele=pl->head;
+      |         ^~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:66:15: error: conflicting types for ‘q’; have ‘node *’
+   66 |         node *q=NULL , *pele=pl->head;
+      |               ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:64:14: note: previous definition of ‘q’ with type ‘int *’
+   64 |         int *q,*pele
+      |              ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:66:9: error: parameter ‘pele’ is initialized
+   66 |         node *q=NULL , *pele=pl->head;
+      |         ^~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:66:32: error: invalid type argument of ‘->’ (have ‘int’)
+   66 |         node *q=NULL , *pele=pl->head;
+      |                                ^~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:61:6: error: old-style parameter declarations in prototyped function definition
+   61 | void delete(node *head)
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:68:12: error: ‘pos’ undeclared (first use in this function)
+   68 |         if(pos<0 || pos>=n)
+      |            ^~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:68:12: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:68:26: error: ‘n’ undeclared (first use in this function)
+   68 |         if(pos<0 || pos>=n)
+      |                          ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:70:16: warning: ‘return’ with a value, in function returning void
+   70 |         return 0;}
+      |                ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:61:6: note: declared here
+   61 | void delete(node *head)
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:71:1: error: expected identifier or ‘(’ before ‘{’ token
+   71 | {
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:76:9: error: expected identifier or ‘(’ before ‘return’
+   76 |         return 1;
+      |         ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:77:1: error: expected identifier or ‘(’ before ‘}’ token
+   77 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:79:1: error: expected identifier or ‘(’ before ‘{’ token
+   79 | {
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:84:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   84 | *pele->next=info
+      |      ^~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:86:2: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   86 | q->next=p->next;
+      |  ^~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:87:1: error: unknown type name ‘free’
+   87 | free p;
+      | ^~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:3:1: note: ‘free’ is defined in header ‘<stdlib.h>’; did you forget to ‘#include <stdlib.h>’?
+    2 | #include<stdlib.h>
+  +++ |+#include <stdlib.h>
+    3 | 
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:88:9: error: expected identifier or ‘(’ before ‘return’
+   88 |         return 1;
+      |         ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:90:1: error: expected identifier or ‘(’ before ‘}’ token
+   90 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:92:1: error: expected identifier or ‘(’ before ‘}’ token
+   92 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS569 - Shreya Halgeri.c:101:9: error: expected identifier or ‘(’ before ‘{’ token
+  101 |         {
+      |         ^
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS298 - LAKSHMEESH R BHAT 2022 Batch,PES University.c
+			Line 42: Curly braces not used
+
+			Line 45: Curly braces not used
+
+			Line 55: Curly braces not used
+
+			Line 70: Curly braces not used
+
+			Line 82: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 122: One variable per declaration rule not followed
+
+			Line 127: Switch statement does not have default case
+
+			File Number: 49
+			LAPCA Score for file PES1UG21CS298 - LAKSHMEESH R BHAT 2022 Batch,PES University.c is 101.83333333333334
+			LAPCA Percentage for file PES1UG21CS298 - LAKSHMEESH R BHAT 2022 Batch,PES University.c is 0.7714646464646465
+			Current avg LAPCA Score is 96.11428571428573
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS255 - Asbar K.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 122: One variable per declaration rule not followed
+
+			Line 127: Switch statement does not have default case
+
+			File Number: 50
+			LAPCA Score for file PES1UG21CS255 - Asbar K.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS255 - Asbar K.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.72866666666667
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS265 - Siddharth Rao.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 115: One variable per declaration rule not followed
+
+			Line 120: Switch statement does not have default case
+
+			File Number: 51
+			LAPCA Score for file PES1UG21CS265 - Siddharth Rao.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS265 - Siddharth Rao.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.31895424836601
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS086 - ANIRUDH LAKHOTIA 2022 Batch,PES University.c
+			Line 34: Curly braces not used
+
+			Line 35: Curly braces not used
+
+			Line 59: Curly braces not used
+
+			Line 76: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 115: One variable per declaration rule not followed
+
+			Line 120: Switch statement does not have default case
+
+			File Number: 52
+			LAPCA Score for file PES1UG21CS086 - ANIRUDH LAKHOTIA 2022 Batch,PES University.c is 102.83333333333334
+			LAPCA Percentage for file PES1UG21CS086 - ANIRUDH LAKHOTIA 2022 Batch,PES University.c is 0.7790404040404041
+			Current avg LAPCA Score is 97.42499999999998
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS725 - Hina Bana.c
+			Line 37: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 96: One variable per declaration rule not followed
+
+			Line 101: Switch statement does not have default case
+
+			File Number: 53
+			LAPCA Score for file PES1UG21CS725 - Hina Bana.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS725 - Hina Bana.c is 0.8472222222222223
+			Current avg LAPCA Score is 97.69685534591193
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS338 - MOHAMMED MUTASIM 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 54
+			LAPCA Score for file PES1UG21CS338 - MOHAMMED MUTASIM 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS338 - MOHAMMED MUTASIM 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.2364197530864
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS244 - JAYANTH K 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 114: One variable per declaration rule not followed
+
+			Line 119: Switch statement does not have default case
+
+			File Number: 55
+			LAPCA Score for file PES1UG21CS244 - JAYANTH K 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS244 - JAYANTH K 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.75636363636362
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS061 - AKSHATA LAXMAN PAWAR 2022 Batch,PES University.c
+			Line 13: One variable per declaration rule not followed
+
+			Line 125: One variable per declaration rule not followed
+
+			Line 130: Switch statement does not have default case
+
+			File Number: 56
+			LAPCA Score for file PES1UG21CS061 - AKSHATA LAXMAN PAWAR 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS061 - AKSHATA LAXMAN PAWAR 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.25773809523807
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS053 - AJEY BHAT 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 127: One variable per declaration rule not followed
+
+			Line 132: Switch statement does not have default case
+
+			File Number: 57
+			LAPCA Score for file PES1UG21CS053 - AJEY BHAT 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS053 - AJEY BHAT 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.74152046783622
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS549 - SHAIK ADEEBA SAHER 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			Line 119: One variable per declaration rule not followed
+
+			Line 124: Switch statement does not have default case
+
+			File Number: 58
+			LAPCA Score for file PES1UG21CS549 - SHAIK ADEEBA SAHER 2022 Batch,PES University.c is 126.5
+			LAPCA Percentage for file PES1UG21CS549 - SHAIK ADEEBA SAHER 2022 Batch,PES University.c is 0.9583333333333334
+			Current avg LAPCA Score is 100.20287356321836
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS559 - Shauryadeep Sinh G Raolji.c
+Error(s) found in file: PES1UG21CS559 - Shauryadeep Sinh G Raolji.c
+./ExtractedFiles/test1/PES1UG21CS559 - Shauryadeep Sinh G Raolji.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS559 - Shauryadeep Sinh G Raolji.c:34:17: warning: implicit declaration of function ‘countNodes’ [-Wimplicit-function-declaration]
+   34 |         int n = countNodes(head);
+      |                 ^~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS383(1) - NIHAAL KUCHANGI.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 111: One variable per declaration rule not followed
+
+			Line 116: Switch statement does not have default case
+
+			File Number: 60
+			LAPCA Score for file PES1UG21CS383(1) - NIHAAL KUCHANGI.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS383(1) - NIHAAL KUCHANGI.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.97666666666663
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS316 - MAHIMAA C S 2022 Batch,PES University.c
+			Line 38: Curly braces not used
+
+			Line 55: Curly braces not used
+
+			Line 64: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 61
+			LAPCA Score for file PES1UG21CS316 - MAHIMAA C S 2022 Batch,PES University.c is 104.33333333333334
+			LAPCA Percentage for file PES1UG21CS316 - MAHIMAA C S 2022 Batch,PES University.c is 0.7904040404040404
+			Current avg LAPCA Score is 99.0644808743169
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS562 - SHIVGOUDA H PATIL 2022 Batch,PES University.c
+Error in file PES1UG21CS562 - SHIVGOUDA H PATIL 2022 Batch,PES University.c.
+Traceback (most recent call last):
+  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/C/C_Parser_new.py", line 646, in <module>
+    MainTransformer().run()
+  File "/home/swaroop/Desktop/LAPCA-Capstone/Language/C/C_Parser_new.py", line 17, in run
+    CParserActions().visit_topdown(C_parser.parse(file))
+  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/lark.py", line 625, in parse
+    return self.parser.parse(text, start=start, on_error=on_error)
+  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/parser_frontends.py", line 96, in parse
+    return self.parser.parse(stream, chosen_start, **kw)
+  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/parsers/earley.py", line 266, in parse
+    to_scan = self._parse(lexer, columns, to_scan, start_symbol)
+  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/parsers/xearley.py", line 146, in _parse
+    to_scan = scan(i, to_scan)
+  File "/home/swaroop/.local/lib/python3.10/site-packages/lark/parsers/xearley.py", line 119, in scan
+    raise UnexpectedCharacters(stream, i, text_line, text_column, {item.expect.name for item in to_scan},
+lark.exceptions.UnexpectedCharacters: No terminal matches '{' in the current parser context, at line 51 col 27
+
+	int countNode(node *head){
+                                 ^
+Expected one of: 
+	* __ATTRIBUTE__
+	* COMMA
+	* ASSIGN
+	* LEFTPAREN
+	* SEMI
+	* LEFTBRACKET
+	* __ASM
+
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS654 - Swathi Karanth(1).c
+			Line 12: One variable per declaration rule not followed
+
+			Line 45: One variable per declaration rule not followed
+
+			Line 59: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 63
+			LAPCA Score for file PES1UG21CS654 - Swathi Karanth(1).c is 126.3
+			LAPCA Percentage for file PES1UG21CS654 - Swathi Karanth(1).c is 0.9568181818181818
+			Current avg LAPCA Score is 97.92433862433859
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS200 - GANTA SRILALITHA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 106: One variable per declaration rule not followed
+
+			Line 111: Switch statement does not have default case
+
+			File Number: 64
+			LAPCA Score for file PES1UG21CS200 - GANTA SRILALITHA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS200 - GANTA SRILALITHA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.37604166666662
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS727 - YADUNAND SIDDARTH.c
+Error(s) found in file: PES1UG21CS727 - YADUNAND SIDDARTH.c
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:46:1: error: expected expression before ‘}’ token
+   46 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:55:5: error: unknown type name ‘Node’; did you mean ‘node’?
+   55 |     Node *prev = head;
+      |     ^~~~
+      |     node
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:55:18: warning: initialization of ‘int *’ from incompatible pointer type ‘node *’ [-Wincompatible-pointer-types]
+   55 |     Node *prev = head;
+      |                  ^~~~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:56:5: error: unknown type name ‘Node’; did you mean ‘node’?
+   56 |     Node *node = head->next;
+      |     ^~~~
+      |     node
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:56:18: warning: initialization of ‘int *’ from incompatible pointer type ‘struct node *’ [-Wincompatible-pointer-types]
+   56 |     Node *node = head->next;
+      |                  ^~~~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:61:13: error: request for member ‘next’ in something not a structure or union
+   61 |         prev->next = node->next;
+      |             ^~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:61:26: error: request for member ‘next’ in something not a structure or union
+   61 |         prev->next = node->next;
+      |                          ^~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:62:16: warning: passing argument 1 of ‘delete’ from incompatible pointer type [-Wincompatible-pointer-types]
+   62 |         delete(node);
+      |                ^~~~
+      |                |
+      |                int *
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:49:19: note: expected ‘node *’ but argument is of type ‘int *’
+   49 | void delete(node *head){
+      |             ~~~~~~^~~~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:64:20: error: request for member ‘next’ in something not a structure or union
+   64 |         prev = prev->next;
+      |                    ^~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:66:24: error: request for member ‘next’ in something not a structure or union
+   66 |             node = prev->next;
+      |                        ^~
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS727 - YADUNAND SIDDARTH.c:73:1: error: expected identifier or ‘(’ before ‘}’ token
+   73 | }
+      | ^
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS433 - Pranav T P.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 119: One variable per declaration rule not followed
+
+			Line 124: Switch statement does not have default case
+
+			File Number: 66
+			LAPCA Score for file PES1UG21CS433 - Pranav T P.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS433 - Pranav T P.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.31666666666662
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS296 - KUSHANG KISSLAY GOSWAMI 2022 Batch,PES University.c
+			Line 43: Curly braces not used
+
+			Line 55: Curly braces not used
+
+			Line 77: Curly braces not used
+
+			Dead code statement in delete at line 75
+
+			Line 14: One variable per declaration rule not followed
+
+			Line 61: One variable per declaration rule not followed
+
+			Line 76: One variable per declaration rule not followed
+
+			Line 118: One variable per declaration rule not followed
+
+			Line 71: Recursion used in function
+
+			Line 123: Switch statement does not have default case
+
+			File Number: 67
+			LAPCA Score for file PES1UG21CS296 - KUSHANG KISSLAY GOSWAMI 2022 Batch,PES University.c is 83.8
+			LAPCA Percentage for file PES1UG21CS296 - KUSHANG KISSLAY GOSWAMI 2022 Batch,PES University.c is 0.6348484848484848
+			Current avg LAPCA Score is 97.11492537313428
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS739 - Geethika Chowdary.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 120: One variable per declaration rule not followed
+
+			Line 125: Switch statement does not have default case
+
+			Empty function found at line 32
+
+			File Number: 68
+			LAPCA Score for file PES1UG21CS739 - Geethika Chowdary.c is 116.83333333333333
+			LAPCA Percentage for file PES1UG21CS739 - Geethika Chowdary.c is 0.88510101010101
+			Current avg LAPCA Score is 97.40490196078427
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS517 - SAJAL JAISWAL 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 116: One variable per declaration rule not followed
+
+			Line 121: Switch statement does not have default case
+
+			File Number: 69
+			LAPCA Score for file PES1UG21CS517 - SAJAL JAISWAL 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS517 - SAJAL JAISWAL 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.83140096618352
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS629 - Stuti Pathak.c
+			Line 15: One variable per declaration rule not followed
+
+			Line 37: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 70
+			LAPCA Score for file PES1UG21CS629 - Stuti Pathak.c is 126.5
+			LAPCA Percentage for file PES1UG21CS629 - Stuti Pathak.c is 0.9583333333333334
+			Current avg LAPCA Score is 98.24095238095234
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS256 - Vardhan KNC.c
+			Line 48: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 120: One variable per declaration rule not followed
+
+			Line 125: Switch statement does not have default case
+
+			File Number: 71
+			LAPCA Score for file PES1UG21CS256 - Vardhan KNC.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS256 - Vardhan KNC.c is 0.8472222222222223
+			Current avg LAPCA Score is 98.43239436619713
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS140 - Bhuvan Vijay Kumar.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 124: One variable per declaration rule not followed
+
+			Line 129: Switch statement does not have default case
+
+			File Number: 72
+			LAPCA Score for file PES1UG21CS140 - Bhuvan Vijay Kumar.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS140 - Bhuvan Vijay Kumar.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.8268518518518
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS196 - GAGAN H R 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 72: One variable per declaration rule not followed
+
+			Line 126: One variable per declaration rule not followed
+
+			Line 131: Switch statement does not have default case
+
+			File Number: 73
+			LAPCA Score for file PES1UG21CS196 - GAGAN H R 2022 Batch,PES University.c is 126.5
+			LAPCA Percentage for file PES1UG21CS196 - GAGAN H R 2022 Batch,PES University.c is 0.9583333333333334
+			Current avg LAPCA Score is 99.2059360730593
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS602 - SIYANI VENGATAGIRI 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 116: One variable per declaration rule not followed
+
+			Line 121: Switch statement does not have default case
+
+			File Number: 74
+			LAPCA Score for file PES1UG21CS602 - SIYANI VENGATAGIRI 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS602 - SIYANI VENGATAGIRI 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.57927927927922
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS345 - Bhargav Narayanan.c
+Error(s) found in file: PES1UG21CS345 - Bhargav Narayanan.c
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:30:13: error: ‘data’ redeclared as different kind of symbol
+   30 |         int data,position;
+      |             ^~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:28:38: note: previous definition of ‘data’ with type ‘int’
+   28 | void insert(node *head, int pos, int data){
+      |                                  ~~~~^~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:31:30: warning: implicit declaration of function ‘maloc’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+   31 |         struct node *newNode=maloc(sizeof(struct node));
+      |                              ^~~~~
+      |                              malloc
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:31:30: warning: initialization of ‘struct node *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:37:17: error: ‘temp’ undeclared (first use in this function); did you mean ‘mktemp’?
+   37 |                 temp=temp->next;
+      |                 ^~~~
+      |                 mktemp
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:37:17: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:39:9: error: ‘temp2’ undeclared (first use in this function)
+   39 |         temp2=temp->next;
+      |         ^~~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:42:1: warning: implicit declaration of function ‘printList’ [-Wimplicit-function-declaration]
+   42 | printList(node *head);
+      | ^~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:42:11: error: expected expression before ‘node’
+   42 | printList(node *head);
+      |           ^~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:47:26: error: expected expression before ‘struct’
+   47 |         struct node*temp=struct node *head;
+      |                          ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:56:16: warning: ‘return’ with a value, in function returning void
+   56 |         return head;
+      |                ^~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:44:6: note: declared here
+   44 | void delete(node *head){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:57:11: error: expected expression before ‘node’
+   57 | printList(node *head);
+      |           ^~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:63:23: error: expected expression before ‘:’ token
+   63 |         if(head==NULL):
+      |                       ^
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:72:6: warning: conflicting types for ‘printList’; have ‘void(node *)’
+   72 | void printList(node *head){
+      |      ^~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS345 - Bhargav Narayanan.c:42:1: note: previous implicit declaration of ‘printList’ with type ‘void(node *)’
+   42 | printList(node *head);
+      | ^~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS098 - Anupama Kamath.c
+			Line 13: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			Line 110: One variable per declaration rule not followed
+
+			Line 115: Switch statement does not have default case
+
+			File Number: 76
+			LAPCA Score for file PES1UG21CS098 - Anupama Kamath.c is 126.5
+			LAPCA Percentage for file PES1UG21CS098 - Anupama Kamath.c is 0.9583333333333334
+			Current avg LAPCA Score is 98.62324561403503
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS303 - LIKHITH V KUNDER 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 118: Switch statement does not have default case
+
+			File Number: 77
+			LAPCA Score for file PES1UG21CS303 - LIKHITH V KUNDER 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS303 - LIKHITH V KUNDER 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.98961038961033
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS357 - Namita Patil.c
+			Line 78: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 122: One variable per declaration rule not followed
+
+			Line 127: Switch statement does not have default case
+
+			File Number: 78
+			LAPCA Score for file PES1UG21CS357 - Namita Patil.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS357 - Namita Patil.c is 0.8472222222222223
+			Current avg LAPCA Score is 99.15427350427343
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS380 - NIDHI P G 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 106: One variable per declaration rule not followed
+
+			Line 111: Switch statement does not have default case
+
+			File Number: 79
+			LAPCA Score for file PES1UG21CS380 - NIDHI P G 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS380 - NIDHI P G 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.5046413502109
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS184 - Disha M.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 115: One variable per declaration rule not followed
+
+			Line 120: Switch statement does not have default case
+
+			File Number: 80
+			LAPCA Score for file PES1UG21CS184 - Disha M.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS184 - Disha M.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.84624999999993
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS163 - Abhaycm Cm.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 110: One variable per declaration rule not followed
+
+			Line 115: Switch statement does not have default case
+
+			File Number: 81
+			LAPCA Score for file PES1UG21CS163 - Abhaycm Cm.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS163 - Abhaycm Cm.c is 0.9608585858585859
+			Current avg LAPCA Score is 100.17942386831268
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS460 - Pushparaj Shetty.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 147: One variable per declaration rule not followed
+
+			Line 152: Switch statement does not have default case
+
+			File Number: 82
+			LAPCA Score for file PES1UG21CS460 - Pushparaj Shetty.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS460 - Pushparaj Shetty.c is 0.9608585858585859
+			Current avg LAPCA Score is 100.50447154471539
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS169 - Deeksha Krishnappa.c
+Error(s) found in file: PES1UG21CS169 - Deeksha Krishnappa.c
+./ExtractedFiles/test1/PES1UG21CS169 - Deeksha Krishnappa.c: In function ‘main’:
+./ExtractedFiles/test1/PES1UG21CS169 - Deeksha Krishnappa.c:138:17: error: too few arguments to function ‘delete’
+  138 |                 delete(head);
+      |                 ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS169 - Deeksha Krishnappa.c:50:6: note: declared here
+   50 | void delete(node *head, int pos, int data, node iter, node * next){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS169 - Deeksha Krishnappa.c:142:31: error: too few arguments to function ‘countNodes’
+  142 |                 no_of_nodes = countNodes(head);
+      |                               ^~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS169 - Deeksha Krishnappa.c:69:5: note: declared here
+   69 | int countNodes(node *head, int data, node *iter){
+      |     ^~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS664 - tanvi jain.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 118: Switch statement does not have default case
+
+			File Number: 84
+			LAPCA Score for file PES1UG21CS664 - tanvi jain.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS664 - tanvi jain.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.62142857142851
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS039 - ADITI PRABHU A 2022 Batch,PES University.c
+Error(s) found in file: PES1UG21CS039 - ADITI PRABHU A 2022 Batch,PES University.c
+./ExtractedFiles/test1/PES1UG21CS039 - ADITI PRABHU A 2022 Batch,PES University.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS039 - ADITI PRABHU A 2022 Batch,PES University.c:75:11: error: expected ‘)’ before ‘;’ token
+   75 |         count++;
+      |           ^
+      |           )
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS164 - D L RAMESHWAR 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 86
+			LAPCA Score for file PES1UG21CS164 - D L RAMESHWAR 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS164 - D L RAMESHWAR 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.77945736434104
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS738 - Zainab Usman.c
+			Line 14: One variable per declaration rule not followed
+
+			Line 119: One variable per declaration rule not followed
+
+			Line 124: Switch statement does not have default case
+
+			File Number: 87
+			LAPCA Score for file PES1UG21CS738 - Zainab Usman.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS738 - Zainab Usman.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.10191570881221
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS149 - Chandana S M.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 118: Switch statement does not have default case
+
+			File Number: 88
+			LAPCA Score for file PES1UG21CS149 - Chandana S M.c is 126.5
+			LAPCA Percentage for file PES1UG21CS149 - Chandana S M.c is 0.9583333333333334
+			Current avg LAPCA Score is 99.41325757575754
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS397 - OMKAR JOIS 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 103: One variable per declaration rule not followed
+
+			Line 108: Switch statement does not have default case
+
+			File Number: 89
+			LAPCA Score for file PES1UG21CS397 - OMKAR JOIS 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS397 - OMKAR JOIS 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.72134831460671
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS362 - Nandan N Prabhu.c
+			Line 71: Curly braces not used
+
+			Line 81: Curly braces not used
+
+			Line 13: One variable per declaration rule not followed
+
+			Line 121: One variable per declaration rule not followed
+
+			Line 126: Switch statement does not have default case
+
+			File Number: 90
+			LAPCA Score for file PES1UG21CS362 - Nandan N Prabhu.c is 106.83333333333334
+			LAPCA Percentage for file PES1UG21CS362 - Nandan N Prabhu.c is 0.8093434343434344
+			Current avg LAPCA Score is 99.80037037037035
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS579 - Shreyas Bandi.c
+			Line 44: Curly braces not used
+
+			Line 67: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 126: One variable per declaration rule not followed
+
+			Line 131: Switch statement does not have default case
+
+			File Number: 91
+			LAPCA Score for file PES1UG21CS579 - Shreyas Bandi.c is 106.83333333333334
+			LAPCA Percentage for file PES1UG21CS579 - Shreyas Bandi.c is 0.8093434343434344
+			Current avg LAPCA Score is 99.87765567765565
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS272 - Kaushik Jegadeesan.c
+			Line 42: Curly braces not used
+
+			Line 65: Curly braces not used
+
+			Line 76: Curly braces not used
+
+			Line 91: Curly braces not used
+
+			Line 13: One variable per declaration rule not followed
+
+			Line 135: One variable per declaration rule not followed
+
+			Line 140: Switch statement does not have default case
+
+			File Number: 92
+			LAPCA Score for file PES1UG21CS272 - Kaushik Jegadeesan.c is 102.83333333333334
+			LAPCA Percentage for file PES1UG21CS272 - Kaushik Jegadeesan.c is 0.7790404040404041
+			Current avg LAPCA Score is 99.90978260869564
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS260 - Sai Vignesh.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 121: One variable per declaration rule not followed
+
+			Line 126: Switch statement does not have default case
+
+			File Number: 93
+			LAPCA Score for file PES1UG21CS260 - Sai Vignesh.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS260 - Sai Vignesh.c is 0.9608585858585859
+			Current avg LAPCA Score is 100.19928315412186
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS105 - Aradhana Mahati.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 94
+			LAPCA Score for file PES1UG21CS105 - Aradhana Mahati.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS105 - Aradhana Mahati.c is 0.9608585858585859
+			Current avg LAPCA Score is 100.48262411347518
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS709 - Vibhav Vasudevan.c
+			Line 64: Curly braces not used
+
+			Line 77: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 95
+			LAPCA Score for file PES1UG21CS709 - Vibhav Vasudevan.c is 106.83333333333334
+			LAPCA Percentage for file PES1UG21CS709 - Vibhav Vasudevan.c is 0.8093434343434344
+			Current avg LAPCA Score is 100.54947368421054
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS573 - Shreya Gunnan.c
+			Line 33: Curly braces not used
+
+			Line 50: Curly braces not used
+
+			Line 54: Curly braces not used
+
+			Line 65: Curly braces not used
+
+			Line 69: Curly braces not used
+
+			Line 98: Curly braces not used
+
+			Line 100: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 136: One variable per declaration rule not followed
+
+			Line 141: Switch statement does not have default case
+
+			File Number: 96
+			LAPCA Score for file PES1UG21CS573 - Shreya Gunnan.c is 100.58333333333334
+			LAPCA Percentage for file PES1UG21CS573 - Shreya Gunnan.c is 0.7619949494949496
+			Current avg LAPCA Score is 100.5498263888889
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS251 - Jugal.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 124: One variable per declaration rule not followed
+
+			Line 129: Switch statement does not have default case
+
+			File Number: 97
+			LAPCA Score for file PES1UG21CS251 - Jugal.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS251 - Jugal.c is 0.9608585858585859
+			Current avg LAPCA Score is 100.82079037800689
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS497 - ROHIT RAJESH 2022 Batch,PES University.c
+			Line 44: Curly braces not used
+
+			Line 56: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 111: One variable per declaration rule not followed
+
+			Line 116: Switch statement does not have default case
+
+			File Number: 98
+			LAPCA Score for file PES1UG21CS497 - ROHIT RAJESH 2022 Batch,PES University.c is 106.83333333333334
+			LAPCA Percentage for file PES1UG21CS497 - ROHIT RAJESH 2022 Batch,PES University.c is 0.8093434343434344
+			Current avg LAPCA Score is 100.88214285714288
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS300 - L arry.c
+			Line 87: Curly braces not used
+
+			Line 13: One variable per declaration rule not followed
+
+			Line 127: One variable per declaration rule not followed
+
+			Line 132: Switch statement does not have default case
+
+			File Number: 99
+			LAPCA Score for file PES1UG21CS300 - L arry.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS300 - L arry.c is 0.8472222222222223
+			Current avg LAPCA Score is 100.99276094276098
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS683 - Ujjwal Mk.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 124: One variable per declaration rule not followed
+
+			Line 129: Switch statement does not have default case
+
+			File Number: 100
+			LAPCA Score for file PES1UG21CS683 - Ujjwal Mk.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS683 - Ujjwal Mk.c is 0.9608585858585859
+			Current avg LAPCA Score is 101.2511666666667
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS388 - Ninad N Nayak.c
+			Line 55: Curly braces not used
+
+			Line 58: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 51: One variable per declaration rule not followed
+
+			Line 106: One variable per declaration rule not followed
+
+			Line 111: Switch statement does not have default case
+
+			File Number: 101
+			LAPCA Score for file PES1UG21CS388 - Ninad N Nayak.c is 106.5
+			LAPCA Percentage for file PES1UG21CS388 - Ninad N Nayak.c is 0.8068181818181818
+			Current avg LAPCA Score is 101.30313531353139
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS695 - VAISHNAVI GORUR VENU 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 108: One variable per declaration rule not followed
+
+			Line 73: Recursion used in function
+
+			Line 113: Switch statement does not have default case
+
+			File Number: 102
+			LAPCA Score for file PES1UG21CS695 - VAISHNAVI GORUR VENU 2022 Batch,PES University.c is 116.83333333333333
+			LAPCA Percentage for file PES1UG21CS695 - VAISHNAVI GORUR VENU 2022 Batch,PES University.c is 0.88510101010101
+			Current avg LAPCA Score is 101.45539215686279
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS042 - Aditya Chaubey.c
+Error(s) found in file: PES1UG21CS042 - Aditya Chaubey.c
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:34:18: error: expected expression before ‘node’
+   34 |     node * ptr = node *(malloc(sizeof(node));
+      |                  ^~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:48:12: warning: ‘return’ with a value, in function returning void
+   48 |     return head;
+      |            ^~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:32:6: note: declared here
+   32 | void insert(node *head, int pos, int data){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:58:16: warning: ‘return’ with a value, in function returning void
+   58 |         return head;
+      |                ^~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:55:6: note: declared here
+   55 | void delete(node *head){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:147:1: error: ‘_______________’ undeclared (first use in this function)
+  147 | _______________
+      | ^~~~~~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:147:1: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:147:16: error: expected ‘;’ at end of input
+  147 | _______________
+      |                ^
+      |                ;
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:147:1: error: expected declaration or statement at end of input
+  147 | _______________
+      | ^~~~~~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS042 - Aditya Chaubey.c:147:1: error: expected declaration or statement at end of input
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS266 - Kallesh K.G.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 114: One variable per declaration rule not followed
+
+			Line 119: Switch statement does not have default case
+
+			File Number: 104
+			LAPCA Score for file PES1UG21CS266 - Kallesh K.G.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS266 - Kallesh K.G.c is 0.9608585858585859
+			Current avg LAPCA Score is 100.72387820512826
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS479 - Rashi Bandi.c
+Error(s) found in file: PES1UG21CS479 - Rashi Bandi.c
+./ExtractedFiles/test1/PES1UG21CS479 - Rashi Bandi.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS479 - Rashi Bandi.c:35:21: warning: implicit declaration of function ‘countNodes’ [-Wimplicit-function-declaration]
+   35 |         int bound = countNodes(head);
+      |                     ^~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS249 - Joseph Sebastian.c
+			Line 69: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 108: One variable per declaration rule not followed
+
+			Line 113: Switch statement does not have default case
+
+			File Number: 106
+			LAPCA Score for file PES1UG21CS249 - Joseph Sebastian.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS249 - Joseph Sebastian.c is 0.8472222222222223
+			Current avg LAPCA Score is 99.87845911949691
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS912 - Sanjana Suresh.c
+			Line 62: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 138: One variable per declaration rule not followed
+
+			Line 143: Switch statement does not have default case
+
+			File Number: 107
+			LAPCA Score for file PES1UG21CS912 - Sanjana Suresh.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS912 - Sanjana Suresh.c is 0.8472222222222223
+			Current avg LAPCA Score is 99.9901869158879
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS586 - ted brawler.c
+Error(s) found in file: PES1UG21CS586 - ted brawler.c
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:102:23: error: ‘size’ undeclared (first use in this function); did you mean ‘size_t’?
+  102 |     int position, data;
+      |                       ^   
+      |                       size_t
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:102:23: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:102:27: error: expected ‘)’ before ‘of’
+  102 |     int position, data;
+      |                      ~    ^  
+      |                           )
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:106:15: error: expected ‘;’ before ‘}’ token
+  106 |         scanf("%d",&operation);
+      |               ^
+      |               ;
+  107 |         switch(operation){
+  108 |             case 1:
+      |                
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:110:9: warning: implicit declaration of function ‘countNodes’ [-Wimplicit-function-declaration]
+  110 |                 scanf("%d %d", &position, &data);
+      |         ^       ~~
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:112:8: error: ‘n’ undeclared (first use in this function)
+  112 |                 break;
+      |        ^
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:124:2: error: ‘newnode’ undeclared (first use in this function); did you mean ‘Newnode’?
+  124 |                 printList(head);
+      |  ^      
+      |  Newnode
+./ExtractedFiles/test1/PES1UG21CS586 - ted brawler.c:134:22: error: expected ‘;’ before ‘t’
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS356 - NAITIK JAIN 2022 Batch,PES University.c
+			Line 20: One variable per declaration rule not followed
+
+			Line 126: One variable per declaration rule not followed
+
+			Line 131: Switch statement does not have default case
+
+			File Number: 109
+			LAPCA Score for file PES1UG21CS356 - NAITIK JAIN 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS356 - NAITIK JAIN 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 99.31911314984715
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS667 - Lavanya Sivanandha.c
+Error(s) found in file: PES1UG21CS667 - Lavanya Sivanandha.c
+./ExtractedFiles/test1/PES1UG21CS667 - Lavanya Sivanandha.c:137:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ at end of input
+  137 | __________
+      | ^~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c
+Error(s) found in file: PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:35:22: error: redeclaration of ‘ptr’ with no linkage
+   35 |         struct node* ptr=(struct node*)malloc(sizeof(struct node*));
+      |                      ^~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:34:22: note: previous declaration of ‘ptr’ with type ‘struct node *’
+   34 |         struct node* ptr;
+      |                      ^~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:43:16: warning: ‘return’ with a value, in function returning void
+   43 |         return head;
+      |                ^~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:32:6: note: declared here
+   32 | void insert(node *head, int pos, int data){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:51:22: error: redefinition of ‘p3’
+   51 |         struct node* p3=(struct node*)malloc(size0f(struct node*));
+      |                      ^~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:50:22: note: previous definition of ‘p3’ with type ‘struct node *’
+   50 |         struct node* p3=NULL;
+      |                      ^~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:51:46: warning: implicit declaration of function ‘size0f’ [-Wimplicit-function-declaration]
+   51 |         struct node* p3=(struct node*)malloc(size0f(struct node*));
+      |                                              ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:51:53: error: expected expression before ‘struct’
+   51 |         struct node* p3=(struct node*)malloc(size0f(struct node*));
+      |                                                     ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:58:16: warning: ‘return’ with a value, in function returning void
+   58 |         return head;
+      |                ^~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:47:6: note: declared here
+   47 | void delete(node *head){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:62:9: error: ‘count’ undeclared (first use in this function)
+   62 |         count=0;
+      |         ^~~~~
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:62:9: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c:124:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ at end of input
+  124 | ___________________________________________
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS574 - SHREYA MISHRA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 117: One variable per declaration rule not followed
+
+			Line 122: Switch statement does not have default case
+
+			File Number: 112
+			LAPCA Score for file PES1UG21CS574 - SHREYA MISHRA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS574 - SHREYA MISHRA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.7912202380953
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS218 - HARIKESHAV SHEKAR 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 108: One variable per declaration rule not followed
+
+			Line 113: Switch statement does not have default case
+
+			File Number: 113
+			LAPCA Score for file PES1UG21CS218 - HARIKESHAV SHEKAR 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS218 - HARIKESHAV SHEKAR 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.04823008849564
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS660 - Dhenu Sarang.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 119: Switch statement does not have default case
+
+			File Number: 114
+			LAPCA Score for file PES1UG21CS660 - Dhenu Sarang.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS660 - Dhenu Sarang.c is 0.9608585858585859
+			Current avg LAPCA Score is 98.30073099415212
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS396 - Nitish Raghu.c
+Error(s) found in file: PES1UG21CS396 - Nitish Raghu.c
+./ExtractedFiles/test1/PES1UG21CS396 - Nitish Raghu.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS396 - Nitish Raghu.c:37:18: error: ‘data’ redeclared as different kind of symbol
+   37 |     struct node *data = malloc(sizeof(struct node));
+      |                  ^~~~
+./ExtractedFiles/test1/PES1UG21CS396 - Nitish Raghu.c:32:38: note: previous definition of ‘data’ with type ‘int’
+   32 | void insert(node *head, int pos, int data){
+      |                                  ~~~~^~~~
+./ExtractedFiles/test1/PES1UG21CS396 - Nitish Raghu.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS396 - Nitish Raghu.c:52:12: error: expected expression before ‘int’
+   52 |     while (int i=0; i<=len(node); i%2==1; i++)
+      |            ^~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS439.c - PRARTHANA P BHAT 2022 Batch,PES University.c
+			Line 46: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 131: One variable per declaration rule not followed
+
+			Line 136: Switch statement does not have default case
+
+			File Number: 116
+			LAPCA Score for file PES1UG21CS439.c - PRARTHANA P BHAT 2022 Batch,PES University.c is 111.83333333333334
+			LAPCA Percentage for file PES1UG21CS439.c - PRARTHANA P BHAT 2022 Batch,PES University.c is 0.8472222222222223
+			Current avg LAPCA Score is 97.5699712643679
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS469 - Raghav Srivatsan.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 116: One variable per declaration rule not followed
+
+			Line 121: Switch statement does not have default case
+
+			File Number: 117
+			LAPCA Score for file PES1UG21CS469 - Raghav Srivatsan.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS469 - Raghav Srivatsan.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.82008547008556
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS063 - Akshatha P.c
+Error(s) found in file: PES1UG21CS063 - Akshatha P.c
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:42:11: error: ‘head’ redeclared as different kind of symbol
+   42 |     node *head = createLinkedList(no_of_nodes, arr);
+      |           ^~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:32:19: note: previous definition of ‘head’ with type ‘node *’
+   32 | void insert(node *head, int pos, int data){
+      |             ~~~~~~^~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:46:19: error: ‘data’ redeclared as different kind of symbol
+   46 |     int position, data;
+      |                   ^~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:32:38: note: previous definition of ‘data’ with type ‘int’
+   32 | void insert(node *head, int pos, int data){
+      |                                  ~~~~^~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:55:8: error: ‘next’ undeclared (first use in this function)
+   55 |   head=next;
+      |        ^~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:55:8: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:57:11: warning: ‘return’ with a value, in function returning void
+   57 |   return i+1;
+      |          ~^~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:52:6: note: declared here
+   52 | void delete(node *head){
+      |      ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:68:5: error: ‘else’ without a previous ‘if’
+   68 |     else{
+      |     ^~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:71:29: error: ‘no_of_nodes’ undeclared (first use in this function)
+   71 |    int *arr = (int *)malloc(no_of_nodes*sizeof(int));
+      |                             ^~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:134:1: error: expected declaration or statement at end of input
+  134 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS063 - Akshatha P.c:134:1: error: expected declaration or statement at end of input
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS464 - R SRIVATSA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 109: One variable per declaration rule not followed
+
+			Line 114: Switch statement does not have default case
+
+			File Number: 119
+			LAPCA Score for file PES1UG21CS464 - R SRIVATSA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS464 - R SRIVATSA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.24187675070037
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS174.c - Dheeraj Havale.c
+Error(s) found in file: PES1UG21CS174.c - Dheeraj Havale.c
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:36:32: error: ‘stuct’ undeclared (first use in this function)
+   36 |     node *newP = malloc(sizeof(stuct node));
+      |                                ^~~~~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:36:32: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:36:37: error: expected ‘)’ before ‘node’
+   36 |     node *newP = malloc(sizeof(stuct node));
+      |                               ~     ^~~~~
+      |                                     )
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:38:15: error: ‘node’ has no member named ‘link’
+   38 |     ptr2 = ptr->link;
+      |               ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:42:15: error: ‘node’ has no member named ‘link’
+   42 |     ptr = ptr ->link;
+      |               ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:43:15: error: ‘node’ has no member named ‘link’
+   43 |     ptr2 = ptr->link
+      |               ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:43:21: error: expected ‘;’ before ‘}’ token
+   43 |     ptr2 = ptr->link
+      |                     ^
+      |                     ;
+   44 |     }
+      |     ~                
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:45:8: error: ‘node’ has no member named ‘link’
+   45 |     ptr->link = newP;
+      |        ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:46:9: error: ‘node’ has no member named ‘link’
+   46 |     newP->link = ptr2->link
+      |         ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:46:22: error: ‘node’ has no member named ‘link’
+   46 |     newP->link = ptr2->link
+      |                      ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:46:28: error: expected ‘;’ before ‘}’ token
+   46 |     newP->link = ptr2->link
+      |                            ^
+      |                            ;
+......
+   50 | }
+      | ~                           
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:58:15: error: ‘node’ has no member named ‘link’
+   58 |     ptr2 = ptr->link->link;
+      |               ^~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:59:11: error: expected expression before ‘int’
+   59 |     while(int pos%2 == 0)
+      |           ^~~
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c: At top level:
+./ExtractedFiles/test1/PES1UG21CS174.c - Dheeraj Havale.c:138:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ at end of input
+  138 | ___
+      | ^~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS060 - AKSHAR S 2022 Batch,PES University.c
+			Line 13: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 121
+			LAPCA Score for file PES1UG21CS060 - AKSHAR S 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS060 - AKSHAR S 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.6827823691461
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS312 - Maanasa Gowda.c
+Error(s) found in file: PES1UG21CS312 - Maanasa Gowda.c
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:33:15: error: ‘p1’ undeclared (first use in this function); did you mean ‘p’?
+   33 |        node*p=p1->head;
+      |               ^~
+      |               p
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:33:15: note: each undeclared identifier is reported only once for each function it appears in
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:35:13: warning: implicit declaration of function ‘countNodes’ [-Wimplicit-function-declaration]
+   35 |     int n = countNodes(p1);
+      |             ^~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:38:2: warning: implicit declaration of function ‘Insert’; did you mean ‘insert’? [-Wimplicit-function-declaration]
+   38 |  Insert(x);
+      |  ^~~~~~
+      |  insert
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:38:9: error: ‘x’ undeclared (first use in this function)
+   38 |  Insert(x);
+      |         ^
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:64:19: error: ‘next’ undeclared (first use in this function)
+   64 |                 q=next;
+      |                   ^~~~
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c: In function ‘countNodes’:
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:89:16: warning: missing terminating " character
+   89 |         printf("the list is empty);
+      |                ^
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:89:16: error: missing terminating " character
+   89 |         printf("the list is empty);
+      |                ^~~~~~~~~~~~~~~~~~~~
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:90:9: error: expected expression before ‘return’
+   90 |         return;
+      |         ^~~~~~
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:90:16: error: expected ‘;’ before ‘}’ token
+   90 |         return;
+      |                ^
+      |                ;
+......
+   96 | }
+      | ~               
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c: In function ‘delete’:
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:154:1: error: expected declaration or statement at end of input
+  154 | }
+      | ^
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:154:1: error: expected declaration or statement at end of input
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:154:1: error: expected declaration or statement at end of input
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS312 - Maanasa Gowda.c:154:1: error: expected declaration or statement at end of input
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS125 - Athul Raimon.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			Line 57: One variable per declaration rule not followed
+
+			Line 112: One variable per declaration rule not followed
+
+			Line 117: Switch statement does not have default case
+
+			File Number: 123
+			LAPCA Score for file PES1UG21CS125 - Athul Raimon.c is 126.3
+			LAPCA Percentage for file PES1UG21CS125 - Athul Raimon.c is 0.9568181818181818
+			Current avg LAPCA Score is 96.13753387533883
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS518 - SAKHINENI ANIRUDH 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 120: One variable per declaration rule not followed
+
+			Line 125: Switch statement does not have default case
+
+			File Number: 124
+			LAPCA Score for file PES1UG21CS518 - SAKHINENI ANIRUDH 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS518 - SAKHINENI ANIRUDH 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.38508064516138
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS043 - ADITYA D VENKATESH PRASANNA 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 113: One variable per declaration rule not followed
+
+			Line 118: Switch statement does not have default case
+
+			File Number: 125
+			LAPCA Score for file PES1UG21CS043 - ADITYA D VENKATESH PRASANNA 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS043 - ADITYA D VENKATESH PRASANNA 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.62866666666676
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS333 - Meghana Goru.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 125: One variable per declaration rule not followed
+
+			Line 130: Switch statement does not have default case
+
+			File Number: 126
+			LAPCA Score for file PES1UG21CS333 - Meghana Goru.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS333 - Meghana Goru.c is 0.9608585858585859
+			Current avg LAPCA Score is 96.86838624338634
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS245 - JERIL JOSHY 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 34: One variable per declaration rule not followed
+
+			Line 105: One variable per declaration rule not followed
+
+			Line 110: Switch statement does not have default case
+
+			File Number: 127
+			LAPCA Score for file PES1UG21CS245 - JERIL JOSHY 2022 Batch,PES University.c is 126.5
+			LAPCA Percentage for file PES1UG21CS245 - JERIL JOSHY 2022 Batch,PES University.c is 0.9583333333333334
+			Current avg LAPCA Score is 97.1017060367455
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS696 - VAISHNAVI M 2022 Batch,PES University.c
+			Line 55: Curly braces not used
+
+			Line 72: Curly braces not used
+
+			Line 81: Curly braces not used
+
+			Line 12: One variable per declaration rule not followed
+
+			Line 129: One variable per declaration rule not followed
+
+			Line 134: Switch statement does not have default case
+
+			File Number: 128
+			LAPCA Score for file PES1UG21CS696 - VAISHNAVI M 2022 Batch,PES University.c is 104.33333333333334
+			LAPCA Percentage for file PES1UG21CS696 - VAISHNAVI M 2022 Batch,PES University.c is 0.7904040404040404
+			Current avg LAPCA Score is 97.1582031250001
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS923 - MALLIDI SIRIJA REDDY 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 128: One variable per declaration rule not followed
+
+			Line 133: Switch statement does not have default case
+
+			File Number: 129
+			LAPCA Score for file PES1UG21CS923 - MALLIDI SIRIJA REDDY 2022 Batch,PES University.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS923 - MALLIDI SIRIJA REDDY 2022 Batch,PES University.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.38824289405694
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS619 - Srikrishna Chitnis.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 123: One variable per declaration rule not followed
+
+			Line 128: Switch statement does not have default case
+
+			File Number: 130
+			LAPCA Score for file PES1UG21CS619 - Srikrishna Chitnis.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS619 - Srikrishna Chitnis.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.6147435897437
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS235 - HRIDAY PRADHAN 2022 Batch,PES University.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 35: One variable per declaration rule not followed
+
+			Line 106: One variable per declaration rule not followed
+
+			Line 111: Switch statement does not have default case
+
+			File Number: 131
+			LAPCA Score for file PES1UG21CS235 - HRIDAY PRADHAN 2022 Batch,PES University.c is 126.5
+			LAPCA Percentage for file PES1UG21CS235 - HRIDAY PRADHAN 2022 Batch,PES University.c is 0.9583333333333334
+			Current avg LAPCA Score is 97.83524173028
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c
+Error(s) found in file: PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c
+./ExtractedFiles/test1/PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c: In function ‘insert’:
+./ExtractedFiles/test1/PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c:45:21: error: ‘node’ has no member named ‘link’
+   45 |                 temp->link = current ->link;
+      |                     ^~
+./ExtractedFiles/test1/PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c:45:38: error: ‘node’ has no member named ‘link’
+   45 |                 temp->link = current ->link;
+      |                                      ^~
+./ExtractedFiles/test1/PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c:46:25: error: ‘node’ has no member named ‘link’
+   46 |                 current ->link = temp;
+      |                         ^~
+./ExtractedFiles/test1/PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c:47:9: error: expected ‘}’ before ‘else’
+   47 |         else{
+      |         ^~~~
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS907 - nistha singh.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 122: One variable per declaration rule not followed
+
+			Line 127: Switch statement does not have default case
+
+			File Number: 133
+			LAPCA Score for file PES1UG21CS907 - nistha singh.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS907 - nistha singh.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.31766917293244
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG21CS563 - Shravani Hiremath.c
+			Line 12: One variable per declaration rule not followed
+
+			Line 116: One variable per declaration rule not followed
+
+			Line 121: Switch statement does not have default case
+
+			File Number: 134
+			LAPCA Score for file PES1UG21CS563 - Shravani Hiremath.c is 126.83333333333333
+			LAPCA Percentage for file PES1UG21CS563 - Shravani Hiremath.c is 0.9608585858585859
+			Current avg LAPCA Score is 97.5379353233832
+------------------------------------------------------------------------------------------------------------------
+
+
+					Total number of files processed: 134
+					LAPCA Score for the given codebase is 97.5379353233832
+					LAPCA Percentage for the given codebase is 0.7389237524498724
+					Total number of files with syntax errors: 26
+					Files with syntax errors:
+						Q1 - SANJANA M V 2022 Batch,PES University.c
+						PES1UG21CS213 - Bharath H M.c
+						PES1UG21CS505 - Priyadarshi Sivakumaran.c
+						PES1UG21CS327 - Manju nath.c
+						PES1UG21CS194 - Vishnupriya reddy Gade.c
+						PES1UG21CS936 - Srimanish Chandrasekaran.c
+						PES1UG21CS187 - Diya Kalyanpur.c
+						PES1UG21CS167 - Darshan Babu T.R.c
+						PES1UG21CS077 - Ananya.c
+						PES1UG21CS369.c - Manoj Kumar.c
+						PES1UG21CS569 - Shreya Halgeri.c
+						PES1UG21CS559 - Shauryadeep Sinh G Raolji.c
+						PES1UG21CS727 - YADUNAND SIDDARTH.c
+						PES1UG21CS345 - Bhargav Narayanan.c
+						PES1UG21CS169 - Deeksha Krishnappa.c
+						PES1UG21CS039 - ADITI PRABHU A 2022 Batch,PES University.c
+						PES1UG21CS042 - Aditya Chaubey.c
+						PES1UG21CS479 - Rashi Bandi.c
+						PES1UG21CS586 - ted brawler.c
+						PES1UG21CS667 - Lavanya Sivanandha.c
+						PES1UG21CS044 - ADITYA KAMSHETTY 2022 Batch,PES University.c
+						PES1UG21CS396 - Nitish Raghu.c
+						PES1UG21CS063 - Akshatha P.c
+						PES1UG21CS174.c - Dheeraj Havale.c
+						PES1UG21CS312 - Maanasa Gowda.c
+						PES1UG21CS238 - IPSHITA BISWAS 2022 Batch,PES University.c
+					Violation count:
+						Curly_braces.lapx : 54
+						Assign_in_loop.lapx : 0
+						Function_size.lapx : 0
+						Indirect_Recursion.lapx : 0
+						Depth_of_looping.lapx : 0
+						Continue.lapx : 0
+						Dead_Code.lapx : 1
+						One_var_decl.lapx : 232
+						Recursion.lapx : 3
+						var_greater_than_31.lapx : 0
+						Switch_default.lapx : 107
+						Function_params.lapx : 0
+						Empty_func.lapx : 1
+					Violated files count:
+						Curly_braces.lapx : 23
+						Assign_in_loop.lapx : 0
+						Function_size.lapx : 0
+						Indirect_Recursion.lapx : 0
+						Depth_of_looping.lapx : 0
+						Continue.lapx : 0
+						Dead_Code.lapx : 1
+						One_var_decl.lapx : 107
+						Recursion.lapx : 3
+						var_greater_than_31.lapx : 0
+						Switch_default.lapx : 107
+						Function_params.lapx : 0
+						Empty_func.lapx : 1
+
+
+------------------------------------------------------------------------------------------------------------------
+real    37m1.684s
+user    36m18.364s
+sys     0m30.117s

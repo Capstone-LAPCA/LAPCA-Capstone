@@ -156,6 +156,8 @@ class LAPCA_Score:
                         continue
                     self.LAPCA_score+=score
                     self.LAPCA_percent += (score/self.max_score)
+                    with open('LAPCA_metrics/LAPCA_Scores.csv', 'a+') as f:
+                        f.write(file+","+str(score)+","+str((score/self.max_score)*100)+"\n")
                     with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
                         f.write("\t\t\tFile Number: "+str(no_of_files)+"\n")
                         f.write("\t\t\tLAPCA Score for file "+file+" is "+str(score)+"\n")
@@ -196,7 +198,7 @@ class LAPCA_Score:
         self.createPdf()
 
 if __name__ == "__main__":
-    obj = LAPCA_Score("codebase.zip", "./ExtractedFiles")
+    obj = LAPCA_Score("test1.zip", "./ExtractedFiles")
     obj.extractZip()
     obj.getLAPCA_Score()
     # print(obj.result)
