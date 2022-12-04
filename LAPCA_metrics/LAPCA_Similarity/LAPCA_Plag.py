@@ -82,7 +82,7 @@ class LAPCA_Plag:
         # print(points)
         if len(points) == 0:
             print("No plagiarism detected")
-            return 0,""
+            return 0,"COLOR"+self.code1+"COLOR"
         mergedPoints = []
         mergedPoints.append(points[0])
         for i in range(1, len(points)):
@@ -103,7 +103,7 @@ class LAPCA_Plag:
             if mergedPoints[i][1] > mergedPoints[i][0]:
                 plagCount += mergedPoints[i][1] - mergedPoints[i][0]
                 newCode = newCode + '\x1b[6;30;42m' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + '\x1b[0m'
-                newCodeSend = newCodeSend + 'ADD_COLOR' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + 'REMOVE_COLOR'
+                newCodeSend = newCodeSend + 'COLOR' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + 'COLOR'
                 if i < len(mergedPoints) - 1:
                     newCode = newCode + self.code1[mergedPoints[i][1] : mergedPoints[i+1][0]]
                     newCodeSend = newCodeSend + self.code1[mergedPoints[i][1] : mergedPoints[i+1][0]]
