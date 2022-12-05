@@ -17,28 +17,49 @@ class LAPCA_Similarity:
     
     def createPdf(self):
         self.pdf.add_page()  
-        self.pdf.set_font("Arial", size = 15)
+        self.pdf.set_font("Arial", size = 12)
         for i in self.plagiarism:
             self.pdf.cell(200, 10, txt = i[0], ln = 1, align = 'C')
-            self.pdf.cell(200, 10, txt = "Plagiarism Percentage: "+str(i[1]), ln = 1, align = 'C')
+            self.pdf.set_fill_color(255, 0,0)
+            self.pdf.cell(200, 10, txt = "Plagiarism Percentage: "+str(i[1])[:5]+"%", ln = 1, align = 'C')
             self.pdf.cell(200, 10, txt = "Plagiarised File: "+str(i[2]), ln = 1, align = 'C')
             self.pdf.cell(200, 10, txt = "Plagiarised Code:\n",align='L')
             self.pdf.set_font("Arial", size = 8)
+            self.pdf.cell(200, 10, txt ="", ln = 1, align = 'C')
+            setColor = False
             for j in i[3].split("\n"):
-                #REPLACE THE BELOW LOGIC
-                self.pdf.cell(200, 10, txt = j, ln = 1, align = 'L')
+                li = j.split("COLOR")
+                colorPresent = False
+                if len(li) > 1:
+                    colorPresent = True
+                if li[0]=='' and len(li)>1:
+                    setColor = not setColor
+                for k in li:
+                    if k=="":
+                        continue
+                    if setColor:
+                        #self.pdf.set_text_color(255, 0, 0)
+                        self.pdf.set_fill_color(255, 354, 23)
+                        self.pdf.cell(len(k)+8, 5, txt = k, ln = 0, align = 'L',fill=True)
+                        self.pdf.set_text_color(0, 0, 0)
+                    else:
+                        self.pdf.cell(len(k)+8, 5, txt = k, ln = 0, align = 'L')
+                    if colorPresent:
+                        setColor = not setColor
+                if li[len(li)-1]!="" and len(li)>1:
+                    setColor = not setColor
+                self.pdf.cell(200, 5, txt ="", ln = 1, align = 'C')
             self.pdf.set_font("Arial", size = 15)
-        #self.pdf.cell(200, 10, txt = x, ln = 1, align = 'L')
-        self.pdf.output("LAPCA_metrics/LAPCA_Score_Pdf/resultsSimilarity.pdf",'F')
+        self.pdf.output("LAPCA_metrics/Similarity_Score_Pdf/resultsSimilarity.pdf",'F')
         self.mergePdf()
 
     def mergePdf(self):
         merger = PyPDF2.PdfFileMerger()
-        f1 = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/Report_Cover_Page.pdf')
-        f2 = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/resultsSimilarity.pdf')
+        f1 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report_Cover_Page.pdf')
+        f2 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/resultsSimilarity.pdf')
         merger.append(f1)
         merger.append(f2)
-        merger.write("LAPCA_metrics/LAPCA_Score_Pdf/ReportSimilar.pdf")
+        merger.write("LAPCA_metrics/Similarity_Score_Pdf/Report.pdf")
 
     def getLAPCA_Similarity(self):
         self.extractZip()
@@ -64,15 +85,13 @@ class LAPCA_Similarity:
                         max_plag = perc
                         max_plag_file = file_list[j]
                         max_plag_code = code
-            print(max_plag_file)
-            print(max_plag)
             plag.append(max_plag)
             plag.append(max_plag_file)
             plag.append(max_plag_code)
+            print(plag[0],"plagiarised",plag[2],"by",plag[1],"%")
             self.plagiarism.append(plag)
-        print(self.plagiarism)
         self.createPdf()
         return self.plagiarism
 
 if __name__ == "__main__":
-    LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/input.zip", "output").getLAPCA_Similarity()
+    LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip", "LAPCA_metrics/LAPCA_Similarity/output").getLAPCA_Similarity()

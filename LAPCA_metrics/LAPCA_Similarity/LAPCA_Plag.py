@@ -81,7 +81,7 @@ class LAPCA_Plag:
         points.sort(key = lambda x: x[0])
         # print(points)
         if len(points) == 0:
-            print("No plagiarism detected")
+            #print("No plagiarism detected")
             return 0,"COLOR"+self.code1+"COLOR"
         mergedPoints = []
         mergedPoints.append(points[0])
