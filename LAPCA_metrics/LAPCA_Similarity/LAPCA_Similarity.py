@@ -62,6 +62,8 @@ class LAPCA_Similarity:
         merger.write("LAPCA_metrics/Similarity_Score_Pdf/Report.pdf")
 
     def getLAPCA_Similarity(self):
+        csv_report = open("LAPCA_metrics/Similarity_Score_Pdf/LAPCA_Similarity.csv","w")
+        csv_report.write("File Name,Plagiarised File,Plagiarism Percentage\n")
         self.extractZip()
         file_list = {}
         for root, dirs, files in os.walk(self.output_file):
@@ -89,9 +91,11 @@ class LAPCA_Similarity:
             plag.append(max_plag_file)
             plag.append(max_plag_code)
             print(plag[0],"plagiarised",plag[2],"by",plag[1],"%")
+            csv_report.write(str(plag[0])+","+plag[2]+","+str(plag[1])+"\n")
             self.plagiarism.append(plag)
-        self.createPdf()
         return self.plagiarism
 
 if __name__ == "__main__":
-    LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip", "LAPCA_metrics/LAPCA_Similarity/output").getLAPCA_Similarity()
+    lc = LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip", "LAPCA_metrics/LAPCA_Similarity/output")
+    lc.getLAPCA_Similarity()
+    lc.createPdf()

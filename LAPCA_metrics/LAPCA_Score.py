@@ -45,6 +45,8 @@ class LAPCA_Score:
         self.result = {}
         self.max_score = 0
         self.LAPCA_score = 0
+        self.make_csv = open("LAPCA_metrics/LAPCA_Score_Pdf/lapca_score.csv", "w")
+        self.make_csv.write("File Name, LAPCA Score,LAPCA Percentage\n")
         self.LAPCA_percent = 0
         self.guidelines = []
         self.err_count = 0
@@ -156,15 +158,14 @@ class LAPCA_Score:
                         continue
                     self.LAPCA_score+=score
                     self.LAPCA_percent += (score/self.max_score)
-                    with open('LAPCA_metrics/LAPCA_Scores.csv', 'a+') as f:
-                        f.write(file+","+str(score)+","+str((score/self.max_score)*100)+"\n")
+                    self.make_csv.write(file+","+str(score)+","+str((score/self.max_score)*100)+"\n")
                     with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
                         f.write("\t\t\tFile Number: "+str(no_of_files)+"\n")
                         f.write("\t\t\tLAPCA Score for file "+file+" is "+str(score)+"\n")
-                        f.write("\t\t\tLAPCA Percentage for file "+file+" is "+str(score/self.max_score)+"\n")
+                        f.write("\t\t\tLAPCA Percentage for file "+file+" is "+str((score/self.max_score)*100)+"\n")
                         f.write("\t\t\tCurrent avg LAPCA Score is "+str(self.LAPCA_score/no_of_files)+"\n")
                     print(f"{bcolors.OKGREEN}Number of files processed:", no_of_files,f"{bcolors.ENDC}")
-                    print(f"{bcolors.OKGREEN}LAPCA Percent for file",file,"is",score/self.max_score,f"{bcolors.ENDC}")
+                    print(f"{bcolors.OKGREEN}LAPCA Percent for file",file,"is",(score/self.max_score)*100,f"{bcolors.ENDC}")
                     print(f"{bcolors.OKGREEN}LAPCA Score for file",file,"is",score,f"{bcolors.ENDC}")
                     print("Current avg LAPCA Score:",self.LAPCA_score/no_of_files)
                                 
@@ -175,7 +176,7 @@ class LAPCA_Score:
 
             f.write("\t\t\t\t\tTotal number of files processed: "+str(no_of_files)+"\n")
             f.write("\t\t\t\t\tLAPCA Score for the given codebase is "+str(self.LAPCA_score/([no_of_files if no_of_files else 1][0]))+"\n")
-            f.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str(self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))+"\n")
+            f.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str((self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))*100)+"\n")
 
             f.write("\t\t\t\t\tTotal number of files with syntax errors: "+str(self.err_count)+"\n")
             f.write("\t\t\t\t\tFiles with syntax errors:\n")
@@ -195,12 +196,13 @@ class LAPCA_Score:
         print(f"{bcolors.OKGREEN}Total number of files:",no_of_files,f"{bcolors.ENDC}")
         print(f"{bcolors.OKGREEN}LAPCA Score for the given codebase is",self.LAPCA_score/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
         print(f"{bcolors.OKGREEN}LAPCA Percent for the given codebase is",self.LAPCA_percent/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
-        self.createPdf()
+        return self.result
 
 if __name__ == "__main__":
     obj = LAPCA_Score("test1.zip", "./ExtractedFiles")
     obj.extractZip()
     obj.getLAPCA_Score()
+    obj.createPdf()
     # print(obj.result)
     # print(obj.error_files)
     # print(obj.err_count)

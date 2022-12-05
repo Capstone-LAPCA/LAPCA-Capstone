@@ -182,9 +182,13 @@ def uploadFile():
     with open("temp.zip", "wb") as f:
         f.write(base64.b64decode(zipfile))
     if data['reportType']=='LAPCA Score':
-        LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Score()
+        ls = LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles"))
+        ls.getLAPCA_Score()
+        ls.createPdf()
     else:
-        LAPCA_Similarity(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles")).getLAPCA_Similarity()
+        lc = LAPCA_Similarity(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles"))
+        lc.getLAPCA_Similarity()
+        lc.createPdf()
     Mail(data['name'],data['email'],data['reportType']).sendMail()
     return jsonify({'data':"success"})
 if __name__ == '__main__':
