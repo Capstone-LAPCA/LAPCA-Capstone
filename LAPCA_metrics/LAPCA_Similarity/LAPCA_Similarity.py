@@ -3,6 +3,7 @@ from LAPCA_metrics.LAPCA_Similarity.LAPCA_Plag import LAPCA_Plag
 import zipfile
 import PyPDF2  
 from fpdf import FPDF
+import unicode
 
 class LAPCA_Similarity:
     def __init__(self, input_file, output_file):
@@ -35,15 +36,16 @@ class LAPCA_Similarity:
                 if li[0]=='' and len(li)>1:
                     setColor = not setColor
                 for k in li:
+                    utxt = unicode(k, 'utf-8').encode('iso-8859-1')       
                     if k=="":
                         continue
                     if setColor:
                         #self.pdf.set_text_color(255, 0, 0)
                         self.pdf.set_fill_color(255, 354, 23)
-                        self.pdf.cell(len(k)+8, 5, txt = k, ln = 0, align = 'L',fill=True)
+                        self.pdf.cell(len(k)+8, 5, txt = utxt, ln = 0, align = 'L',fill=True)
                         self.pdf.set_text_color(0, 0, 0)
                     else:
-                        self.pdf.cell(len(k)+8, 5, txt = k, ln = 0, align = 'L')
+                        self.pdf.cell(len(k)+8, 5, txt = utxt, ln = 0, align = 'L')
                     if colorPresent:
                         setColor = not setColor
                 if li[len(li)-1]!="" and len(li)>1:
@@ -98,6 +100,6 @@ class LAPCA_Similarity:
         return self.plagiarism
 
 if __name__ == "__main__":
-    lc = LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip", "LAPCA_metrics/LAPCA_Similarity/output")
+    lc = LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip", "LAPCA_metrics/LAPCA_Similarity/output1")
     lc.getLAPCA_Similarity()
     lc.createPdf()
