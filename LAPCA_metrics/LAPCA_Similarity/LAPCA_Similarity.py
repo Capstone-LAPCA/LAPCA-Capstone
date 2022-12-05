@@ -87,6 +87,8 @@ class LAPCA_Similarity:
                         max_plag = perc
                         max_plag_file = file_list[j]
                         max_plag_code = code
+                        if max_plag == 100:
+                            break
             plag.append(max_plag)
             plag.append(max_plag_file)
             plag.append(max_plag_code)
