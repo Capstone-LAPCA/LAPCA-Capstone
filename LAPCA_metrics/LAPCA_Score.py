@@ -7,7 +7,7 @@ from main import MainModule
 import subprocess
 from fpdf import FPDF
 import PyPDF2
-
+import re
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -71,20 +71,21 @@ class LAPCA_Score:
     
     def createPdf(self):
         self.pdf.add_page()  
-        self.pdf.set_font("Arial", size = 15)
+        self.pdf.set_font("Arial", size = 10)
         f = open('LAPCA_metrics/LAPCA_Score_Report.txt', "r")
         for x in f:
-            self.pdf.cell(200, 10, txt = x, ln = 1, align = 'L')
-        self.pdf.output("LAPCA_metrics/LAPCA_Score_pdf/results.pdf",'F')
+            y = re.sub(u"(\u2018|\u2019)", "'", x)
+            self.pdf.cell(200, 10, txt = y, ln = 1, align = 'L')
+        self.pdf.output("LAPCA_metrics/LAPCA_Score_Pdf/results.pdf",'F')
         self.mergePdf()
 
     def mergePdf(self):
         merger = PyPDF2.PdfFileMerger()
-        f1 = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\Report_Cover_Page.pdf')
-        f2 = os.path.abspath('LAPCA_metrics\LAPCA_Score_Pdf\\results.pdf')
+        f1 = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/Report_Cover_Page.pdf')
+        f2 = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/results.pdf')
         merger.append(f1)
         merger.append(f2)
-        merger.write("LAPCA_metrics/LAPCA_Score_pdf/Report.pdf")
+        merger.write("LAPCA_metrics/LAPCA_Score_Pdf/Report.pdf")
         
     def getLAPCA_ScoreOfFile(self,file):
         if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
