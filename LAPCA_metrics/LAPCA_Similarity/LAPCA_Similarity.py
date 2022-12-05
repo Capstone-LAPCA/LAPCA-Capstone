@@ -34,16 +34,17 @@ class LAPCA_Similarity:
                     colorPresent = True
                 if li[0]=='' and len(li)>1:
                     setColor = not setColor
-                for k in li:   
+                for k in li:
+                    utxt = k.encode('latin-1', 'replace').decode('latin-1')     
                     if k=="":
                         continue
                     if setColor:
                         #self.pdf.set_text_color(255, 0, 0)
                         self.pdf.set_fill_color(255, 354, 23)
-                        self.pdf.cell(len(k)+8, 5, txt = k, ln = 0, align = 'L',fill=True)
+                        self.pdf.cell(len(k)+8, 5, txt = utxt, ln = 0, align = 'L',fill=True)
                         self.pdf.set_text_color(0, 0, 0)
                     else:
-                        self.pdf.cell(len(k)+8, 5, txt = k, ln = 0, align = 'L')
+                        self.pdf.cell(len(k)+8, 5, txt = utxt, ln = 0, align = 'L')
                     if colorPresent:
                         setColor = not setColor
                 if li[len(li)-1]!="" and len(li)>1:
