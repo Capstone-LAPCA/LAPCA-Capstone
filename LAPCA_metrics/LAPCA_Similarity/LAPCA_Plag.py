@@ -1,6 +1,6 @@
 import hashlib
 from LAPCA_metrics.LAPCA_Similarity.LAPCA_Clean import LAPCA_Clean
-
+from difflib import SequenceMatcher
 class LAPCA_Plag:
     def __init__(self, code1, code2, lang):
         self.code1 = code1
@@ -54,6 +54,10 @@ class LAPCA_Plag:
         code2 = lc.toText(token2)
         kGrams1 = self.kgrams(list(code1),10)  #stores k-grams, their hash values and positions in cleaned up text
         kGrams2 = self.kgrams(list(code2),10)
+        SM = SequenceMatcher(None, code1, code2)
+        similarity_ratio = SM.ratio()
+        if abs(similarity_ratio-1.0) < 0.01:
+            return similarity_ratio*100,"COLOR"+self.code1+"COLOR"
         HL1 = [i[1] for i in kGrams1] 
         HL2 = [i[1] for i in kGrams2]
         fpList1 = self.get_fingerprint(HL1,1)
@@ -81,8 +85,8 @@ class LAPCA_Plag:
         points.sort(key = lambda x: x[0])
         # print(points)
         if len(points) == 0:
-            print("No plagiarism detected")
-            return 0,""
+            #print("No plagiarism detected")
+            return 0,self.code1
         mergedPoints = []
         mergedPoints.append(points[0])
         for i in range(1, len(points)):
@@ -103,7 +107,7 @@ class LAPCA_Plag:
             if mergedPoints[i][1] > mergedPoints[i][0]:
                 plagCount += mergedPoints[i][1] - mergedPoints[i][0]
                 newCode = newCode + '\x1b[6;30;42m' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + '\x1b[0m'
-                newCodeSend = newCodeSend + 'ADD_COLOR' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + 'REMOVE_COLOR'
+                newCodeSend = newCodeSend + 'COLOR' + self.code1[mergedPoints[i][0] : mergedPoints[i][1]] + 'COLOR'
                 if i < len(mergedPoints) - 1:
                     newCode = newCode + self.code1[mergedPoints[i][1] : mergedPoints[i+1][0]]
                     newCodeSend = newCodeSend + self.code1[mergedPoints[i][1] : mergedPoints[i+1][0]]
