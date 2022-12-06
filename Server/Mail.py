@@ -13,7 +13,7 @@ class Mail:
         self.name = name
         self.sender_email = "lapcametric@gmail.com" # TODO: replace with your email address
         self.receiver_email = email # TODO: replace with your recipients
-        self.password = ''
+        self.password = 'wwxmoeubcvblucds'
         self.msg = MIMEMultipart()
         self.msg["Subject"] = "Your LAPCA Results are here!"
         self.msg["From"] = self.sender_email
@@ -49,7 +49,7 @@ class Mail:
 
         ## Attachments in general
         ## Replace filename to your attachments. Tested and works for png, jpeg, txt, pptx, csv
-        if(self.reportType == 'score'):
+        if(self.reportType == 'LAPCA Score'):
             filename = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/Report.pdf') # TODO: replace your attachment filepath/name
         else:
             filename = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report.pdf') # TODO: replace your attachment filepath/name

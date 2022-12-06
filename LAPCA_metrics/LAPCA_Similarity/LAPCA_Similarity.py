@@ -51,13 +51,13 @@ class LAPCA_Similarity:
                     setColor = not setColor
                 self.pdf.cell(200, 5, txt ="", ln = 1, align = 'C')
             self.pdf.set_font("Arial", size = 15)
-        self.pdf.output("LAPCA_metrics/Similarity_Score_Pdf/resultsSimilarity.pdf",'F')
+        self.pdf.output("LAPCA_metrics/Similarity_Score_Pdf/results.pdf",'F')
         self.mergePdf()
 
     def mergePdf(self):
         merger = PyPDF2.PdfFileMerger()
         f1 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report_Cover_Page.pdf')
-        f2 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/resultsSimilarity.pdf')
+        f2 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/results.pdf')
         merger.append(f1)
         merger.append(f2)
         merger.write("LAPCA_metrics/Similarity_Score_Pdf/Report.pdf")

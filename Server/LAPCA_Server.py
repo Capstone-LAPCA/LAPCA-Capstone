@@ -181,11 +181,11 @@ def uploadFile():
     zipfile = data['uploadFile']['data']
     with open("temp.zip", "wb") as f:
         f.write(base64.b64decode(zipfile))
-    if data['reportType']=='score':
+    if data['reportType']=='LAPCA Score':
         ls = LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles"))
         ls.getLAPCA_Score()
         ls.createPdf()
-    elif data['reportType']=='similarity':
+    elif data['reportType']=='LAPCA Similarity Score':
         lc = LAPCA_Similarity(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles"))
         lc.getLAPCA_Similarity()
         lc.createPdf()
