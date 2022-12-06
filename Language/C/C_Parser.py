@@ -589,7 +589,9 @@ class CParserActions(visitors.Visitor):
     def functiondefinition(self, items):
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
-        FUNCTION_NAME = ALL_TOKENS[ALL_TOKENS.index("(")-1]
+        FUNCTION_NAME=""
+        if "(" in ALL_TOKENS:
+            FUNCTION_NAME = ALL_TOKENS[ALL_TOKENS.index("(")-1]
         FUNCTION_CALLS = []
         FUNCTION_PARAMS = []
         getFunctionParams(items,FUNCTION_PARAMS)
