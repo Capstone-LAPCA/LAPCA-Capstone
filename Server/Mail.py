@@ -49,7 +49,7 @@ class Mail:
 
         ## Attachments in general
         ## Replace filename to your attachments. Tested and works for png, jpeg, txt, pptx, csv
-        if(self.reportType == 'LAPCA Score'):
+        if(self.reportType == 'score'):
             filename = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/Report.pdf') # TODO: replace your attachment filepath/name
         else:
             filename = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report.pdf') # TODO: replace your attachment filepath/name
