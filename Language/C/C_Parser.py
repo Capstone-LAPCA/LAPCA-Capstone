@@ -200,6 +200,7 @@ class CParserActions(visitors.Visitor):
         LINE_NO = items.meta.line
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
+        exec(map_state_to_code["switch_stmt"])
         pass
     def start(self, items):
         LINE_NO = items.meta.line
@@ -210,7 +211,7 @@ class CParserActions(visitors.Visitor):
     def primaryexpression(self, items):
         LINE_NO = items.meta.line
         cont_pres= items.children[0].value == "continue"
-
+        exec(map_state_to_code["primaryexpression"])
         pass
 
     def genericselection(self, items):
@@ -324,7 +325,7 @@ class CParserActions(visitors.Visitor):
     def initdeclaratorlist(self, items):
         LINE_NO=items.meta.line
         var_list=items.children
-
+        exec(map_state_to_code["initdeclaratorlist"])
         pass
 
     def initdeclarator(self, items):
@@ -408,6 +409,7 @@ class CParserActions(visitors.Visitor):
         if(not variable):
             return
         LINE_NO = items.meta.line
+        exec(map_state_to_code["directdeclarator"])
         pass
 
     def gccdeclaratorextension(self, items):
@@ -564,6 +566,7 @@ class CParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["iterationstatement"])
         pass
 
     def forcondition(self, items):
@@ -590,6 +593,7 @@ class CParserActions(visitors.Visitor):
         GLOBAL_FUNCTION_CALLS=[]
         LINE_NO=items.meta.line
         getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
+        exec(map_state_to_code["translationunit"])
         pass
 
     def externaldeclaration(self, items):
@@ -609,6 +613,7 @@ class CParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["functiondefinition"])
         pass
 
     def declarationlist(self, items):

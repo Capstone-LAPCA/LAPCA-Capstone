@@ -8,6 +8,7 @@ global_list = []
 info_list = []
 STATEMENT_LINE_NO={}
 flagIf = False
+map_state_to_code = {}
 
 def ret_iter(Tree, variables):
     if Tree.data == "assign_base" and not isinstance(Tree.children[0], type(Tree)):
@@ -144,10 +145,16 @@ def getFunctionParams(Tree, param_list):
                 getFunctionParams(i,param_list)
 
 class MainTransformer():
+    def __init__(self,temp,test_file_path):
+        global map_state_to_code
+        map_state_to_code = temp
+        self.test_file_path = test_file_path
     def run(self):
-        file = open(sys.argv[1], encoding='utf-8').read()
+        file = open(self.test_file_path, encoding='utf-8').read()
+        exec(map_state_to_code["before"])
         Java_parser = Lark.open('Java_Grammar.lark', start="clazz",rel_to=__file__, keep_all_tokens=True, propagate_positions=True)
         javaParserActions().visit_topdown(Java_parser.parse(file))
+        exec(map_state_to_code["before"])
         #print(javaParserActions().visit_topdown(Java_parser.parse(file)).pretty())
         return
 
@@ -238,6 +245,7 @@ class javaParserActions(visitors.Visitor):
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["method"])
         pass
     def method_annotations(self, items):
 
@@ -274,6 +282,7 @@ class javaParserActions(visitors.Visitor):
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
         getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
+        exec(map_state_to_code["clazz"])
         pass
     def class_package(self, items):
 
@@ -335,14 +344,14 @@ class javaParserActions(visitors.Visitor):
     def assign_mul(self, items):
         LINE_NO=items.meta.line
         var_list=items.children
-
+        exec(map_state_to_code["assign_mul"])
         pass
     def assign_base(self, items):
         variable = ret_iter(items, [])
         if(not variable):
             return 
         LINE_NO = items.meta.line
-        
+        exec(map_state_to_code["assign_base"])
         pass
     def break_stmt(self, items):
 
@@ -350,7 +359,7 @@ class javaParserActions(visitors.Visitor):
     def continue_stmt(self, items):
         cont_pres=True
         LINE_NO=items.meta.line
-
+        exec(map_state_to_code["continue_stmt"])
         pass
     def return_stmt(self, items):
 
@@ -395,6 +404,7 @@ class javaParserActions(visitors.Visitor):
             ITERATION = items.children[0].data
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["compound_stmt"])
         pass
     def synchronized_stmt(self, items):
 
@@ -453,6 +463,7 @@ class javaParserActions(visitors.Visitor):
             ITERATION_CONDITION = condition_list[0]
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["while_stmt"])
         pass
     def for_stmt(self, items):
         ALL_TOKENS = []
@@ -466,6 +477,7 @@ class javaParserActions(visitors.Visitor):
         ITERATION_CONDITION = condition_list
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["for_stmt"])
         pass
     def for_test(self, items):
 
@@ -483,6 +495,7 @@ class javaParserActions(visitors.Visitor):
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
         LINE_NO = items.meta.line
+        exec(map_state_to_code["switch_stmt"])
         pass
     def case_stmts(self, items):
 
@@ -504,7 +517,7 @@ class javaParserActions(visitors.Visitor):
         getFunctionCalls(items,FUNCTION_CALLS)
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
-
+        exec(map_state_to_code["if_stmt"])
         pass
     def elif_stmt(self, items):
 
@@ -710,4 +723,3 @@ class javaParserActions(visitors.Visitor):
     def primary_type(self, items):
 
         pass
-MainTransformer().run()

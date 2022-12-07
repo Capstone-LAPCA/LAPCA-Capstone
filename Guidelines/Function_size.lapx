@@ -1,4 +1,5 @@
 STATE before
+    global count_lines, count_iter, cur_function_name, function_count
     count_lines = 0
     function_count = {"":0}
     cur_function_name = ""
@@ -6,9 +7,7 @@ STATE before
 END_STATE
 
 STATE function
-    global count_lines
-    global count_iter
-    global cur_function_name
+    global count_lines, count_iter, cur_function_name
     cur_function_name = FUNCTION_NAME
     for i in STATEMENTS:
         if "for" in i[0:3] or "while" in i[0:5]:
