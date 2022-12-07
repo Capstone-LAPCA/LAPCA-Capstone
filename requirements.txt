@@ -4,3 +4,4 @@ Flask-Cors==3.0.10
 Werkzeug==2.2.2
 gunicorn==20.1.0
 zss==1.2.0
+fpdf==1.7.2
