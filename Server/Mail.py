@@ -5,15 +5,17 @@ from email.mime.application import MIMEApplication
 import smtplib
 import ssl
 import os
+import time
 
 smtp_server = "smtp.gmail.com"
 port = 587  # For starttls
 class Mail:
-    def __init__(self, name, email, reportType, *args, **kwargs):
+    def __init__(self, name, email, reportType, timestamp = time.strftime("%Y%m%d%H%M%S"), *args, **kwargs):
         self.name = name
         self.sender_email = "lapcametric@gmail.com" # TODO: replace with your email address
         self.receiver_email = email # TODO: replace with your recipients
         self.password = 'wwxmoeubcvblucds'
+        self.timestamp = timestamp
         self.msg = MIMEMultipart()
         self.msg["Subject"] = "Your LAPCA Results are here!"
         self.msg["From"] = self.sender_email
@@ -39,20 +41,10 @@ class Mail:
 
         body_html = MIMEText(html.format(self.name, self.reportType), 'html')  # parse values into html text
         self.msg.attach(body_html)  # attaching the text body into msg
-
-        ## Image
-        # img_name = 'logo_pb.png' # TODO: replace your image filepath/name
-        # with open(img_name, 'rb') as fp:
-        #     img = MIMEImage(fp.read())
-        #     img.add_header('Content-Disposition', 'attachment', filename=img_name)
-        #     msg.attach(img)
-
-        ## Attachments in general
-        ## Replace filename to your attachments. Tested and works for png, jpeg, txt, pptx, csv
         if(self.reportType == 'LAPCA Score'):
-            filename = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/Report.pdf') # TODO: replace your attachment filepath/name
+            filename = os.path.abspath("LAPCA_metrics/LAPCA_Score_Pdf/Report-"+self.timestamp+".pdf") # TODO: replace your attachment filepath/name
         else:
-            filename = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report.pdf') # TODO: replace your attachment filepath/name
+            filename = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report-'+self.timestamp+".pdf") # TODO: replace your attachment filepath/name
 
         with open(filename, 'rb') as fp:
             attachment = MIMEApplication(fp.read())

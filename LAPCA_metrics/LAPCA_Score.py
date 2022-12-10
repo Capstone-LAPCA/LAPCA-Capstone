@@ -8,6 +8,7 @@ import subprocess
 from fpdf import FPDF
 import PyPDF2
 import re
+import time
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -37,55 +38,62 @@ def compilePhase(lang,test_file):
         return runCommand([sys.executable,"-m","py_compile",test_file])
 
 class LAPCA_Score:
-    def __init__(self,  *args, **kwargs):
-        if len(args) == 2:
+    def __init__(self,  *args):
+        if len(args) >= 2:
             self.input_file = args[0]
             self.output_file = args[1]
+            if len(args) == 2:
+                self.timestamp = time.strftime("%Y%m%d%H%M%S")
+            else:
+                self.timestamp = args[2]
+            self.make_csv = open("LAPCA_metrics/LAPCA_Score_Pdf/lapca_score-"+self.timestamp+".csv", "w")
+            self.make_csv.write("File Name, LAPCA Score,LAPCA Percentage\n")
+            self.report_txt = open('LAPCA_metrics/LAPCA_Score_Report-'+self.timestamp+'.txt', "a+")
+            self.pdf = FPDF()
+        elif len(args) == 0:
+            self.timestamp = time.strftime("%Y%m%d%H%M%S")
+        else:
+            return "Invalid Arguments"
         self.mapping = json.load(open(os.path.abspath("./JSON/guidelines.json")))["guidelines"]
         self.result = {}
         self.max_score = 0
         self.LAPCA_score = 0
-        self.make_csv = open("LAPCA_metrics/LAPCA_Score_Pdf/lapca_score.csv", "w")
-        self.make_csv.write("File Name, LAPCA Score,LAPCA Percentage\n")
         self.LAPCA_percent = 0
         self.guidelines = []
         self.err_count = 0
         self.error_files = []
         self.violation_count = {}
         self.violated_file_count = {}
-        self.pdf = FPDF()
-        with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'w') as f:
-            f.write("")
         for i in self.mapping:
             if i["priority"]:
                 self.violation_count[i["id"]] = 0
                 self.violated_file_count[i["id"]] = 0
                 self.guidelines.append([i["id"],i["label"],i["priority"]])
                 self.max_score+=i["priority"]
-        
-        pass
 
     def extractZip(self):
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
             zip_ref.extractall(self.output_file)
     
     def createPdf(self):
+        print(self.timestamp)
         self.pdf.add_page()  
         self.pdf.set_font("Arial", size = 10)
-        f = open('LAPCA_metrics/LAPCA_Score_Report.txt', "r")
+        f = open('LAPCA_metrics/LAPCA_Score_Report-'+self.timestamp+'.txt', "r")
         for x in f:
             y = re.sub(u"(\u2018|\u2019)", "'", x)
             self.pdf.cell(200, 10, txt = y, ln = 1, align = 'L')
-        self.pdf.output("LAPCA_metrics/LAPCA_Score_Pdf/results.pdf",'F')
+        self.pdf.output("LAPCA_metrics/LAPCA_Score_Pdf/results-"+self.timestamp+".pdf",'F')
         self.mergePdf()
+        f.close()
 
     def mergePdf(self):
         merger = PyPDF2.PdfFileMerger()
         f1 = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/Report_Cover_Page.pdf')
-        f2 = os.path.abspath('LAPCA_metrics/LAPCA_Score_Pdf/results.pdf')
+        f2 = os.path.abspath("LAPCA_metrics/LAPCA_Score_Pdf/results-"+self.timestamp+".pdf")
         merger.append(f1)
         merger.append(f2)
-        merger.write("LAPCA_metrics/LAPCA_Score_Pdf/Report.pdf")
+        merger.write("LAPCA_metrics/LAPCA_Score_Pdf/Report-"+self.timestamp+".pdf")
         
     def getLAPCA_ScoreOfFile(self,file):
         if file.endswith(".py") or file.endswith(".c") or file.endswith(".java"):
@@ -115,14 +123,13 @@ class LAPCA_Score:
                     score = 0
                     print("----------------------------------------")
                     print("\t\t\tRunning LAPCA on file:", file)
-                    with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
-                        f.write("------------------------------------------------------------------------------------------------------------------\n")
-                        f.write("\t\t\t\t\t\t\t\t\t\tFile: "+file+"\n")
+                    self.report_txt.write("------------------------------------------------------------------------------------------------------------------\n")
+                    self.report_txt.write("\t\t\t\t\t\t\t\t\t\tFile: "+file+"\n")
                     lang = file.split(".")[-1]
                     if compilePhase(lang,os.path.join(root, file)):
-                        with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f, open('results.txt', 'r') as r:
-                            f.write("Error(s) found in file: "+file+"\n")
-                            f.write(r.read())
+                        with open('results.txt', 'r') as r:
+                            self.report_txt.write("Error(s) found in file: "+file+"\n")
+                            self.report_txt.write(r.read())
                             self.error_files.append(file)
                             self.err_count+=1
                             continue
@@ -140,9 +147,8 @@ class LAPCA_Score:
                                 #print(f"{bcolors.FAIL}Terminating LAPCA Score Benchmark{bcolors.ENDC}")
                                 #return "Error in file"+file+".\nTerminating LAPCA Score Benchmark\n"
                                 #exit(0)
-                                with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
-                                    f.write("Error in file "+file+".\n")
-                                    f.write(str(file_op))
+                                self.report_txt.write("Error in file "+file+".\n")
+                                self.report_txt.write(str(file_op))
                                 flag = True
                                 break
 
@@ -150,9 +156,8 @@ class LAPCA_Score:
                                 self.violation_count[guideline[0]]+=len(lines)-1
                                 if len(lines)-1 > 0:
                                     self.violated_file_count[guideline[0]]+=1
-                                with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
-                                    for i in lines[:-1]:
-                                        f.write("\t\t\t"+i+"\n\n")
+                                for i in lines[:-1]:
+                                    self.report_txt.write("\t\t\t"+i+"\n\n")
                                 self.result[file][guideline[1]].extend(lines[:-1])
                                 score += guideline[2]/len(lines)
                     if flag:
@@ -160,43 +165,44 @@ class LAPCA_Score:
                     self.LAPCA_score+=score
                     self.LAPCA_percent += (score/self.max_score)
                     self.make_csv.write(file+","+str(score)+","+str((score/self.max_score)*100)+"\n")
-                    with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
-                        f.write("\t\t\tFile Number: "+str(no_of_files)+"\n")
-                        f.write("\t\t\tLAPCA Score for file "+file+" is "+str(score)+"\n")
-                        f.write("\t\t\tLAPCA Percentage for file "+file+" is "+str((score/self.max_score)*100)+"\n")
-                        f.write("\t\t\tCurrent avg LAPCA Score is "+str(self.LAPCA_score/no_of_files)+"\n")
+                    self.report_txt.write("\t\t\tFile Number: "+str(no_of_files)+"\n")
+                    self.report_txt.write("\t\t\tLAPCA Score for file "+file+" is "+str(score)+"\n")
+                    self.report_txt.write("\t\t\tLAPCA Percentage for file "+file+" is "+str((score/self.max_score)*100)+"\n")
+                    self.report_txt.write("\t\t\tCurrent avg LAPCA Score is "+str(self.LAPCA_score/no_of_files)+"\n")
                     print(f"{bcolors.OKGREEN}Number of files processed:", no_of_files,f"{bcolors.ENDC}")
                     print(f"{bcolors.OKGREEN}LAPCA Percent for file",file,"is",(score/self.max_score)*100,f"{bcolors.ENDC}")
                     print(f"{bcolors.OKGREEN}LAPCA Score for file",file,"is",score,f"{bcolors.ENDC}")
                     print("Current avg LAPCA Score:",self.LAPCA_score/no_of_files)
                                 
                     print("------------------------------------------------------------------------------------------------------------------")
-        with open('LAPCA_metrics/LAPCA_Score_Report.txt', 'a+') as f:
-            f.write("------------------------------------------------------------------------------------------------------------------\n")
-            f.write("\n\n")
 
-            f.write("\t\t\t\t\tTotal number of files processed: "+str(no_of_files)+"\n")
-            f.write("\t\t\t\t\tLAPCA Score for the given codebase is "+str(self.LAPCA_score/([no_of_files if no_of_files else 1][0]))+"\n")
-            f.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str((self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))*100)+"\n")
+        self.report_txt.write("------------------------------------------------------------------------------------------------------------------\n")
+        self.report_txt.write("\n\n")
 
-            f.write("\t\t\t\t\tTotal number of files with syntax errors: "+str(self.err_count)+"\n")
-            f.write("\t\t\t\t\tFiles with syntax errors:\n")
-            for i in self.error_files:
-                f.write("\t\t\t\t\t\t"+i+"\n")
+        self.report_txt.write("\t\t\t\t\tTotal number of files processed: "+str(no_of_files)+"\n")
+        self.report_txt.write("\t\t\t\t\tLAPCA Score for the given codebase is "+str(self.LAPCA_score/([no_of_files if no_of_files else 1][0]))+"\n")
+        self.report_txt.write("\t\t\t\t\tLAPCA Percentage for the given codebase is "+str((self.LAPCA_percent/([no_of_files if no_of_files else 1][0]))*100)+"\n")
 
-            f.write("\t\t\t\t\tViolation count:\n")
-            for i in self.violation_count.keys():
-                f.write("\t\t\t\t\t\t"+i+" : "+str(self.violation_count[i])+"\n")
-            f.write("\t\t\t\t\tViolated files count:\n")
-            for i in self.violated_file_count.keys():
-                f.write("\t\t\t\t\t\t"+i+" : "+str(self.violated_file_count[i])+"\n")
+        self.report_txt.write("\t\t\t\t\tTotal number of files with syntax errors: "+str(self.err_count)+"\n")
+        self.report_txt.write("\t\t\t\t\tFiles with syntax errors:\n")
+        for i in self.error_files:
+            self.report_txt.write("\t\t\t\t\t\t"+i+"\n")
 
-            f.write("\n\n")
-            f.write("------------------------------------------------------------------------------------------------------------------\n")
+        self.report_txt.write("\t\t\t\t\tViolation count:\n")
+        for i in self.violation_count.keys():
+            self.report_txt.write("\t\t\t\t\t\t"+i+" : "+str(self.violation_count[i])+"\n")
+        self.report_txt.write("\t\t\t\t\tViolated files count:\n")
+        for i in self.violated_file_count.keys():
+            self.report_txt.write("\t\t\t\t\t\t"+i+" : "+str(self.violated_file_count[i])+"\n")
+
+        self.report_txt.write("\n\n")
+        self.report_txt.write("------------------------------------------------------------------------------------------------------------------\n")
     
         print(f"{bcolors.OKGREEN}Total number of files:",no_of_files,f"{bcolors.ENDC}")
         print(f"{bcolors.OKGREEN}LAPCA Score for the given codebase is",self.LAPCA_score/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
         print(f"{bcolors.OKGREEN}LAPCA Percent for the given codebase is",self.LAPCA_percent/([no_of_files if no_of_files else 1][0]),bcolors.ENDC)
+        self.report_txt.close()
+        self.make_csv.close()
         return self.result
 
 if __name__ == "__main__":

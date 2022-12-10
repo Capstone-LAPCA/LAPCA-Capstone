@@ -3,13 +3,15 @@ from LAPCA_metrics.LAPCA_Similarity.LAPCA_Plag import LAPCA_Plag
 import zipfile
 import PyPDF2  
 from fpdf import FPDF
+import time
 
 class LAPCA_Similarity:
-    def __init__(self, input_file, output_file):
+    def __init__(self, input_file,timestamp = time.strftime("%Y%m%d%H%M%S")):
         self.plagiarism = []
         self.input_file = input_file
-        self.output_file = output_file
+        self.output_file = input_file[:-4]
         self.pdf = FPDF()
+        self.timestamp = timestamp
 
     def extractZip(self):
         with zipfile.ZipFile(self.input_file, 'r') as zip_ref:
@@ -39,7 +41,6 @@ class LAPCA_Similarity:
                     if k=="":
                         continue
                     if setColor:
-                        #self.pdf.set_text_color(255, 0, 0)
                         self.pdf.set_fill_color(255, 354, 23)
                         self.pdf.cell(len(k)+8, 5, txt = utxt, ln = 0, align = 'L',fill=True)
                         self.pdf.set_text_color(0, 0, 0)
@@ -51,19 +52,19 @@ class LAPCA_Similarity:
                     setColor = not setColor
                 self.pdf.cell(200, 5, txt ="", ln = 1, align = 'C')
             self.pdf.set_font("Arial", size = 15)
-        self.pdf.output("LAPCA_metrics/Similarity_Score_Pdf/results.pdf",'F')
+        self.pdf.output("LAPCA_metrics/Similarity_Score_Pdf/results-"+self.timestamp+".pdf",'F')
         self.mergePdf()
 
     def mergePdf(self):
         merger = PyPDF2.PdfFileMerger()
         f1 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/Report_Cover_Page.pdf')
-        f2 = os.path.abspath('LAPCA_metrics/Similarity_Score_Pdf/results.pdf')
+        f2 = os.path.abspath("LAPCA_metrics/Similarity_Score_Pdf/results-"+self.timestamp+".pdf")
         merger.append(f1)
         merger.append(f2)
-        merger.write("LAPCA_metrics/Similarity_Score_Pdf/Report.pdf")
+        merger.write("LAPCA_metrics/Similarity_Score_Pdf/Report-"+self.timestamp+".pdf")
 
     def getLAPCA_Similarity(self):
-        csv_report = open("LAPCA_metrics/Similarity_Score_Pdf/LAPCA_Similarity.csv","w")
+        csv_report = open("LAPCA_metrics/Similarity_Score_Pdf/LAPCA_Similarity"+self.timestamp+".csv","w")
         csv_report.write("File Name,Plagiarised File,Plagiarism Percentage\n")
         self.extractZip()
         file_list = {}
@@ -96,9 +97,10 @@ class LAPCA_Similarity:
             print(plag[0],"plagiarised",plag[2],"by",plag[1],"%")
             csv_report.write(str(plag[0])+","+plag[2]+","+str(plag[1])+"\n")
             self.plagiarism.append(plag)
+        csv_report.close()
         return self.plagiarism
 
 if __name__ == "__main__":
-    lc = LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip", "LAPCA_metrics/LAPCA_Similarity/output1")
+    lc = LAPCA_Similarity("LAPCA_metrics/LAPCA_Similarity/xytest.zip")
     lc.getLAPCA_Similarity()
     lc.createPdf()

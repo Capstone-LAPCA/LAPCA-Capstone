@@ -12,6 +12,7 @@ from LAPCA_metrics.LAPCA_Score import LAPCA_Score
 from Server.Mail import Mail
 print(os.getcwd())
 from LAPCA_metrics.LAPCA_Similarity.LAPCA_Similarity import LAPCA_Similarity
+import time
 
 if(os.getcwd().split(os.sep)[-1]=='Server'):
     os.chdir('..')
@@ -178,18 +179,19 @@ def getGuidelines():
 @cross_origin()
 def uploadFile():
     data = request.get_json()
+    timestr = time.strftime("%Y%m%d%H%M%S")
     zipfile = data['uploadFile']['data']
-    with open("temp.zip", "wb") as f:
+    with open("req_files-"+data["name"]+timestr+".zip", "wb") as f:
         f.write(base64.b64decode(zipfile))
     if data['reportType']=='LAPCA Score':
-        ls = LAPCA_Score(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles"))
+        ls = LAPCA_Score("req_files-"+data["name"]+timestr+".zip","extracted_files-"+timestr,timestr)
         ls.getLAPCA_Score()
         ls.createPdf()
     elif data['reportType']=='LAPCA Similarity Score':
-        lc = LAPCA_Similarity(os.path.abspath("temp.zip"),os.path.abspath("extractedFiles"))
+        lc = LAPCA_Similarity("req_files-"+data["name"]+timestr+".zip",timestr)
         lc.getLAPCA_Similarity()
         lc.createPdf()
-    Mail(data['name'],data['email'],data['reportType']).sendMail()
+    Mail(data['name'],data['email'],data['reportType'],timestr).sendMail()
     return jsonify({'data':"success"})
 if __name__ == '__main__':
-    app.run(port=3003)
+    app.run(port=3003,threaded=True)
