@@ -7,3 +7,4 @@ zss==1.2.0
 fpdf==1.7.2
 PyPDF2==2.11.2
 Pygments==2.13.0
+waitress==2.1.2

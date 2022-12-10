@@ -130,7 +130,6 @@ def getResults():
     code = data['code']
     form = data['predefined_guidelines']
     user_defined_guidelines = data['custom_guidelines']
-    print(form)
     file_path=os.path.join("Server","test."+language)
     res = ""
     comp_result = {
@@ -192,4 +191,6 @@ def uploadFile():
     Mail(data['name'],data['email'],data['reportType']).sendMail()
     return jsonify({'data':"success"})
 if __name__ == '__main__':
-    app.run(port=3003)
+    #app.run(port=3003) # Using this for development
+    from waitress import serve
+    serve(app,host = "0.0.0.0",port=3003)
