@@ -1,1 +1,1 @@
-web: gunicorn LAPCA_Server:app --timeout 90 --chdir Server 
+web: gunicorn LAPCA_Server:app --timeout 1000 --chdir Server 
