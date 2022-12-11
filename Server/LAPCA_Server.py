@@ -10,7 +10,6 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
 from LAPCA_metrics.LAPCA_Score import LAPCA_Score
 from Server.Mail import Mail
-print(os.getcwd())
 from LAPCA_metrics.LAPCA_Similarity.LAPCA_Similarity import LAPCA_Similarity
 import time
 
