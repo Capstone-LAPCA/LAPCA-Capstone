@@ -1,4 +1,4 @@
 STATE assign_loop
-    if ' = ' in ASSIGN_COND:
-        print("Assignment statement in loop condition at line", LINE_NO)
+    if ' = ' is present in ASSIGN_COND:
+        PRINT "Assignment statement in loop condition present"
 END_STATE

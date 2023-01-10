@@ -1,4 +1,4 @@
 STATE continue
     if(cont_pres):
-        print("continue present in line",LINE_NO)
+        PRINT "continue present"
 END_STATE

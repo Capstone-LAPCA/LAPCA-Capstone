@@ -5,12 +5,19 @@ import sys
 import os
 import subprocess
 import json
+import base64
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from main import MainModule
+from LAPCA_metrics.LAPCA_Score import LAPCA_Score
+from Server.Mail import Mail
+from LAPCA_metrics.LAPCA_Similarity.LAPCA_Similarity import LAPCA_Similarity
+import time
+
 if(os.getcwd().split(os.sep)[-1]=='Server'):
     os.chdir('..')
 app = Flask(__name__)
 CORS(app)
+
 def runCommand(command):
     flag=False
     with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,universal_newlines=True) as p, open("results.txt", "w") as f:
@@ -123,13 +130,13 @@ def getResults():
     code = data['code']
     form = data['predefined_guidelines']
     user_defined_guidelines = data['custom_guidelines']
-    print(form)
     file_path=os.path.join("Server","test."+language)
     res = ""
     comp_result = {
         "compilationErr":False,
         "compilationOutput": "",
-        "guidelines": []
+        "guidelines": [], 
+        "score": 0
     }
 
     with open(file_path, "w") as text_file:
@@ -140,11 +147,13 @@ def getResults():
         comp_result["compilationOutput"]="Compilation Successful"
         comp_result=accessRes(file_path,form,comp_result)
         comp_result=userDefAccessRes(file_path,user_defined_guidelines,comp_result)
+        comp_result["score"] = LAPCA_Score().getLAPCA_ScoreOfFile(file_path)
     else:
         with open("results.txt", "r") as text_file:
             res=text_file.read()
             comp_result["compilationErr"] = True
             comp_result["compilationOutput"] = res
+            comp_result["score"]=0
 
     return jsonify(comp_result)
 
@@ -152,6 +161,8 @@ def getResults():
 @cross_origin()
 def getGuidelines():
     json_file = json.load(open(os.path.abspath("./JSON/guidelines.json")))
+    # json_file = json.load(open(r"C:\Users\Hp\Documents\LAPCA-Capstone\JSON\guidelines.json"))
+
     for i in range(len(json_file["guidelines"])):
         id = json_file["guidelines"][i]["id"]
         if os.path.isfile(os.path.join("Guidelines",id)):
@@ -161,5 +172,26 @@ def getGuidelines():
         else:
             return jsonify({"error":"Guideline file not found"})
     return jsonify(json_file)
+
+@app.route("/upload_file", methods=['POST'])
+@cross_origin()
+def uploadFile():
+    data = request.get_json()
+    timestr = time.strftime("%Y%m%d%H%M%S")
+    zipfile = data['uploadFile']['data']
+    with open("req_files-"+data["name"]+timestr+".zip", "wb") as f:
+        f.write(base64.b64decode(zipfile))
+    if data['reportType']=='LAPCA Score':
+        ls = LAPCA_Score("req_files-"+data["name"]+timestr+".zip","extracted_files-"+timestr,timestr)
+        ls.getLAPCA_Score()
+        ls.createPdf()
+    elif data['reportType']=='LAPCA Similarity Score':
+        lc = LAPCA_Similarity("req_files-"+data["name"]+timestr+".zip",timestr)
+        lc.getLAPCA_Similarity()
+        lc.createPdf()
+    Mail(data['name'],data['email'],data['reportType'],timestr).sendMail()
+    return jsonify({'data':"success"})
 if __name__ == '__main__':
-    app.run(port=3003)
+    #app.run(port=3003) # Using this for development
+    from waitress import serve
+    serve(app,host = "0.0.0.0",port=3003)

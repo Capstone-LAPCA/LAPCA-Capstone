@@ -7,10 +7,9 @@ import os
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from Utils.Utility import Utility, getTokens
 info_list = []
-FUNCTIONS = []
-line_no = {}
-d = {}
+STATEMENT_LINE_NO = {}
 flagIf = False
+map_state_to_code = {}
 
 def ret_iter(Tree,variables):
     if Tree.data == "assign" and not isinstance(Tree.children[0], type(Tree)):
@@ -69,7 +68,7 @@ def getBlockItem(Tree,s):
         for i in l:
             s+=getBlockItem(i,"")
         if hasattr(Tree,'meta') and hasattr(Tree.meta,'line'):
-            d[s] = Tree.meta.line
+            STATEMENT_LINE_NO[s] = Tree.meta.line
     return s
 
 
@@ -139,18 +138,31 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
             if isinstance(i,Token) and i.value == "else":
                 expression_statements.append("else") 
             if isinstance(i, type(Tree)):
-                if i.data == "if_stmt" or i.data=="elifs":
+                if i.data == "if_stmt" or i.data=="elif_":
                     expression_statements.append("else")
                 getExpressionStatementsInsideIf(i,expression_statements)
 
+def getFunctionParams(Tree, param_list):
+    for i in Tree.children:
+        if isinstance(i,type(Tree)) and i.data == "parameters":
+                for child in i.children:
+                    if isinstance(child,type(Tree)):
+                        param_list.append(getBlockItem(child,""))
+
 class MainTransformer():
+    def __init__(self,temp,test_file_path):
+        global map_state_to_code
+        map_state_to_code = temp
+        self.test_file_path = test_file_path
     def run(self):
-        file = open(sys.argv[1], encoding='utf-8').read()
+        file = open(self.test_file_path, encoding='utf-8').read()
         file+="\n"
         kwargs = dict(postlex=PythonIndenter(), start='file_input')
+        exec(map_state_to_code["before"])
         python_parser2 = Lark.open('Python_Grammar.lark', rel_to=__file__, **kwargs,keep_all_tokens=True,propagate_positions=True)
         #print(pythonParserActions().visit_topdown(python_parser2.parse(file)).pretty())
         pythonParserActions().visit_topdown(python_parser2.parse(file))
+        exec(map_state_to_code["after"])
         return
 
 class pythonParserActions(visitors.Visitor):
@@ -158,8 +170,11 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def file_input(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         GLOBAL_FUNCTION_CALLS=[]
         getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
+        exec(map_state_to_code["file_input"])
         pass
     def eval_input(self, items):
 
@@ -177,15 +192,19 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def funcdef(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        FUNCTION_PARAMS = [] 
+        getFunctionParams(items,FUNCTION_PARAMS)
         FUNCTION_NAME = getFunctionName(items)
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         STATEMENTS = []
-        line_no[FUNCTION_NAME] = LINE_NO
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["funcdef"])
         pass
     def parameters(self, items):
 
@@ -252,7 +271,7 @@ class pythonParserActions(visitors.Visitor):
         if(not variable):
             return 
         LINE_NO = items.meta.line
-        
+        exec(map_state_to_code["assign"])
         pass
     def augassign(self, items):
 
@@ -278,7 +297,7 @@ class pythonParserActions(visitors.Visitor):
     def continue_stmt(self, items):   
         cont_pres=True    
         LINE_NO=items.meta.line
-
+        exec(map_state_to_code["continue_stmt"])
         pass
     def return_stmt(self, items):
 
@@ -326,6 +345,8 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def compound_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         STATEMENTS = []
         LINE_NO = items.meta.line
         getBlockItemList(items,STATEMENTS)
@@ -344,16 +365,20 @@ class pythonParserActions(visitors.Visitor):
             ITERATION = items.children[0].data
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["compound_stmt"])
         pass
     def async_stmt(self, items):
 
         pass
     def if_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         LINE_NO = items.meta.line
         FUNCTION_CALLS = []
         getFunctionCalls(items,FUNCTION_CALLS)
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
+        exec(map_state_to_code["if_stmt"])
         pass
     def elifs(self, items):
 
@@ -362,18 +387,25 @@ class pythonParserActions(visitors.Visitor):
 
         pass
     def while_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         STATEMENTS = []
         LINE_NO = items.meta.line
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
         getExpressionStatements(items,EXP_STATEMENTS)
         condition_list = []
+        ITERATION_CONDITION = ""
         getCondition(items,condition_list)
-        ITERATION_CONDITION = condition_list
+        if len(condition_list) >0:
+            ITERATION_CONDITION = condition_list[0]
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["while_stmt"])
         pass
     def for_stmt(self, items):
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
@@ -383,6 +415,7 @@ class pythonParserActions(visitors.Visitor):
         ITERATION_CONDITION = ""
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["for_stmt"])
         pass
     def try_stmt(self, items):
 
@@ -406,6 +439,7 @@ class pythonParserActions(visitors.Visitor):
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
         LINE_NO = items.meta.line
+        exec(map_state_to_code["match_stmt"])
         pass
     def case(self, items):
 
@@ -617,5 +651,3 @@ class pythonParserActions(visitors.Visitor):
     def name(self, items):
 
         pass
-
-MainTransformer().run()

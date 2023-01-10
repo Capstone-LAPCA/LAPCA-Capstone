@@ -1,4 +1,4 @@
 STATE declr
     if len(variable) > 31:
-        print("Variable length too long at line",LINE_NO)
+        PRINT "Variable length too long"
 END_STATE	

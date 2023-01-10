@@ -1,0 +1,115 @@
+------------------------------------------------------------------------------------------------------------------
+										File: bfsmain.c
+			Line 21: Curly braces not used
+
+			Line 26: Curly braces not used
+
+			Line 6: One variable per declaration rule not followed
+
+			File Number: 1
+			LAPCA Score for file bfsmain.c is 98.33333333333334
+			LAPCA Percentage for file bfsmain.c is 0.9276729559748429
+			Current avg LAPCA Score is 98.33333333333334
+------------------------------------------------------------------------------------------------------------------
+										File: H_PES1201901801_Week11b.c
+			Line 4: One variable per declaration rule not followed
+
+			Line 14: One variable per declaration rule not followed
+
+			File Number: 2
+			LAPCA Score for file H_PES1201901801_Week11b.c is 104.66666666666666
+			LAPCA Percentage for file H_PES1201901801_Week11b.c is 0.9874213836477986
+			Current avg LAPCA Score is 101.5
+------------------------------------------------------------------------------------------------------------------
+										File: dfsimp.c
+			Line 7: Curly braces not used
+
+			Line 30: Curly braces not used
+
+			Line 23: Recursion used in function
+
+			File Number: 3
+			LAPCA Score for file dfsimp.c is 98.83333333333334
+			LAPCA Percentage for file dfsimp.c is 0.9323899371069183
+			Current avg LAPCA Score is 100.61111111111113
+------------------------------------------------------------------------------------------------------------------
+										File: dfsmain.c
+			Depth of looping greater than 2 at line 16
+
+			File Number: 4
+			LAPCA Score for file dfsmain.c is 101.0
+			LAPCA Percentage for file dfsmain.c is 0.9528301886792453
+			Current avg LAPCA Score is 100.70833333333334
+------------------------------------------------------------------------------------------------------------------
+										File: H_PES1201901801_Week10.c
+			Line 24: Curly braces not used
+
+			Line 31: Curly braces not used
+
+			Line 39: Curly braces not used
+
+			Line 51: Curly braces not used
+
+			Line 63: Curly braces not used
+
+			Line 77: Curly braces not used
+
+			Line 95: Curly braces not used
+
+			Line 108: Curly braces not used
+
+			Line 18: One variable per declaration rule not followed
+
+			File Number: 5
+			LAPCA Score for file H_PES1201901801_Week10.c is 96.11111111111111
+			LAPCA Percentage for file H_PES1201901801_Week10.c is 0.9067085953878407
+			Current avg LAPCA Score is 99.78888888888889
+------------------------------------------------------------------------------------------------------------------
+										File: tbtmain.c
+			Line 8: One variable per declaration rule not followed
+
+			File Number: 6
+			LAPCA Score for file tbtmain.c is 105.0
+			LAPCA Percentage for file tbtmain.c is 0.9905660377358491
+			Current avg LAPCA Score is 100.6574074074074
+------------------------------------------------------------------------------------------------------------------
+										File: tbtimp1.c
+			Empty function found at line 5
+
+			Empty function found at line 10
+
+			Empty function found at line 15
+
+			Empty function found at line 20
+
+			Empty function found at line 46
+
+			File Number: 7
+			LAPCA Score for file tbtimp1.c is 89.33333333333333
+			LAPCA Percentage for file tbtimp1.c is 0.8427672955974842
+			Current avg LAPCA Score is 99.03968253968254
+------------------------------------------------------------------------------------------------------------------
+
+
+					Total number of files processed: 7
+					LAPCA Score for the given codebase is 99.03968253968254
+					LAPCA Percentage for the given codebase is 0.9343366277328542
+					Total number of error files: 0
+					Error files: []
+					Violation count:
+						Curly_braces.lapx : 12
+						Assign_in_loop.lapx : 0
+						Function_size.lapx : 0
+						Indirect_Recursion.lapx : 0
+						Depth_of_looping.lapx : 1
+						Continue.lapx : 0
+						Dead_Code.lapx : 0
+						One_var_decl.lapx : 5
+						Recursion.lapx : 1
+						var_greater_than_31.lapx : 0
+						Switch_default.lapx : 0
+						Function_params.lapx : 0
+						Empty_func.lapx : 5
+
+
+------------------------------------------------------------------------------------------------------------------

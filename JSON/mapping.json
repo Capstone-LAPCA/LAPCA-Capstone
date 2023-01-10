@@ -38,7 +38,7 @@
         "while":"while_stmt",
         "for":"for_stmt",
         "iteration":"compound_stmt",
-        "switch":"switch_stmt"
-
+        "switch":"switch_stmt",
+        "if":"if_stmt"
     }
 }

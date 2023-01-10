@@ -5,19 +5,24 @@ import os
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from Utils.Utility import Utility, getTokens
 info_list = []
-d = {}
-line_no = {}
-FUNCTIONS = []
+STATEMENT_LINE_NO = {}
 flagIf = False
+map_state_to_code = {}
 
 class MainTransformer():
+    def __init__(self,temp,test_file_path):
+        global map_state_to_code
+        map_state_to_code = temp
+        self.test_file_path = test_file_path
     def run(self):
-        file = open(sys.argv[1], encoding='utf-8').read()
+        file = open(self.test_file_path, encoding='utf-8').read()
         #file = 'int main() { int a = 5; int b = a+10; for(int i = 0;i < 10; i++) printf("%d",i);  return 0; }'
+        exec(map_state_to_code["before"])
         C_parser = Lark.open('C_Grammar.lark', rel_to=__file__,
                              start='translationunit', keep_all_tokens=True, propagate_positions=True)
         CParserActions().visit_topdown(C_parser.parse(file))
-        #print(CParserActions().visit_topdown(C_parser.parse(file)).pretty())
+        exec(map_state_to_code["after"])
+        # print(CParserActions().visit_topdown(C_parser.parse(file)).pretty())
         return
 
 def ret_iter(Tree, variables):
@@ -60,7 +65,7 @@ def getBlockItem(tree,s):
         for i in l:
             s+=getBlockItem(i,"")
         if hasattr(tree,'meta') and hasattr(tree.meta,'line'):
-            d[s] = tree.meta.line
+            STATEMENT_LINE_NO[s] = tree.meta.line
     return s
 
 
@@ -84,7 +89,7 @@ def ischild(Tree,child):
     return flag
 
 def getCondition(Tree,condition_list):
-    if Tree.data=="while_stmt" or Tree.data =="for_stmt" or Tree.data=="selectionstatement":
+    if Tree.data=="while_stmt" or Tree.data =="for_stmt" or Tree.data=="if_stmt" or Tree.data=="switch_stmt":
         condition_list.append(getBlockItem(Tree.children[2],""))
     l = Tree.children
     for i in l:
@@ -102,7 +107,7 @@ def getExpressionStatements(Tree,expression_statements):
 
 def getExpressionStatementsInsideAllIf(Tree,expression_statements):
     global flagIf
-    if Tree.data == "selectionstatement":
+    if Tree.data == "if_stmt":
         expr = []
         getExpressionStatementsInsideIf(Tree,expr)
         if "else" in expr:
@@ -129,7 +134,7 @@ def getExpressionStatementsInsideAllIf(Tree,expression_statements):
 
 def getExpressionStatementsInsideIf(Tree,expression_statements):
     global flagIf
-    if Tree.data == "selectionstatement":
+    if Tree.data == "if_stmt":
         if flagIf:
             return
         else:
@@ -144,7 +149,34 @@ def getExpressionStatementsInsideIf(Tree,expression_statements):
             if isinstance(i, type(Tree)):
                 getExpressionStatementsInsideIf(i,expression_statements)
 
+def getFunctionParams(Tree, param_list):
+    if Tree.data == "parameterdeclaration":
+        param_list.append(getBlockItem(Tree,""))
+    else:
+        for i in Tree.children:
+            if isinstance(i,type(Tree)):
+                getFunctionParams(i,param_list)
+
 class CParserActions(visitors.Visitor):
+    def for_stmt(self, items):
+        LINE_NO=items.meta.line
+        condition_list = []
+        ITERATION = "for"
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = ""
+        if len(condition_list):
+            ITERATION_CONDITION = condition_list[0]
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        EXP_STATEMENTS = []
+        getExpressionStatements(items,EXP_STATEMENTS)
+        EXP_STATEMENTS_INSIDE_ALL_IF = []
+        getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        exec(map_state_to_code["for_stmt"])
+        pass
+
     def while_stmt(self, items):
         LINE_NO=items.meta.line
         condition_list = []
@@ -159,21 +191,27 @@ class CParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        exec(map_state_to_code["while_stmt"])
         pass
 
     def switch_stmt(self, items):
         LINE_NO = items.meta.line
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
+        exec(map_state_to_code["switch_stmt"])
         pass
     def start(self, items):
-
+        LINE_NO = items.meta.line
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         pass
 
     def primaryexpression(self, items):
         LINE_NO = items.meta.line
         cont_pres= items.children[0].value == "continue"
-
+        exec(map_state_to_code["primaryexpression"])
         pass
 
     def genericselection(self, items):
@@ -287,7 +325,7 @@ class CParserActions(visitors.Visitor):
     def initdeclaratorlist(self, items):
         LINE_NO=items.meta.line
         var_list=items.children
-
+        exec(map_state_to_code["initdeclaratorlist"])
         pass
 
     def initdeclarator(self, items):
@@ -371,6 +409,7 @@ class CParserActions(visitors.Visitor):
         if(not variable):
             return
         LINE_NO = items.meta.line
+        exec(map_state_to_code["directdeclarator"])
         pass
 
     def gccdeclaratorextension(self, items):
@@ -476,9 +515,22 @@ class CParserActions(visitors.Visitor):
     def expressionstatement(self, items):
 
         pass
+    
+    def if_stmt(self, items):
+        condition_list = []
+        ALL_TOKENS = []
+        LINE_NO = items.meta.line
+        getTokens(items,ALL_TOKENS)
+        getCondition(items,condition_list)
+        ITERATION_CONDITION = condition_list
+        STATEMENTS = []
+        getBlockItemList(items,STATEMENTS)
+        exec(map_state_to_code["if_stmt"])
+        pass
 
     def selectionstatement(self, items):
         condition_list = []
+        LINE_NO = items.meta.line
         getCondition(items,condition_list)
         ITERATION_CONDITION = condition_list
         STATEMENTS = []
@@ -487,6 +539,8 @@ class CParserActions(visitors.Visitor):
 
     def iterationstatement(self, items):
         LINE_NO=items.meta.line
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
         condition_list = []
         ITERATION = ""
         if items.children[0].data == "while_stmt":
@@ -512,17 +566,19 @@ class CParserActions(visitors.Visitor):
         getExpressionStatements(items,EXP_STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["iterationstatement"])
         pass
 
     def forcondition(self, items):
-
+        LINE_NO=items.meta.line
         pass
 
     def fordeclaration(self, items):
-
+        LINE_NO=items.meta.line
         pass
 
     def forexpression(self, items):
+        LINE_NO=items.meta.line
         pass
 
     def jumpstatement(self, items):
@@ -535,7 +591,9 @@ class CParserActions(visitors.Visitor):
 
     def translationunit(self, items):
         GLOBAL_FUNCTION_CALLS=[]
+        LINE_NO=items.meta.line
         getGlobalFunctionCalls(items,GLOBAL_FUNCTION_CALLS)
+        exec(map_state_to_code["translationunit"])
         pass
 
     def externaldeclaration(self, items):
@@ -543,18 +601,21 @@ class CParserActions(visitors.Visitor):
         pass
 
     def functiondefinition(self, items):
-        d.clear()
-        tokens = []
-        getTokens(items,tokens)
-        FUNCTION_NAME = tokens[1]
+        ALL_TOKENS = []
+        getTokens(items,ALL_TOKENS)
+        FUNCTION_NAME=""
+        if "(" in ALL_TOKENS:
+            FUNCTION_NAME = ALL_TOKENS[ALL_TOKENS.index("(")-1]
         FUNCTION_CALLS = []
+        FUNCTION_PARAMS = []
+        getFunctionParams(items,FUNCTION_PARAMS)
         getFunctionCalls(items,FUNCTION_CALLS)
         LINE_NO = items.meta.line
-        line_no[FUNCTION_NAME] = LINE_NO
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS_INSIDE_ALL_IF = []
         getExpressionStatementsInsideAllIf(items,EXP_STATEMENTS_INSIDE_ALL_IF)
+        exec(map_state_to_code["functiondefinition"])
         pass
 
     def declarationlist(self, items):
@@ -566,4 +627,4 @@ class CParserActions(visitors.Visitor):
         pass
 
 
-MainTransformer().run()
+# MainTransformer().run()

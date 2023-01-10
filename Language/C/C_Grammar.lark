@@ -248,7 +248,7 @@ WHITESPACE : /[ \t]/+
 NEWLINE : ("\r" "\n") | "\n"
 %ignore NEWLINE
 
-BLOCKCOMMENT :   "/*" /./* "*/"
+BLOCKCOMMENT :   /\/\*/ (/./ | NEWLINE)* /\*\//
 %ignore BLOCKCOMMENT
 
 LINECOMMENT :   "//" /[^\r\n]/*

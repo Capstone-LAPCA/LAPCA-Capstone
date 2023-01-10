@@ -1,0 +1,11 @@
+STATE function
+    count = 0
+    if len(STATEMENTS) == 0:
+        print("Empty function found at line", LINE_NO)
+    else:
+        for statement in STATEMENTS:
+            if not ('pass' in statement.strip(' ')[0:4]):
+                count += 1
+        if(count == 0):
+            print("Empty function found at line", LINE_NO)
+END_STATE

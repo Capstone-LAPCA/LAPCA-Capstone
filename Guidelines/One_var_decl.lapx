@@ -1,4 +1,4 @@
 STATE var_decl
     if(len(var_list)>1):
-        print("One variable per declaration rule not followed at line number", LINE_NO)
+        PRINT "One variable per declaration rule not followed"
 END_STATE

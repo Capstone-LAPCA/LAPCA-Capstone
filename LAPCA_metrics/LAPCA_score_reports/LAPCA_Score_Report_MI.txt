@@ -1,0 +1,185 @@
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			Line 36: continue present
+
+			Line 69: continue present
+
+			File Number: 1
+			LAPCA Score for file PES1UG19CS532.py is 104.66666666666666
+			LAPCA Percentage for file PES1UG19CS532.py is 0.9874213836477986
+			Current avg LAPCA Score is 104.66666666666666
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 2
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 105.33333333333333
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			File Number: 3
+			LAPCA Score for file PES1UG19CS532.py is 106.0
+			LAPCA Percentage for file PES1UG19CS532.py is 1.0
+			Current avg LAPCA Score is 105.55555555555554
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 4
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 105.66666666666666
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			File Number: 5
+			LAPCA Score for file PES1UG19CS532.py is 106.0
+			LAPCA Percentage for file PES1UG19CS532.py is 1.0
+			Current avg LAPCA Score is 105.73333333333332
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 6
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 105.77777777777777
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			Dead code statement in stump_error at line 76
+
+			Dead code statement in compute_alpha at line 91
+
+			Dead code statement in update_weights at line 118
+
+			Dead code statement in predict at line 132
+
+			Line 29: Recursion used in function
+
+			Line 120: Recursion used in function
+
+			File Number: 7
+			LAPCA Score for file PES1UG19CS532.py is 89.33333333333334
+			LAPCA Percentage for file PES1UG19CS532.py is 0.8427672955974843
+			Current avg LAPCA Score is 103.42857142857143
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 8
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 103.75
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			File Number: 9
+			LAPCA Score for file PES1UG19CS532.py is 106.0
+			LAPCA Percentage for file PES1UG19CS532.py is 1.0
+			Current avg LAPCA Score is 104.0
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 10
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 104.2
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			Function has too many parameters at line  52
+
+			File Number: 11
+			LAPCA Score for file PES1UG19CS532.py is 103.5
+			LAPCA Percentage for file PES1UG19CS532.py is 0.9764150943396226
+			Current avg LAPCA Score is 104.13636363636364
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			Number of lines exceeded in function test_case
+
+			File Number: 12
+			LAPCA Score for file SampleTest.py is 103.5
+			LAPCA Percentage for file SampleTest.py is 0.9764150943396226
+			Current avg LAPCA Score is 104.08333333333333
+------------------------------------------------------------------------------------------------------------------
+										File: DT_SampleTestCase.py
+			File Number: 13
+			LAPCA Score for file DT_SampleTestCase.py is 106.0
+			LAPCA Percentage for file DT_SampleTestCase.py is 1.0
+			Current avg LAPCA Score is 104.23076923076923
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			File Number: 14
+			LAPCA Score for file PES1UG19CS532.py is 106.0
+			LAPCA Percentage for file PES1UG19CS532.py is 1.0
+			Current avg LAPCA Score is 104.35714285714286
+------------------------------------------------------------------------------------------------------------------
+										File: DT_SampleTestCase_2.py
+			Number of lines exceeded in function test_case
+
+			File Number: 15
+			LAPCA Score for file DT_SampleTestCase_2.py is 103.5
+			LAPCA Percentage for file DT_SampleTestCase_2.py is 0.9764150943396226
+			Current avg LAPCA Score is 104.3
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 16
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 104.40625
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			Dead code statement in grad_add at line 132
+
+			Dead code statement in grad_matmul at line 155
+
+			Line 157: Recursion used in function
+
+			File Number: 17
+			LAPCA Score for file PES1UG19CS532.py is 92.16666666666666
+			LAPCA Percentage for file PES1UG19CS532.py is 0.8694968553459118
+			Current avg LAPCA Score is 103.68627450980392
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 18
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 103.81481481481482
+------------------------------------------------------------------------------------------------------------------
+										File: PES1UG19CS532.py
+			Dead code statement in viterbi_algorithm at line 64
+
+			Function has too many parameters at line  14
+
+			File Number: 19
+			LAPCA Score for file PES1UG19CS532.py is 93.5
+			LAPCA Percentage for file PES1UG19CS532.py is 0.8820754716981132
+			Current avg LAPCA Score is 103.27192982456141
+------------------------------------------------------------------------------------------------------------------
+										File: SampleTest.py
+			File Number: 20
+			LAPCA Score for file SampleTest.py is 106.0
+			LAPCA Percentage for file SampleTest.py is 1.0
+			Current avg LAPCA Score is 103.40833333333335
+------------------------------------------------------------------------------------------------------------------
+										File: sergio.py
+			Function has too many parameters at line  3
+
+			File Number: 21
+			LAPCA Score for file sergio.py is 103.5
+			LAPCA Percentage for file sergio.py is 0.9764150943396226
+			Current avg LAPCA Score is 103.41269841269843
+------------------------------------------------------------------------------------------------------------------
+
+
+					Total number of files processed: 21
+					LAPCA Score for the given codebase is 103.41269841269843
+					LAPCA Percentage for the given codebase is 0.9755914944594188
+					Total number of error files: 0
+					Error files: []
+					Violation count:
+						Curly_braces.lapx : 0
+						Assign_in_loop.lapx : 0
+						Function_size.lapx : 2
+						Indirect_Recursion.lapx : 0
+						Depth_of_looping.lapx : 0
+						Continue.lapx : 2
+						Dead_Code.lapx : 7
+						One_var_decl.lapx : 0
+						Recursion.lapx : 3
+						var_greater_than_31.lapx : 0
+						Switch_default.lapx : 0
+						Function_params.lapx : 3
+						Empty_func.lapx : 0
+
+
+------------------------------------------------------------------------------------------------------------------

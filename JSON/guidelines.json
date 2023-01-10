@@ -1,53 +1,93 @@
 {
     "guidelines":[
-        {
+    {
+        "id": "Curly_braces.lapx",
+        "label": "Check whether curly braces are used for all control structures",
+        "class":"Organizational",
+        "priority": 10
+    },
+    {
         "id":"Assign_in_loop.lapx",
         "label":"Check for assignment in loop condition",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority": 2
     },
     {
         "id":"Function_size.lapx",
         "label":"Check whether size of a function has exceeded the limit",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority":5
+    },
+    {
+        "id": "Indirect_Recursion.lapx",
+        "label": "Check for indirect recursion",
+        "class": "Organizational",
+        "priority": 5
+    },
+    {
+        "id": "Depth_of_looping.lapx",
+        "label": "Check whether depth of looping has exceeded the limit",
+        "class": "Organizational",
+        "priority": 10
     },
     {
         "id":"Binary_Search_Iterative.lapx",
         "label":"Check if binary search iterative is implemented",
-        "class":"Algorithmic"
+        "class":"Algorithmic",
+        "priority": 0
     },
     {
         "id":"Continue.lapx",
         "label":"Check if continue statement is used",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority": 2
     },
     {
         "id":"Dead_Code.lapx",
         "label":"Check for dead code",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority": 20
     },
     {
         "id":"One_var_decl.lapx",
         "label":"Check if only one variable is declared per statement",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority": 2
     },
     {
         "id":"Recursion.lapx",
         "label":"Check if recursion is used",
-        "class":"Algorithmic"
+        "class":"Algorithmic",
+        "priority": 1
     },
     {
         "id":"Unused_Functions.lapx",
         "label":"Check for unused functions",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority": 0
     },
     {
         "id":"var_greater_than_31.lapx",
         "label":"Check if variable length is greater than 31",
-        "class":"Organizational"
+        "class":"Organizational",
+        "priority": 4
     },
     {
         "id": "Switch_default.lapx",
         "label": "Check if switch default is used",
-        "class": "Organizational"
+        "class": "Organizational",
+        "priority": 20
+    },
+    {
+        "id": "Function_params.lapx",
+        "label": "Check if function has more than 5 parameters",
+        "class": "Organizational",
+        "priority": 5
+    },
+    {
+        "id":"Empty_func.lapx",
+        "label":"Check for empty functions",
+        "class":"Organizational",
+        "priority": 20
     }]
 }

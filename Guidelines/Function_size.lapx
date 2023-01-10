@@ -1,21 +1,27 @@
 STATE before
+    global count_lines, count_iter, cur_function_name, function_count
     count_lines = 0
-    function_count = {}
+    function_count = {"":0}
     cur_function_name = ""
+    count_iter = 0
 END_STATE
 
 STATE function
-    global count_lines
-    global cur_function_name
+    global count_lines, count_iter, cur_function_name
     cur_function_name = FUNCTION_NAME
+    for i in STATEMENTS:
+        if "for" in i[0:3] or "while" in i[0:5]:
+            count_iter+=1
     count_lines = len(STATEMENTS) + len(sum(EXP_STATEMENTS_INSIDE_ALL_IF,[]))
     function_count[FUNCTION_NAME] = count_lines
 END_STATE
 
 STATE iteration
-    if ITERATION=="for" or ITERATION=="while":
+    global count_iter
+    if (ITERATION=="for" or ITERATION=="while") and count_iter:
         global count_lines
         function_count[cur_function_name]+=len(STATEMENTS)
+        count_iter-=1
 END_STATE
 
 STATE after
