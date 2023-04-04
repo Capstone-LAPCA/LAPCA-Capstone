@@ -1,5 +1,4 @@
 STATE before
-    global final_res
     final_res = []
 END_STATE
 
@@ -12,7 +11,7 @@ STATE while
     if ">=" not in ITERATION_CONDITION and "<=" not in ITERATION_CONDITION:
         res.extend([0,1,1,1,1])
         final_res.append(res)
-        exit(0)
+        return
     else:
         res.append(1)
         if ">=" in ITERATION_CONDITION:

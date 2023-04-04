@@ -1,12 +1,13 @@
 STATE before
-    global CUR_DEPTH,myl,RES
     CUR_DEPTH = 1
     myl = []
     RES = []
 END_STATE
 
 STATE iteration
-    global CUR_DEPTH,my1,RES
+    global myl
+    global RES
+    global CUR_DEPTH
     if ITERATION in ["for","while"]:
         t = 0
         if CUR_DEPTH > 2:

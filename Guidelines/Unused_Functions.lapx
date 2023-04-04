@@ -1,6 +1,5 @@
 
 STATE before
-    global MY_FUNCTION_CALLS, line_no, FUNCTIONS
     MY_FUNCTION_CALLS = []
     line_no = {}
     FUNCTIONS = []
