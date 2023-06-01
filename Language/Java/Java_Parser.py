@@ -452,6 +452,7 @@ class javaParserActions(visitors.Visitor):
     def while_stmt(self, items):
         ALL_TOKENS = []
         getTokens(items,ALL_TOKENS)
+        LINE_NO = items.meta.line
         STATEMENTS = []
         getBlockItemList(items,STATEMENTS)
         EXP_STATEMENTS = []
